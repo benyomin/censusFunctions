@@ -2,7 +2,7 @@ Package: censusFunctions
 Title: Helper Functions for Israeli Census Files
 Version: 0.0.0.94
 Authors@R: person("Benyomin", "Hagalili", email = "first.last@example.com", role = c("aut", "cre"))
-Description: Refactoring of Spaghetti Code for analysis in R of Israeli Census Data..
+Description: Refactoring of Spaghetti Code for analysis in R of Israeli Census Data. Use this function >>devtools::install_github("benyomin/censusFunctions")   >>library('censusFunctions')  When you make changes run R < document () from command line
 Depends: R (>= 3.3.1)
 License: All Rights Reserved.
 Encoding: UTF-8
