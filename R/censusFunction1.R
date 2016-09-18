@@ -5,8 +5,8 @@
 #' @keywords individual, household
 #' @export
 #' @examples
-#' cat_function()
-cat_function <- function(year=TRUE){
+#' censusFunction1()
+censusFunction1 <- function(year=TRUE){
     if(year==1976){
         print("This is the census data for 1976.")
     }
