@@ -1,0 +1,5 @@
+library(roxygen2)
+library(devtools)
+setwd('~/personal/benyomin/censusFunctions')
+document()
+install("censusFunctions")
