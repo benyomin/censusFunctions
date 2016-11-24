@@ -1,6 +1,6 @@
 Package: censusFunctions
 Title: Helper Functions for Israeli Census Files
-Version: 0.0.0.94
+Version: 0.0.0.35
 Authors@R: person("Benyomin", "Hagalili", email = "first.last@example.com", role = c("aut", "cre"))
 Description: Refactoring of Spaghetti Code for analysis in R
     of Israeli Census Data. Use this function
@@ -8,8 +8,10 @@ Description: Refactoring of Spaghetti Code for analysis in R
     >>library('censusFunctions')
     When you make changes run
     updateMe.R
-Depends: R (>= 3.3.1)
+Depends:
+    R (>= 3.3.1)
 License: MIT
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 5.0.1.9000
+RoxygenNote: 5.0.1
+Instructions: After updating the function code, run document() in the R console.  Upload changes to github.

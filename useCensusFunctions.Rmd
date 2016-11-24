@@ -1,0 +1,14 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+getwd()
+setwd('~/benyomin/censusFunctions')
+devtools::install_github("benyomin/censusFunctions")
+library('censusFunctions')
+
+??cat_function
+```
