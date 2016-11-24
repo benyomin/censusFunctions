@@ -23,7 +23,7 @@ censusFunction1()
 censusFunction1(1976)
 censusFunction1(1977)
 censusFunction1(1978)
-censusFunction1()
+censusFunction2()
 }
 \keyword{household}
 \keyword{individual,}

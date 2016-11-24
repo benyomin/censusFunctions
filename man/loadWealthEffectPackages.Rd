@@ -3,7 +3,8 @@
 \name{loadWealthEffectPackages}
 \alias{loadWealthEffectPackages}
 \title{Loads the required packages for the
-Housing Wealth Effect Analysis.}
+Housing Wealth Effect Analysis.
+Provides for simple dependency management to aid in reproducibility.}
 \usage{
 loadWealthEffectPackages(load = TRUE)
 }
@@ -13,14 +14,15 @@ loadWealthEffectPackages(load = TRUE)
 \description{
 Loads the required packages for the
 Housing Wealth Effect Analysis.
+Provides for simple dependency management to aid in reproducibility.
 }
 \examples{
 loadWealthEffectPackages()
 }
-\keyword{dependencies}
-\keyword{library}
-\keyword{packageManagement}
-\keyword{packages}
-\keyword{require}
+\keyword{dependencies,}
+\keyword{library,}
+\keyword{packageManagement,}
+\keyword{packages,}
+\keyword{require,}
 \keyword{requirements}
 
