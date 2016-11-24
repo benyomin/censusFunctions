@@ -5,10 +5,10 @@
 #' @keywords individual, household
 #' @export
 #' @examples
-#' censusFunction1()
+#' censusFunction2()
 censusFunction1 <- function(year=TRUE){
-    if(year==1976){
-        print("This is the census data for 1976.")
+    if(year){
+
     }
     else if(year==1977){
         print("The year is 1977")

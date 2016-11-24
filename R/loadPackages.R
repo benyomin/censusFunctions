@@ -2,7 +2,7 @@
 #' Housing Wealth Effect Analysis.
 #' Provides for simple dependency management to aid in reproducibility.
 #' @param load Defaults to TRUE.
-#' @keywords packages packageManagement dependencies library require requirements
+#' @keywords packages, packageManagement, dependencies, library, require, requirements
 #' @export
 #' @examples
 #' loadWealthEffectPackages()
