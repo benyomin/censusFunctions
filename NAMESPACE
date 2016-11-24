@@ -3,3 +3,4 @@
 export(cat_function)
 export(censusFunction1)
 export(install_if_needed)
+export(loadWealthEffectPackages)

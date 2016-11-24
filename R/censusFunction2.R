@@ -1,7 +1,7 @@
 #' A Census Function
 #'
 #' This function allows you to do something.
-#' @param year
+#' @param year The year that data will be returned for.
 #' @keywords individual, household
 #' @export
 #' @examples
