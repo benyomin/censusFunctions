@@ -10,6 +10,8 @@ censusFunction1(year = TRUE)
 }
 \arguments{
 \item{year}{The year which you will perform the function on.}
+
+\item{year}{The year that data will be returned for.}
 }
 \description{
 This function allows you to do something.
