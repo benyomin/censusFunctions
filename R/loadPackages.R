@@ -38,6 +38,8 @@ loadWealthEffectPackages <- function(load=TRUE){
         library(data.table)
         install_if_needed("gdata")
         library(gdata)
+        install_if_needed("readr")
+        library(readr)
         library(dtplyr)
     }
     else {
