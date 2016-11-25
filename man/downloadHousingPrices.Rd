@@ -5,7 +5,7 @@
 \title{Downloads quarterly housing prices for the years
 2006-2016 to the current working directory as 5 excel files}
 \usage{
-downloadHousingPrices(year = TRUE)
+downloadHousingPrices(key = 3)
 }
 \arguments{
 \item{year}{defaults to true}
@@ -15,7 +15,10 @@ Downloads quarterly housing prices for the years
 2006-2016 to the current working directory as 5 excel files
 }
 \examples{
-downloadHousingPrices()
+downloadHousingPrices(1)        #downloads Excel files from CBS servers
+downloadHousingPrices(FALSE)    #displays a message
+downloadHousingPrices(3)       #downloads a test file
+downloadHousingPrices()         #downloads a test file
 }
 \keyword{CBS,}
 \keyword{cpi,}

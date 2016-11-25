@@ -4,10 +4,16 @@
 #' @keywords housing, cpi, price, download, fetch, CBS, dataset
 #' @export
 #' @examples
-#' downloadHousingPrices()
-downloadHousingPrices <- function(year=TRUE){
-    if(year){
-        ## list of files on CBS site
+#' downloadHousingPrices(1)        #downloads Excel files from CBS servers
+#' downloadHousingPrices(FALSE)    #displays a message
+#' downloadHousingPrices(3)       #downloads a test file
+#' downloadHousingPrices()         #downloads a test file
+## define function
+downloadHousingPrices <- function(key=3){
+  ## set variables
+     ## test file
+        test.url ="http://in.bgu.ac.il/Style%20Library/Images/bgu/general/logo-simbol.gif"
+     ## list of files on CBS site
         ## 2014,15,16q1-q3
         yr14_16.url ="http://www.cbs.gov.il/www/price_new/a6_2_e.xls"
         ## 2013,12
@@ -21,20 +27,21 @@ downloadHousingPrices <- function(year=TRUE){
         ## 05,04
         ## no quarterly data publicly available for this year.
         ## http://www.cbs.gov.il/www/archive/200603/price/t16_3_e.xls
-        ## download the excel files
-        options(HTTPUserAgent = "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6;
-                en-US; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12")
-        ## download.file(yr14_16.url, "houseP14_16.xls")
-
+     ## change useragent (curl is blocked to prevent scraping of data from the website)
+        options(HTTPUserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36")
+  if(key==1){
         houseP14_16.xls = getURLContent(yr14_16.url, useragent=getOption("HTTPUserAgent"))
         houseP12_13.xls = getURLContent(yr12_13.url, useragent=getOption("HTTPUserAgent"))
         houseP10_11.xls = getURLContent(yr10_11.url, useragent=getOption("HTTPUserAgent"))
         houseP09_08.xls = getURLContent(yr08_09.url, useragent=getOption("HTTPUserAgent"))
         houseP07_06.xls = getURLContent(yr06_07.url, useragent=getOption("HTTPUserAgent"))
     }
-    else if(year==1977){
-        print("The year is 1977")
-      }
+    else if(key==3)
+     {
+       print("Downloading test file logo.jpg to your working directory.")
+       logo.jpg = getURLContent(test.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"))
+       
+    }
     else {
         print("Census data for those years not yet implemented.")
     }
