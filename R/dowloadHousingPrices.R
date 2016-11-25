@@ -31,13 +31,26 @@ downloadHousingPrices <- function(key=3){
         options(HTTPUserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64)")
   if(key==1){
     print("Downloading Housing Prices 2006-2016 from the Central Bureau of Statistics.")
-    f=CFILE("houseP14_16.xls",mode = "wb")
+    ## get data 2014q1 to 2016 q3
+    f=CFILE("houseP14_16.xls",mode = "wb") ##creates a file in which to write downloaded data.
     curlPerform(url=yr14_16.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"), writedata=f@ref)
-    RCurl::close(f) 
-       # houseP12_13.xls = getURLContent(yr12_13.url, useragent=getOption("HTTPUserAgent"))
-       # houseP10_11.xls = getURLContent(yr10_11.url, useragent=getOption("HTTPUserAgent"))
-       # houseP09_08.xls = getURLContent(yr08_09.url, useragent=getOption("HTTPUserAgent"))
-       # houseP07_06.xls = getURLContent(yr06_07.url, useragent=getOption("HTTPUserAgent"))
+    RCurl::close(f)
+    ## get data 2012q1-2013q4
+    f=CFILE("houseP12_13.xls", mode="wb")
+    curlPerform(url=yr12_13.url, useragent=getOption("HTTPUserAgent"),writedata=f@ref)
+    RCurl::close(f)
+    ## get data 2010q1-2011q4
+    f=CFILE("houseP10_11.xls", mode ="wb")
+    curlPerform(url=yr10_11.url, useragent=getOption("HTTPUserAgent"), writedata=f@ref)
+    RCurl::close(f)
+    ## get data 2008q1-2009q4
+    f=CFILE("houseP09_08.xls", mode ="wb")
+    curlPerform(url=yr08_09.url, useragent=getOption("HTTPUserAgent"), writedata=f@ref)
+    RCurl::close(f)
+    ## get data 2006q1-2007q4
+    f=CFILE("houseP07_06.xls", mode ="wb")
+    curlPerform(url=yr06_07.url, useragent=getOption("HTTPUserAgent"), writedata=f@ref)
+    RCurl::close(f)
     }
     else if(key==3)
      {
