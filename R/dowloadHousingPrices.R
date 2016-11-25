@@ -41,7 +41,7 @@ downloadHousingPrices <- function(key=3){
      {
        print("Downloading test file logo.jpg to your working directory.")
        f = CFILE("logo.jpg", mode="wb")
-       curlPerform(test.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"), writedata=f@ref)
+       curlPerform(url=test.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"), writedata=f@ref)
        close(f) 
     }
     else {
