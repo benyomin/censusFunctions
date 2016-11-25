@@ -31,11 +31,13 @@ downloadHousingPrices <- function(key=3){
         options(HTTPUserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64)")
   if(key==1){
     print("Downloading Housing Prices 2006-2016 from the Central Bureau of Statistics.")
-        houseP14_16.xls = getURLContent(yr14_16.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"))
-        houseP12_13.xls = getURLContent(yr12_13.url, useragent=getOption("HTTPUserAgent"))
-        houseP10_11.xls = getURLContent(yr10_11.url, useragent=getOption("HTTPUserAgent"))
-        houseP09_08.xls = getURLContent(yr08_09.url, useragent=getOption("HTTPUserAgent"))
-        houseP07_06.xls = getURLContent(yr06_07.url, useragent=getOption("HTTPUserAgent"))
+    f=CFILE("houseP14_16.xls",mode = "wb")
+    curlPerform(url=yr14_16.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"), writedata=f@ref)
+    RCurl::close(f) 
+       # houseP12_13.xls = getURLContent(yr12_13.url, useragent=getOption("HTTPUserAgent"))
+       # houseP10_11.xls = getURLContent(yr10_11.url, useragent=getOption("HTTPUserAgent"))
+       # houseP09_08.xls = getURLContent(yr08_09.url, useragent=getOption("HTTPUserAgent"))
+       # houseP07_06.xls = getURLContent(yr06_07.url, useragent=getOption("HTTPUserAgent"))
     }
     else if(key==3)
      {
