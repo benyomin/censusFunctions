@@ -77,10 +77,10 @@ downloadHousingPrices <- function(key=3){
     RCurl::close(i)
      }}
      else if(key==9)
-     {if(file.exists("houseP09_08.xls")){print("2008-09 already downloaded")}
+     {if(file.exists("houseP08_09.xls")){print("2008-09 already downloaded")}
       else{print("downloading 2008-09")
 ## get data 2008q1-2009q4
-    j=CFILE("houseP09_08.xls", mode ="wb")
+    j=CFILE("houseP08_09.xls", mode ="wb")
     curlPerform(url=yr08_09.url, useragent=getOption("HTTPUserAgent"), writedata=j@ref)
     RCurl::close(j)
      }}
