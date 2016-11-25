@@ -32,6 +32,10 @@ loadWealthEffectPackages <- function(load=TRUE){
         library(ggplot2)
         install_if_needed("RCurl")
         library(RCurl)
+        install_if_needed("yearmon")
+        library(yearmon)
+        install_if_needed("zoo")
+        library(zoo)
     }
     else {
         print("Helper Packages not loaded by censusFunctions.")
