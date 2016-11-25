@@ -1,3 +1,9 @@
 * Common Problems
-1. JAVA error related to packages "rJava" or "xlsx"
+** JAVA error related to packages "rJava" or "xlsx"
 [[https://stackoverflow.com/questions/30738974/rjava-load-error-in-rstudio-r-after-upgrading-to-osx-yosemite]]
+** Skipping "packageName" in Console output
+*** If your output resembles:
+Skipping tidyrSkipping roxygen2Skipping purrrSkipping broomSkipping foreignSkipping rJavaSkipping
+*** This means that you already have these packages. 
+The (re-)downloading of these packages is skipped on your installation.
+They are still "loaded" via require(packageName) or library(packageName).

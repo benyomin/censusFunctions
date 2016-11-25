@@ -30,7 +30,8 @@ loadWealthEffectPackages <- function(load=TRUE){
         library(magrittr)
         install_if_needed("ggplot2")
         library(ggplot2)
-
+        install_if_needed("RCurl")
+        library(RCurl)
     }
     else {
         print("Helper Packages not loaded by censusFunctions.")
