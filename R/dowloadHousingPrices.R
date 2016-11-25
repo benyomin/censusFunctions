@@ -53,7 +53,7 @@ downloadHousingPrices <- function(key=3){
     RCurl::close(f)
   }
      else if(key==16)
-  {if(file.exists("houseP14_16.xls"){print("2014-16 already downloaded")}
+  {if(file.exists("houseP14_16.xls")){print("2014-16 already downloaded")}
       else{print("downloading 2014-16")
          ## get data 2014q1 to 2016 q3
     g=CFILE("houseP14_16.xls",mode = "wb") ##creates a file in which to write downloaded data.
