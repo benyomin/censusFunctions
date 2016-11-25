@@ -4,11 +4,11 @@
 #' @keywords housing, cpi, price, download, fetch, CBS, dataset
 #' @export
 #' @examples
-#' downloadHousingPrices(1)        #downloads Excel files from CBS servers
-#' downloadHousingPrices(FALSE)    #displays a message
-#' downloadHousingPrices(3)       #downloads a test file
-#' downloadHousingPrices()         #downloads a test file
-## define function
+#' downloadHousingPrices(13)     
+#' downloadHousingPrices(FALSE)     
+#' downloadHousingPrices(3)       
+#' downloadHousingPrices()      
+
 downloadHousingPrices <- function(key=3){
   ## set variables
      ## test file

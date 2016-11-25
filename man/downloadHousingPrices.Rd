@@ -15,10 +15,10 @@ Downloads quarterly housing prices for the years
 2006-2016 to the current working directory as 5 excel files
 }
 \examples{
-downloadHousingPrices(1)        #downloads Excel files from CBS servers
-downloadHousingPrices(FALSE)    #displays a message
-downloadHousingPrices(3)       #downloads a test file
-downloadHousingPrices()         #downloads a test file
+downloadHousingPrices(13)     
+downloadHousingPrices(FALSE)     
+downloadHousingPrices(3)       
+downloadHousingPrices()      
 }
 \keyword{CBS,}
 \keyword{cpi,}
