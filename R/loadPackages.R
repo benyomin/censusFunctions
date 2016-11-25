@@ -36,6 +36,9 @@ loadWealthEffectPackages <- function(load=TRUE){
         library(zoo)
         install_if_needed("data.table")
         library(data.table)
+        install_if_needed("gdata")
+        library(gdata)
+        library(dtplyr)
     }
     else {
         print("Helper Packages not loaded by censusFunctions.")
