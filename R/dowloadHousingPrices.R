@@ -12,10 +12,12 @@
 downloadHousingPrices <- function(key=3){
   ## set variables
      ## test file
-        test.url ="http://www-eng-x.llnl.gov/documents/a_image.gif"
+        test.url   ="http://www-eng-x.llnl.gov/documents/a_image.gif"
      ## list of files on CBS site
-        ## 2014,15,16q1-q3
-        yr14_16.url ="http://www.cbs.gov.il/www/price_new/a6_2_e.xls"
+        ## 2014q3-q4,15,16q1-q3
+        yr14_16.url="http://www.cbs.gov.il/www/price_new/a6_2_e.xls"
+        ## 2014q1-q2
+        yr14.url   ="http://www.cbs.gov.il/www/archive/201503/price_new/a6_2_e.xls"
         ## 2013,12
         yr12_13.url="http://www.cbs.gov.il/www/archive/201403/price_new/a6_2_e.xls"
         ## 2011,10
@@ -60,6 +62,14 @@ downloadHousingPrices <- function(key=3){
     curlPerform(url=yr14_16.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"), writedata=g@ref)
     RCurl::close(g)
   }}
+ else if(key==14)
+     {if(file.exists("houseP14q1-2.xls")){print("2014q1-q2 already downloaded")}
+      else{print("downloading q1,q2 of 2014")
+       ## get data 2012q1-2013q4
+    g2=CFILE("houseP14q1-2.xls", mode="wb")
+    curlPerform(url=yr14.url, useragent=getOption("HTTPUserAgent"),writedata=g2@ref)
+    RCurl::close(g2)
+     }}
      else if(key==13)
      {if(file.exists("houseP12_13.xls")){print("2012-13 already downloaded")}
       else{print("downloading 2012-13")
