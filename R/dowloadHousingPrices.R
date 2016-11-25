@@ -12,7 +12,7 @@
 downloadHousingPrices <- function(key=3){
   ## set variables
      ## test file
-        test.url ="http://in.bgu.ac.il/Style%20Library/Images/bgu/general/logo-simbol.gif"
+        test.url ="http://www-eng-x.llnl.gov/documents/a_image.gif"
      ## list of files on CBS site
         ## 2014,15,16q1-q3
         yr14_16.url ="http://www.cbs.gov.il/www/price_new/a6_2_e.xls"
@@ -28,7 +28,7 @@ downloadHousingPrices <- function(key=3){
         ## no quarterly data publicly available for this year.
         ## http://www.cbs.gov.il/www/archive/200603/price/t16_3_e.xls
      ## change useragent (curl is blocked to prevent scraping of data from the website)
-        options(HTTPUserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36")
+        options(HTTPUserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64)")
   if(key==1){
     print("Downloading Housing Prices 2006-2016 from the Central Bureau of Statistics.")
         houseP14_16.xls = getURLContent(yr14_16.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"))
@@ -39,8 +39,8 @@ downloadHousingPrices <- function(key=3){
     }
     else if(key==3)
      {
-       print("Downloading test file logo.jpg to your working directory.")
-       f = CFILE("logo.jpg", mode="wb")
+       print("Downloading test file logo.gif to your working directory.")
+       f = CFILE("logo.gif", mode="wb")
        curlPerform(url=test.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"), writedata=f@ref)
        close(f) 
     }
