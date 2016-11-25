@@ -40,8 +40,9 @@ downloadHousingPrices <- function(key=3){
     else if(key==3)
      {
        print("Downloading test file logo.jpg to your working directory.")
-       logo.jpg = getURLContent(test.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"))
-       
+       f = CFILE("logo.jpg", mode="wb")
+       curlPerform(test.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"), writedata=f@ref)
+       close(f) 
     }
     else {
         print("Census data for those years not yet implemented.")
