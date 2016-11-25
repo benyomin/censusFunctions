@@ -34,6 +34,8 @@ loadWealthEffectPackages <- function(load=TRUE){
         library(RCurl)
         install_if_needed("zoo")
         library(zoo)
+        install_if_needed("data.table")
+        library(data.table)
     }
     else {
         print("Helper Packages not loaded by censusFunctions.")
