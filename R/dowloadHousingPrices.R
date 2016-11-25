@@ -42,7 +42,7 @@ downloadHousingPrices <- function(key=3){
        print("Downloading test file logo.gif to your working directory.")
        f = CFILE("logo.gif", mode="wb")
        curlPerform(url=test.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"), writedata=f@ref)
-       close(f) 
+       RCurl::close(f) 
     }
     else {
         print("Census data for those years not yet implemented.")
