@@ -62,15 +62,15 @@ downloadHousingPrices <- function(key=3){
     curlPerform(url=yr14_16.url, verbose=TRUE, useragent=getOption("HTTPUserAgent"), writedata=g@ref)
     RCurl::close(g)
   }}
- else if(key==14)
+  else if(key==14)
      {if(file.exists("houseP14q1-2.xls")){print("2014q1-q2 already downloaded")}
       else{print("downloading q1,q2 of 2014")
        ## get data 2012q1-2013q4
-    g2=CFILE("houseP14q1-2.xls", mode="wb")
-    curlPerform(url=yr14.url, useragent=getOption("HTTPUserAgent"),writedata=g2@ref)
-    RCurl::close(g2)
+    z=CFILE("houseP14q1-2.xls", mode="wb")
+    curlPerform(url=yr14.url, useragent=getOption("HTTPUserAgent"),writedata=z@ref)
+    RCurl::close(z)
      }}
-     else if(key==13)
+  else if(key==13)
      {if(file.exists("houseP12_13.xls")){print("2012-13 already downloaded")}
       else{print("downloading 2012-13")
        ## get data 2012q1-2013q4

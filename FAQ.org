@@ -1,5 +1,16 @@
 * Common Problems
 ** JAVA error related to packages "rJava" or "xlsx"
+*** library(xlsx)
+# install.packages("rJava",type="source")
+# install.packages("xlsx")
+library(rJava)
+library(xlsx)  ##reads Excel files
+## If you receive a java error here run 
+## "sudo R CMD javareconf" and
+## "sudo find /Library/Frameworks/R.framework/Resources/etc -type f -exec chmod 664 "{}" \;"
+## from a command line.
+## then uncomment the line that installs rJava from source
+*** rjava compile
 [[https://stackoverflow.com/questions/30738974/rjava-load-error-in-rstudio-r-after-upgrading-to-osx-yosemite]]
 ** Skipping "packageName" in Console output
 *** If your output resembles:
