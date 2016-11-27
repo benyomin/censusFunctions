@@ -41,8 +41,8 @@ loadWealthEffectPackages <- function(load=TRUE){
         install_if_needed("readr")
         library(readr)
         library(dtplyr)
-      #  install_if_needed("reshape2")
-      #  library(reshape2)
+        install_if_needed("operators")
+        library(operators)
       #  install_if_needed("ggplot2")
       #  library
     }
