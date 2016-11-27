@@ -43,8 +43,8 @@ loadWealthEffectPackages <- function(load=TRUE){
         library(dtplyr)
         install_if_needed("operators")
         library(operators)
-      #  install_if_needed("ggplot2")
-      #  library
+        install_if_needed("grid")
+        library(grid)
     }
     else {
         print("Helper Packages not loaded by censusFunctions.")
