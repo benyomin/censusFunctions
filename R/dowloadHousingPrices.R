@@ -55,7 +55,8 @@ downloadHousingPrices <- function(key=3){
     RCurl::close(f)
   }
      else if(key==16)
-  {if(file.exists("houseP14_16.xls")){print("2014-16 already downloaded")}
+  {if(file.exists("houseP14_16.xls")){#print("2014-16 already downloaded")
+   }
       else{print("downloading 2014-16")
          ## get data 2014q1 to 2016 q3
     g=CFILE("houseP14_16.xls",mode = "wb") ##creates a file in which to write downloaded data.
@@ -63,7 +64,8 @@ downloadHousingPrices <- function(key=3){
     RCurl::close(g)
   }}
   else if(key==14)
-     {if(file.exists("houseP14q1-2.xls")){print("2014q1-q2 already downloaded")}
+  {if(file.exists("houseP14q1-2.xls")){#print("2014q1-q2 already downloaded")
+   }
       else{print("downloading q1,q2 of 2014")
        ## get data 2012q1-2013q4
     z=CFILE("houseP14q1-2.xls", mode="wb")
@@ -71,7 +73,8 @@ downloadHousingPrices <- function(key=3){
     RCurl::close(z)
      }}
   else if(key==13)
-     {if(file.exists("houseP12_13.xls")){print("2012-13 already downloaded")}
+       {if(file.exists("houseP12_13.xls")){#print("2012-13 already downloaded")
+        }
       else{print("downloading 2012-13")
        ## get data 2012q1-2013q4
     h=CFILE("houseP12_13.xls", mode="wb")
@@ -79,7 +82,8 @@ downloadHousingPrices <- function(key=3){
     RCurl::close(h)
      }}
      else if(key==11)
-     {if(file.exists("houseP10_11.xls")){print("2010-11 already downloaded")}
+       {if(file.exists("houseP10_11.xls")){#print("2010-11 already downloaded")
+      }
       else{print("downloading 2010-11")
 ## get data 2010q1-2011q4
     i=CFILE("houseP10_11.xls", mode ="wb")
@@ -87,7 +91,8 @@ downloadHousingPrices <- function(key=3){
     RCurl::close(i)
      }}
      else if(key==9)
-     {if(file.exists("houseP08_09.xls")){print("2008-09 already downloaded")}
+       {if(file.exists("houseP08_09.xls")){#print("2008-09 already downloaded")
+        }
       else{print("downloading 2008-09")
 ## get data 2008q1-2009q4
     j=CFILE("houseP08_09.xls", mode ="wb")
@@ -95,7 +100,8 @@ downloadHousingPrices <- function(key=3){
     RCurl::close(j)
      }}
      else if(key==7)
-     {if(file.exists("houseP06_07.xls")){print("2006-07 already downloaded")}
+       {if(file.exists("houseP06_07.xls")){#print("2006-07 already downloaded")
+        }
       else{print("downloading 2006-07")
     k=CFILE("houseP06_07.xls", mode ="wb")
     curlPerform(url=yr06_07.url, useragent=getOption("HTTPUserAgent"), writedata=k@ref)
