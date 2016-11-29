@@ -9,7 +9,7 @@ Description: Refactoring of Spaghetti Code for analysis in R
     When you make changes run
     updateMe.R
 Depends:
-    R (>= 3.3.1), dplyr, rbundler, tidyr, purrr, broom, foreign, magrittr, ggplot2, roxygen2, devtools, RCurl, zoo, data.table, gdata,dtplyr,readr, operators,grid
+    R (>= 3.3.1), dplyr, rbundler, tidyr, purrr, broom, foreign, magrittr, ggplot2, roxygen2, devtools, RCurl, zoo, data.table, gdata,dtplyr, readr, operators, grid, bookdown
 License: MIT
 Encoding: UTF-8
 LazyData: true
