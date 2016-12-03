@@ -47,6 +47,8 @@ loadWealthEffectPackages <- function(load=TRUE){
         library(grid)
         install_if_needed("bookdown")
         library(bookdown)
+        install_if_needed("scales")
+        library(scales)
     }
     else {
         print("Helper Packages not loaded by censusFunctions.")
