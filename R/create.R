@@ -6,7 +6,7 @@
 #' @export
 #' @examples
 #' create("matrices")
-#' create("means)
+#' create("means")
 create <- function(arg1){
     if(arg1=="matrices"){
         source("../includes/familyConsumption.R",  echo=FALSE)

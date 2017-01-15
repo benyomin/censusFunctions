@@ -12,6 +12,10 @@ create(arg1)
 \description{
 This function imports Israeli census data.
 }
+\examples{
+create("matrices")
+create("means")
+}
 \keyword{aggregate,}
 \keyword{data}
 \keyword{process,}

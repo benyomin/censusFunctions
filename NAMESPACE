@@ -2,10 +2,13 @@
 
 export(cat_function)
 export(censusFunction1)
+export(censusGraph)
 export(create)
+export(createGraphs)
 export(downloadHousingPrices)
 export(importData)
 export(install_if_needed)
 export(loadWealthEffectPackages)
 export(multiplot)
 export(sampleFunction)
+export(weighHouseholds)
