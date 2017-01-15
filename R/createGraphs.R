@@ -1,6 +1,6 @@
 #' Create ggplot2 plots, but don't print to screen/page.
 #'
-#' This function aggregates graphing code.
+#' This function aggregates graphing code; returns plots as a list.
 #' @param arg1 defaults to TRUE
 #' @keywords plots, graphs
 #' @export
@@ -88,9 +88,12 @@ pWeightedNHC1 <<- pWeightedNHC + geom_line(aes(x=year,
                                         col=key))
 #pWeightedNHC1
 
+plot <- c(pIncome,pallIncome,p3,p5,p7,p9,p11,
+          pWeightedConsumption1,
+          pWeightedIncome1,
+          pWeightedNHC1)
 
-
-      return(1)
+      return(plot)
     }else if (arg1=="FALSE"){
         return(0)
     }else{return(0)}

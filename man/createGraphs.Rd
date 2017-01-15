@@ -10,7 +10,7 @@ createGraphs(arg1 = 1)
 \item{arg1}{defaults to TRUE}
 }
 \description{
-This function aggregates graphing code.
+This function aggregates graphing code; returns plots as a list.
 }
 \examples{
 createGraphs(1)

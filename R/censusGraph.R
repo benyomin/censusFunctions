@@ -9,10 +9,10 @@
 #' censusGraph("allConsumption")
 censusGraph <- function(plot){
   if(plot=="allConsumption"){
-    p7
-        return(p7)
+    plot$p7
+        return(plot$p7)
   }else if (plot=="allIncome"){
-    pallIncome
-        return(pallIncome)
+    plot$pallIncome
+        return(plot$pallIncome)
     }else{return(0)}
 }
