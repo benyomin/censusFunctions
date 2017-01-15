@@ -4,17 +4,20 @@
 \alias{weighHouseholds}
 \title{Applies Weights to households.}
 \usage{
-weighHouseholds(arg1 = 1)
+weighHouseholds(class, metric)
 }
 \arguments{
-\item{arg1}{Defaults to TRUE.}
+\item{class}{Takes values of renters or owners.}
+
+\item{metric}{Takes values of income, consumption or NHC.}
 }
 \description{
-This function weighs Israeli census data.
+This function weighs Israeli census data. Returns 1 of 6 options mat[owner/renter]Weighted[Income/Consumption/NHC].
 }
 \examples{
-weighHouseholds(1)
-weighHouseholds(0)
+weighHouseholds("renters","income")
+weighHouseholds("owners","consumption")
+weighHouseholds("renters","NHC")
 }
 \keyword{aggregate,}
 \keyword{data}
