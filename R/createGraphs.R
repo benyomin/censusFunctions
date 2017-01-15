@@ -80,10 +80,10 @@ pWeightedConsumption1 <<- pWeightedConsumption + geom_line(aes(x=year,
                                         col=key))
 #pWeightedConsumption1
 ##Graph Income - Weighted.
-pWeightedIncome <- ggplot(data=allWeightedIncome)
-pWeightedIncome1 <<- pWeightedIncome + geom_line(aes(x=year,
-                                        y=value,
-                                        col=key))
+## pWeightedIncome <- ggplot(data=allWeightedIncome)
+## pWeightedIncome1 <<- pWeightedIncome + geom_line(aes(x=year,
+##                                         y=value,
+##                                         col=key))
 #pWeightedIncome1
 ##Graph Non-Housing Consumption - Weighted.
 pWeightedNHC <- ggplot(data=allWeightedNHC)
@@ -95,12 +95,11 @@ pWeightedNHC1 <<- pWeightedNHC + geom_line(aes(x=year,
 preparedPlot <- c(carBoxPlot,
          pIncome,pallIncome,
          p3,p5,p7,p9,p11,
-          pWeightedConsumption1,
-          pWeightedIncome1,
-          pWeightedNHC1)
+          pWeightedConsumption1
+          )
 
       return(preparedPlot)
-    }else if (arg1=="FALSE"){
-        return(0)
-    }else{return(0)}
+    }else if (arg1==FALSE){
+        return(carBoxPlot)
+    }else{return("Hello error 3009x7")}
 }

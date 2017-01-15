@@ -152,15 +152,15 @@ allWeightedNHC <-
   Hmisc::Merge(matOwnerWeightedNHC,
                matRenterWeightedNHC, id=~someyears)
 ## make a long, tidy data frame
-allWeightedIncome <- gather(allWeightedIncome, someyears)
+allWeightedIncome <- tidyr::gather(allWeightedIncome, someyears)
 names(allWeightedIncome)[1]<-"year"
 names(allWeightedIncome)[2]<-"key"
 
-allWeightedConsumption <<- gather(allWeightedConsumption, someyears)
+allWeightedConsumption <<- tidyr::gather(allWeightedConsumption, someyears)
 names(allWeightedConsumption)[1]<-"year"
 names(allWeightedConsumption)[2]<-"key"
 
-allWeightedNHC <- gather(allWeightedNHC, someyears)
+allWeightedNHC <- tidyr::gather(allWeightedNHC, someyears)
 names(allWeightedNHC)[1]<-"year"
 names(allWeightedNHC)[2]<-"key"
 
