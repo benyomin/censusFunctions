@@ -4,10 +4,10 @@
 \alias{createGraphs}
 \title{Create ggplot2 plots, but don't print to screen/page.}
 \usage{
-createGraphs(arg1 = 1)
+createGraphs(metric = "income")
 }
 \arguments{
-\item{arg1}{defaults to TRUE}
+\item{metric}{income/consumption/NHC ;; weighted}
 }
 \description{
 This function aggregates graphing code; returns plots as a list.
