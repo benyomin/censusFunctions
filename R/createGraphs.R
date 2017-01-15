@@ -11,14 +11,14 @@ createGraphs <- function(arg1=1){
     if(arg1==TRUE){
 #names(matIncome)
 plotIncome <-ggplot(data=matIncome)
-pIncome <- plotIncome+ geom_line(aes(x=someyears,
+pIncome <<- plotIncome+ geom_line(aes(x=someyears,
                        y=meanGrossIncome))+xlab("")+
   ylab("Mean monthly gross income")+
    ggtitle("Gross Income by Year - All Households")
 #pIncome
 #names(allY)
 pallY <-ggplot(data=allY)
-pallIncome <- pallY+ geom_line(aes(x=year,
+pallIncome <<- pallY+ geom_line(aes(x=year,
                        y=value,
                        col=key))+
   ylab("Mean Total Income (NIS/month)")+
@@ -28,18 +28,18 @@ pallIncome <- pallY+ geom_line(aes(x=year,
     geom_vline(xintercept = 2013)
 #pallIncome
 p2 <-ggplot(data=matConsRenters)
-p3 <- p2+ geom_line(aes(x=someyears,
+p3 <<- p2+ geom_line(aes(x=someyears,
                        y=meanConsRenters))+xlab("")+
   ylab("Mean monthly consumption expediture")+
    ggtitle("Consumption Expenditure by Year - Renters")
 
 p4 <-ggplot(data=matConsOwners)
-p5 <- p2+ geom_line(aes(x=someyears,
+p5 <<- p2+ geom_line(aes(x=someyears,
                        y=meanConsOwners))+xlab("")+
   ylab("Mean monthly consumption expediture")+
    ggtitle("Consumption Expenditure by Year - Owners")
 p6 <-ggplot(data=allConsumption)
-p7 <- p6+ geom_line(aes(x=year,
+p7 <<- p6+ geom_line(aes(x=year,
                        y=value,
                        col=key))+
   ylab("Mean household consumption (NIS/month)")+
@@ -48,7 +48,7 @@ p7 <- p6+ geom_line(aes(x=year,
     geom_vline(xintercept = 2011)+
     geom_vline(xintercept = 2013)
 p8 <-ggplot(data=allNHC)
-p9 <- p8+ geom_line(aes(x=year,
+p9 <<- p8+ geom_line(aes(x=year,
                        y=value,
                        col=key))+
   ylab("Mean household consumption (NIS/month)")+
@@ -58,7 +58,7 @@ p9 <- p8+ geom_line(aes(x=year,
       geom_vline(xintercept = 2010)+
       geom_vline(xintercept = 2013)
 p10 <-ggplot(data=matIncome)
-p11 <- p10+ geom_line(aes(x=year,
+p11 <<- p10+ geom_line(aes(x=year,
                        y=value,
                        col=key))+
   ylab("Mean Income (NIS/month)")+
@@ -71,19 +71,19 @@ p11 <- p10+ geom_line(aes(x=year,
 
 ##Graph Consumption - Weighted.
 pWeightedConsumption <- ggplot(data=allWeightedConsumption)
-pWeightedConsumption1 <- pWeightedConsumption + geom_line(aes(x=year,
+pWeightedConsumption1 <<- pWeightedConsumption + geom_line(aes(x=year,
                                         y=value,
                                         col=key))
 #pWeightedConsumption1
 ##Graph Income - Weighted.
 pWeightedIncome <- ggplot(data=allWeightedIncome)
-pWeightedIncome1 <- pWeightedIncome + geom_line(aes(x=year,
+pWeightedIncome1 <<- pWeightedIncome + geom_line(aes(x=year,
                                         y=value,
                                         col=key))
 #pWeightedIncome1
 ##Graph Non-Housing Consumption - Weighted.
 pWeightedNHC <- ggplot(data=allWeightedNHC)
-pWeightedNHC1 <- pWeightedNHC + geom_line(aes(x=year,
+pWeightedNHC1 <<- pWeightedNHC + geom_line(aes(x=year,
                                         y=value,
                                         col=key))
 #pWeightedNHC1
