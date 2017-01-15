@@ -2,7 +2,7 @@
 #'
 #' This function imports Israeli census data.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R.
-#' @keywords import, saved, spss, por, raw, 
+#' @keywords import, saved, spss, por, raw 
 #' @export
 #' @examples
 #' importData("raw")

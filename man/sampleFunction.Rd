@@ -24,11 +24,12 @@ importData("saved")
 sampleFunction("Y")
 sampleFunction("N")
 }
-\keyword{generic}
+\keyword{generic,}
 \keyword{import,}
 \keyword{por,}
-\keyword{raw,}
+\keyword{raw}
 \keyword{sample,}
 \keyword{saved,}
 \keyword{spss,}
+\keyword{template}
 

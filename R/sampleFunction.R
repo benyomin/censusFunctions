@@ -2,7 +2,7 @@
 #'
 #' This function is a template for structuring my code.
 #' @param arg1 "options are yes and no, enclosed in parens."
-#' @keywords sample, generic
+#' @keywords sample, generic, template
 #' @export
 #' @examples
 #' sampleFunction("Y")
