@@ -91,7 +91,10 @@ pWeightedNHC1 <<- pWeightedNHC + geom_line(aes(x=year,
                                         y=value,
                                         col=key))
 #pWeightedNHC1
-
+namedPlots<-c("carBoxPlot",
+              "pIncome","pallIncome",
+              "p3","p5","p7","p9","p11",
+              "pWeightedConsumption1")
 preparedPlot <- c(carBoxPlot,
          pIncome,pallIncome,
          p3,p5,p7,p9,p11,
