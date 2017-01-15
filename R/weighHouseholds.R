@@ -20,6 +20,7 @@ ownerWeightedIncome    = 0
 allWeightedConsumption = 0
 renterWeightedConsumption = 0
 ownerWeightedConsumption  = 0
+someyears   <- c(2004:2014)
 ##existing variables
 ##exp2004df {
            ##exp2004s
@@ -155,25 +156,13 @@ allWeightedIncome <- gather(allWeightedIncome, someyears)
 names(allWeightedIncome)[1]<-"year"
 names(allWeightedIncome)[2]<-"key"
 
-allWeightedConsumption <- gather(allWeightedConsumption, someyears)
+allWeightedConsumption <<- gather(allWeightedConsumption, someyears)
 names(allWeightedConsumption)[1]<-"year"
 names(allWeightedConsumption)[2]<-"key"
 
 allWeightedNHC <- gather(allWeightedNHC, someyears)
 names(allWeightedNHC)[1]<-"year"
 names(allWeightedNHC)[2]<-"key"
-
-
-
-
-
-
-
-
-
-
-
-
 
         return(1)
     }else if (arg1==0){

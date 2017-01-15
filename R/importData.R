@@ -13,7 +13,7 @@ importData <- function(source){
         return("Imported Housing Expenditure Survey from Central Bureau of Statistics raw files.")
     }else if(source=="saved"){
         source("../includes/getProcessedData.R", echo=FALSE)
-        return("Imported selected portions of Housing Expenditure Survey.")
+        return("Imported selected portions of Housing Expenditure Survey. Returns exp2004-14s")
     }else{"the only options are Y and N"
         return("the only options are 'raw' and 'saved'")
     }
