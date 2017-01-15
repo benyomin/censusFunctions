@@ -1,6 +1,6 @@
 library(roxygen2)
 library(devtools)
-setwd('~/personal/benyomin/censusFunctions')
+setwd('~/censusFunctions')
 document()
 install('censusFunctions')
 censusFunction1(1978)
