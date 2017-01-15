@@ -7,12 +7,17 @@
 #' @examples
 #' censusGraph("allIncome")
 #' censusGraph("allConsumption")
+#' censusGraph("car")
 censusGraph <- function(plot){
   if(plot=="allConsumption"){
-    plot$p7
-        return(plot$p7)
+        preparedPlot$p7
+        return(preparedPlot$p7)
   }else if (plot=="allIncome"){
-    plot$pallIncome
-        return(plot$pallIncome)
-    }else{return(0)}
-}
+        preparedPlot$pallIncome
+        return(preparedPlot$pallIncome)
+  }else if (plot=="car"){
+        preparedPlot$carBoxPlot
+        return(preparedPlot$carBoxPlot)
+  }else{
+        return(0)}}
+
