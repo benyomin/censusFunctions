@@ -7,7 +7,7 @@
 #' @examples
 #' importData("raw")
 #' importData("saved")
-sampleFunction <- function(source){
+importData <- function(source){
     if(source=="raw"){
         source("../includes/importExpenditureRaw.R",  echo=FALSE)
         return("Imported Housing Expenditure Survey from Central Bureau of Statistics raw files.")

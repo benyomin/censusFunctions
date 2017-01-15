@@ -3,6 +3,7 @@
 export(cat_function)
 export(censusFunction1)
 export(downloadHousingPrices)
+export(importData)
 export(install_if_needed)
 export(loadWealthEffectPackages)
 export(multiplot)
