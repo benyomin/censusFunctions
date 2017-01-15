@@ -10,6 +10,10 @@
 createGraphs <- function(arg1=1){
     if(arg1==TRUE){
 #names(matIncome)
+        ##sample
+carBoxPlot <- qplot(gear, mpg, data=mtcars, geom=c("boxplot", "jitter"),
+              fill=gear, main="Mileage by Gear Number",
+              xlab="", ylab="Miles per Gallon")
 plotIncome <-ggplot(data=matIncome)
 pIncome <<- plotIncome+ geom_line(aes(x=someyears,
                        y=meanGrossIncome))+xlab("")+
@@ -88,12 +92,14 @@ pWeightedNHC1 <<- pWeightedNHC + geom_line(aes(x=year,
                                         col=key))
 #pWeightedNHC1
 
-plot <- c(pIncome,pallIncome,p3,p5,p7,p9,p11,
+preparedPlot <- c(carBoxPlot,
+         pIncome,pallIncome,
+         p3,p5,p7,p9,p11,
           pWeightedConsumption1,
           pWeightedIncome1,
           pWeightedNHC1)
 
-      return(plot)
+      return(preparedPlot)
     }else if (arg1=="FALSE"){
         return(0)
     }else{return(0)}
