@@ -1,5 +1,7 @@
 library(roxygen2)
 library(devtools)
+devtools::install_github("hadley/tidyverse")
+library(tidyverse)
 setwd('~/censusFunctions')
 document()
 install('censusFunctions')

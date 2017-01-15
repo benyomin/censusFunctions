@@ -2,6 +2,7 @@
 
 export(cat_function)
 export(censusFunction1)
+export(create)
 export(downloadHousingPrices)
 export(importData)
 export(install_if_needed)
