@@ -1,4 +1,4 @@
-#' Helper function to change directories.
+#' Helper function to change directories. v.1.2
 #'
 #' This function installs the local or github version of Israel Census helper functions.
 #' @param location Either local or github.

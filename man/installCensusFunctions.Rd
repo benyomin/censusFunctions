@@ -2,7 +2,7 @@
 % Please edit documentation in R/installCensusFunctions.R
 \name{installCensusFunctions}
 \alias{installCensusFunctions}
-\title{Helper function to change directories.}
+\title{Helper function to change directories. v.1.2}
 \usage{
 installCensusFunctions(location)
 }
