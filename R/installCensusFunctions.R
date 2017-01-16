@@ -8,13 +8,13 @@
 #' installCensusFunctions("local")
 #' installCensusFunctions("github")
 installCensusFunctions <- function(location){
-  if(arg=="local"){
+  if(location=="local"){
     chngDir("package")
     devtools::install("~/censusFunctions")  ##local version
     library(censusFunctions)
     chngDir("paper")
    return("install local development version of censusFunctions")
-  }else if(arg=="github"){
+  }else if(location=="github"){
     devtools::install_github("benyomin/censusFunctions")
     library(censusFunctions)
     return("installed from github")

@@ -10,6 +10,34 @@
 #' weighHouseholds("owners","consumption")
 #' weighHouseholds("renters","NHC")
 weighHouseholds <- function(class, metric){
+  ##make data available for parsing
+  ##subset only 8 colums from >100
+  ##subset renters
+      exp2004renters <- ownership("renters",2004 )
+      exp2005renters <- ownership("renters",2005 )
+      exp2006renters <- ownership("renters",2006 )
+      exp2007renters <- ownership("renters",2007 )
+      exp2008renters <- ownership("renters",2008 )
+      exp2009renters <- ownership("renters",2009 )
+      exp2010renters <- ownership("renters",2010 )
+      exp2011renters <- ownership("renters",2011 )
+      exp2012renters <- ownership("renters",2012 )
+      exp2013renters <- ownership("renters",2013 )
+      exp2014renters <- ownership("renters",2014 )
+  ##subset owners
+      exp2004owners <- ownership("owners",2004 )
+      exp2005owners <- ownership("owners",2005 )
+      exp2006owners <- ownership("owners",2006 )
+      exp2007owners <- ownership("owners",2007 )
+      exp2008owners <- ownership("owners",2008 )
+      exp2009owners <- ownership("owners",2009 )
+      exp2010owners <- ownership("owners",2010 )
+      exp2011owners <- ownership("owners",2011 )
+      exp2012owners <- ownership("owners",2012 )
+      exp2013owners <- ownership("owners",2013 )
+      exp2014owners <- ownership("owners",2014 )
+
+
 if(class=="renters"){
     if(metric=="income"){
       exp2004renters$renterWeightedIncome<<-(exp2004renters$Q1 * exp2004renters$WEIGHT)/100
