@@ -9,9 +9,7 @@
 #' loadWealthEffectPackages()
 loadWealthEffectPackages <- function(load=TRUE){
   if(load==TRUE){
-        install_if_needed("tidyverse")
-        library(tidyverse)
-        install_if_needed("reshape2")
+        #install_if_needed("reshape2")
         library(reshape2)
         install_if_needed("roxygen2")
         library(roxygen2)
@@ -27,6 +25,8 @@ loadWealthEffectPackages <- function(load=TRUE){
         library(zoo)
         install_if_needed("dtplyr")
         library(dtplyr)
+        install_if_needed("tidyverse")
+        library(tidyverse)
         install_if_needed("gdata")
         library(gdata)
         #install_if_needed("operators")

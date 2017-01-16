@@ -38,7 +38,7 @@ meanRenterWeightedIncome<-
 matRenterWeightedIncome <-as.data.frame(cbind(someyears,meanRenterWeightedIncome))
       return(matRenterWeightedIncome)
     }else if(metric=="consumption"){
-      exp2014renters$renterWeightedConsumption<<-(exp2004renters[,3] * exp2004renters$WEIGHT)/100
+      exp2004renters$renterWeightedConsumption<<-(exp2004renters[,3] * exp2004renters$WEIGHT)/100
       exp2005renters$renterWeightedConsumption<<-(exp2005renters[,3] * exp2005renters$WEIGHT)/100
       exp2006renters$renterWeightedConsumption<<-(exp2006renters[,3] * exp2006renters$WEIGHT)/100
       exp2007renters$renterWeightedConsumption<<-(exp2007renters[,3] * exp2007renters$WEIGHT)/100
