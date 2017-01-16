@@ -10,6 +10,8 @@
 #' weighHouseholds("owners","consumption")
 #' weighHouseholds("renters","NHC")
 weighHouseholds <- function(class, metric){
+  ##declare variables
+  someyears<-c(2004:2014)
   ##make data available for parsing
   ##subset only 8 colums from >100
   ##subset renters
@@ -36,7 +38,6 @@ weighHouseholds <- function(class, metric){
       exp2012owners <- ownership("owners",2012 )
       exp2013owners <- ownership("owners",2013 )
       exp2014owners <- ownership("owners",2014 )
-
 
 if(class=="renters"){
     if(metric=="income"){
