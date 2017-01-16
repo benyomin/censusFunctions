@@ -4,7 +4,7 @@
 \alias{renameColumns}
 \title{rename columns from raw data.}
 \usage{
-renameColumns(arg)
+renameColumns(arg = TRUE)
 }
 \arguments{
 \item{arg}{Sentence describing arg.
