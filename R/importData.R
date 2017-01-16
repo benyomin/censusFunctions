@@ -30,9 +30,23 @@ exp2014s <-dget("../dataframes/exp2014s.txt")
 
       return("Imported selected portions of Housing Expenditure Survey. Returns exp2004-14s")
     }else if(source=="writeOut"){
-      return("not yet implemented")
+########################
+## write out new data ##
+########################
+dput(exp2004s, file="../dataframes/exp2004s.txt")
+dput(exp2005s, file="../dataframes/exp2005s.txt")
+dput(exp2006s, file="../dataframes/exp2006s.txt")
+dput(exp2007s, file="../dataframes/exp2007s.txt")
+dput(exp2008s, file="../dataframes/exp2008s.txt")
+dput(exp2009s, file="../dataframes/exp2009s.txt")
+dput(exp2010s, file="../dataframes/exp2010s.txt")
+dput(exp2011s, file="../dataframes/exp2011s.txt")
+dput(exp2012s, file="../dataframes/exp2012s.txt")
+dput(exp2013s, file="../dataframes/exp2013s.txt")
+dput(exp2014s, file="../dataframes/exp2014s.txt")
+        return("wrote out dataframes")
 
-    }else{"the only options are Y and N"
+    }else{   ##"the only options are Y and N"
         return("the only options are 'raw' and 'saved'")
     }}
 
