@@ -15,10 +15,12 @@ This function imports Israeli census data.
 \examples{
 importData("raw")
 importData("saved")
+importData("writeOut")
 }
 \keyword{import,}
+\keyword{load}
 \keyword{por,}
-\keyword{raw}
+\keyword{raw,}
 \keyword{saved,}
 \keyword{spss,}
 
