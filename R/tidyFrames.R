@@ -27,7 +27,7 @@ names(allWeightedIncome)[1]<-"year"
 allWeightedConsumption <-
   Hmisc::Merge(ownerWeightedConsumption,
                renterWeightedConsumption, id=~someyears)
-allWeightedConsumption <<- tidyr::gather(allWeightedConsumption, someyears)
+allWeightedConsumption <- tidyr::gather(allWeightedConsumption, someyears)
 names(allWeightedConsumption)[1]<-"year"
 names(allWeightedConsumption)[2]<-"key"
 return(allWeightedConsumption)
