@@ -1,7 +1,7 @@
-#' Graphs I've made before
+#' Graphs I've made before  v0.1.3
 #'
 #' This function plots with ggplot2
-#' @param class Owner or renter?
+#' @param class Owner or renter? Defaults to owner.
 #' @param x What goes on the x-axis?
 #' @param y What goes on the y-axis?
 #' @param year What year do you want to see?
@@ -38,7 +38,7 @@ incCons2004own <-     ggplot(frame1, aes(x=V1,
     xlab("Total Income")+
     ylab("Total Consumption")
 
-if(class==renters){          ##   renters
+if(class=="renters"){          ##   renters
   if(year==2004){
     if(x=="income"){
       if(y=="consumption"){

@@ -2,13 +2,13 @@
 % Please edit documentation in R/savedGraphs.R
 \name{savedGraphs}
 \alias{savedGraphs}
-\title{Graphs I've made before}
+\title{Graphs I've made before  v0.1.3}
 \usage{
 savedGraphs(class = "renters", x = "income", y = "consumption",
   year = 2004)
 }
 \arguments{
-\item{class}{Owner or renter?}
+\item{class}{Owner or renter? Defaults to owner.}
 
 \item{x}{What goes on the x-axis?}
 
