@@ -12,7 +12,7 @@ ownership(class, year)
 \item{year}{Numeric, from 2004 to 2014}
 }
 \description{
-Creates dataframes based on payment of rent..
+Creates dataframes based on payment of rent.
 }
 \examples{
 ownership("renters", 2012)
