@@ -8,6 +8,7 @@
 #' @examples
 #' ownership("renters", 2012)
 #' ownership("owners",  2004)
+
 #### new version                                              ##
 #### based on >0 in imputed rent                              ## 
 #### uses new column names

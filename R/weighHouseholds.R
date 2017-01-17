@@ -1,4 +1,4 @@
-#' Applies Weights to households.  v 0.25 - uses new column names
+#' Applies Weights to households.  v 0.27 - spacing?
 #'
 #' This function weighs Israeli census data. Returns 1 of 6 options mat[owner/renter]Weighted[Income/Consumption/NHC].
 #' @param class Takes values of renters or owners.
@@ -9,6 +9,7 @@
 #' weighHouseholds("renters","income")
 #' weighHouseholds("owners","consumption")
 #' weighHouseholds("renters","NHC")
+
 #### uses new column names
 #[1] "grossIncome"      "rentalIncome"     "totalConsumption"
 #[4] "rentEXP"          "imputedRent"      "WEIGHT"          

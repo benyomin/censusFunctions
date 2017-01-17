@@ -2,7 +2,7 @@
 % Please edit documentation in R/weighHouseholds.R
 \name{weighHouseholds}
 \alias{weighHouseholds}
-\title{Applies Weights to households.  v 0.25 - uses new column names}
+\title{Applies Weights to households.  v 0.27 - spacing?}
 \usage{
 weighHouseholds(class, metric)
 }
