@@ -1,4 +1,4 @@
-#' Applies Weights to households.
+#' Applies Weights to households.  v 0.25 - uses new column names
 #'
 #' This function weighs Israeli census data. Returns 1 of 6 options mat[owner/renter]Weighted[Income/Consumption/NHC].
 #' @param class Takes values of renters or owners.
@@ -9,6 +9,10 @@
 #' weighHouseholds("renters","income")
 #' weighHouseholds("owners","consumption")
 #' weighHouseholds("renters","NHC")
+#### uses new column names
+#[1] "grossIncome"      "rentalIncome"     "totalConsumption"
+#[4] "rentEXP"          "imputedRent"      "WEIGHT"          
+#[7] "HHNUM"            "year"
 weighHouseholds <- function(class, metric){
   ##declare variables
   someyears<-c(2004:2014)
@@ -41,17 +45,17 @@ weighHouseholds <- function(class, metric){
 
 if(class=="renters"){
     if(metric=="income"){
-      exp2004renters$renterWeightedIncome<<-(exp2004renters$Q1 * exp2004renters$WEIGHT)/100
-      exp2005renters$renterWeightedIncome<<-(exp2005renters$Q1 * exp2005renters$WEIGHT)/100
-      exp2006renters$renterWeightedIncome<<-(exp2006renters$Q1 * exp2006renters$WEIGHT)/100
-      exp2007renters$renterWeightedIncome<<-(exp2007renters$Q1 * exp2007renters$WEIGHT)/100
-      exp2008renters$renterWeightedIncome<<-(exp2008renters$Q1 * exp2008renters$WEIGHT)/100
-      exp2009renters$renterWeightedIncome<<-(exp2009renters$Q1 * exp2009renters$WEIGHT)/100
-      exp2010renters$renterWeightedIncome<<-(exp2010renters$Q1 * exp2010renters$WEIGHT)/100
-      exp2011renters$renterWeightedIncome<<-(exp2011renters$Q1 * exp2011renters$WEIGHT)/100
-      exp2012renters$renterWeightedIncome<<-(exp2012renters$Q1 * exp2012renters$WEIGHT)/100
-      exp2013renters$renterWeightedIncome<<-(exp2013renters$Q1 * exp2013renters$WEIGHT)/100
-      exp2014renters$renterWeightedIncome<<-(exp2014renters$Q1 * exp2014renters$WEIGHT)/100
+      exp2004renters$renterWeightedIncome<<-(exp2004renters$grossIncome * exp2004renters$WEIGHT)/100
+      exp2005renters$renterWeightedIncome<<-(exp2005renters$grossIncome * exp2005renters$WEIGHT)/100
+      exp2006renters$renterWeightedIncome<<-(exp2006renters$grossIncome * exp2006renters$WEIGHT)/100
+      exp2007renters$renterWeightedIncome<<-(exp2007renters$grossIncome * exp2007renters$WEIGHT)/100
+      exp2008renters$renterWeightedIncome<<-(exp2008renters$grossIncome * exp2008renters$WEIGHT)/100
+      exp2009renters$renterWeightedIncome<<-(exp2009renters$grossIncome * exp2009renters$WEIGHT)/100
+      exp2010renters$renterWeightedIncome<<-(exp2010renters$grossIncome * exp2010renters$WEIGHT)/100
+      exp2011renters$renterWeightedIncome<<-(exp2011renters$grossIncome * exp2011renters$WEIGHT)/100
+      exp2012renters$renterWeightedIncome<<-(exp2012renters$grossIncome * exp2012renters$WEIGHT)/100
+      exp2013renters$renterWeightedIncome<<-(exp2013renters$grossIncome * exp2013renters$WEIGHT)/100
+      exp2014renters$renterWeightedIncome<<-(exp2014renters$grossIncome * exp2014renters$WEIGHT)/100
 meanRenterWeightedIncome<- 
                    c(mean(exp2004renters$renterWeightedIncome),
                      mean(exp2005renters$renterWeightedIncome),
@@ -122,17 +126,17 @@ matRenterWeightedNHC <-as.data.frame(cbind(someyears,meanRenterWeightedNHC))
       return("valid metric args are income/consumption/NHC")}
 }else if(class=="owners"){
      if(metric=="income"){
-      exp2004owners$ownerWeightedIncome<<-(exp2004owners$Q1 * exp2004owners$WEIGHT)/100
-      exp2005owners$ownerWeightedIncome<<-(exp2005owners$Q1 * exp2005owners$WEIGHT)/100
-      exp2006owners$ownerWeightedIncome<<-(exp2006owners$Q1 * exp2006owners$WEIGHT)/100
-      exp2007owners$ownerWeightedIncome<<-(exp2007owners$Q1 * exp2007owners$WEIGHT)/100
-      exp2008owners$ownerWeightedIncome<<-(exp2008owners$Q1 * exp2008owners$WEIGHT)/100
-      exp2009owners$ownerWeightedIncome<<-(exp2009owners$Q1 * exp2009owners$WEIGHT)/100
-      exp2010owners$ownerWeightedIncome<<-(exp2010owners$Q1 * exp2010owners$WEIGHT)/100
-      exp2011owners$ownerWeightedIncome<<-(exp2011owners$Q1 * exp2011owners$WEIGHT)/100
-      exp2012owners$ownerWeightedIncome<<-(exp2012owners$Q1 * exp2012owners$WEIGHT)/100
-      exp2013owners$ownerWeightedIncome<<-(exp2013owners$Q1 * exp2013owners$WEIGHT)/100
-      exp2014owners$ownerWeightedIncome<<-(exp2014owners$Q1 * exp2014owners$WEIGHT)/100
+      exp2004owners$ownerWeightedIncome<<-(exp2004owners$grossIncome * exp2004owners$WEIGHT)/100
+      exp2005owners$ownerWeightedIncome<<-(exp2005owners$grossIncome * exp2005owners$WEIGHT)/100
+      exp2006owners$ownerWeightedIncome<<-(exp2006owners$grossIncome * exp2006owners$WEIGHT)/100
+      exp2007owners$ownerWeightedIncome<<-(exp2007owners$grossIncome * exp2007owners$WEIGHT)/100
+      exp2008owners$ownerWeightedIncome<<-(exp2008owners$grossIncome * exp2008owners$WEIGHT)/100
+      exp2009owners$ownerWeightedIncome<<-(exp2009owners$grossIncome * exp2009owners$WEIGHT)/100
+      exp2010owners$ownerWeightedIncome<<-(exp2010owners$grossIncome * exp2010owners$WEIGHT)/100
+      exp2011owners$ownerWeightedIncome<<-(exp2011owners$grossIncome * exp2011owners$WEIGHT)/100
+      exp2012owners$ownerWeightedIncome<<-(exp2012owners$grossIncome * exp2012owners$WEIGHT)/100
+      exp2013owners$ownerWeightedIncome<<-(exp2013owners$grossIncome * exp2013owners$WEIGHT)/100
+      exp2014owners$ownerWeightedIncome<<-(exp2014owners$grossIncome * exp2014owners$WEIGHT)/100
 meanOwnerWeightedIncome<- 
                    c(mean(exp2004owners$ownerWeightedIncome),
                      mean(exp2005owners$ownerWeightedIncome),
