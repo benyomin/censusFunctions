@@ -2,7 +2,7 @@
 % Please edit documentation in R/importData.R
 \name{importData}
 \alias{importData}
-\title{Import data to workspace}
+\title{Import data to workspace v.0.3}
 \usage{
 importData(source)
 }
@@ -10,12 +10,13 @@ importData(source)
 \item{source}{Source for data, "raw" imports from .por files. "saved" files were previously parsed in R.}
 }
 \description{
-This function imports Israeli census data.
+This function imports Israeli census data from spss .por files distributed by the CBS.
 }
 \examples{
 importData("raw")
 importData("saved")
 importData("writeOut")
+importData(family)
 }
 \keyword{import,}
 \keyword{load}

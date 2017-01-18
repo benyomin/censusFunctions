@@ -1,6 +1,6 @@
-#' Import data to workspace
+#' Import data to workspace v.0.3
 #'
-#' This function imports Israeli census data.
+#' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R.
 #' @keywords import, saved, spss, por, raw, load
 #' @export
@@ -8,8 +8,13 @@
 #' importData("raw")
 #' importData("saved")
 #' importData("writeOut")
+#' importData(family)
 importData <- function(source){
-    if(source=="raw"){
+  family="family"
+  expenditure="raw"
+  if(source=="family"){
+return("it works")
+  }else  if(source=="raw"){
    #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
 exp2004 <- spss.get("../rawData/census/f466/f466exp.por",
                   use.value.labels = TRUE)
