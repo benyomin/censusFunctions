@@ -11,6 +11,7 @@
 #' importData("writeOutEXP")
 #' importData("combine")
 #' importData("writeOutCombined")
+#' importData("importExpFamInd")
 #' importData("importCombined")
 importData <- function(source){
   family="family"
@@ -117,6 +118,46 @@ fam2014s <<-dplyr::select(fam2014df,HHNUM,
                           CODELOC,SUBDIST,CLUSTER)
 
 return("Family data imported. 59 vars in 2005, 100 vars in 2013")
+  }else if(source=="rawIND"){
+ind2004 <- spss.get("../rawData/census/f466/f466ind.por",
+                  use.value.labels = TRUE)
+ind2005 <- spss.get("../rawData/census/f467/f467ind.por",
+                  use.value.labels = TRUE)
+ind2006 <- spss.get("../rawData/census/f468/n468ind.por",  
+                  use.value.labels = TRUE)
+ind2007 <- spss.get("../rawData/census/f469/f469ind.por",
+                  use.value.labels = TRUE)
+ind2008 <- spss.get("../rawData/census/f474/f474ind.por",
+                  use.value.labels = TRUE)
+ind2009 <- spss.get("../rawData/census/f472/f472ind.por",
+                    use.value.labels = TRUE)
+ind2010 <- haven::read_por("../rawData/census/f471/f471ind.por")
+ind2011 <- spss.get("../rawData/census/f459/f459ind.por",
+                    use.value.labels = TRUE)
+ind2012 <- spss.get("../rawData/census/f458/f458ind.por",
+                    use.value.labels = TRUE)
+ind2013 <- spss.get("../rawData/census/f457/f457ind.por",
+                    use.value.labels = TRUE)
+ind2014 <- spss.get("../rawData/census/f456/f456ind.por",
+                    use.value.labels = TRUE)
+ind2004s <- select(ind2004,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2005s <- select(ind2005,HHNUM,PERSNUM,RELATHH,AGE,SCHOOLY)
+ind2006s <- select(ind2006,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2007s <- select(ind2007,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2008s <- select(ind2008,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2009s <- select(ind2009,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2010s <- select(ind2010,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2011s <- select(ind2011,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2012s <- select(ind2012,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2013s <- select(ind2013,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2014s <- select(ind2014,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+
+    return("imported raw individual data, subset selected columns")
+  }else  if(source=="writeOutInd"){
+
+    return("wrote out IND data.")
+  }else  if(source=="savedIND"){
+    return("imported Individual data from saved subset.")
   }else  if(source=="raw"){
    #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
 exp2004 <- spss.get("../rawData/census/f466/f466exp.por",
@@ -219,6 +260,38 @@ data2012<<-dget("../dataframes/data2012.txt")
 data2013<<-dget("../dataframes/data2013.txt")
 data2014<<-dget("../dataframes/data2014.txt")
       return("wrote out dataframes")
+ }else if(source=="writeOutExpFamInd"){
+####################################
+## write out combined data frames ##
+####################################
+dput(expFamInd2004, file="../dataframes/expFamInd2004.txt")
+dput(expFamInd2005, file="../dataframes/expFamInd2005.txt")
+dput(expFamInd2006, file="../dataframes/expFamInd2006.txt")
+dput(expFamInd2007, file="../dataframes/expFamInd2007.txt")
+dput(expFamInd2008, file="../dataframes/expFamInd2008.txt")
+dput(expFamInd2009, file="../dataframes/expFamInd2009.txt")
+dput(expFamInd2010, file="../dataframes/expFamInd2010.txt")
+dput(expFamInd2011, file="../dataframes/expFamInd2011.txt")
+dput(expFamInd2012, file="../dataframes/expFamInd2012.txt")
+dput(expFamInd2013, file="../dataframes/expFamInd2013.txt")
+dput(expFamInd2014, file="../dataframes/expFamInd2014.txt")
+      return("wrote out dataframes with Exp, Fam and Ind columns")
+ }else if(source=="importExpFamInd"){
+####################################
+## import    combined data frames ##
+####################################
+expFamInd2004<<-dget("../dataframes/expFamInd2004.txt")
+expFamInd2005<<-dget("../dataframes/expFamInd2005.txt")
+expFamInd2006<<-dget("../dataframes/expFamInd2006.txt")
+expFamInd2007<<-dget("../dataframes/expFamInd2007.txt")
+expFamInd2008<<-dget("../dataframes/expFamInd2008.txt")
+expFamInd2009<<-dget("../dataframes/expFamInd2009.txt")
+expFamInd2010<<-dget("../dataframes/expFamInd2010.txt")
+expFamInd2011<<-dget("../dataframes/expFamInd2011.txt")
+expFamInd2012<<-dget("../dataframes/expFamInd2012.txt")
+expFamInd2013<<-dget("../dataframes/expFamInd2013.txt")
+expFamInd2014<<-dget("../dataframes/expFamInd2014.txt")
+      return("wrote out dataframes with Exp, Fam and Ind columns")
           }else if(source=="writeOutCombined"){
 ####################################
 ## write out combined data frames ##

@@ -19,6 +19,7 @@ importData("family")
 importData("writeOutEXP")
 importData("combine")
 importData("writeOutCombined")
+importData("importExpFamInd")
 importData("importCombined")
 }
 \keyword{import,}
