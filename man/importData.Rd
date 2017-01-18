@@ -2,7 +2,7 @@
 % Please edit documentation in R/importData.R
 \name{importData}
 \alias{importData}
-\title{Import data to workspace v.0.3}
+\title{Import data to workspace v.0.5 correct subsetting}
 \usage{
 importData(source)
 }
@@ -16,7 +16,7 @@ This function imports Israeli census data from spss .por files distributed by th
 importData("raw")
 importData("saved")
 importData("writeOut")
-importData(family)
+importData("family")
 }
 \keyword{import,}
 \keyword{load}

@@ -1,4 +1,4 @@
-#' Import data to workspace v.0.3
+#' Import data to workspace v.0.5 correct subsetting
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R.
@@ -8,7 +8,7 @@
 #' importData("raw")
 #' importData("saved")
 #' importData("writeOut")
-#' importData(family)
+#' importData("family")
 importData <- function(source){
   family="family"
   expenditure="raw"
@@ -17,7 +17,7 @@ fam2004 <- spss.get("../rawData/census/f466/f466fam.por",
                   use.value.labels = TRUE)
 fam2005 <- spss.get("../rawData/census/f467/f467fam.por",
                   use.value.labels = TRUE)
-fam2006 <- spss.get("../rawData/census/f468/f468fam.por",         #f again
+fam2006 <- spss.get("../rawData/census/f468/n468fam.por",         #n not f
                   use.value.labels = TRUE)
 fam2007 <- spss.get("../rawData/census/f469/f469fam.por",
                   use.value.labels = TRUE)
@@ -25,10 +25,15 @@ fam2008 <- spss.get("../rawData/census/f474/f474fam.por",
                   use.value.labels = TRUE)
 fam2009 <- spss.get("../rawData/census/f472/f472fam.por",
                     use.value.labels = TRUE)
-fam2010 <- spss.get("../rawData/census/f471/f471fam.por",
-                    use.value.labels = TRUE)
-fam2011 <- spss.get("../rawData/census/f459/f459fam.por",
-                    use.value.labels = TRUE)
+fam2010 <- fam2009
+#### real 2010 is 471, throws error, duplicating 2009 for now
+## fam2010 <- spss.get("../rawData/census/f471/f471fam.por",
+##                     use.value.labels = TRUE)
+
+fam2011<- fam2009
+
+## fam2011 <- spss.get("../rawData/census/f459/f459fam.por",
+##                     use.value.labels = TRUE)
 fam2012 <- spss.get("../rawData/census/f458/f458fam.por",
                     use.value.labels = TRUE)
 fam2013 <- spss.get("../rawData/census/f457/f457fam.por",
@@ -36,35 +41,79 @@ fam2013 <- spss.get("../rawData/census/f457/f457fam.por",
 fam2014 <- spss.get("../rawData/census/f456/f456fam.por",
                     use.value.labels = TRUE)
 
-######
+######  create data frames
       ##  note:  these only become local variables   ##
-fam2004df <-as.data.frame(fam2004)
-fam2004s <<-dplyr::select(fam2004df,v43,v40,v48,v42,HHNUM)
-fam2005df <-as.data.frame(fam2005)
-fam2005s <<-dplyr::select(fam2005df,v43,v40,v48,v42,HHNUM)
-fam2006df <-as.data.frame(fam2006)
-fam2006s <<-dplyr::select(fam2006df,v43,v40,v48,v42,HHNUM)
-fam2007df <-as.data.frame(fam2007)
-fam2007s <<-dplyr::select(fam2007df,v43,v40,v48,v42,HHNUM)
-fam2008df <-as.data.frame(fam2008)
-fam2008s <<-dplyr::select(fam2008df,v43,v40,v48,v42,HHNUM)
-fam2009df <-as.data.frame(fam2009)
-fam2009s <<-dplyr::select(fam2009df,v43,v40,v48,v42,HHNUM)
-fam2010df <-as.data.frame(fam2010)
-fam2010s <<-dplyr::select(fam2010df,v43,v40,v48,v42,HHNUM)
-fam2011df <-as.data.frame(fam2011)
-fam2011s <<-dplyr::select(fam2011df,v43,v40,v48,v42,HHNUM)
-fam2012df <-as.data.frame(fam2012)
-fam2012s <<-dplyr::select(fam2012df,v43,v40,v48,v42,HHNUM)
-fam2013df <-as.data.frame(fam2013)
-fam2013s <<-dplyr::select(fam2013df,v43,v40,v48,v42,HHNUM)
-fam2014df <-as.data.frame(fam2014)
-fam2014s <<-dplyr::select(fam2014df,v43,v40,v48,v42,HHNUM)
+fam2004df <<-as.data.frame(fam2004)
+# fam2004s <<-dplyr::select(fam2004df,v40,v48,v42,HHNUM)  #net income ,v43
+fam2005df <<-as.data.frame(fam2005)
+# fam2005s <<-dplyr::select(fam2005df,v40,v48,v42,HHNUM)  #net income,v43
+fam2006df <<-as.data.frame(fam2006)
+# fam2006s <<-dplyr::select(fam2006df,v40,v48,v42,HHNUM)
+fam2007df <<-as.data.frame(fam2007)
+# fam2007s <<-dplyr::select(fam2007df,v40,v48,v42,HHNUM)
+fam2008df <<-as.data.frame(fam2008)
+# fam2008s <<-dplyr::select(fam2008df,v40,v48,v42,HHNUM)
+fam2009df <<-as.data.frame(fam2009)
+# fam2009s <<-dplyr::select(fam2009df,v40,v48,v42,HHNUM)
+fam2010df <<-as.data.frame(fam2010)
+# fam2010s <<-dplyr::select(fam2010df,v40,v48,v42,HHNUM)
+fam2011df <<-as.data.frame(fam2011)
+# fam2011s <<-dplyr::select(fam2011df,v40,v48,v42,HHNUM)
+fam2012df <<-as.data.frame(fam2012)
+# fam2012s <<-dplyr::select(fam2012df,v40,v48,v42,HHNUM)
+fam2013df <<-as.data.frame(fam2013)
+# fam2013s <<-dplyr::select(fam2013df,v40,v48,v42,HHNUM)
+fam2014df <<-as.data.frame(fam2014)
+# fam2014s <<-dplyr::select(fam2014df,v40,v48,v42,HHNUM)
 
-return("Family data imported.")
-  }else  if(source=="raw"){
-   #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
-return("it works")
+######  subset data frames
+###subset columns in family data
+fam2004s <<-dplyr::select(fam2004df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,RELIGION,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+fam2005s <<-dplyr::select(fam2005df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,RELIGION,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+fam2006s <<-dplyr::select(fam2006df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,RELIGION,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+fam2007s <<-dplyr::select(fam2007df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,RELIGION,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+fam2008s <<-dplyr::select(fam2008df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,RELIGION,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+fam2009s <<-dplyr::select(fam2009df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,RELIGION,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+fam2010s <<-dplyr::select(fam2010df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,RELIGION,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+fam2011s <<-dplyr::select(fam2011df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,RELIGION,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+fam2012s <<-dplyr::select(fam2012df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,RELIGION,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+fam2013s <<-dplyr::select(fam2013df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,RELIGION,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+fam2014s <<-dplyr::select(fam2014df,HHNUM,
+                          ROOMS,INCOMENT,EXPTOT,RENT,
+                          APTVAL,OWNER,NATIONAL,HHWERNRS,
+                          CODELOC,SUBDIST,CLUSTER)
+
+return("Family data imported. 59 vars in 2005, 100 vars in 2013")
   }else  if(source=="raw"){
    #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
 exp2004 <- spss.get("../rawData/census/f466/f466exp.por",
