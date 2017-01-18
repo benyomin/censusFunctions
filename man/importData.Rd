@@ -15,8 +15,11 @@ This function imports Israeli census data from spss .por files distributed by th
 \examples{
 importData("raw")
 importData("saved")
-importData("writeOut")
 importData("family")
+importData("writeOutEXP")
+importData("combine")
+importData("writeOutCombined")
+importData("importCombined")
 }
 \keyword{import,}
 \keyword{load}

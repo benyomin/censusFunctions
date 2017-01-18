@@ -7,8 +7,11 @@
 #' @examples
 #' importData("raw")
 #' importData("saved")
-#' importData("writeOut")
 #' importData("family")
+#' importData("writeOutEXP")
+#' importData("combine")
+#' importData("writeOutCombined")
+#' importData("importCombined")
 importData <- function(source){
   family="family"
   expenditure="raw"
@@ -184,7 +187,7 @@ exp2013s <<-dget("../dataframes/exp2013s.txt")
 exp2014s <<-dget("../dataframes/exp2014s.txt")
 
       return("Imported selected portions of Housing Expenditure Survey. Returns exp2004-14s")
-    }else if(source=="writeOut"){
+    }else if(source=="writeOutEXP"){
 ########################
 ## write out new data ##
 ########################
@@ -199,8 +202,51 @@ dput(exp2011s, file="../dataframes/exp2011s.txt")
 dput(exp2012s, file="../dataframes/exp2012s.txt")
 dput(exp2013s, file="../dataframes/exp2013s.txt")
 dput(exp2014s, file="../dataframes/exp2014s.txt")
-        return("wrote out dataframes")
-
+      return("wrote out dataframes")
+          }else if(source=="importCombined"){
+####################################
+## IMPORT    combined data frames ##
+####################################
+data2004<<-dget("../dataframes/data2004.txt")
+data2005<<-dget("../dataframes/data2005.txt")
+data2006<<-dget("../dataframes/data2006.txt")
+data2007<<-dget("../dataframes/data2007.txt")
+data2008<<-dget("../dataframes/data2008.txt")
+data2009<<-dget("../dataframes/data2009.txt")
+data2010<<-dget("../dataframes/data2010.txt")
+data2011<<-dget("../dataframes/data2011.txt")
+data2012<<-dget("../dataframes/data2012.txt")
+data2013<<-dget("../dataframes/data2013.txt")
+data2014<<-dget("../dataframes/data2014.txt")
+      return("wrote out dataframes")
+          }else if(source=="writeOutCombined"){
+####################################
+## write out combined data frames ##
+####################################
+dput(data2004, file="../dataframes/data2004.txt")
+dput(data2005, file="../dataframes/data2005.txt")
+dput(data2006, file="../dataframes/data2006.txt")
+dput(data2007, file="../dataframes/data2007.txt")
+dput(data2008, file="../dataframes/data2008.txt")
+dput(data2009, file="../dataframes/data2009.txt")
+dput(data2010, file="../dataframes/data2010.txt")
+dput(data2011, file="../dataframes/data2011.txt")
+dput(data2012, file="../dataframes/data2012.txt")
+dput(data2013, file="../dataframes/data2013.txt")
+dput(data2014, file="../dataframes/data2014.txt")
+      return("wrote out dataframes")
+      }else if(source=="combine"){
+data2004<<-merge(exp2004s,fam2004s, by="HHNUM")
+data2005<<-merge(exp2005s,fam2005s, by="HHNUM")
+data2006<<-merge(exp2006s,fam2006s, by="HHNUM")
+data2007<<-merge(exp2007s,fam2007s, by="HHNUM")
+data2008<<-merge(exp2008s,fam2008s, by="HHNUM")
+data2009<<-merge(exp2009s,fam2009s, by="HHNUM")
+data2010<<-merge(exp2010s,fam2010s, by="HHNUM")
+data2011<<-merge(exp2011s,fam2011s, by="HHNUM")
+data2012<<-merge(exp2012s,fam2012s, by="HHNUM")
+data2013<<-merge(exp2013s,fam2013s, by="HHNUM")
+data2004<<-merge(exp2014s,fam2014s, by="HHNUM")
     }else{   ##"the only options are Y and N"
         return("the only options are 'raw' and 'saved'")
     }}
