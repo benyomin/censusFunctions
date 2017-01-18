@@ -13,6 +13,57 @@ importData <- function(source){
   family="family"
   expenditure="raw"
   if(source=="family"){
+fam2004 <- spss.get("../rawData/census/f466/f466fam.por",
+                  use.value.labels = TRUE)
+fam2005 <- spss.get("../rawData/census/f467/f467fam.por",
+                  use.value.labels = TRUE)
+fam2006 <- spss.get("../rawData/census/f468/f468fam.por",         #f again
+                  use.value.labels = TRUE)
+fam2007 <- spss.get("../rawData/census/f469/f469fam.por",
+                  use.value.labels = TRUE)
+fam2008 <- spss.get("../rawData/census/f474/f474fam.por",
+                  use.value.labels = TRUE)
+fam2009 <- spss.get("../rawData/census/f472/f472fam.por",
+                    use.value.labels = TRUE)
+fam2010 <- spss.get("../rawData/census/f471/f471fam.por",
+                    use.value.labels = TRUE)
+fam2011 <- spss.get("../rawData/census/f459/f459fam.por",
+                    use.value.labels = TRUE)
+fam2012 <- spss.get("../rawData/census/f458/f458fam.por",
+                    use.value.labels = TRUE)
+fam2013 <- spss.get("../rawData/census/f457/f457fam.por",
+                    use.value.labels = TRUE)
+fam2014 <- spss.get("../rawData/census/f456/f456fam.por",
+                    use.value.labels = TRUE)
+
+######
+      ##  note:  these only become local variables   ##
+fam2004df <-as.data.frame(fam2004)
+fam2004s <<-dplyr::select(fam2004df,v43,v40,v48,v42,HHNUM)
+fam2005df <-as.data.frame(fam2005)
+fam2005s <<-dplyr::select(fam2005df,v43,v40,v48,v42,HHNUM)
+fam2006df <-as.data.frame(fam2006)
+fam2006s <<-dplyr::select(fam2006df,v43,v40,v48,v42,HHNUM)
+fam2007df <-as.data.frame(fam2007)
+fam2007s <<-dplyr::select(fam2007df,v43,v40,v48,v42,HHNUM)
+fam2008df <-as.data.frame(fam2008)
+fam2008s <<-dplyr::select(fam2008df,v43,v40,v48,v42,HHNUM)
+fam2009df <-as.data.frame(fam2009)
+fam2009s <<-dplyr::select(fam2009df,v43,v40,v48,v42,HHNUM)
+fam2010df <-as.data.frame(fam2010)
+fam2010s <<-dplyr::select(fam2010df,v43,v40,v48,v42,HHNUM)
+fam2011df <-as.data.frame(fam2011)
+fam2011s <<-dplyr::select(fam2011df,v43,v40,v48,v42,HHNUM)
+fam2012df <-as.data.frame(fam2012)
+fam2012s <<-dplyr::select(fam2012df,v43,v40,v48,v42,HHNUM)
+fam2013df <-as.data.frame(fam2013)
+fam2013s <<-dplyr::select(fam2013df,v43,v40,v48,v42,HHNUM)
+fam2014df <-as.data.frame(fam2014)
+fam2014s <<-dplyr::select(fam2014df,v43,v40,v48,v42,HHNUM)
+
+return("Family data imported.")
+  }else  if(source=="raw"){
+   #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
 return("it works")
   }else  if(source=="raw"){
    #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
