@@ -246,7 +246,7 @@ data2010<<-merge(exp2010s,fam2010s, by="HHNUM")
 data2011<<-merge(exp2011s,fam2011s, by="HHNUM")
 data2012<<-merge(exp2012s,fam2012s, by="HHNUM")
 data2013<<-merge(exp2013s,fam2013s, by="HHNUM")
-data2004<<-merge(exp2014s,fam2014s, by="HHNUM")
+data2014<<-merge(exp2014s,fam2014s, by="HHNUM")
     }else{   ##"the only options are Y and N"
         return("the only options are 'raw' and 'saved'")
     }}
