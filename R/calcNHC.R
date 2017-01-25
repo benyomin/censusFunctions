@@ -8,7 +8,7 @@
 #' @examples
 #' calcNHC(TRUE)
 #' calcNHC(FALSE)
-calNHC <- function(arg=TRUE){
+calcNHC <- function(arg=TRUE){
 exp2004owners$NHC<<-exp2004owners[,3] - exp2004owners[,5]
 exp2005owners$NHC<<-exp2005owners[,3] - exp2005owners[,5]
 exp2006owners$NHC<<-exp2006owners[,3] - exp2006owners[,5]
