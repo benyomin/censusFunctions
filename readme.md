@@ -1,6 +1,12 @@
 # Readme
-## helper functions for 
+## helper functions for working with Israeli Census Data 
+<br>
+developed for:<br>
 <a href="http://benyomin.github.io">"Housing Wealth Effect Paper"</a>
+<br>
+load these functions in R via:<br>
+devtools::install_github("benyomin/censusFunctions")
+
 <br>
 <a href="http://stackexchange.com/users/2035856/%d7%91%d7%a0%d7%99%d7%9e%d7%9f-%d7%94%d7%92%d7%9c%d7%99%d7%9c%d7%99"><img src="http://stackexchange.com/users/flair/2035856.png" width="208" height="58" alt="profile for בנימן הגלילי on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for בנימן הגלילי on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
 <br>
