@@ -1,5 +1,5 @@
-#' Creates dataframes expYYYYowners and expYYYYrenters, calles weighHouseholds.
-#'
+#' Creates dataframes expYYYYowners and expYYYYrenters,
+#' calls weighHouseholds() ; 
 #' This function creates subsets of renters and owners.
 #' @param arg Defaults to true.
 #' @keywords owners, renters, subset

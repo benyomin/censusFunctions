@@ -2,7 +2,9 @@
 % Please edit documentation in R/ownership.R
 \name{ownership}
 \alias{ownership}
-\title{Divide into owners and renters.}
+\title{Divide into owners and renters.
+Is called by: weighHouseholds(), takes expYYYYs
+Creates dataframes based on payment of rent.}
 \usage{
 ownership(class, year)
 }
@@ -12,6 +14,8 @@ ownership(class, year)
 \item{year}{Numeric, from 2004 to 2014}
 }
 \description{
+Divide into owners and renters.
+Is called by: weighHouseholds(), takes expYYYYs
 Creates dataframes based on payment of rent.
 }
 \examples{

@@ -2,7 +2,9 @@
 % Please edit documentation in R/subsetByOwnership.R
 \name{subsetByOwnership}
 \alias{subsetByOwnership}
-\title{Creates dataframes expYYYYowners and expYYYYrenters, calles weighHouseholds.}
+\title{Creates dataframes expYYYYowners and expYYYYrenters,
+calls weighHouseholds() ; 
+This function creates subsets of renters and owners.}
 \usage{
 subsetByOwnership(arg = TRUE)
 }
@@ -10,6 +12,8 @@ subsetByOwnership(arg = TRUE)
 \item{arg}{Defaults to true.}
 }
 \description{
+Creates dataframes expYYYYowners and expYYYYrenters,
+calls weighHouseholds() ; 
 This function creates subsets of renters and owners.
 }
 \examples{

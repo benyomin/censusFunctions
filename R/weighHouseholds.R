@@ -1,5 +1,5 @@
-#' Applies Weights to households.  v 0.27 - spacing?
-#'
+#' Applies Weights to households.
+#' Calls ownership() ; returns expYYYY[renters/owners]
 #' This function weighs Israeli census data. Returns 1 of 6 options mat[owner/renter]Weighted[Income/Consumption/NHC].
 #' @param class Takes values of renters or owners.
 #' @param metric Takes values of income, consumption or NHC.
@@ -12,7 +12,7 @@
 
 #### uses new column names
 #[1] "grossIncome"      "rentalIncome"     "totalConsumption"
-#[4] "rentEXP"          "imputedRent"      "WEIGHT"          
+#[4] "rentEXP"          "imputedRent"      "WEIGHT"
 #[7] "HHNUM"            "year"
 weighHouseholds <- function(class, metric){
   ##declare variables

@@ -2,7 +2,9 @@
 % Please edit documentation in R/weighHouseholds.R
 \name{weighHouseholds}
 \alias{weighHouseholds}
-\title{Applies Weights to households.  v 0.27 - spacing?}
+\title{Applies Weights to households.
+Calls ownership() ; returns expYYYY[renters/owners]
+This function weighs Israeli census data. Returns 1 of 6 options mat[owner/renter]Weighted[Income/Consumption/NHC].}
 \usage{
 weighHouseholds(class, metric)
 }
@@ -12,6 +14,8 @@ weighHouseholds(class, metric)
 \item{metric}{Takes values of income, consumption or NHC.}
 }
 \description{
+Applies Weights to households.
+Calls ownership() ; returns expYYYY[renters/owners]
 This function weighs Israeli census data. Returns 1 of 6 options mat[owner/renter]Weighted[Income/Consumption/NHC].
 }
 \examples{

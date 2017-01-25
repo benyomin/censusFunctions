@@ -1,5 +1,5 @@
 #' Divide into owners and renters.
-#'
+#' Is called by: weighHouseholds(), takes expYYYYs
 #' Creates dataframes based on payment of rent.
 #' @param class owners or renters, defaults to owners.
 #' @param year Numeric, from 2004 to 2014
@@ -10,10 +10,10 @@
 #' ownership("owners",  2004)
 
 #### new version                                              ##
-#### based on >0 in imputed rent                              ## 
+#### based on >0 in imputed rent                              ##
 #### uses new column names
 #[1] "grossIncome"      "rentalIncome"     "totalConsumption"
-#[4] "rentEXP"          "imputedRent"      "WEIGHT"          
+#[4] "rentEXP"          "imputedRent"      "WEIGHT"
 #[7] "HHNUM"            "year"
 ownership <- function(class, year){
     someyears   <- c(2004:2014)
@@ -25,7 +25,7 @@ ownership <- function(class, year){
     }else if(year==2008){return(subset(exp2008s,imputedRent==0))
     }else if(year==2009){return(subset(exp2009s,imputedRent==0))
     }else if(year==2010){return(subset(exp2010s,imputedRent==0))
-    }else if(year==2011){return(subset(exp2012s,imputedRent==0))
+    }else if(year==2011){return(subset(exp2011s,imputedRent==0))
     }else if(year==2012){return(subset(exp2012s,imputedRent==0))
     }else if(year==2013){return(subset(exp2013s,imputedRent==0))
     }else if(year==2014){return(subset(exp2014s,imputedRent==0))
@@ -38,7 +38,7 @@ ownership <- function(class, year){
     }else if(year==2008){return(subset(exp2008s, imputedRent>0))
     }else if(year==2009){return(subset(exp2009s, imputedRent>0))
     }else if(year==2010){return(subset(exp2010s, imputedRent>0))
-    }else if(year==2011){return(subset(exp2012s, imputedRent>0))
+    }else if(year==2011){return(subset(exp2011s, imputedRent>0))
     }else if(year==2012){return(subset(exp2012s, imputedRent>0))
     }else if(year==2013){return(subset(exp2013s, imputedRent>0))
     }else if(year==2014){return(subset(exp2014s, imputedRent>0))
