@@ -27,4 +27,3 @@ downloadHousingPrices()
 \keyword{fetch,}
 \keyword{housing,}
 \keyword{price,}
-

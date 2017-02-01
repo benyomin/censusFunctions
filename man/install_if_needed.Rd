@@ -21,4 +21,3 @@ install_if_needed("dplyr")
 
 }
 \keyword{install}
-

@@ -18,4 +18,3 @@ rentersIncome()
 \keyword{owner,}
 \keyword{renter,}
 \keyword{subset}
-

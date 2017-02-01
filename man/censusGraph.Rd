@@ -21,4 +21,3 @@ censusGraph("car")
 \keyword{graph,}
 \keyword{plot,}
 \keyword{viewer}
-

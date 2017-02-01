@@ -26,4 +26,3 @@ savedGraphs("renters","income",        "rent", 2010)
 }
 \keyword{graph,}
 \keyword{plot}
-

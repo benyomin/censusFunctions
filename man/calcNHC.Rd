@@ -18,4 +18,3 @@ This function subtracts.
 calcNHC(TRUE)
 calcNHC(FALSE)
 }
-

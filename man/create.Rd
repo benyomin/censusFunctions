@@ -19,4 +19,3 @@ create("means")
 \keyword{aggregate,}
 \keyword{data}
 \keyword{process,}
-

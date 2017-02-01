@@ -27,4 +27,3 @@ loadWealthEffectPackages()
 \keyword{packages,}
 \keyword{require,}
 \keyword{requirements}
-

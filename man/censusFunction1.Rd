@@ -2,6 +2,7 @@
 % Please edit documentation in R/censusFunction1.R, R/censusFunction2.R
 \name{censusFunction1}
 \alias{censusFunction1}
+\alias{censusFunction1}
 \title{A Census Function}
 \usage{
 censusFunction1(year = TRUE)
@@ -27,4 +28,3 @@ censusFunction2()
 }
 \keyword{household}
 \keyword{individual,}
-

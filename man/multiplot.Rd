@@ -33,4 +33,3 @@ multiplot(gdp,consumption,netExports
 \keyword{ggplot,ggplot2,}
 \keyword{many}
 \keyword{multiple,}
-

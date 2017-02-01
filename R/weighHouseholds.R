@@ -44,8 +44,13 @@ weighHouseholds <- function(class, metric){
       exp2013owners  <<- ownership("owners",2013 )
       exp2014owners  <<- ownership("owners",2014 )
 
-if(class=="renters"){
-    if(metric=="income"){
+  if(class=="renters"){
+    if(metric=="keymoney"){
+      years = (2004:2014)
+      ## call for side effect of <<-
+      ownership("keymoney", years)
+      ownership("notkey", years)
+    }else if(metric=="income"){
       exp2004renters$renterWeightedIncome<<-(exp2004renters$grossIncome * exp2004renters$WEIGHT)/100
       exp2005renters$renterWeightedIncome<<-(exp2005renters$grossIncome * exp2005renters$WEIGHT)/100
       exp2006renters$renterWeightedIncome<<-(exp2006renters$grossIncome * exp2006renters$WEIGHT)/100

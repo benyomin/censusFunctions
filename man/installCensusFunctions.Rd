@@ -18,4 +18,3 @@ installCensusFunctions("github")
 }
 \keyword{dir,}
 \keyword{directory}
-

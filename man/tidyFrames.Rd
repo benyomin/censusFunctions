@@ -20,4 +20,3 @@ tidyFrame("NHC")
 \keyword{aggregate,}
 \keyword{data}
 \keyword{process,}
-

@@ -26,4 +26,3 @@ weighHouseholds("renters","NHC")
 \keyword{aggregate,}
 \keyword{data}
 \keyword{process,}
-

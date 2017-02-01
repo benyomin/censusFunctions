@@ -35,4 +35,3 @@ ownership("owners",  2004)
 \keyword{owner,}
 \keyword{renter,}
 \keyword{subset}
-

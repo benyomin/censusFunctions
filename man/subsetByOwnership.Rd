@@ -24,4 +24,3 @@ subsetByOwnership(FALSE)
 \keyword{owners,}
 \keyword{renters,}
 \keyword{subset}
-
