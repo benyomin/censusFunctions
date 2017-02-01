@@ -38,38 +38,38 @@ ownership <- function(class, year){
     }else{return(0)}
     }else if(class=="keymoney"){
       if(year==2004){
-exp2004notKey<<-subset(exp2004renters,rentEXP<=120)
-      return(exp2004notKey)
+exp2004keyMoney<<-subset(exp2004renters,rentEXP<=120)
+      return(exp2004keyMoney)
       }else if(year==2005){
-exp2005notKey<<-subset(exp2005renters,rentEXP<=120) 
-      return(exp2005notKey)
+exp2005keyMoney<<-subset(exp2005renters,rentEXP<=120) 
+      return(exp2005keyMoney)
       }else if(year==2006){
-exp2006notKey<<-subset(exp2006renters,rentEXP<=120)
-      return(exp2006notKey)
+exp2006keyMoney<<-subset(exp2006renters,rentEXP<=120)
+      return(exp2006keyMoney)
       }else if(year==2007){
-exp2007notKey<<-subset(exp2007renters,rentEXP<=120)
-      return(exp2007notKey)
+exp2007keyMoney<<-subset(exp2007renters,rentEXP<=120)
+      return(exp2007keyMoney)
       }else if(year==2008){
-exp2008notKey<<-subset(exp2008renters,rentEXP<=120)
-      return(exp2008notKey)
+exp2008keyMoney<<-subset(exp2008renters,rentEXP<=120)
+      return(exp2008keyMoney)
       }else if(year==2009){
-exp2009notKey<<-subset(exp2009renters,rentEXP<=120)
-      return(exp2009notKey)
+exp2009keyMoney<<-subset(exp2009renters,rentEXP<=120)
+      return(exp2009keyMoney)
       }else if(year==2010){
-exp2010notKey<<-subset(exp2010renters,rentEXP<=120)
-      return(exp2010notKey)
+exp2010keyMoney<<-subset(exp2010renters,rentEXP<=120)
+      return(exp2010keyMoney)
       }else if(year==2011){
-exp2011notKey<<-subset(exp2011renters,rentEXP<=120)
-      return(exp2011notKey)
+exp2011keyMoney<<-subset(exp2011renters,rentEXP<=120)
+      return(exp2011keyMoney)
       }else if(year==2012){
-exp2012notKey<<-subset(exp2012renters,rentEXP<=120)
-      return(exp2012notKey)
+exp2012keyMoney<<-subset(exp2012renters,rentEXP<=120)
+      return(exp2012keyMoney)
       }else if(year==2013){
-exp2013notKey<<-subset(exp2013renters,rentEXP<=120)
-      return(exp2013notKey)
+exp2013keyMoney<<-subset(exp2013renters,rentEXP<=120)
+      return(exp2013keyMoney)
       }else if(year==2014){
-exp2014notKey<<-subset(exp2014renters,rentEXP<=120)
-      return(exp2014notKey)
+exp2014keyMoney<<-subset(exp2014renters,rentEXP<=120)
+      return(exp2014keyMoney)
     }else{return(0)}
     }else if(class=="notkey"){ 
             if(year==2004){
