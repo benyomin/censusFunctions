@@ -6,9 +6,11 @@
 #' @export
 #' @examples
 #' subsetByOwnership("listKeyMoney")
+#' subsetByOwnership()
 #' subsetByOwnership("listOwners")
-#' subsetByOwnership("listRenters")
 #' subsetByOwnership("listNotKey")
+#' subsetByOwnership("listHouseholds")
+#' subsetByOwnership("listRenters")
 #' subsetByOwnership("listKeyMoney")
 #' subsetByOwnership(1)
 #' subsetByOwnership(FALSE)
@@ -53,6 +55,13 @@ subsetByOwnership <- function(arg=TRUE){
                    exp2012renters,exp2013renters,
                    exp2014renters)
     return(rentersList)
+  }else if(arg=="listHouseholds"){
+    householdsList<- list(exp2004s,exp2005s,
+                   exp2006s,exp2007s,
+                   exp2008s,exp2009s,
+                   exp2010s,exp2011s,
+                   exp2012s)
+    return(householdsList)
   }else{
         return("not implemented, error: aorns9q4o")
   }

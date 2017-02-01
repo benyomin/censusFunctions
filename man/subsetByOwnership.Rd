@@ -18,9 +18,11 @@ This function creates subsets of renters and owners. and key money
 }
 \examples{
 subsetByOwnership("listKeyMoney")
+subsetByOwnership()
 subsetByOwnership("listOwners")
-subsetByOwnership("listRenters")
 subsetByOwnership("listNotKey")
+subsetByOwnership("listHouseholds")
+subsetByOwnership("listRenters")
 subsetByOwnership("listKeyMoney")
 subsetByOwnership(1)
 subsetByOwnership(FALSE)
