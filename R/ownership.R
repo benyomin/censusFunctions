@@ -1,4 +1,8 @@
 #' Divide into owners and renters.
+#' renters is imputed rent ==0 and includes keymoney and notkey
+#' keymoney is renting households whose rent<=120 NIS ($30 USD)
+#' notkey is renting households   whose rent >120 NIS ($30 USD)
+#' keymoney and notkey rely on renters being called first
 #' Is called by: weighHouseholds(), takes expYYYYs
 #' Creates dataframes based on payment of rent.
 #' @param class owners or renters, defaults to owners.
@@ -7,6 +11,8 @@
 #' @export
 #' @examples
 #' ownership("renters", 2012)
+#' ownership("notkey", 2012)
+#' ownership("keymoney", 2012)
 #' ownership("owners",  2004)
 
 #### new version                                              ##
@@ -30,7 +36,77 @@ ownership <- function(class, year){
     }else if(year==2013){return(subset(exp2013s,imputedRent==0))
     }else if(year==2014){return(subset(exp2014s,imputedRent==0))
     }else{return(0)}
-    }else{ ##class="owners"   owners have imputed rent on property
+    }else if(class=="keymoney"){
+      if(year==2004){
+exp2004notKey<<-subset(exp2004renters,rentEXP<=120)
+      return(exp2004notKey)
+      }else if(year==2005){
+exp2005notKey<<-subset(exp2005renters,rentEXP<=120) 
+      return(exp2005notKey)
+      }else if(year==2006){
+exp2006notKey<<-subset(exp2006renters,rentEXP<=120)
+      return(exp2006notKey)
+      }else if(year==2007){
+exp2007notKey<<-subset(exp2007renters,rentEXP<=120)
+      return(exp2007notKey)
+      }else if(year==2008){
+exp2008notKey<<-subset(exp2008renters,rentEXP<=120)
+      return(exp2008notKey)
+      }else if(year==2009){
+exp2009notKey<<-subset(exp2009renters,rentEXP<=120)
+      return(exp2009notKey)
+      }else if(year==2010){
+exp2010notKey<<-subset(exp2010renters,rentEXP<=120)
+      return(exp2010notKey)
+      }else if(year==2011){
+exp2011notKey<<-subset(exp2011renters,rentEXP<=120)
+      return(exp2011notKey)
+      }else if(year==2012){
+exp2012notKey<<-subset(exp2012renters,rentEXP<=120)
+      return(exp2012notKey)
+      }else if(year==2013){
+exp2013notKey<<-subset(exp2013renters,rentEXP<=120)
+      return(exp2013notKey)
+      }else if(year==2014){
+exp2014notKey<<-subset(exp2014renters,rentEXP<=120)
+      return(exp2014notKey)
+    }else{return(0)}
+    }else if(class=="notkey"){ 
+            if(year==2004){
+exp2004notKey<<-subset(exp2004renters,rentEXP>120)
+      return(exp2004notKey)
+      }else if(year==2005){
+exp2005notKey<<-subset(exp2005renters,rentEXP>120) 
+      return(exp2005notKey)
+      }else if(year==2006){
+exp2006notKey<<-subset(exp2006renters,rentEXP>120)
+        return(exp2006notKey)
+      }else if(year==2007){
+exp2007notKey<<-subset(exp2007renters,rentEXP>120)
+      return(exp2007notKey)
+      }else if(year==2008){
+exp2008notKey<<-subset(exp2008renters,rentEXP>120)
+      return(exp2008notKey)
+      }else if(year==2009){
+exp2009notKey<<-subset(exp2009renters,rentEXP>120)
+      return(exp2009notKey)
+      }else if(year==2010){
+exp2010notKey<<-subset(exp2010renters,rentEXP>120)
+      return(exp2010notKey)
+      }else if(year==2011){
+exp2011notKey<<-subset(exp2011renters,rentEXP>120)
+      return(exp2011notKey)
+      }else if(year==2012){
+exp2012notKey<<-subset(exp2012renters,rentEXP>120)
+      return(exp2012notKey)
+      }else if(year==2013){
+exp2013notKey<<-subset(exp2013renters,rentEXP>120)
+      return(exp2013notKey)
+      }else if(year==2014){
+exp2014notKey<<-subset(exp2014renters,rentEXP>120)
+      return(exp2014notKey)
+    }else {return(0)}
+    }else { ##class="owners"   owners have imputed rent on property
           if(year==2004){return(subset(exp2004s, imputedRent>0))
     }else if(year==2005){return(subset(exp2005s, imputedRent>0))
     }else if(year==2006){return(subset(exp2006s, imputedRent>0))

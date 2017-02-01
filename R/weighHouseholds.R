@@ -198,7 +198,7 @@ matOwnerWeightedConsumption <-as.data.frame(cbind(someyears,meanOwnerWeightedCon
                      mean(exp2008owners$ownerWeightedNHC),
                      mean(exp2009owners$ownerWeightedNHC),
                      mean(exp2010owners$ownerWeightedNHC),
-                     mean(exp2011owners$ownerWeightedNHC),    
+                     mean(exp2011owners$ownerWeightedNHC),
                      mean(exp2012owners$ownerWeightedNHC),
                      mean(exp2013owners$ownerWeightedNHC),
                      mean(exp2014owners$ownerWeightedNHC))

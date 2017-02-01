@@ -3,6 +3,10 @@
 \name{ownership}
 \alias{ownership}
 \title{Divide into owners and renters.
+renters is imputed rent ==0 and includes keymoney and notkey
+keymoney is renting households whose rent<=120 NIS ($30 USD)
+notkey is renting households   whose rent >120 NIS ($30 USD)
+keymoney and notkey rely on renters being called first
 Is called by: weighHouseholds(), takes expYYYYs
 Creates dataframes based on payment of rent.}
 \usage{
@@ -15,11 +19,17 @@ ownership(class, year)
 }
 \description{
 Divide into owners and renters.
+renters is imputed rent ==0 and includes keymoney and notkey
+keymoney is renting households whose rent<=120 NIS ($30 USD)
+notkey is renting households   whose rent >120 NIS ($30 USD)
+keymoney and notkey rely on renters being called first
 Is called by: weighHouseholds(), takes expYYYYs
 Creates dataframes based on payment of rent.
 }
 \examples{
 ownership("renters", 2012)
+ownership("notkey", 2012)
+ownership("keymoney", 2012)
 ownership("owners",  2004)
 }
 \keyword{owner,}
