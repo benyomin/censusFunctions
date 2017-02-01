@@ -17,7 +17,11 @@ calls weighHouseholds() ;
 This function creates subsets of renters and owners. and key money
 }
 \examples{
-subsetByOwnership()
+subsetByOwnership("listKeyMoney")
+subsetByOwnership("listOwners")
+subsetByOwnership("listRenters")
+subsetByOwnership("listNotKey")
+subsetByOwnership("listKeyMoney")
 subsetByOwnership(1)
 subsetByOwnership(FALSE)
 }
