@@ -4,7 +4,7 @@
 \alias{subsetByOwnership}
 \title{Creates dataframes expYYYYowners and expYYYYrenters,
 calls weighHouseholds() ; 
-This function creates subsets of renters and owners.}
+This function creates subsets of renters and owners. and key money}
 \usage{
 subsetByOwnership(arg = TRUE)
 }
@@ -14,7 +14,7 @@ subsetByOwnership(arg = TRUE)
 \description{
 Creates dataframes expYYYYowners and expYYYYrenters,
 calls weighHouseholds() ; 
-This function creates subsets of renters and owners.
+This function creates subsets of renters and owners. and key money
 }
 \examples{
 subsetByOwnership()

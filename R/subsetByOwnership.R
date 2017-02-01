@@ -1,6 +1,6 @@
 #' Creates dataframes expYYYYowners and expYYYYrenters,
 #' calls weighHouseholds() ; 
-#' This function creates subsets of renters and owners.
+#' This function creates subsets of renters and owners. and key money
 #' @param arg Defaults to true.
 #' @keywords owners, renters, subset
 #' @export
@@ -15,6 +15,7 @@ subsetByOwnership <- function(arg=TRUE){
     weighHouseholds("renters", "consumption")
     weighHouseholds("owners", "income")
     weighHouseholds("owners", "consumption")
+    weighHouseholds("renters","keymoney")
         return("created subsets owners/renters for all years")
   }else{
         return("not implemented, error: aorns9q4o")
