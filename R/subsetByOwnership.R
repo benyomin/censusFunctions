@@ -30,14 +30,16 @@ subsetByOwnership <- function(arg=TRUE){
                    exp2006keyMoney,exp2007keyMoney,
                    exp2008keyMoney,exp2009keyMoney,
                    exp2010keyMoney,exp2011keyMoney,
-                   exp2012keyMoney)
+                   exp2012keyMoney,exp2013keyMoney,
+                   exp2014keyMoney)
     return(keyMoneyList)
   }else if(arg=="listNotKey"){
     notKeyList<- list(exp2004notKey,exp2005notKey,
                    exp2006notKey,exp2007notKey,
                    exp2008notKey,exp2009notKey,
                    exp2010notKey,exp2011notKey,
-                   exp2012notKey)
+                   exp2012notKey,exp2013notKey,
+                   exp2014notKey)
     return(notKeyList)
   }else if(arg=="listOwners"){
     ownersList <- list(exp2004owners,exp2005owners,
@@ -60,7 +62,8 @@ subsetByOwnership <- function(arg=TRUE){
                    exp2006s,exp2007s,
                    exp2008s,exp2009s,
                    exp2010s,exp2011s,
-                   exp2012s)
+                   exp2012s,exp2013s,
+                   exp2014s)
     return(householdsList)
   }else{
         return("not implemented, error: aorns9q4o")
