@@ -1,0 +1,216 @@
+#' Import family data to workspace v.0.1
+#'
+#' This function imports Israeli census data from spss .por files distributed by the CBS.
+#' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R.
+#' @keywords import, saved, spss, por, raw, load
+#' @export
+#' @examples
+#' importFamilyData("raw")
+#' importFamilyData("saved")
+importFamilyData <- function(source){
+  if(source=="raw"){
+yr2000 <- spss.portable.file("../rawData/census/f461/f461fam.por")
+yr2001 <- spss.portable.file('../rawData/census/f462/f462fam.por')
+yr2002 <- spss.portable.file("../rawData/census/f463/f463fam.por")
+yr2003 <- spss.portable.file("../rawData/census/f464/f464fam.por")
+yr2004 <- spss.portable.file("../rawData/census/f466/f466fam.por")
+yr2005 <- spss.portable.file("../rawData/census/f467/f467fam.por")
+yr2006 <- spss.portable.file("../rawData/census/f468/n468fam.por")#n-not-f
+yr2007 <- spss.portable.file("../rawData/census/f469/f469fam.por")
+yr2008 <- spss.portable.file("../rawData/census/f474/f474fam.por")
+yr2009 <- spss.portable.file("../rawData/census/f472/f472fam.por")
+yr2010 <- spss.portable.file("../rawData/census/f471/f471fam.por")
+yr2011 <- spss.portable.file("../rawData/census/f459/f459fam.por")
+yr2012 <- spss.portable.file("../rawData/census/f458/f458fam.por")
+yr2013 <- spss.portable.file("../rawData/census/f457/f457fam.por")
+yr2014 <- spss.portable.file("../rawData/census/f456/f456fam.por") 
+yr.2003 <-subset(yr2003,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                  keymoney = keymoney,
+                   cluster = cluster,
+                    caseid = hhnum,
+                     rooms = rooms,
+                   codeloc = codeloc,
+                  incgross = incgross,
+                    exptot = exptot,
+                    aptval = aptval,
+                  typerent = typerent,
+                  weight   = weight
+                   ))
+yr.2004 <-subset(yr2004,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                  keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                    exptot = exptot,
+                    aptval = aptval,
+                  typerent = typerent,
+                    weight = weight))
+yr.2005 <-subset(yr2005,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                  keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                    exptot = exptot,
+                    aptval = aptval,
+                  typerent = typerent,
+                    weight = weight))
+yr.2006 <-subset(yr2006,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                   keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                   exptot = exptot,
+                   aptval = aptval, 
+                   typerent = typerent,
+                    weight = weight))
+yr.2007 <-subset(yr2007,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                   keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                   exptot = exptot,
+                   aptval = aptval,
+                   typerent = typerent,
+                    weight = weight))
+yr.2008 <-subset(yr2008,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                   keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                   exptot = exptot,
+                   aptval = aptval,
+                   typerent = typerent,
+                   weight = weight))
+yr.2009 <-subset(yr2009,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                   keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                   exptot = exptot,
+                   aptval = aptval,
+                   typerent = typerent,
+                   weight = weight))
+yr.2010 <-subset(yr2010,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                   keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                   exptot = exptot,
+                   aptval = aptval,
+                   typerent = typerent,
+                   weight = weight))
+yr.2011 <-subset(yr2011,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                   keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                   exptot = exptot,
+                   aptval = aptval,
+                   typerent = typerent,
+                   weight = weight))
+yr.2012 <-subset(yr2012,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                   keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                   exptot = exptot,
+                   aptval = aptval,
+                   typerent = typerent,
+                   weight = weight))
+yr.2013 <-subset(yr2013,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                   keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                   exptot = exptot,
+                   aptval = aptval,
+                   typerent = typerent,
+                   weight = weight))
+yr.2014 <-subset(yr2014,
+                 select=c(
+                      rent = rent,
+                     owner = owner, 
+                   keymoney = keymoney,
+                   cluster = cluster,
+                     hhnum = hhnum,
+                     rooms = rooms, 
+                   codeloc = codeloc,
+                  incgross = incgross,
+                   exptot = exptot,
+                   aptval = aptval,
+                   typerent = typerent,
+                   weight = weight))
+######  create data frames
+family2003 <<-as.data.frame(yr.2003)
+family2004 <<-as.data.frame(yr.2004)
+family2005 <<-as.data.frame(yr.2005)
+family2006 <<-as.data.frame(yr.2006)
+family2007 <<-as.data.frame(yr.2007)
+family2008 <<-as.data.frame(yr.2008)
+family2009 <<-as.data.frame(yr.2009)
+family2010 <<-as.data.frame(yr.2010)
+family2011 <<-as.data.frame(yr.2011)
+family2012 <<-as.data.frame(yr.2012)
+family2013 <<-as.data.frame(yr.2013)
+family2014 <<-as.data.frame(yr.2014)
+        return("family data imported raw.")
+  }else if(source=="saved"){
+        return("family data imported from saved subset")
+  }else{
+        return("error #.eil4g09")
+    }}
+
+## code to write out saved versions
