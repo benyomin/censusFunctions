@@ -25,21 +25,35 @@ yr2012 <- spss.portable.file("../rawData/census/f458/f458fam.por")
 yr2013 <- spss.portable.file("../rawData/census/f457/f457fam.por")
 yr2014 <- spss.portable.file("../rawData/census/f456/f456fam.por")
 ### choose several columns from the imported CBS data
-yr.2003 <-memisc::subset(yr2003,
-                 select=c(
-                      rent = rent,
-                     owner = owner,
-                  keymoney = keymoney,
-                   cluster = cluster,
-                    caseid = hhnum,
-                     rooms = rooms,
-                   codeloc = codeloc,
-                  incgross = incgross,
-                    exptot = exptot,
-                    aptval = aptval,
-                  typerent = typerent,
-                    weight = weight))
-yr.2004 <-memisc::subset(yr2004,
+## yr.2003 <-subset(yr2003,
+##                  select=c(
+##                       rent = rent,
+##                      owner = owner,
+##                   keymoney = keymoney,
+##                    cluster = cluster,
+##                     caseid = hhnum,
+##                      rooms = rooms,
+##                    codeloc = codeloc,
+##                   incgross = incgross,
+##                     exptot = exptot,
+##                     aptval = aptval,
+##                   typerent = typerent,
+##                   weight   = weight))
+## yr.2003 <-subset(yr2003,
+##                  select=c(
+##                       rent = rent,
+##                      owner = owner,
+##                   keymoney = keymoney,
+##                    cluster = cluster,
+##                     caseid = hhnum,
+##                      rooms = rooms,
+##                    codeloc = codeloc,
+##                   incgross = incgross,
+##                     exptot = exptot,
+##                     aptval = aptval,
+##                   typerent = typerent,
+##                     weight = weight))
+yr.2004 <-subset(yr2004,
                  select=c(
                       rent = rent,
                      owner = owner, 
@@ -53,7 +67,7 @@ yr.2004 <-memisc::subset(yr2004,
                     aptval = aptval,
                   typerent = typerent,
                     weight = weight))
-yr.2005 <-memisc::subset(yr2005,
+yr.2005 <-subset(yr2005,
                  select=c(
                       rent = rent,
                      owner = owner, 
@@ -67,7 +81,7 @@ yr.2005 <-memisc::subset(yr2005,
                     aptval = aptval,
                   typerent = typerent,
                     weight = weight))
-yr.2006 <-memisc::subset(yr2006,
+yr.2006 <-subset(yr2006,
                  select=c(
                       rent = rent,
                      owner = owner, 
@@ -81,7 +95,7 @@ yr.2006 <-memisc::subset(yr2006,
                    aptval = aptval, 
                    typerent = typerent,
                     weight = weight))
-yr.2007 <-memisc::subset(yr2007,
+yr.2007 <-subset(yr2007,
                  select=c(
                       rent = rent,
                      owner = owner, 
@@ -95,7 +109,7 @@ yr.2007 <-memisc::subset(yr2007,
                    aptval = aptval,
                    typerent = typerent,
                     weight = weight))
-yr.2008 <-memisc::subset(yr2008,
+yr.2008 <-subset(yr2008,
                  select=c(
                       rent = rent,
                      owner = owner, 
@@ -109,7 +123,7 @@ yr.2008 <-memisc::subset(yr2008,
                    aptval = aptval,
                    typerent = typerent,
                    weight = weight))
-yr.2009 <-memisc::subset(yr2009,
+yr.2009 <-subset(yr2009,
                  select=c(
                       rent = rent,
                      owner = owner, 
@@ -123,7 +137,7 @@ yr.2009 <-memisc::subset(yr2009,
                    aptval = aptval,
                    typerent = typerent,
                    weight = weight))
-yr.2010 <-memisc::subset(yr2010,
+yr.2010 <-subset(yr2010,
                  select=c(
                       rent = rent,
                      owner = owner, 
@@ -137,7 +151,7 @@ yr.2010 <-memisc::subset(yr2010,
                    aptval = aptval,
                    typerent = typerent,
                    weight = weight))
-yr.2011 <-memisc::subset(yr2011,
+yr.2011 <-subset(yr2011,
                  select=c(
                       rent = rent,
                      owner = owner, 
@@ -151,7 +165,7 @@ yr.2011 <-memisc::subset(yr2011,
                    aptval = aptval,
                    typerent = typerent,
                    weight = weight))
-yr.2012 <-memisc::subset(yr2012,
+yr.2012 <-subset(yr2012,
                  select=c(
                       rent = rent,
                      owner = owner, 
@@ -165,7 +179,7 @@ yr.2012 <-memisc::subset(yr2012,
                    aptval = aptval,
                    typerent = typerent,
                    weight = weight))
-yr.2013 <-memisc::subset(yr2013,
+yr.2013 <-subset(yr2013,
                  select=c(
                       rent = rent,
                      owner = owner, 
@@ -179,7 +193,7 @@ yr.2013 <-memisc::subset(yr2013,
                    aptval = aptval,
                    typerent = typerent,
                    weight = weight))
-yr.2014 <-memisc::subset(yr2014,
+yr.2014 <-subset(yr2014,
                  select=c(
                       rent = rent,
                      owner = owner, 
