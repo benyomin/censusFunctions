@@ -25,6 +25,20 @@ yr2012 <- spss.portable.file("../rawData/census/f458/f458fam.por")
 yr2013 <- spss.portable.file("../rawData/census/f457/f457fam.por")
 yr2014 <- spss.portable.file("../rawData/census/f456/f456fam.por")
 ### choose several columns from the imported CBS data
+## yr.2003 <-subset(yr2003,
+##                  select=c(
+##                       rent = rent,
+##                      owner = owner, 
+##                   keymoney = keymoney,
+##                    cluster = cluster,
+##                     caseid = hhnum,
+##                      rooms = rooms,
+##                    codeloc = codeloc,
+##                   incgross = incgross,
+##                     exptot = exptot,
+##                     aptval = aptval,
+##                   typerent = typerent,
+##                   weight   = weight))
 yr.2003 <-subset(yr2003,
                  select=c(
                       rent = rent,
@@ -38,8 +52,7 @@ yr.2003 <-subset(yr2003,
                     exptot = exptot,
                     aptval = aptval,
                   typerent = typerent,
-                  weight   = weight
-                   ))
+                  weight   = weight))
 yr.2004 <-subset(yr2004,
                  select=c(
                       rent = rent,
