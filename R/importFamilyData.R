@@ -23,7 +23,8 @@ yr2010 <- spss.portable.file("../rawData/census/f471/f471fam.por")
 yr2011 <- spss.portable.file("../rawData/census/f459/f459fam.por")
 yr2012 <- spss.portable.file("../rawData/census/f458/f458fam.por")
 yr2013 <- spss.portable.file("../rawData/census/f457/f457fam.por")
-yr2014 <- spss.portable.file("../rawData/census/f456/f456fam.por") 
+yr2014 <- spss.portable.file("../rawData/census/f456/f456fam.por")
+### choose several columns from the imported CBS data
 yr.2003 <-subset(yr2003,
                  select=c(
                       rent = rent,
@@ -206,7 +207,12 @@ family2011 <<-as.data.frame(yr.2011)
 family2012 <<-as.data.frame(yr.2012)
 family2013 <<-as.data.frame(yr.2013)
 family2014 <<-as.data.frame(yr.2014)
-        return("family data imported raw.")
+
+familiesList<-list(family2003,family2004,family2005,
+                   family2006,family2007,family2008,
+                   family2009,family2010,family2011,
+                   family2012,family2013,family2014)
+        return(familiesList)
   }else if(source=="saved"){
         return("family data imported from saved subset")
   }else{
