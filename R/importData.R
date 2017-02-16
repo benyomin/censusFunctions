@@ -123,7 +123,7 @@ fam2014s <<-dplyr::select(fam2014df,HHNUM,
 
 return("Family data imported. 59 vars in 2005, 100 vars in 2013")
   }else if(source=="familyNewRaw"){
-    censusFunctions::importFamilyData()
+    censusFunctions::importFamilyData("raw")
     return("success 05l09l")
   }else if(source=="familyProcessed"){
     ## new family with socio-econ var

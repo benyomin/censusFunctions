@@ -1,4 +1,4 @@
-#' Import family data to workspace v.0.1
+#' Import family data to workspace v.0.3
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R.
@@ -7,6 +7,7 @@
 #' @examples
 #' importFamilyData("raw")
 #' importFamilyData("saved")
+#' importFamilyData("writeOut")
 importFamilyData <- function(source){
   if(source=="raw"){
 yr2000 <- spss.portable.file("../rawData/census/f461/f461fam.por")
@@ -207,13 +208,28 @@ family2012 <<-as.data.frame(yr.2012)
 family2013 <<-as.data.frame(yr.2013)
 family2014 <<-as.data.frame(yr.2014)
 
-familiesList<-list(family2004,family2005,
+familiesList<<-list(family2004,family2005,
                    family2006,family2007,family2008,
                    family2009,family2010,family2011,
                    family2012,family2013,family2014)
         return(familiesList)
   }else if(source=="saved"){
+    importData("familyProcessed")
         return("family data imported from saved subset")
+  }else if(source=="writeOut"){
+dput(familiesList,   file="../dataframes/familiesList.txt")
+dput(family2004,     file="../dataframes/family2004.txt")
+dput(family2005,     file="../dataframes/family2005.txt")
+dput(family2006,     file="../dataframes/family2006.txt")
+dput(family2007,     file="../dataframes/family2007.txt")
+dput(family2008,     file="../dataframes/family2008.txt")
+dput(family2009,     file="../dataframes/family2009.txt")
+dput(family2010,     file="../dataframes/family2010.txt")
+dput(family2011,     file="../dataframes/family2011.txt")
+dput(family2012,     file="../dataframes/family2012.txt")
+dput(family2013,     file="../dataframes/family2013.txt")
+dput(family2014,     file="../dataframes/family2014.txt")
+        return("success #onsr9don")
   }else{
         return("error #.eil4g09")
     }}

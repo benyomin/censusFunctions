@@ -2,7 +2,7 @@
 % Please edit documentation in R/importFamilyData.R
 \name{importFamilyData}
 \alias{importFamilyData}
-\title{Import family data to workspace v.0.1}
+\title{Import family data to workspace v.0.3}
 \usage{
 importFamilyData(source)
 }
@@ -15,6 +15,7 @@ This function imports Israeli census data from spss .por files distributed by th
 \examples{
 importFamilyData("raw")
 importFamilyData("saved")
+importFamilyData("writeOut")
 }
 \keyword{import,}
 \keyword{load}
