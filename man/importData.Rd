@@ -2,7 +2,7 @@
 % Please edit documentation in R/importData.R
 \name{importData}
 \alias{importData}
-\title{Import data to workspace v.0.6 add data source}
+\title{Import data to workspace v.0.7 process year column}
 \usage{
 importData(source)
 }
@@ -23,6 +23,7 @@ importData("writeOutCombined")
 importData("writeOutIND")
 importData("rawIND")
 importData("familyProcessed")
+importData("process")
 importData("importExpFamInd")
 importData("importCombined")
 }
