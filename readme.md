@@ -9,8 +9,9 @@ developed for:<br>
 devtools::install_github("benyomin/censusFunctions")
 ```
 ## documentation
-[online](https://benyomin.github.io/censusFunctions/reference/index.html)
-in R:
+###[online docs](https://benyomin.github.io/censusFunctions/reference/index.html)
+<br>
+###in R:
 ```R
 ?censusFunctions
 ```
