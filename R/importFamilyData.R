@@ -26,7 +26,7 @@ yr2013 <- spss.portable.file("../rawData/census/f457/f457fam.por")
 yr2014 <- spss.portable.file("../rawData/census/f456/f456fam.por")
 ### choose several columns from the imported CBS data
 yr.2003 <-memisc::subset(yr2003,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner,
                   keymoney = keymoney,
@@ -40,7 +40,7 @@ yr.2003 <-memisc::subset(yr2003,
                   typerent = typerent,
                     weight = weight))
 yr.2004 <-memisc::subset(yr2004,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
                   keymoney = keymoney,
@@ -54,7 +54,7 @@ yr.2004 <-memisc::subset(yr2004,
                   typerent = typerent,
                     weight = weight))
 yr.2005 <-memisc::subset(yr2005,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
                   keymoney = keymoney,
@@ -68,24 +68,24 @@ yr.2005 <-memisc::subset(yr2005,
                   typerent = typerent,
                     weight = weight))
 yr.2006 <-memisc::subset(yr2006,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
-                   keymoney = keymoney,
+                  keymoney = keymoney,
                    cluster = cluster,
                      hhnum = hhnum,
                      rooms = rooms, 
                    codeloc = codeloc,
                   incgross = incgross,
-                   exptot = exptot,
-                   aptval = aptval, 
-                   typerent = typerent,
+                    exptot = exptot,
+                    aptval = aptval, 
+                  typerent = typerent,
                     weight = weight))
 yr.2007 <-memisc::subset(yr2007,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
-                   keymoney = keymoney,
+                  keymoney = keymoney,
                    cluster = cluster,
                      hhnum = hhnum,
                      rooms = rooms, 
@@ -96,7 +96,7 @@ yr.2007 <-memisc::subset(yr2007,
                    typerent = typerent,
                     weight = weight))
 yr.2008 <-memisc::subset(yr2008,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
                    keymoney = keymoney,
@@ -110,7 +110,7 @@ yr.2008 <-memisc::subset(yr2008,
                    typerent = typerent,
                    weight = weight))
 yr.2009 <-memisc::subset(yr2009,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
                    keymoney = keymoney,
@@ -124,7 +124,7 @@ yr.2009 <-memisc::subset(yr2009,
                    typerent = typerent,
                    weight = weight))
 yr.2010 <-memisc::subset(yr2010,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
                    keymoney = keymoney,
@@ -138,7 +138,7 @@ yr.2010 <-memisc::subset(yr2010,
                    typerent = typerent,
                    weight = weight))
 yr.2011 <-memisc::subset(yr2011,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
                    keymoney = keymoney,
@@ -152,7 +152,7 @@ yr.2011 <-memisc::subset(yr2011,
                    typerent = typerent,
                    weight = weight))
 yr.2012 <-memisc::subset(yr2012,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
                    keymoney = keymoney,
@@ -166,7 +166,7 @@ yr.2012 <-memisc::subset(yr2012,
                    typerent = typerent,
                    weight = weight))
 yr.2013 <-memisc::subset(yr2013,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
                    keymoney = keymoney,
@@ -180,7 +180,7 @@ yr.2013 <-memisc::subset(yr2013,
                    typerent = typerent,
                    weight = weight))
 yr.2014 <-memisc::subset(yr2014,
-                 select=c(
+          select = c( year = year,
                       rent = rent,
                      owner = owner, 
                    keymoney = keymoney,
@@ -220,3 +220,19 @@ familiesList<-list(family2004,family2005,
 
 ## code to write out saved versions
 ## save to ~/proposal/dataframes
+##     }else if(source=="writeOutfamilies"){
+##       ## taken from working Feb16.Rmd
+## dput(householdsList, file="../dataframes/householdsList.txt")
+## dput(familiesList,   file="../dataframes/familiesList.txt")
+## dput(family2004,     file="../dataframes/family2004.txt")
+## dput(family2005,     file="../dataframes/family2005.txt")
+## dput(family2006,     file="../dataframes/family2006.txt")
+## dput(family2007,     file="../dataframes/family2007.txt")
+## dput(family2008,     file="../dataframes/family2008.txt")
+## dput(family2009,     file="../dataframes/family2009.txt")
+## dput(family2010,     file="../dataframes/family2010.txt")
+## dput(family2011,     file="../dataframes/family2011.txt")
+## dput(family2012,     file="../dataframes/family2012.txt")
+## dput(family2013,     file="../dataframes/family2013.txt")
+## dput(family2014,     file="../dataframes/family2014.txt")
+ 
