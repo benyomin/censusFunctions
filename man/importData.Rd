@@ -2,12 +2,12 @@
 % Please edit documentation in R/importData.R
 \name{importData}
 \alias{importData}
-\title{Import data to workspace v.0.5 correct subsetting}
+\title{Import data to workspace v.0.6 add data source}
 \usage{
 importData(source)
 }
 \arguments{
-\item{source}{Source for data, "raw" imports from .por files. "saved" files were previously parsed in R.}
+\item{source}{Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.}
 }
 \description{
 This function imports Israeli census data from spss .por files distributed by the CBS.
@@ -19,12 +19,18 @@ importData("family")
 importData("writeOutEXP")
 importData("combine")
 importData("writeOutCombined")
+importData("writeOutIND")
+importData("rawIND")
+importData("familyProcessed")
 importData("importExpFamInd")
 importData("importCombined")
 }
+\keyword{family,}
 \keyword{import,}
-\keyword{load}
+\keyword{individual,}
+\keyword{load,}
 \keyword{por,}
 \keyword{raw,}
 \keyword{saved,}
 \keyword{spss,}
+\keyword{write}

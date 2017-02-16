@@ -1,8 +1,8 @@
-#' Import data to workspace v.0.5 correct subsetting
+#' Import data to workspace v.0.6 add data source
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
-#' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R.
-#' @keywords import, saved, spss, por, raw, load
+#' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.
+#' @keywords import, saved, spss, por, raw, load, family, individual, write
 #' @export
 #' @examples
 #' importData("raw")
@@ -11,6 +11,9 @@
 #' importData("writeOutEXP")
 #' importData("combine")
 #' importData("writeOutCombined")
+#' importData("writeOutIND")
+#' importData("rawIND")
+#' importData("familyProcessed")
 #' importData("importExpFamInd")
 #' importData("importCombined")
 importData <- function(source){
@@ -118,6 +121,34 @@ fam2014s <<-dplyr::select(fam2014df,HHNUM,
                           CODELOC,SUBDIST,CLUSTER)
 
 return("Family data imported. 59 vars in 2005, 100 vars in 2013")
+  }else if(source=="familyProcessed"){
+    ## new family with socio-econ var
+householdsList <- dget("../dataframes/householdsList.txt")
+familiesList   <- dget("../dataframes/familiesList.txt")
+family2004     <- dget("../dataframes/family2004.txt")
+family2005     <- dget("../dataframes/family2005.txt")
+family2006     <- dget("../dataframes/family2006.txt")
+family2007     <- dget("../dataframes/family2007.txt")
+family2008     <- dget("../dataframes/family2008.txt")
+family2009     <- dget("../dataframes/family2009.txt")
+family2010     <- dget("../dataframes/family2010.txt")
+family2011     <- dget("../dataframes/family2011.txt")
+family2012     <- dget("../dataframes/family2012.txt")
+family2013     <- dget("../dataframes/family2013.txt")
+family2014     <- dget("../dataframes/family2014.txt")
+    ## already combine family and individual, perhaps not needed
+exp2004s <-dget("../dataframes/exp2004s.txt")
+exp2005s <-dget("../dataframes/exp2005s.txt")
+exp2006s <-dget("../dataframes/exp2006s.txt")
+exp2007s <-dget("../dataframes/exp2007s.txt")
+exp2008s <-dget("../dataframes/exp2008s.txt")
+exp2009s <-dget("../dataframes/exp2009s.txt")
+exp2010s <-dget("../dataframes/exp2010s.txt")
+exp2011s <-dget("../dataframes/exp2011s.txt")
+exp2012s <-dget("../dataframes/exp2012s.txt")
+exp2013s <-dget("../dataframes/exp2013s.txt")
+exp2014s <-dget("../dataframes/exp2014s.txt")
+
   }else if(source=="rawIND"){
 ind2004 <- spss.get("../rawData/census/f466/f466ind.por",
                   use.value.labels = TRUE)
@@ -140,23 +171,44 @@ ind2013 <- spss.get("../rawData/census/f457/f457ind.por",
                     use.value.labels = TRUE)
 ind2014 <- spss.get("../rawData/census/f456/f456ind.por",
                     use.value.labels = TRUE)
-ind2004s <- select(ind2004,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2005s <- select(ind2005,HHNUM,PERSNUM,RELATHH,AGE,SCHOOLY)
-ind2006s <- select(ind2006,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2007s <- select(ind2007,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2008s <- select(ind2008,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2009s <- select(ind2009,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2010s <- select(ind2010,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2011s <- select(ind2011,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2012s <- select(ind2012,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2013s <- select(ind2013,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2014s <- select(ind2014,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2004s <<- select(ind2004,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2005s <<- select(ind2005,HHNUM,PERSNUM,RELATHH,AGE,SCHOOLY)
+ind2006s <<- select(ind2006,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2007s <<- select(ind2007,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2008s <<- select(ind2008,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2009s <<- select(ind2009,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2010s <<- select(ind2010,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2011s <<- select(ind2011,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2012s <<- select(ind2012,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2013s <<- select(ind2013,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+ind2014s <<- select(ind2014,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
 
     return("imported raw individual data, subset selected columns")
   }else  if(source=="writeOutInd"){
-
+dput(ind2004s, file="../dataframes/ind2004s.txt")
+dput(ind2005s, file="../dataframes/ind2005s.txt")
+dput(ind2006s, file="../dataframes/ind2006s.txt")
+dput(ind2007s, file="../dataframes/ind2007s.txt")
+dput(ind2008s, file="../dataframes/ind2008s.txt")
+dput(ind2009s, file="../dataframes/ind2009s.txt")
+dput(ind2010s, file="../dataframes/ind2010s.txt")
+dput(ind2011s, file="../dataframes/ind2011s.txt")
+dput(ind2012s, file="../dataframes/ind2012s.txt")
+dput(ind2013s, file="../dataframes/ind2013s.txt")
+dput(ind2014s, file="../dataframes/ind2014s.txt")
     return("wrote out IND data.")
   }else  if(source=="savedIND"){
+ind2004s <<- dget("../dataframes/ind2004s.txt")
+ind2005s <<- dget("../dataframes/ind2005s.txt")
+ind2006s <<- dget("../dataframes/ind2006s.txt")
+ind2007s <<- dget("../dataframes/ind2007s.txt")
+ind2008s <<- dget("../dataframes/ind2008s.txt")
+ind2009s <<- dget("../dataframes/ind2009s.txt")
+ind2010s <<- dget("../dataframes/ind2010s.txt")
+ind2011s <<- dget("../dataframes/ind2011s.txt")
+ind2012s <<- dget("../dataframes/ind2012s.txt")
+ind2013s <<- dget("../dataframes/ind2013s.txt")
+ind2014s <<- dget("../dataframes/ind2014s.txt")
     return("imported Individual data from saved subset.")
   }else  if(source=="raw"){
    #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
@@ -212,9 +264,7 @@ renameColumns() ## adds a year column
 
         return("Imported Housing Expenditure Survey from Central Bureau of Statistics raw files.")
     }else if(source=="saved"){
-
-      ##  source("../includes/getProcessedData.R", echo=FALSE)
-
+ ##  source("../includes/getProcessedData.R", echo=FALSE)
 exp2004s <<-dget("../dataframes/exp2004s.txt")
 exp2005s <<-dget("../dataframes/exp2005s.txt")
 exp2006s <<-dget("../dataframes/exp2006s.txt")
@@ -228,6 +278,21 @@ exp2013s <<-dget("../dataframes/exp2013s.txt")
 exp2014s <<-dget("../dataframes/exp2014s.txt")
 
       return("Imported selected portions of Housing Expenditure Survey. Returns exp2004-14s")
+    }else if(source=="writeOutfamilies"){
+      ## taken from working Feb16.Rmd
+dput(householdsList, file="../dataframes/householdsList.txt")
+dput(familiesList,   file="../dataframes/familiesList.txt")
+dput(family2004,     file="../dataframes/family2004.txt")
+dput(family2005,     file="../dataframes/family2005.txt")
+dput(family2006,     file="../dataframes/family2006.txt")
+dput(family2007,     file="../dataframes/family2007.txt")
+dput(family2008,     file="../dataframes/family2008.txt")
+dput(family2009,     file="../dataframes/family2009.txt")
+dput(family2010,     file="../dataframes/family2010.txt")
+dput(family2011,     file="../dataframes/family2011.txt")
+dput(family2012,     file="../dataframes/family2012.txt")
+dput(family2013,     file="../dataframes/family2013.txt")
+dput(family2014,     file="../dataframes/family2014.txt")
     }else if(source=="writeOutEXP"){
 ########################
 ## write out new data ##
