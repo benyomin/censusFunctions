@@ -7,8 +7,9 @@
 #' @examples
 #' importData("raw")
 #' importData("saved")
-#' importData("family")
 #' importData("writeOutEXP")
+#' importData("familyOldRaw")
+#' importData("familyNewRaw")
 #' importData("combine")
 #' importData("writeOutCombined")
 #' importData("writeOutIND")
@@ -19,7 +20,7 @@
 importData <- function(source){
   family="family"
   expenditure="raw"
-  if(source=="family"){
+  if(source=="familyOldRaw"){
 fam2004 <- spss.get("../rawData/census/f466/f466fam.por",
                   use.value.labels = TRUE)
 fam2005 <- spss.get("../rawData/census/f467/f467fam.por",
@@ -121,6 +122,9 @@ fam2014s <<-dplyr::select(fam2014df,HHNUM,
                           CODELOC,SUBDIST,CLUSTER)
 
 return("Family data imported. 59 vars in 2005, 100 vars in 2013")
+  }else if(source=="familyNewRaw"){
+    censusFunctions::importFamilyData()
+    return("success 05l09l")
   }else if(source=="familyProcessed"){
     ## new family with socio-econ var
 householdsList <<- dget("../dataframes/householdsList.txt")
@@ -148,7 +152,7 @@ exp2011s <-dget("../dataframes/exp2011s.txt")
 exp2012s <-dget("../dataframes/exp2012s.txt")
 exp2013s <-dget("../dataframes/exp2013s.txt")
 exp2014s <-dget("../dataframes/exp2014s.txt")
-
+return("success o9lardn4")
   }else if(source=="rawIND"){
 ind2004 <- spss.get("../rawData/census/f466/f466ind.por",
                   use.value.labels = TRUE)
