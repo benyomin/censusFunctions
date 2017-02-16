@@ -1,4 +1,4 @@
-#' Import data to workspace v.0.7 process year column
+#' Import data to workspace v.0.8 import stock index
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.
@@ -11,6 +11,7 @@
 #' importData("familyOldRaw")
 #' importData("familyNewRaw")
 #' importData("combine")
+#' importData("tlv125")
 #' importData("writeOutCombined")
 #' importData("writeOutIND")
 #' importData("rawIND")
@@ -155,17 +156,17 @@ exp2013s <-dget("../dataframes/exp2013s.txt")
 exp2014s <-dget("../dataframes/exp2014s.txt")
 return("success o9lardn4")
   }else if(source=="process"){
-family2004$year<-2004
-family2005$year<-2005
-family2006$year<-2006
-family2007$year<-2007
-family2008$year<-2008
-family2009$year<-2009
-family2010$year<-2010
-family2011$year<-2011
-family2012$year<-2012
-family2013$year<-2013
-family2014$year<-2014
+family2004$year<<-2004
+family2005$year<<-2005
+family2006$year<<-2006
+family2007$year<<-2007
+family2008$year<<-2008
+family2009$year<<-2009
+family2010$year<<-2010
+family2011$year<<-2011
+family2012$year<<-2012
+family2013$year<<-2013
+family2014$year<<-2014
   }else if(source=="rawIND"){
 ind2004 <- spss.get("../rawData/census/f466/f466ind.por",
                   use.value.labels = TRUE)
@@ -227,6 +228,17 @@ ind2012s <<- dget("../dataframes/ind2012s.txt")
 ind2013s <<- dget("../dataframes/ind2013s.txt")
 ind2014s <<- dget("../dataframes/ind2014s.txt")
     return("imported Individual data from saved subset.")
+  }else  if(source=="tlv125"){
+    #import the new TLV stock data from the csv
+tlv128<-readr::read_csv("../rawData/TLV-125midYearPrice.csv")
+#View(tlv125)
+tlv126<-tlv128[,c(1,4)] # select date and closing price columns
+#View(tlv126)
+tlv127<-tlv126[13:1,]  # remove extra rows
+tlv125<-as.data.frame(tlv127)
+rownames(tlv125)<-c(2004:2016)
+#tlv128["2004",2] #"YYYY",2nd column is closing P. @ last day in June.
+    return(tlv125)    
   }else  if(source=="raw"){
    #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
 exp2004 <- spss.get("../rawData/census/f466/f466exp.por",

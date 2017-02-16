@@ -2,7 +2,7 @@
 % Please edit documentation in R/importData.R
 \name{importData}
 \alias{importData}
-\title{Import data to workspace v.0.7 process year column}
+\title{Import data to workspace v.0.8 import stock index}
 \usage{
 importData(source)
 }
@@ -19,6 +19,7 @@ importData("writeOutEXP")
 importData("familyOldRaw")
 importData("familyNewRaw")
 importData("combine")
+importData("tlv125")
 importData("writeOutCombined")
 importData("writeOutIND")
 importData("rawIND")
