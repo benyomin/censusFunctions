@@ -6,12 +6,15 @@
 #' @export
 #' @examples
 #' chngDir(package)
+#' chngDir(febThesis)
 #' chngDir(paper)
 chngDir <- function(arg){
-  if(arg=="package"){
+        if(arg=="package"){
     setwd('~/')
     ##      cd to local package censusFunctions
   }else if(arg=="paper"){
     setwd('~/proposal/secret/')
     ##      cd to where we build the pdf
+  }else if(arg=="febThesis"){
+    setwd('~/school/febThesis')
   }else{return("invalid option, error code q3543dgp")}}
