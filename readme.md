@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/benyomin/censusFunctions.png?label=ready&title=Ready)](https://waffle.io/benyomin/censusFunctions)
 # censusFunctions:
 ## a package of R helper functions 
 for working with Israeli Census Data 
