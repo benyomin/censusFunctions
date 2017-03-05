@@ -2,6 +2,7 @@
 #' Housing Wealth Effect Analysis.
 #' Provides for simple dependency management to aid in reproducibility.
 #' v.Jan12-2017 - changes to tidyverse instead of tidyr
+#' March 5 - rio for csv import of stock prices
 #' @param load Defaults to TRUE.
 #' @keywords packages, packageManagement, dependencies, library, require, requirements
 #' @export
@@ -11,6 +12,8 @@ loadWealthEffectPackages <- function(load=TRUE){
   if(load==TRUE){
         #install_if_needed("reshape2")
         library(reshape2)
+    install_if_needed("rio")
+    library(rio)
         install_if_needed("roxygen2")
         library(roxygen2)
         install_if_needed("foreign")
