@@ -14,6 +14,7 @@ This function moves between 2 directories.
 }
 \examples{
 chngDir(package)
+chngDir(febThesis)
 chngDir(paper)
 }
 \keyword{dir,}

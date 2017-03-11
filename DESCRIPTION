@@ -1,6 +1,6 @@
 Package: censusFunctions
 Title: Helper Functions for Israeli Census Files
-Version: 0.55
+Version: 0.56
 Authors@R: person("Benyomin", "Hagalili", email = "first.last@example.com", role = c("aut", "cre"))
 Description: Refactoring of Spaghetti Code for analysis in R
     of Israeli Census Data. Use this function
@@ -15,4 +15,5 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
 Instructions: After updating the function code, run document() in the R console. Upload changes to github.
-changelog: 0.55 - compatability with multi-chapter thesis, 0.54 - tlv125, 0.53 - add pkgdown documentation, 0.52 - some years 2012 vs 2014, fixed; 0.51 - keyMoney coded on 120NIS, 0.50 - refactored NHC calc; 0.48 - import family data, 0.47 - <<- assignment to renters/owners, 0.45 - refactoring of technical debt, 0.40 - broken refactoring, 0.38 - working quarterly dates, 0.01 - missing q1-q2 2014, 0.02 - update FAQ,0.03 - multiplot,
+changelog: 0.56 - mapping tools; 0.55 - compatability with multi-chapter thesis, 0.54 - tlv125, 0.53 - add pkgdown documentation, 0.52 - some years 2012 vs 2014, fixed; 0.51 - keyMoney coded on 120NIS, 0.50 - refactored NHC calc; 0.48 - import family data, 0.47 - <<- assignment to renters/owners, 0.45 - refactoring of technical debt, 0.40 - broken refactoring, 0.38 - working quarterly dates, 0.01 - missing q1-q2 2014, 0.02 - update FAQ,0.03 - multiplot,
+

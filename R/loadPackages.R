@@ -11,9 +11,16 @@
 loadWealthEffectPackages <- function(load=TRUE){
   if(load==TRUE){
         #install_if_needed("reshape2")
+    ##  mapping
+    ##devtools::install_github("mtennekes/tmaptools")
+    ##devtools::install_github("mtennekes/tmap")
+    ##devtools::install_github('walkerke/tigris')
+    ##library(tigris)
+    ##library(tmapn)
+    ##  other
         library(reshape2)
-    install_if_needed("rio")
-    library(rio)
+        install_if_needed("rio")
+        library(rio)
         install_if_needed("roxygen2")
         library(roxygen2)
         install_if_needed("foreign")
