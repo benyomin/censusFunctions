@@ -1,6 +1,7 @@
 #' Loads the required packages for the
 #' Housing Wealth Effect Analysis.
 #' Provides for simple dependency management to aid in reproducibility.
+#' v.March 12-2017 - remove gdata dependency, use other xlsx reader
 #' v.Jan12-2017 - changes to tidyverse instead of tidyr
 #' March 5 - rio for csv import of stock prices
 #' @param load Defaults to TRUE.
@@ -37,8 +38,8 @@ loadWealthEffectPackages <- function(load=TRUE){
         library(dtplyr)
         install_if_needed("tidyverse")
         library(tidyverse)
-        install_if_needed("gdata")
-        library(gdata)
+        #install_if_needed("gdata")  ## causes thesisdown to fail
+        #library(gdata)
         #install_if_needed("operators")
         #library(operators)
         #install_if_needed("grid")
@@ -51,8 +52,5 @@ loadWealthEffectPackages <- function(load=TRUE){
         library(Hmisc)
         install_if_needed("memisc")
         library(memisc)
-    }
-    else {
-        print("Helper Packages not loaded by censusFunctions.")
-    }
-}
+    }else{print("Helper Packages not loaded by censusFunctions.")}
+                                       }

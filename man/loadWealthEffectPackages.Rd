@@ -5,6 +5,7 @@
 \title{Loads the required packages for the
 Housing Wealth Effect Analysis.
 Provides for simple dependency management to aid in reproducibility.
+v.March 12-2017 - remove gdata dependency, use other xlsx reader
 v.Jan12-2017 - changes to tidyverse instead of tidyr
 March 5 - rio for csv import of stock prices}
 \usage{
@@ -17,6 +18,7 @@ loadWealthEffectPackages(load = TRUE)
 Loads the required packages for the
 Housing Wealth Effect Analysis.
 Provides for simple dependency management to aid in reproducibility.
+v.March 12-2017 - remove gdata dependency, use other xlsx reader
 v.Jan12-2017 - changes to tidyverse instead of tidyr
 March 5 - rio for csv import of stock prices
 }
