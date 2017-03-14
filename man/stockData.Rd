@@ -14,8 +14,9 @@ This function imports mid-year prices from the tlv-125 index.
 }
 \examples{
 stockData("import")
-stockData("saved")
 stockData("writeOutStock")
+stockData("saved")
+stockData("createSaved")
 stockData("add")
 }
 \keyword{import,}
