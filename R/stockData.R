@@ -6,8 +6,9 @@
 #' @export
 #' @examples
 #' stockData("import")
-#' stockData("saved")
 #' stockData("writeOutStock")
+#' stockData("saved")
+#' stockData("createSaved")
 #' stockData("add")
 stockData <- function(arg){
 if(arg=="import"){
@@ -73,6 +74,18 @@ rownames(tlv125)<-c(2004:2016)
        wStockFamily2013<<- dget("../dataframes/wStockFamily2013.txt")
        wStockFamily2014<<- dget("../dataframes/wStockFamily2014.txt")
           return("imported saved data :: ;043q9ogwf")
+}else if(arg=="createSaved"){
+  ## censusFunctions::importData("familyProcessed")
+## *  version: raw_data_import
+## -- creates the usual saved version
+## -- maximum reproducibility
+## ** import raw stock prices
+## ** add to data frames
+## ** write out stock prices
+  tlv125 <- censusFunctions::stockData("import")
+  censusFunctions::stockData("add")
+  censusFunctions::stockData("writeOutStock")
+          return("added stock values and saved data wStockFamilyYYYY")
 }else{   ##"the only options are Y and N"
           return("feature not implemented :: ;049035;")}}
 
