@@ -37,7 +37,9 @@ loadWealthEffectPackages <- function(load=TRUE){
           install_if_needed("dtplyr")
             library(dtplyr)
           install_if_needed("tidyverse")
-            library(tidyverse)
+    library(tidyverse)
+    install_if_needed("plm") ## linear models for panel data ## https://r-forge.r-project.org/projects/plm/
+    library(plm)
         #install_if_needed("gdata")  ## causes thesisdown to fail
         #library(gdata)
         #install_if_needed("operators")
