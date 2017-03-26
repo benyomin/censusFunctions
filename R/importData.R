@@ -1,4 +1,4 @@
-#' Import data to workspace v.0.8 import stock index
+#' Import data to workspace v.0.9 import housing prices index
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.
@@ -155,6 +155,20 @@ exp2012s <-dget("../dataframes/exp2012s.txt")
 exp2013s <-dget("../dataframes/exp2013s.txt")
 exp2014s <-dget("../dataframes/exp2014s.txt")
 return("success o9lardn4")
+  }else if(source=="rawGoogleMap"){
+    mapImageData3 <- get_map(location = c(lon = 35.1660235,
+                                  lat = 31.32226),
+                                color ="color",
+                               source = "google",
+                              maptype = "satellite",
+                                 zoom = 7)
+return("success rawGoogleMap")
+  }else if(source=="saveGoogleMap"){
+dput(mapImageData3, "../dataframes/mapImageData3.txt")
+return("success - wrote out Google Map")
+  }else if(source=="savedGoogleMap"){
+mapImageData3 <- dget("../dataframes/mapImageData3.txt")
+return("success - imported savedGoogleMap")
   }else if(source=="process"){
 family2004$year<<-2004
 family2005$year<<-2005
