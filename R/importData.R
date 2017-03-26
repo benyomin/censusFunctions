@@ -168,7 +168,7 @@ dput(mapImageData3, "../dataframes/mapImageData3.txt")
 return("success - wrote out Google Map")
   }else if(source=="savedGoogleMap"){
 mapImageData3 <- dget("../dataframes/mapImageData3.txt")
-return("success - imported savedGoogleMap")
+return(mapImageData3)
   }else if(source=="process"){
 family2004$year<<-2004
 family2005$year<<-2005
