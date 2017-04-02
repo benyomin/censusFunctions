@@ -13,7 +13,6 @@ loadWealthEffectPackages <- function(load=TRUE){
   if(load==TRUE){
         #install_if_needed("reshape2")
     ##  mapping
-    ##devtools::install_github("mtennekes/tmaptools")
     ##devtools::install_github("mtennekes/tmap")
     ##devtools::install_github('walkerke/tigris')
     ##library(tigris)
@@ -36,10 +35,8 @@ loadWealthEffectPackages <- function(load=TRUE){
             library(zoo)
           install_if_needed("dtplyr")
             library(dtplyr)
-          install_if_needed("tidyverse")
-    library(tidyverse)
-    install_if_needed("plm") ## linear models for panel data ## https://r-forge.r-project.org/projects/plm/
-    library(plm)
+          install_if_needed("plm") ## linear models for panel data ## https://r-forge.r-project.org/projects/plm/
+            library(plm)
         #install_if_needed("gdata")  ## causes thesisdown to fail
         #library(gdata)
         #install_if_needed("operators")
