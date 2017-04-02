@@ -9,8 +9,8 @@ Description: Refactoring of Spaghetti Code for analysis in R
     When you make changes run
     updateMe.R
 Depends:
-    R (>= 3.3.1),  rbundler, foreign, roxygen2, survival, plm, rio, RCurl, zoo, dtplyr, readr, operators, grid, bookdown, scales, Hmisc, memisc, rgdal, sf
-Suggests: testthat
+    R (>= 3.3.1),  rbundler, foreign, roxygen2, survival, plm, rio, RCurl, zoo, dtplyr, readr, operators, grid, bookdown, scales, Hmisc, memisc, rgdal
+Suggests: testthat, sf
 License: MIT
 Encoding: UTF-8
 LazyData: true
