@@ -17,7 +17,7 @@ install_if_needed(pkgs, lib = NULL, repos = getOption("repos"),
 This function allows you to install packages.
 }
 \examples{
-install_if_needed("dplyr")
+install_if_needed('dplyr')
 
 }
 \keyword{install}

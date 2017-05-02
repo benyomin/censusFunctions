@@ -9,50 +9,46 @@
 #' @export
 #' @examples
 #' loadWealthEffectPackages()
-loadWealthEffectPackages <- function(load=TRUE){
-  if(load==TRUE){
-        #install_if_needed("reshape2")
-    ##  mapping
-    ##devtools::install_github("mtennekes/tmap")
-    ##devtools::install_github('walkerke/tigris')
-    ##library(tigris)
-    ##library(tmapn)
-    ##  other
-            library(reshape2)
-    install_github("dkahle/ggmap")
-    library("ggmap")
-          install_if_needed("rio")
-            library(rio)
-          install_if_needed("roxygen2")
-            library(roxygen2)
-          install_if_needed("foreign")
-            library(foreign)
-          install_if_needed("rJava")
-            library(rJava)
-          install_if_needed("xlsx")
-            library(xlsx)
-          install_if_needed("RCurl")
-            library(RCurl)
-          install_if_needed("zoo")
-            library(zoo)
-          install_if_needed("dtplyr")
-            library(dtplyr)
-          install_if_needed("plm") ## linear models for panel data ## https://r-forge.r-project.org/projects/plm/
-            library(plm)
-        #install_if_needed("gdata")  ## causes thesisdown to fail
-        #library(gdata)
-        #install_if_needed("operators")
-        #library(operators)
-        #install_if_needed("grid")
-        #library(grid)
-           install_if_needed("bookdown")
-             library(bookdown)
-           install_if_needed("scales")
-             library(scales)
- devtools::install_github("therneau/survival")  ## Hmisc needs updated version
-           install_if_needed("Hmisc")
-             library(Hmisc)
-           install_if_needed("memisc")
-             library(memisc)
-  }else{print("Helper Packages not loaded by censusFunctions.")}
-        }
+loadWealthEffectPackages <- function(load = TRUE) {
+    if (load == TRUE) {
+        # install_if_needed('reshape2') mapping
+        # devtools::install_github('mtennekes/tmap')
+        # devtools::install_github('walkerke/tigris') library(tigris) library(tmapn)
+        # other
+        library(reshape2)
+        install_github("dkahle/ggmap")
+        library("ggmap")
+        install_if_needed("rio")
+        library(rio)
+        install_if_needed("roxygen2")
+        library(roxygen2)
+        install_if_needed("foreign")
+        library(foreign)
+        install_if_needed("rJava")
+        library(rJava)
+        install_if_needed("xlsx")
+        library(xlsx)
+        install_if_needed("RCurl")
+        library(RCurl)
+        install_if_needed("zoo")
+        library(zoo)
+        install_if_needed("dtplyr")
+        library(dtplyr)
+        install_if_needed("plm")  ## linear models for panel data ## https://r-forge.r-project.org/projects/plm/
+        library(plm)
+        # install_if_needed('gdata') ## causes thesisdown to fail library(gdata)
+        # install_if_needed('operators') library(operators) install_if_needed('grid')
+        # library(grid)
+        install_if_needed("bookdown")
+        library(bookdown)
+        install_if_needed("scales")
+        library(scales)
+        devtools::install_github("therneau/survival")  ## Hmisc needs updated version
+        install_if_needed("Hmisc")
+        library(Hmisc)
+        install_if_needed("memisc")
+        library(memisc)
+    } else {
+        print("Helper Packages not loaded by censusFunctions.")
+    }
+}

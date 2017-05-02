@@ -13,8 +13,8 @@ installCensusFunctions(location)
 This function installs the local or github version of Israel Census helper functions.
 }
 \examples{
-installCensusFunctions("local")
-installCensusFunctions("github")
+installCensusFunctions('local')
+installCensusFunctions('github')
 }
 \keyword{dir,}
 \keyword{directory}

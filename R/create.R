@@ -5,14 +5,16 @@
 #' @keywords process, aggregate, data
 #' @export
 #' @examples
-#' create("matrices")
-#' create("means")
-create <- function(arg1){
-    if(arg1=="matrices"){
-        source("../includes/familyConsumption.R",  echo=FALSE)
+#' create('matrices')
+#' create('means')
+create <- function(arg1) {
+    if (arg1 == "matrices") {
+        source("../includes/familyConsumption.R", echo = FALSE)
         return(1)
-    }else if (arg1=="means"){
-        source("../includes/meanConsumption.R",    echo=FALSE)
+    } else if (arg1 == "means") {
+        source("../includes/meanConsumption.R", echo = FALSE)
         return(1)
-    }else{return(0)}
+    } else {
+        return(0)
+    }
 }

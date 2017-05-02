@@ -19,9 +19,9 @@ Calls ownership() ; returns expYYYY[renters/owners]
 This function weighs Israeli census data. Returns 1 of 6 options mat[owner/renter]Weighted[Income/Consumption/NHC].
 }
 \examples{
-weighHouseholds("renters","income")
-weighHouseholds("owners","consumption")
-weighHouseholds("renters","NHC")
+weighHouseholds('renters','income')
+weighHouseholds('owners','consumption')
+weighHouseholds('renters','NHC')
 }
 \keyword{aggregate,}
 \keyword{data}

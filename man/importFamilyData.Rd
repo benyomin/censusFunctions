@@ -7,15 +7,15 @@
 importFamilyData(source)
 }
 \arguments{
-\item{source}{Source for data, "raw" imports from .por files. "saved" files were previously parsed in R.}
+\item{source}{Source for data, 'raw' imports from .por files. 'saved' files were previously parsed in R.}
 }
 \description{
 This function imports Israeli census data from spss .por files distributed by the CBS.
 }
 \examples{
-importFamilyData("raw")
-importFamilyData("saved")
-importFamilyData("writeOut")
+importFamilyData('raw')
+importFamilyData('saved')
+importFamilyData('writeOut')
 }
 \keyword{import,}
 \keyword{load}

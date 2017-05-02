@@ -13,9 +13,9 @@ censusGraph(plot)
 This function displays processed data visually.
 }
 \examples{
-censusGraph("allIncome")
-censusGraph("allConsumption")
-censusGraph("car")
+censusGraph('allIncome')
+censusGraph('allConsumption')
+censusGraph('car')
 }
 \keyword{display,}
 \keyword{graph,}

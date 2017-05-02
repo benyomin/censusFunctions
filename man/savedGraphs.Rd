@@ -20,9 +20,9 @@ savedGraphs(class = "renters", x = "income", y = "consumption",
 This function plots with ggplot2
 }
 \examples{
-savedGraphs("owners", "income", "consumption", 2005)
-savedGraphs("renters","consumption",   "rent", 2013)
-savedGraphs("renters","income",        "rent", 2010)
+savedGraphs('owners', 'income', 'consumption', 2005)
+savedGraphs('renters','consumption',   'rent', 2013)
+savedGraphs('renters','income',        'rent', 2010)
 }
 \keyword{graph,}
 \keyword{plot}

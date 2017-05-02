@@ -13,9 +13,9 @@ tidyFrames(metric)
 This function weighs Israeli census data. Returns 1 of 6 options mat[owner/renter]Weighted[Income/Consumption/NHC].
 }
 \examples{
-tidyFrame("income")
-tidyFrame("consumption")
-tidyFrame("NHC")
+tidyFrame('income')
+tidyFrame('consumption')
+tidyFrame('NHC')
 }
 \keyword{aggregate,}
 \keyword{data}

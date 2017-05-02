@@ -27,10 +27,10 @@ Is called by: weighHouseholds(), takes expYYYYs
 Creates dataframes based on payment of rent.
 }
 \examples{
-ownership("renters", 2012)
-ownership("notkey", 2012)
-ownership("keymoney", 2012)
-ownership("owners",  2004)
+ownership('renters', 2012)
+ownership('notkey', 2012)
+ownership('keymoney', 2012)
+ownership('owners',  2004)
 }
 \keyword{owner,}
 \keyword{renter,}
