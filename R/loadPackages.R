@@ -19,6 +19,8 @@ loadWealthEffectPackages <- function(load=TRUE){
     ##library(tmapn)
     ##  other
             library(reshape2)
+    install_github("dkahle/ggmap")
+    library("ggmap")
           install_if_needed("rio")
             library(rio)
           install_if_needed("roxygen2")
