@@ -126,8 +126,8 @@ write.csv(ilframe, file =   "../includes/ilregions.csv", row.names = FALSE)
 }else if (args == "saved"){
 
 # import saved data # http://rprogramming.net/read-csv-in-r/
-ilframe <- read.csv(file = " ../includes/ilregions.csv", header = TRUE, sep = ",")
-
+ilframe <- read.csv(file = "../includes/ilregions.csv", header = TRUE, sep = ",")
+return(ilframe)
 }else{
 return("not implemented oy9arsldka")
      }
