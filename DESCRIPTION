@@ -9,7 +9,7 @@ Description: Refactoring of Spaghetti Code for analysis in R
     When you make changes run
     updateMe.R
 Depends:
-    R (>= 3.3.1),  rbundler, foreign, roxygen2, survival, plm, rio, RCurl, zoo, dtplyr, readr, operators, grid, bookdown, scales, Hmisc, memisc, rgdal
+    R (>= 3.3.1),  rbundler, foreign, roxygen2, survival, plm, rio, RCurl, zoo, dtplyr, readr, operators, grid, bookdown, scales, Hmisc, memisc, rgdal, choroplethr, choroplethrAdmin1, maptools, rgeos
 Suggests: testthat, sf
 License: MIT
 Encoding: UTF-8

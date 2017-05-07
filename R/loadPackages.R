@@ -34,8 +34,13 @@ loadWealthEffectPackages <- function(load = TRUE) {
         library(zoo)
         install_if_needed("dtplyr")
         library(dtplyr)
-        install_if_needed("plm")  ## linear models for panel data ## https://r-forge.r-project.org/projects/plm/
-        library(plm)
+      install_if_needed("plm")  ## linear models for panel data ## https://r-forge.r-project.org/projects/plm/
+library(plm)
+      install_if_needed("choroplethr")
+install_github("choroplethrAdmin1", "arilamstein")
+ #     install_if_needed("choroplethrAdmin1")
+library(choroplethr)
+library(choroplethrAdmin1)
         # install_if_needed('gdata') ## causes thesisdown to fail library(gdata)
         # install_if_needed('operators') library(operators) install_if_needed('grid')
         # library(grid)
