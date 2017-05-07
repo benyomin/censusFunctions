@@ -20,9 +20,10 @@ dlplethr <- function(source = "saved"){     #defaults to saved version
   ##        curlPerform(url = admin1map_url, verbose = TRUE, useragent = getOption("HTTPUserAgent"), 
   ##            writedata = f@ref)
   ##       RCurl::close(f)
-    library("RCurl")
-    arymap <<- getUrl(admin1map_url)
-dlplethr("write")
+  ##  library(RCurl)
+  ##  arymap <<- getURL(admin1map_url)
+    ## dlplethr("write")
+    return("please try with option saved")
   } else if (source == "saved") {
         if (file.exists("../rawData/maps/admin1.map.rdata")) {
           load("../rawData/maps/admin1.map.rdata")
