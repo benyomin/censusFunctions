@@ -16,14 +16,14 @@ dlplethr <- function(source = "saved"){     #defaults to saved version
 
   if  (source == "raw"){
     #load("/Users/AbuDavid/scratch/R/choroplethrAdmin1/data/admin1.map.rdata")
- f <-   CFILE("../rawData/admin1.map.rdata", mode = "wb")  ##creates a file in which to write downloaded data.
+ f <-   CFILE("../rawData/maps/admin1.map.rdata", mode = "wb")  ##creates a file in which to write downloaded data.
         curlPerform(url = admin1map_url, verbose = TRUE, useragent = getOption("HTTPUserAgent"), 
             writedata = f@ref)
         RCurl::close(f)
 
   } else if (source == "saved") {
-        if (file.exists("../rawData/admin1.map.rdata")) {
-          load("../rawData/admin1.map.rdata")
+        if (file.exists("../rawData/maps/admin1.map.rdata")) {
+          load("../rawData/maps/admin1.map.rdata")
 
         } else {
           print("error 034h9d7h - file not downloaded, please try raw option ")
