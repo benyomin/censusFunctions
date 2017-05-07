@@ -15,8 +15,12 @@ chngDir <- function(arg) {
     } else if (arg == "paper") {
         setwd("~/proposal/secret/")
         ## cd to where we build the pdf
+    } else if (arg == "index") {
+setwd("/Volumes/Bmac/febThesis/index")
     } else if (arg == "febThesis") {
         setwd("~/school/febThesis")
+        } else if (arg == "map") {
+        setwd("~/scratch/toronto_neighbourhoods")    
     } else {
         return("invalid option, error code q3543dgp")
     }
