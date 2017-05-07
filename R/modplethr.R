@@ -123,6 +123,10 @@ ilframe <- rbind(auldframe, golanframe, qrayotframe, sharonframe)
 # writeout data  # http://www.cookbook-r.com/Data_input_and_output/Writing_data_to_a_file/
 write.csv(ilframe, file =   "../includes/ilregions.csv", row.names = FALSE)
 
+}else if (args == "writeAgain"){
+save(ilframe, file="../includes/admin1.map.rdata")  ## only 1 country now
+
+
 }else if (args == "saved"){
 
 # import saved data # http://rprogramming.net/read-csv-in-r/

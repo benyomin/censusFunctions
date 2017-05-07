@@ -2,7 +2,7 @@
 % Please edit documentation in R/makeilframe.R
 \name{makeilframe}
 \alias{makeilframe}
-\title{makeilframe v.0.3}
+\title{makeilframe v.0.4}
 \usage{
 makeilframe(x = "saved")
 }
@@ -12,6 +12,7 @@ This function is a wrapper around dlplethr and modplethr.
 \examples{
 makeilframe("raw")
 makeilframe("saved")
+makeilframe("alt")
 }
 \keyword{GIS}
 \keyword{choropleth,}
