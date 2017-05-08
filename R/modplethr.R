@@ -115,8 +115,9 @@ auldframe   <- admin1.map[which(admin1.map$admin == medina), ]
 #names(golanframe)
 
 # combine
-ilframe <- rbind(auldframe, golanframe, qrayotframe, sharonframe)
+newonly <<- rbind(golanframe, qrayotframe, sharonframe)
 
+ilframe <- rbind(auldframe, golanframe, qrayotframe, sharonframe)
 
 }else if (args == "write"){
 
