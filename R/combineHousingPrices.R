@@ -22,16 +22,13 @@ rooms<-c("average","1.5-2 rooms","2.5-3 rooms", "3.5-4 rooms","4.5-5 rooms")
 repLocations<-rep(locations, each=5)
 rows <-paste(repLocations, rooms)
 ## read prices from excel
-## location of prices on gov. site:  TODO
+## location of prices on gov. site: yr14.url = "http://www.cbs.gov.il/www/archive/201503/price_new/a6_2_e.xls"
 
-P06_07<-read_excel("../rawData/houseP06_07.xls",  range = "A6:K56")
+P06_07<-read_ehomeprices <- combineHousingPrices("excel")
 P06_07   <- P06_07[,-7]   ##remove annual average
 ## label columns
 colNames06_07 <- c("id","Total",dates[01:08])
 colnames(P06_07) <- colNames06_07
-#View(P06_07)
-#colNames06_07 <- c("id","Total",dates[01:08])
-#colNames06_07
 
 ## end q4 2007
 ## begin q1 2008
@@ -88,9 +85,8 @@ rownames(homeprices) <- rows
     return(homeprices)
   } else if (arg1 == "saved") {
 
-   load("../savedData/homeprices.Rda")
   print("loading home prices from a saved R data file")
-    return("success")
+   load("../savedData/homeprices.Rda")
 } else if (arg1 == "writeout") {
   save(homeprices, file = "../savedData/homeprices.Rda")
   print("wrote prices to a saved data frame.")
