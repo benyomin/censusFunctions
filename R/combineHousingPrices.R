@@ -9,7 +9,7 @@
 #' combineHousingPrices("excel")
 #' combineHousingPrices("raw")
 #' combineHousingPrices("writeout")
-create <- function(arg1) {
+combineHousingFunctions <- function(arg1) {
   require(zoo)
   require(readxl)
   if (arg1 == "excel") {
