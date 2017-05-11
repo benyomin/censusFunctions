@@ -24,15 +24,15 @@ rows <-paste(repLocations, rooms)
 ## read prices from excel
 ## location of prices on gov. site: yr14.url = "http://www.cbs.gov.il/www/archive/201503/price_new/a6_2_e.xls"
 
-P06_07<-read_ehomeprices <- combineHousingPrices("excel")
-P06_07   <- P06_07[,-7]   ##remove annual average
+P06_07 <- read_excel("../rawData/houseP06_07.xls", range = "A6:K56")
+P06_07 <- P06_07[,-7]   ##remove annual average
 ## label columns
 colNames06_07 <- c("id","Total",dates[01:08])
 colnames(P06_07) <- colNames06_07
 
 ## end q4 2007
 ## begin q1 2008
-P08_09<-read_excel("../rawData/houseP08_09.xls",  range = "A6:K56")
+P08_09 <-read_excel("../rawData/houseP08_09.xls",  range = "A6:K56")
 P08_09 <- P08_09[,-7]   ##remove annual average
 colNames08_09 <- c("id","Total",dates[09:16])
 colnames(P08_09)<-colNames08_09
@@ -60,7 +60,7 @@ P14   <-read_excel("../rawData/houseP14q1-2.xls", range = "A6:K56")
 P14   <-P14[,-7]   ##remove annual average
 colNames14 <- c("id","Total",dates[29:36])
 colnames(P14)<-colNames14
-#View(P14)
+#P14
 
 ## end q4 2014
 ## begin q1 2015
@@ -74,7 +74,7 @@ P15_16 <- P15_16[, -c(3,4)]
 p06_07<-P06_07
 p08_09<-P08_09[,-c(1,2)]
 p10_11<-P10_11[,-c(1,2)]
-p12_13<-P12_13[,-c(1,2)]
+p12_13<-P12_13[,-c(1,2,7,8,9,10)]
 p14<-   P14[,-c(1,2)]
 p15_16<-P15_16[,-c(1,2)]
 prices<-cbind(p06_07,p08_09,p10_11,p12_13,p14,p15_16)
@@ -87,22 +87,22 @@ rownames(homeprices) <- rows
 
   print("loading home prices from a saved R data file")
    load("../savedData/homeprices.Rda")
-} else if (arg1 == "writeout") {
-  save(homeprices, file = "../savedData/homeprices.Rda")
+  } else if (arg1 == "writeout") {
+
+  write.csv(homeprices, file = "../savedData/homeprices.csv", row.names = FALSE)
+       save(homeprices, file = "../savedData/homeprices.Rda")
   print("wrote prices to a saved data frame.")
 } else if (arg1 == "raw") {
   chngDir("index")
   setwd("../rawData")
   getwd()
 #  dir.create("rawData")
-
   file.remove("houseP06_07.xls")
   file.remove("houseP08_09.xls")
   file.remove("houseP10_11xls")
   file.remove("houseP12_13.xls")
   file.remove("houseP14_16.xls")
   file.remove("houseP14q1-2.xls")
-
 
   downloadHousingPrices("1")
   downloadHousingPrices("3")
