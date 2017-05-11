@@ -10,7 +10,7 @@
 #' chngDir(paper)
 chngDir <- function(arg) {
     if (arg == "package") {
-        setwd("~/")
+        setwd("~/censusFunctions")
         ## cd to local package censusFunctions
     } else if (arg == "paper") {
         setwd("~/proposal/secret/")

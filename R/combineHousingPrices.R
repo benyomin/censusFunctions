@@ -83,18 +83,39 @@ p15_16<-P15_16[,-c(1,2)]
 prices<-cbind(p06_07,p08_09,p10_11,p12_13,p14,p15_16)
 homeprices <- prices
 rownames(homeprices) <- rows
-homeprices
+# homeprices
+  print("combining home prices from excel sheets.")
+    return(homeprices)
+  } else if (arg1 == "saved") {
 
-  print("combing home prices from excel sheets.")
-    return(homeprices)
-} else if (arg1 == "saved") {
+   load("../savedData/homeprices.Rda")
   print("loading home prices from a saved R data file")
-    return(homeprices)
+    return("success")
+} else if (arg1 == "writeout") {
+  save(homeprices, file = "../savedData/homeprices.Rda")
+  print("wrote prices to a saved data frame.")
 } else if (arg1 == "raw") {
   chngDir("index")
-  setwd("..")
+  setwd("../rawData")
   getwd()
-        return("downloading excel files")
+#  dir.create("rawData")
+
+  file.remove("houseP06_07.xls")
+  file.remove("houseP08_09.xls")
+  file.remove("houseP10_11xls")
+  file.remove("houseP12_13.xls")
+  file.remove("houseP14_16.xls")
+  file.remove("houseP14q1-2.xls")
+
+
+  downloadHousingPrices("1")
+  downloadHousingPrices("3")
+  downloadHousingPrices("7")
+  downloadHousingPrices("11")
+  downloadHousingPrices("13")
+  downloadHousingPrices("14")
+  downloadHousingPrices("16")
+  return("downloading excel files")
     } else {
 
         return("writing excel files")
