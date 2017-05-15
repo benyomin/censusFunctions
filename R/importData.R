@@ -166,6 +166,9 @@ return("success rawGoogleMap")
   }else if(source=="saveGoogleMap"){
 dput(mapImageData3, "../dataframes/mapImageData3.txt")
 return("success - wrote out Google Map")
+  }else if(source=="homePrices"){
+homeprices <<- load("../savedData/homeprices.Rda")
+source("../includes/regionalPrices.R")
   }else if(source=="savedGoogleMap"){
 mapImageData3 <- dget("../dataframes/mapImageData3.txt")
 return(mapImageData3)
