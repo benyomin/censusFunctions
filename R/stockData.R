@@ -10,6 +10,7 @@
 #' stockData('saved')
 #' stockData('createSaved')
 #' stockData('add')
+
 stockData <- function(arg) {
     if (arg == "import") {
         # import the new TLV stock data from the csv
@@ -36,7 +37,6 @@ stockData <- function(arg) {
         dput(wStockFamily2014, file = "../dataframes/wStockFamily2014.txt")
         return("wrote out dataFrames with stock prices")
     } else if (arg == "add") {
-        ## manipulates the frames created by importData('familyProcessed')
         wStockFamily2004 <<- family2004
         wStockFamily2005 <<- family2005
         wStockFamily2006 <<- family2006
@@ -48,7 +48,6 @@ stockData <- function(arg) {
         wStockFamily2012 <<- family2012
         wStockFamily2013 <<- family2013
         wStockFamily2014 <<- family2014
-        
         wStockFamily2004$stock <<- tlv125["2004", 2]
         wStockFamily2005$stock <<- tlv125["2005", 2]
         wStockFamily2006$stock <<- tlv125["2006", 2]
@@ -74,16 +73,9 @@ stockData <- function(arg) {
         wStockFamily2014 <<- dget("../dataframes/wStockFamily2014.txt")
         return("imported saved data :: ;043q9ogwf")
     } else if (arg == "createSaved") {
-        ## censusFunctions::importData('familyProcessed') * version: raw_data_import --
-        ## creates the usual saved version -- maximum reproducibility ** import raw stock
-        ## prices ** add to data frames ** write out stock prices
         tlv125 <- censusFunctions::stockData("import")
         censusFunctions::stockData("add")
         censusFunctions::stockData("writeOutStock")
         return("added stock values and saved data wStockFamilyYYYY")
     } else {
-        ##'the only options are Y and N'
-        return("feature not implemented :: ;049035;")
-    }
-}
-
+        return("feature not implemented :: ;049035;")}}

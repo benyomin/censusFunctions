@@ -12,6 +12,13 @@ stockData(arg)
 \description{
 This function imports mid-year prices from the tlv-125 index.
 }
+\examples{
+stockData('import')
+stockData('writeOutStock')
+stockData('saved')
+stockData('createSaved')
+stockData('add')
+}
 \keyword{import,}
 \keyword{non-housing}
 \keyword{stocks,}
