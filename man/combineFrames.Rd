@@ -2,7 +2,7 @@
 % Please edit documentation in R/combineFrames.R
 \name{combineFrames}
 \alias{combineFrames}
-\title{combine from raw data.}
+\title{combine all years into a single dataframe to facilitate regression.}
 \usage{
 combineFrames(arg = TRUE)
 }

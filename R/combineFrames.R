@@ -1,4 +1,4 @@
-#' combine from raw data.
+#' combine all years into a single dataframe to facilitate regression.
 #'
 #' This function combines multiple years to a dataframe.
 #' @param arg Sentence describing arg.
@@ -11,10 +11,8 @@
 combineFrames <- function(arg = TRUE) {
     
     family2004$stock
-    
     head(family2005)
     names(family2005)
-    
     str(family2005)  ## get number of rows
     
     family2004a <- family2004
@@ -45,7 +43,7 @@ combineFrames <- function(arg = TRUE) {
     ## check
     names(family2011a) == names(family2005a)
     
-    mergedData1 <- do.call(rbind, list(family2004, family2005, family2006, family2007, 
+    mergedData1 <<- do.call(rbind, list(family2004, family2005, family2006, family2007,
         family2008, family2009, family2010, family2011, family2012, family2013, family2014))
     
     # str(family2004) ## 6k rows
@@ -55,7 +53,4 @@ combineFrames <- function(arg = TRUE) {
     ## mergedData <- merge( family2004, family2005, family2006, family2007,
     ## family2008, family2009, family2010, family2011, family2012, family2013,
     ## family2014, all=T)
-    
-    
 }
-
