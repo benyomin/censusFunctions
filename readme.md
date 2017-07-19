@@ -10,6 +10,10 @@ developed for:<br>
 ```R
 devtools::install_github("benyomin/censusFunctions")
 ```
+## publicity:
+we got picked up on a list of R packages.
+[rdrr.io](https://rdrr.io/github/benyomin/censusFunctions/)
+
 ## documentation
 ###[online docs](https://benyomin.github.io/censusFunctions/reference/index.html)
 ###in R:
