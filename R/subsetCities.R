@@ -438,13 +438,13 @@ kefar2004     %>% count %>% as.numeric,
 petah2004     %>% count %>% as.numeric,
 rishon2004    %>% count %>% as.numeric,
 ramat2004     %>% count %>% as.numeric,
-beer2004      %>% count %>% as.numeric)
+beer2004      %>% count %>% as.numeric,
+modiin2004      %>% count %>% as.numeric,
+betshemesh2004  %>% count %>% as.numeric,
+nahariyya2004   %>% count %>% as.numeric,
+qiryatatta2004  %>% count %>% as.numeric,
+givatayim2004   %>% count %>% as.numeric)
 
-# counts2004
-
-length(cityList)
-counts2005a <- (100:119)
-counts2005a
 
 ## all years
 
@@ -468,7 +468,12 @@ kefar2005     %>% count %>% as.numeric,
 petah2005     %>% count %>% as.numeric,
 rishon2005    %>% count %>% as.numeric,
 ramat2005     %>% count %>% as.numeric,
-beer2005      %>% count %>% as.numeric)
+beer2005      %>% count %>% as.numeric,
+modiin2005      %>% count %>% as.numeric,
+betshemesh2005  %>% count %>% as.numeric,
+nahariyya2005   %>% count %>% as.numeric,
+qiryatatta2005  %>% count %>% as.numeric,
+givatayim2005   %>% count %>% as.numeric)
 
 counts2006 <-  c(
 jerusalem2006 %>% count %>% as.numeric,
@@ -490,7 +495,12 @@ kefar2006     %>% count %>% as.numeric,
 petah2006     %>% count %>% as.numeric,
 rishon2006    %>% count %>% as.numeric,
 ramat2006     %>% count %>% as.numeric,
-beer2006      %>% count %>% as.numeric)
+beer2006      %>% count %>% as.numeric,
+modiin2006      %>% count %>% as.numeric,
+betshemesh2006  %>% count %>% as.numeric,
+nahariyya2006   %>% count %>% as.numeric,
+qiryatatta2006  %>% count %>% as.numeric,
+givatayim2006   %>% count %>% as.numeric)
 
 
 counts2007 <-  c(
@@ -513,7 +523,12 @@ kefar2007     %>% count %>% as.numeric,
 petah2007     %>% count %>% as.numeric,
 rishon2007    %>% count %>% as.numeric,
 ramat2007     %>% count %>% as.numeric,
-beer2007      %>% count %>% as.numeric)
+beer2007      %>% count %>% as.numeric,
+modiin2007      %>% count %>% as.numeric,
+betshemesh2007  %>% count %>% as.numeric,
+nahariyya2007   %>% count %>% as.numeric,
+qiryatatta2007  %>% count %>% as.numeric,
+givatayim2007   %>% count %>% as.numeric)
 
 counts2008 <-  c(
 jerusalem2008 %>% count %>% as.numeric,
@@ -535,7 +550,12 @@ kefar2008     %>% count %>% as.numeric,
 petah2008     %>% count %>% as.numeric,
 rishon2008    %>% count %>% as.numeric,
 ramat2008     %>% count %>% as.numeric,
-beer2008      %>% count %>% as.numeric)
+beer2008      %>% count %>% as.numeric,
+modiin2008      %>% count %>% as.numeric,
+betshemesh2008  %>% count %>% as.numeric,
+nahariyya2008   %>% count %>% as.numeric,
+qiryatatta2008  %>% count %>% as.numeric,
+givatayim2008   %>% count %>% as.numeric)
 
 counts2009 <-  c(
 jerusalem2009 %>% count %>% as.numeric,
@@ -557,7 +577,12 @@ kefar2009     %>% count %>% as.numeric,
 petah2009     %>% count %>% as.numeric,
 rishon2009    %>% count %>% as.numeric,
 ramat2009     %>% count %>% as.numeric,
-beer2009      %>% count %>% as.numeric)
+beer2009      %>% count %>% as.numeric,
+modiin2009      %>% count %>% as.numeric,
+betshemesh2009  %>% count %>% as.numeric,
+nahariyya2009   %>% count %>% as.numeric,
+qiryatatta2009  %>% count %>% as.numeric,
+givatayim2009   %>% count %>% as.numeric)
 
 counts2010 <-  c(
 jerusalem2010 %>% count %>% as.numeric,
@@ -579,7 +604,12 @@ kefar2010     %>% count %>% as.numeric,
 petah2010     %>% count %>% as.numeric,
 rishon2010    %>% count %>% as.numeric,
 ramat2010     %>% count %>% as.numeric,
-beer2010      %>% count %>% as.numeric)
+beer2010      %>% count %>% as.numeric,
+modiin2010      %>% count %>% as.numeric,
+betshemesh2010  %>% count %>% as.numeric,
+nahariyya2010   %>% count %>% as.numeric,
+qiryatatta2010  %>% count %>% as.numeric,
+givatayim2010   %>% count %>% as.numeric)
 
 counts2011 <-  c(
 jerusalem2011 %>% count %>% as.numeric,
@@ -601,7 +631,12 @@ kefar2011     %>% count %>% as.numeric,
 petah2011     %>% count %>% as.numeric,
 rishon2011    %>% count %>% as.numeric,
 ramat2011     %>% count %>% as.numeric,
-beer2011      %>% count %>% as.numeric)
+beer2011      %>% count %>% as.numeric,
+modiin2011      %>% count %>% as.numeric,
+betshemesh2011  %>% count %>% as.numeric,
+nahariyya2011   %>% count %>% as.numeric,
+qiryatatta2011  %>% count %>% as.numeric,
+givatayim2011   %>% count %>% as.numeric)
 
 counts2012 <-  c(
 jerusalem2012 %>% count %>% as.numeric,
@@ -623,7 +658,12 @@ kefar2012     %>% count %>% as.numeric,
 petah2012     %>% count %>% as.numeric,
 rishon2012    %>% count %>% as.numeric,
 ramat2012     %>% count %>% as.numeric,
-beer2012      %>% count %>% as.numeric)
+beer2012      %>% count %>% as.numeric,
+modiin2012      %>% count %>% as.numeric,
+betshemesh2012  %>% count %>% as.numeric,
+nahariyya2012   %>% count %>% as.numeric,
+qiryatatta2012  %>% count %>% as.numeric,
+givatayim2012   %>% count %>% as.numeric)
 
 counts2013 <-  c(
 jerusalem2013 %>% count %>% as.numeric,
@@ -645,7 +685,12 @@ kefar2013     %>% count %>% as.numeric,
 petah2013     %>% count %>% as.numeric,
 rishon2013    %>% count %>% as.numeric,
 ramat2013     %>% count %>% as.numeric,
-beer2013      %>% count %>% as.numeric)
+beer2013      %>% count %>% as.numeric,
+modiin2013      %>% count %>% as.numeric,
+betshemesh2013  %>% count %>% as.numeric,
+nahariyya2013   %>% count %>% as.numeric,
+qiryatatta2013  %>% count %>% as.numeric,
+givatayim2013   %>% count %>% as.numeric)
 
 counts2014 <-  c(
 jerusalem2014 %>% count %>% as.numeric,
@@ -667,8 +712,12 @@ kefar2014     %>% count %>% as.numeric,
 petah2014     %>% count %>% as.numeric,
 rishon2014    %>% count %>% as.numeric,
 ramat2014     %>% count %>% as.numeric,
-beer2014      %>% count %>% as.numeric)
-
+beer2014      %>% count %>% as.numeric,
+modiin2014      %>% count %>% as.numeric,
+betshemesh2014  %>% count %>% as.numeric,
+nahariyya2014   %>% count %>% as.numeric,
+qiryatatta2014  %>% count %>% as.numeric,
+givatayim2014   %>% count %>% as.numeric)
 
 ## list
 survey2004 <<-as.data.frame(rbind(list   = cityList,
@@ -683,7 +732,5 @@ survey2004 <<-as.data.frame(rbind(list   = cityList,
                                 "2012"  = counts2012,
                                 "2013"  = counts2013,
                                 "2014"  = counts2014))
-
-
 
 }
