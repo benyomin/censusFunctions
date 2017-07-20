@@ -2,7 +2,7 @@
 % Please edit documentation in R/subsetCities.R
 \name{subsetCities}
 \alias{subsetCities}
-\title{subsets the yearly surveys by city of residence}
+\title{subsets the yearly surveys by city of residence, v 0.83}
 \usage{
 subsetCities(arg)
 }
@@ -10,7 +10,7 @@ subsetCities(arg)
 \item{arg}{nil}
 }
 \description{
-subsets the yearly surveys by city of residence
+subsets the yearly surveys by city of residence, v 0.83
 }
 \examples{
 subsetCities()
