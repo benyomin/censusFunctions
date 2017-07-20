@@ -235,6 +235,11 @@ petah2008    <<- subset(familiesList[[5]], codeloc=="Petah Tiqwa")
 rishon2008   <<- subset(familiesList[[5]], codeloc=="Rishon LeZiyon")
 ramat2008    <<- subset(familiesList[[5]], codeloc=="Ramat Gan")
 beer2008     <<- subset(familiesList[[5]], codeloc=="Beer Sheva")
+modiin2008         <<- subset(familiesList[[1]], codeloc=="Mod'in")
+betshemesh2008     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
+nahariyya2008      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
+qiryatatta2008     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
+givatayim2008      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
 
 jerusalem2009 <<- subset(familiesList[[6]], codeloc=="Jerusalem")
 Ashdod2009    <<- subset(familiesList[[6]], codeloc=="Ashdod")
@@ -256,6 +261,11 @@ petah2009    <<- subset(familiesList[[6]], codeloc=="Petah Tiqwa")
 rishon2009   <<- subset(familiesList[[6]], codeloc=="Rishon LeZiyon")
 ramat2009    <<- subset(familiesList[[6]], codeloc=="Ramat Gan")
 beer2009     <<- subset(familiesList[[6]], codeloc=="Beer Sheva")
+modiin2009         <<- subset(familiesList[[1]], codeloc=="Mod'in")
+betshemesh2009     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
+nahariyya2009      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
+qiryatatta2009     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
+givatayim2009      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
 
 jerusalem2010 <<- subset(familiesList[[7]], codeloc=="Jerusalem")
 Ashdod2010    <<- subset(familiesList[[7]], codeloc=="Ashdod")
@@ -394,7 +404,7 @@ givatayim2014      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
   ## counts in cities
 
 
-cities2004 <- c(
+cities2004 <<- c(
 jerusalem2004,
 Ashdod2004  ,
 Haifa2004  ,
@@ -418,7 +428,7 @@ beer2004)
 
 #cityList
 #cities2004
-counts2004 <- c(
+counts2004 <<- c(
 jerusalem2004 %>% count %>% as.numeric,
 Ashdod2004    %>% count %>% as.numeric,
 Haifa2004     %>% count %>% as.numeric,
@@ -448,7 +458,7 @@ givatayim2004   %>% count %>% as.numeric)
 
 ## all years
 
-counts2005 <-  c(
+counts2005 <<-  c(
 jerusalem2005 %>% count %>% as.numeric,
 Ashdod2005    %>% count %>% as.numeric,
 Haifa2005     %>% count %>% as.numeric,
@@ -475,7 +485,7 @@ nahariyya2005   %>% count %>% as.numeric,
 qiryatatta2005  %>% count %>% as.numeric,
 givatayim2005   %>% count %>% as.numeric)
 
-counts2006 <-  c(
+counts2006 <<-  c(
 jerusalem2006 %>% count %>% as.numeric,
 Ashdod2006    %>% count %>% as.numeric,
 Haifa2006     %>% count %>% as.numeric,
@@ -503,7 +513,7 @@ qiryatatta2006  %>% count %>% as.numeric,
 givatayim2006   %>% count %>% as.numeric)
 
 
-counts2007 <-  c(
+counts2007 <<-  c(
 jerusalem2007 %>% count %>% as.numeric,
 Ashdod2007    %>% count %>% as.numeric,
 Haifa2007     %>% count %>% as.numeric,
@@ -530,7 +540,7 @@ nahariyya2007   %>% count %>% as.numeric,
 qiryatatta2007  %>% count %>% as.numeric,
 givatayim2007   %>% count %>% as.numeric)
 
-counts2008 <-  c(
+counts2008 <<-  c(
 jerusalem2008 %>% count %>% as.numeric,
 Ashdod2008    %>% count %>% as.numeric,
 Haifa2008     %>% count %>% as.numeric,
@@ -557,7 +567,7 @@ nahariyya2008   %>% count %>% as.numeric,
 qiryatatta2008  %>% count %>% as.numeric,
 givatayim2008   %>% count %>% as.numeric)
 
-counts2009 <-  c(
+counts2009 <<-  c(
 jerusalem2009 %>% count %>% as.numeric,
 Ashdod2009    %>% count %>% as.numeric,
 Haifa2009     %>% count %>% as.numeric,
@@ -584,7 +594,7 @@ nahariyya2009   %>% count %>% as.numeric,
 qiryatatta2009  %>% count %>% as.numeric,
 givatayim2009   %>% count %>% as.numeric)
 
-counts2010 <-  c(
+counts2010 <<-  c(
 jerusalem2010 %>% count %>% as.numeric,
 Ashdod2010    %>% count %>% as.numeric,
 Haifa2010     %>% count %>% as.numeric,
@@ -611,7 +621,7 @@ nahariyya2010   %>% count %>% as.numeric,
 qiryatatta2010  %>% count %>% as.numeric,
 givatayim2010   %>% count %>% as.numeric)
 
-counts2011 <-  c(
+counts2011 <<-  c(
 jerusalem2011 %>% count %>% as.numeric,
 Ashdod2011    %>% count %>% as.numeric,
 Haifa2011     %>% count %>% as.numeric,
@@ -638,7 +648,7 @@ nahariyya2011   %>% count %>% as.numeric,
 qiryatatta2011  %>% count %>% as.numeric,
 givatayim2011   %>% count %>% as.numeric)
 
-counts2012 <-  c(
+counts2012 <<-  c(
 jerusalem2012 %>% count %>% as.numeric,
 Ashdod2012    %>% count %>% as.numeric,
 Haifa2012     %>% count %>% as.numeric,
@@ -665,7 +675,7 @@ nahariyya2012   %>% count %>% as.numeric,
 qiryatatta2012  %>% count %>% as.numeric,
 givatayim2012   %>% count %>% as.numeric)
 
-counts2013 <-  c(
+counts2013 <<-  c(
 jerusalem2013 %>% count %>% as.numeric,
 Ashdod2013    %>% count %>% as.numeric,
 Haifa2013     %>% count %>% as.numeric,
@@ -692,7 +702,7 @@ nahariyya2013   %>% count %>% as.numeric,
 qiryatatta2013  %>% count %>% as.numeric,
 givatayim2013   %>% count %>% as.numeric)
 
-counts2014 <-  c(
+counts2014 <<-  c(
 jerusalem2014 %>% count %>% as.numeric,
 Ashdod2014    %>% count %>% as.numeric,
 Haifa2014     %>% count %>% as.numeric,
@@ -732,5 +742,19 @@ survey2004 <<-as.data.frame(rbind(list   = cityList,
                                 "2012"  = counts2012,
                                 "2013"  = counts2013,
                                 "2014"  = counts2014))
+
+surveyList  <<-as.data.frame(cbind(list   = cityList,
+                                "2004"  = counts2004,
+                                "2005"  = counts2005,
+                                "2006"  = counts2006,
+                                "2007"  = counts2007,
+                                "2008"  = counts2008,
+                                "2009"  = counts2009,
+                                "2010"  = counts2010,
+                                "2011"  = counts2011,
+                                "2012"  = counts2012,
+                                "2013"  = counts2013,
+                                "2014"  = counts2014))
+
 
 }
