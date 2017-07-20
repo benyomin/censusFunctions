@@ -9,6 +9,7 @@ subsetCities <- function(arg) {
 
   ## exports these    dataframes to the global environment
   ## cityList      <- 99
+  ## survey2004   table of people surveyed by city and year
   ownerCounts   <- 99
   ownersList    <- 99
   ownersYYYY    <- 99
@@ -17,10 +18,7 @@ subsetCities <- function(arg) {
   rentersYYYY   <- 99
   jerusalemYYYY <- 99
 
-
-
   ## renter /owner
-
 
 renters2004  <<- subset(familiesList[[1]], rent=="Yes")
 # head(renters2004)  #check
@@ -339,4 +337,300 @@ petah2014    <<- subset(familiesList[[11]], codeloc=="Petah Tiqwa")
 rishon2014   <<- subset(familiesList[[11]], codeloc=="Rishon LeZiyon")
 ramat2014    <<- subset(familiesList[[11]], codeloc=="Ramat Gan")
 beer2014     <<- subset(familiesList[[11]], codeloc=="Beer Sheva")
+
+  ## counts in cities
+
+
+cities2004 <- c(
+jerusalem2004,
+Ashdod2004  ,
+Haifa2004  ,
+Herzliyya2004 ,
+Holon2004   ,
+Lod2004    ,
+Hadera2004,
+Ashqelon2004,
+Nettanya2004,
+Rehovot2004 ,
+Ramla2004  ,
+Raannana2004,
+tlv2004    ,
+bene2004  ,
+bat2004  ,
+kefar2004,
+petah2004  ,
+rishon2004,
+ramat2004,
+beer2004)
+
+#cityList
+#cities2004
+counts2004 <- c(
+jerusalem2004 %>% count %>% as.numeric,
+Ashdod2004    %>% count %>% as.numeric,
+Haifa2004     %>% count %>% as.numeric,
+Herzliyya2004 %>% count %>% as.numeric,
+Holon2004     %>% count %>% as.numeric,
+Lod2004       %>% count %>% as.numeric,
+Hadera2004    %>% count %>% as.numeric,
+Ashqelon2004  %>% count %>% as.numeric,
+Nettanya2004  %>% count %>% as.numeric,
+Rehovot2004   %>% count %>% as.numeric,
+Ramla2004     %>% count %>% as.numeric,
+Raannana2004  %>% count %>% as.numeric,
+tlv2004       %>% count %>% as.numeric,
+bene2004      %>% count %>% as.numeric,
+bat2004       %>% count %>% as.numeric,
+kefar2004     %>% count %>% as.numeric,
+petah2004     %>% count %>% as.numeric,
+rishon2004    %>% count %>% as.numeric,
+ramat2004     %>% count %>% as.numeric,
+beer2004      %>% count %>% as.numeric)
+
+# counts2004
+
+length(cityList)
+counts2005a <- (100:119)
+counts2005a
+
+## all years
+
+counts2005 <-  c(
+jerusalem2005 %>% count %>% as.numeric,
+Ashdod2005    %>% count %>% as.numeric,
+Haifa2005     %>% count %>% as.numeric,
+Herzliyya2005 %>% count %>% as.numeric,
+Holon2005     %>% count %>% as.numeric,
+Lod2005       %>% count %>% as.numeric,
+Hadera2005    %>% count %>% as.numeric,
+Ashqelon2005  %>% count %>% as.numeric,
+Nettanya2005  %>% count %>% as.numeric,
+Rehovot2005   %>% count %>% as.numeric,
+Ramla2005     %>% count %>% as.numeric,
+Raannana2005  %>% count %>% as.numeric,
+tlv2005       %>% count %>% as.numeric,
+bene2005      %>% count %>% as.numeric,
+bat2005       %>% count %>% as.numeric,
+kefar2005     %>% count %>% as.numeric,
+petah2005     %>% count %>% as.numeric,
+rishon2005    %>% count %>% as.numeric,
+ramat2005     %>% count %>% as.numeric,
+beer2005      %>% count %>% as.numeric)
+
+counts2006 <-  c(
+jerusalem2006 %>% count %>% as.numeric,
+Ashdod2006    %>% count %>% as.numeric,
+Haifa2006     %>% count %>% as.numeric,
+Herzliyya2006 %>% count %>% as.numeric,
+Holon2006     %>% count %>% as.numeric,
+Lod2006       %>% count %>% as.numeric,
+Hadera2006    %>% count %>% as.numeric,
+Ashqelon2006  %>% count %>% as.numeric,
+Nettanya2006  %>% count %>% as.numeric,
+Rehovot2006   %>% count %>% as.numeric,
+Ramla2006     %>% count %>% as.numeric,
+Raannana2006  %>% count %>% as.numeric,
+tlv2006       %>% count %>% as.numeric,
+bene2006      %>% count %>% as.numeric,
+bat2006       %>% count %>% as.numeric,
+kefar2006     %>% count %>% as.numeric,
+petah2006     %>% count %>% as.numeric,
+rishon2006    %>% count %>% as.numeric,
+ramat2006     %>% count %>% as.numeric,
+beer2006      %>% count %>% as.numeric)
+
+
+counts2007 <-  c(
+jerusalem2007 %>% count %>% as.numeric,
+Ashdod2007    %>% count %>% as.numeric,
+Haifa2007     %>% count %>% as.numeric,
+Herzliyya2007 %>% count %>% as.numeric,
+Holon2007     %>% count %>% as.numeric,
+Lod2007       %>% count %>% as.numeric,
+Hadera2007    %>% count %>% as.numeric,
+Ashqelon2007  %>% count %>% as.numeric,
+Nettanya2007  %>% count %>% as.numeric,
+Rehovot2007   %>% count %>% as.numeric,
+Ramla2007     %>% count %>% as.numeric,
+Raannana2007  %>% count %>% as.numeric,
+tlv2007       %>% count %>% as.numeric,
+bene2007      %>% count %>% as.numeric,
+bat2007       %>% count %>% as.numeric,
+kefar2007     %>% count %>% as.numeric,
+petah2007     %>% count %>% as.numeric,
+rishon2007    %>% count %>% as.numeric,
+ramat2007     %>% count %>% as.numeric,
+beer2007      %>% count %>% as.numeric)
+
+counts2008 <-  c(
+jerusalem2008 %>% count %>% as.numeric,
+Ashdod2008    %>% count %>% as.numeric,
+Haifa2008     %>% count %>% as.numeric,
+Herzliyya2008 %>% count %>% as.numeric,
+Holon2008     %>% count %>% as.numeric,
+Lod2008       %>% count %>% as.numeric,
+Hadera2008    %>% count %>% as.numeric,
+Ashqelon2008  %>% count %>% as.numeric,
+Nettanya2008  %>% count %>% as.numeric,
+Rehovot2008   %>% count %>% as.numeric,
+Ramla2008     %>% count %>% as.numeric,
+Raannana2008  %>% count %>% as.numeric,
+tlv2008       %>% count %>% as.numeric,
+bene2008      %>% count %>% as.numeric,
+bat2008       %>% count %>% as.numeric,
+kefar2008     %>% count %>% as.numeric,
+petah2008     %>% count %>% as.numeric,
+rishon2008    %>% count %>% as.numeric,
+ramat2008     %>% count %>% as.numeric,
+beer2008      %>% count %>% as.numeric)
+
+counts2009 <-  c(
+jerusalem2009 %>% count %>% as.numeric,
+Ashdod2009    %>% count %>% as.numeric,
+Haifa2009     %>% count %>% as.numeric,
+Herzliyya2009 %>% count %>% as.numeric,
+Holon2009     %>% count %>% as.numeric,
+Lod2009       %>% count %>% as.numeric,
+Hadera2009    %>% count %>% as.numeric,
+Ashqelon2009  %>% count %>% as.numeric,
+Nettanya2009  %>% count %>% as.numeric,
+Rehovot2009   %>% count %>% as.numeric,
+Ramla2009     %>% count %>% as.numeric,
+Raannana2009  %>% count %>% as.numeric,
+tlv2009       %>% count %>% as.numeric,
+bene2009      %>% count %>% as.numeric,
+bat2009       %>% count %>% as.numeric,
+kefar2009     %>% count %>% as.numeric,
+petah2009     %>% count %>% as.numeric,
+rishon2009    %>% count %>% as.numeric,
+ramat2009     %>% count %>% as.numeric,
+beer2009      %>% count %>% as.numeric)
+
+counts2010 <-  c(
+jerusalem2010 %>% count %>% as.numeric,
+Ashdod2010    %>% count %>% as.numeric,
+Haifa2010     %>% count %>% as.numeric,
+Herzliyya2010 %>% count %>% as.numeric,
+Holon2010     %>% count %>% as.numeric,
+Lod2010       %>% count %>% as.numeric,
+Hadera2010    %>% count %>% as.numeric,
+Ashqelon2010  %>% count %>% as.numeric,
+Nettanya2010  %>% count %>% as.numeric,
+Rehovot2010   %>% count %>% as.numeric,
+Ramla2010     %>% count %>% as.numeric,
+Raannana2010  %>% count %>% as.numeric,
+tlv2010       %>% count %>% as.numeric,
+bene2010      %>% count %>% as.numeric,
+bat2010       %>% count %>% as.numeric,
+kefar2010     %>% count %>% as.numeric,
+petah2010     %>% count %>% as.numeric,
+rishon2010    %>% count %>% as.numeric,
+ramat2010     %>% count %>% as.numeric,
+beer2010      %>% count %>% as.numeric)
+
+counts2011 <-  c(
+jerusalem2011 %>% count %>% as.numeric,
+Ashdod2011    %>% count %>% as.numeric,
+Haifa2011     %>% count %>% as.numeric,
+Herzliyya2011 %>% count %>% as.numeric,
+Holon2011     %>% count %>% as.numeric,
+Lod2011       %>% count %>% as.numeric,
+Hadera2011    %>% count %>% as.numeric,
+Ashqelon2011  %>% count %>% as.numeric,
+Nettanya2011  %>% count %>% as.numeric,
+Rehovot2011   %>% count %>% as.numeric,
+Ramla2011     %>% count %>% as.numeric,
+Raannana2011  %>% count %>% as.numeric,
+tlv2011       %>% count %>% as.numeric,
+bene2011      %>% count %>% as.numeric,
+bat2011       %>% count %>% as.numeric,
+kefar2011     %>% count %>% as.numeric,
+petah2011     %>% count %>% as.numeric,
+rishon2011    %>% count %>% as.numeric,
+ramat2011     %>% count %>% as.numeric,
+beer2011      %>% count %>% as.numeric)
+
+counts2012 <-  c(
+jerusalem2012 %>% count %>% as.numeric,
+Ashdod2012    %>% count %>% as.numeric,
+Haifa2012     %>% count %>% as.numeric,
+Herzliyya2012 %>% count %>% as.numeric,
+Holon2012     %>% count %>% as.numeric,
+Lod2012       %>% count %>% as.numeric,
+Hadera2012    %>% count %>% as.numeric,
+Ashqelon2012  %>% count %>% as.numeric,
+Nettanya2012  %>% count %>% as.numeric,
+Rehovot2012   %>% count %>% as.numeric,
+Ramla2012     %>% count %>% as.numeric,
+Raannana2012  %>% count %>% as.numeric,
+tlv2012       %>% count %>% as.numeric,
+bene2012      %>% count %>% as.numeric,
+bat2012       %>% count %>% as.numeric,
+kefar2012     %>% count %>% as.numeric,
+petah2012     %>% count %>% as.numeric,
+rishon2012    %>% count %>% as.numeric,
+ramat2012     %>% count %>% as.numeric,
+beer2012      %>% count %>% as.numeric)
+
+counts2013 <-  c(
+jerusalem2013 %>% count %>% as.numeric,
+Ashdod2013    %>% count %>% as.numeric,
+Haifa2013     %>% count %>% as.numeric,
+Herzliyya2013 %>% count %>% as.numeric,
+Holon2013     %>% count %>% as.numeric,
+Lod2013       %>% count %>% as.numeric,
+Hadera2013    %>% count %>% as.numeric,
+Ashqelon2013  %>% count %>% as.numeric,
+Nettanya2013  %>% count %>% as.numeric,
+Rehovot2013   %>% count %>% as.numeric,
+Ramla2013     %>% count %>% as.numeric,
+Raannana2013  %>% count %>% as.numeric,
+tlv2013       %>% count %>% as.numeric,
+bene2013      %>% count %>% as.numeric,
+bat2013       %>% count %>% as.numeric,
+kefar2013     %>% count %>% as.numeric,
+petah2013     %>% count %>% as.numeric,
+rishon2013    %>% count %>% as.numeric,
+ramat2013     %>% count %>% as.numeric,
+beer2013      %>% count %>% as.numeric)
+
+counts2014 <-  c(
+jerusalem2014 %>% count %>% as.numeric,
+Ashdod2014    %>% count %>% as.numeric,
+Haifa2014     %>% count %>% as.numeric,
+Herzliyya2014 %>% count %>% as.numeric,
+Holon2014     %>% count %>% as.numeric,
+Lod2014       %>% count %>% as.numeric,
+Hadera2014    %>% count %>% as.numeric,
+Ashqelon2014  %>% count %>% as.numeric,
+Nettanya2014  %>% count %>% as.numeric,
+Rehovot2014   %>% count %>% as.numeric,
+Ramla2014     %>% count %>% as.numeric,
+Raannana2014  %>% count %>% as.numeric,
+tlv2014       %>% count %>% as.numeric,
+bene2014      %>% count %>% as.numeric,
+bat2014       %>% count %>% as.numeric,
+kefar2014     %>% count %>% as.numeric,
+petah2014     %>% count %>% as.numeric,
+rishon2014    %>% count %>% as.numeric,
+ramat2014     %>% count %>% as.numeric,
+beer2014      %>% count %>% as.numeric)
+
+
+## list
+survey2004 <<-as.data.frame(rbind(list   = cityList,
+                                "2004"  = counts2004,
+                                "2005"  = counts2005,
+                                "2006"  = counts2006,
+                                "2007"  = counts2007,
+                                "2008"  = counts2008,
+                                "2009"  = counts2009,
+                                "2010"  = counts2010,
+                                "2011"  = counts2011,
+                                "2012"  = counts2012,
+                                "2013"  = counts2013,
+                                "2014"  = counts2014))
+
+
+
 }
