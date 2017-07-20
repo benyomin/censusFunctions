@@ -1,11 +1,94 @@
 #' subsets the yearly surveys by city of residence
 #' @param arg nil
 #' @keywords city, subset
-#' @export
+#' @export ownersYYYY, rentersYYYY, ownersList, rentersList, renterCounts, ownerCounts, cityList, jerusalemYYYY
 #' @examples
 #' subsetCities()
 
 subsetCities <- function(arg) {
+
+renters2004  <<- subset(familiesList[[1]], rent=="Yes")
+# head(renters2004)  #check
+renters2005  <<- subset(familiesList[[2]], rent=="Yes")
+renters2006  <<- subset(familiesList[[3]], rent=="Yes")
+renters2007  <<- subset(familiesList[[4]], rent=="Yes")
+renters2008  <<- subset(familiesList[[5]], rent=="Yes")
+renters2009  <<- subset(familiesList[[6]], rent=="Yes")
+renters2010  <<- subset(familiesList[[7]], rent=="Yes")
+renters2011  <<- subset(familiesList[[8]], rent=="Yes")
+renters2012  <<- subset(familiesList[[9]], rent=="Yes")
+renters2013  <<- subset(familiesList[[10]],rent=="Yes")
+renters2014  <<- subset(familiesList[[11]],rent=="Yes")
+
+rentersList  <<- c(
+renters2004,
+renters2005,
+renters2006,
+renters2007,
+renters2008,
+renters2009,
+renters2010,
+renters2011,
+renters2012,
+renters2013,
+renters2014)
+## owners
+#head(familiesList[[1]])
+owners2004  <<- subset(familiesList[[1]], owner=="Yes")
+# head(owners2004)  #check
+owners2005  <<- subset(familiesList[[2]], owner=="Yes")
+owners2006  <<- subset(familiesList[[3]], owner=="Yes")
+owners2007  <<- subset(familiesList[[4]], owner=="Yes")
+owners2008  <<- subset(familiesList[[5]], owner=="Yes")
+owners2009  <<- subset(familiesList[[6]], owner=="Yes")
+owners2010  <<- subset(familiesList[[7]], owner=="Yes")
+owners2011  <<- subset(familiesList[[8]], owner=="Yes")
+owners2012  <<- subset(familiesList[[9]], owner=="Yes")
+owners2013  <<- subset(familiesList[[10]],owner=="Yes")
+owners2014  <<- subset(familiesList[[11]],owner=="Yes")
+
+ownersList <<- c(
+owners2004,
+owners2005,
+owners2006,
+owners2007,
+owners2008,
+owners2009,
+owners2010,
+owners2011,
+owners2012,
+owners2013,
+owners2014)
+
+countOwners <- c(
+count(owners2004),
+count(owners2005),
+count(owners2006),
+count(owners2007),
+count(owners2008),
+count(owners2009),
+count(owners2010),
+count(owners2011),
+count(owners2012),
+count(owners2013),
+count(owners2014))
+
+countRenters <- c(
+count(renters2004),
+count(renters2005),
+count(renters2006),
+count(renters2007),
+count(renters2008),
+count(renters2009),
+count(renters2010),
+count(renters2011),
+count(renters2012),
+count(renters2013),
+count(renters2014))
+
+renterCounts  <<-as.numeric(countRenters)
+ ownerCounts  <<-as.numeric(countOwners)
+
 
 cities <- as.character(levels(renters2004$codeloc))
 cityList <<- cities[-1]
