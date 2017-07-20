@@ -544,18 +544,18 @@ cities2008 <<- c(
 
 cities2009 <<- c(
               jerusalem2009,
-                 Ashdod2009  ,
-                  Haifa2009  ,
-              Herzliyya2009 ,
-                  Holon2009   ,
-                    Lod2009    ,
+                 Ashdod2009,
+                  Haifa2009,
+              Herzliyya2009,
+                  Holon2009  ,
+                    Lod2009,
                  Hadera2009,
                Ashqelon2009,
                Nettanya2009,
                 Rehovot2009 ,
                   Ramla2009  ,
                Raannana2009,
-                    tlv2009    ,
+                    tlv2009,
                    bene2009  ,
                     bat2009  ,
                   kefar2009,
@@ -709,7 +709,7 @@ cities2014 <<- c(
              qiryatatta2014,
               givatayim2014)
 
-counts2004 <<- c(
+counts2004 <- c(
 jerusalem2004 %>% count %>% as.numeric,
 Ashdod2004    %>% count %>% as.numeric,
 Haifa2004     %>% count %>% as.numeric,
@@ -736,9 +736,8 @@ nahariyya2004   %>% count %>% as.numeric,
 qiryatatta2004  %>% count %>% as.numeric,
 givatayim2004   %>% count %>% as.numeric)
 
-## all years
 
-counts2005 <<-  c(
+counts2005 <-  c(
 jerusalem2005 %>% count %>% as.numeric,
 Ashdod2005    %>% count %>% as.numeric,
 Haifa2005     %>% count %>% as.numeric,
@@ -765,7 +764,7 @@ nahariyya2005   %>% count %>% as.numeric,
 qiryatatta2005  %>% count %>% as.numeric,
 givatayim2005   %>% count %>% as.numeric)
 
-counts2006 <<-  c(
+counts2006 <-  c(
 jerusalem2006 %>% count %>% as.numeric,
 Ashdod2006    %>% count %>% as.numeric,
 Haifa2006     %>% count %>% as.numeric,
@@ -793,7 +792,7 @@ qiryatatta2006  %>% count %>% as.numeric,
 givatayim2006   %>% count %>% as.numeric)
 
 
-counts2007 <<-  c(
+counts2007 <-  c(
 jerusalem2007 %>% count %>% as.numeric,
 Ashdod2007    %>% count %>% as.numeric,
 Haifa2007     %>% count %>% as.numeric,
@@ -820,7 +819,7 @@ nahariyya2007   %>% count %>% as.numeric,
 qiryatatta2007  %>% count %>% as.numeric,
 givatayim2007   %>% count %>% as.numeric)
 
-counts2008 <<-  c(
+counts2008 <-  c(
 jerusalem2008 %>% count %>% as.numeric,
 Ashdod2008    %>% count %>% as.numeric,
 Haifa2008     %>% count %>% as.numeric,
@@ -847,7 +846,7 @@ nahariyya2008   %>% count %>% as.numeric,
 qiryatatta2008  %>% count %>% as.numeric,
 givatayim2008   %>% count %>% as.numeric)
 
-counts2009 <<-  c(
+counts2009 <-  c(
 jerusalem2009 %>% count %>% as.numeric,
 Ashdod2009    %>% count %>% as.numeric,
 Haifa2009     %>% count %>% as.numeric,
@@ -874,7 +873,7 @@ nahariyya2009   %>% count %>% as.numeric,
 qiryatatta2009  %>% count %>% as.numeric,
 givatayim2009   %>% count %>% as.numeric)
 
-counts2010 <<-  c(
+counts2010 <-  c(
 jerusalem2010 %>% count %>% as.numeric,
 Ashdod2010    %>% count %>% as.numeric,
 Haifa2010     %>% count %>% as.numeric,
@@ -901,7 +900,7 @@ nahariyya2010   %>% count %>% as.numeric,
 qiryatatta2010  %>% count %>% as.numeric,
 givatayim2010   %>% count %>% as.numeric)
 
-counts2011 <<-  c(
+counts2011 <-  c(
 jerusalem2011 %>% count %>% as.numeric,
 Ashdod2011    %>% count %>% as.numeric,
 Haifa2011     %>% count %>% as.numeric,
@@ -928,7 +927,7 @@ nahariyya2011   %>% count %>% as.numeric,
 qiryatatta2011  %>% count %>% as.numeric,
 givatayim2011   %>% count %>% as.numeric)
 
-counts2012 <<-  c(
+counts2012 <-  c(
 jerusalem2012 %>% count %>% as.numeric,
 Ashdod2012    %>% count %>% as.numeric,
 Haifa2012     %>% count %>% as.numeric,
@@ -955,7 +954,7 @@ nahariyya2012   %>% count %>% as.numeric,
 qiryatatta2012  %>% count %>% as.numeric,
 givatayim2012   %>% count %>% as.numeric)
 
-counts2013 <<-  c(
+counts2013 <-  c(
 jerusalem2013 %>% count %>% as.numeric,
 Ashdod2013    %>% count %>% as.numeric,
 Haifa2013     %>% count %>% as.numeric,
@@ -982,7 +981,7 @@ nahariyya2013   %>% count %>% as.numeric,
 qiryatatta2013  %>% count %>% as.numeric,
 givatayim2013   %>% count %>% as.numeric)
 
-counts2014 <<-  c(
+counts2014 <-  c(
 jerusalem2014 %>% count %>% as.numeric,
 Ashdod2014    %>% count %>% as.numeric,
 Haifa2014     %>% count %>% as.numeric,
