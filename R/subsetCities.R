@@ -1,11 +1,26 @@
 #' subsets the yearly surveys by city of residence
 #' @param arg nil
 #' @keywords city, subset
-#' @export ownersYYYY, rentersYYYY, ownersList, rentersList, renterCounts, ownerCounts, cityList, jerusalemYYYY
+#' @export subsetCities
 #' @examples
 #' subsetCities()
 
 subsetCities <- function(arg) {
+
+  ## exports these    dataframes to the global environment
+  ## cityList      <- 99
+  ownerCounts   <- 99
+  ownersList    <- 99
+  ownersYYYY    <- 99
+  renterCounts  <- 99
+  rentersList   <- 99
+  rentersYYYY   <- 99
+  jerusalemYYYY <- 99
+
+
+
+  ## renter /owner
+
 
 renters2004  <<- subset(familiesList[[1]], rent=="Yes")
 # head(renters2004)  #check
@@ -89,10 +104,11 @@ count(renters2014))
 renterCounts  <<-as.numeric(countRenters)
  ownerCounts  <<-as.numeric(countOwners)
 
+  ## cities by year
 
-cities <- as.character(levels(renters2004$codeloc))
-cityList <<- cities[-1]
 
+#  cities <- as.character(levels(renters2004$codeloc))
+#cityList <<- cities[-1]
 jerusalem2004 <<- subset(familiesList[[1]], codeloc=="Jerusalem")
 Ashdod2004    <<- subset(familiesList[[1]], codeloc=="Ashdod")
 Haifa2004     <<- subset(familiesList[[1]], codeloc=="Haifa")
