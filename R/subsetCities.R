@@ -154,11 +154,11 @@ petah2005    <<- subset(familiesList[[2]], codeloc=="Petah Tiqwa")
 rishon2005   <<- subset(familiesList[[2]], codeloc=="Rishon LeZiyon")
 ramat2005    <<- subset(familiesList[[2]], codeloc=="Ramat Gan")
 beer2005     <<- subset(familiesList[[2]], codeloc=="Beer Sheva")
-modiin2005         <<- subset(familiesList[[1]], codeloc=="Mod'in")
-betshemesh2005     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
-nahariyya2005      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
-qiryatatta2005     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
-givatayim2005      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
+modiin2005         <<- subset(familiesList[[2]], codeloc=="Mod'in")
+betshemesh2005     <<- subset(familiesList[[2]], codeloc=="Bet Shemesh")
+nahariyya2005      <<- subset(familiesList[[2]], codeloc=="Nahariyya")
+qiryatatta2005     <<- subset(familiesList[[2]], codeloc=="Qiryat Atta")
+givatayim2005      <<- subset(familiesList[[2]], codeloc=="Giv'atayim")
 
 
 jerusalem2006 <<- subset(familiesList[[3]], codeloc=="Jerusalem")
@@ -181,12 +181,11 @@ petah2006    <<- subset(familiesList[[3]], codeloc=="Petah Tiqwa")
 rishon2006   <<- subset(familiesList[[3]], codeloc=="Rishon LeZiyon")
 ramat2006    <<- subset(familiesList[[3]], codeloc=="Ramat Gan")
 beer2006     <<- subset(familiesList[[3]], codeloc=="Beer Sheva")
-modiin2006         <<- subset(familiesList[[1]], codeloc=="Mod'in")
-betshemesh2006     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
-nahariyya2006      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
-qiryatatta2006     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
-givatayim2006      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
-
+modiin2006         <<- subset(familiesList[[3]], codeloc=="Mod'in")
+betshemesh2006     <<- subset(familiesList[[3]], codeloc=="Bet Shemesh")
+nahariyya2006      <<- subset(familiesList[[3]], codeloc=="Nahariyya")
+qiryatatta2006     <<- subset(familiesList[[3]], codeloc=="Qiryat Atta")
+givatayim2006      <<- subset(familiesList[[3]], codeloc=="Giv'atayim")
 
 jerusalem2007 <<- subset(familiesList[[4]], codeloc=="Jerusalem")
 Ashdod2007    <<- subset(familiesList[[4]], codeloc=="Ashdod")
@@ -208,11 +207,11 @@ petah2007    <<- subset(familiesList[[4]], codeloc=="Petah Tiqwa")
 rishon2007   <<- subset(familiesList[[4]], codeloc=="Rishon LeZiyon")
 ramat2007    <<- subset(familiesList[[4]], codeloc=="Ramat Gan")
 beer2007     <<- subset(familiesList[[4]], codeloc=="Beer Sheva")
-modiin2007         <<- subset(familiesList[[1]], codeloc=="Mod'in")
-betshemesh2007     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
-nahariyya2007      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
-qiryatatta2007     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
-givatayim2007      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
+modiin2007         <<- subset(familiesList[[4]], codeloc=="Mod'in")
+betshemesh2007     <<- subset(familiesList[[4]], codeloc=="Bet Shemesh")
+nahariyya2007      <<- subset(familiesList[[4]], codeloc=="Nahariyya")
+qiryatatta2007     <<- subset(familiesList[[4]], codeloc=="Qiryat Atta")
+givatayim2007      <<- subset(familiesList[[4]], codeloc=="Giv'atayim")
 
 
 jerusalem2008 <<- subset(familiesList[[5]], codeloc=="Jerusalem")
@@ -235,11 +234,11 @@ petah2008    <<- subset(familiesList[[5]], codeloc=="Petah Tiqwa")
 rishon2008   <<- subset(familiesList[[5]], codeloc=="Rishon LeZiyon")
 ramat2008    <<- subset(familiesList[[5]], codeloc=="Ramat Gan")
 beer2008     <<- subset(familiesList[[5]], codeloc=="Beer Sheva")
-modiin2008         <<- subset(familiesList[[1]], codeloc=="Mod'in")
-betshemesh2008     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
-nahariyya2008      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
-qiryatatta2008     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
-givatayim2008      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
+modiin2008         <<- subset(familiesList[[5]], codeloc=="Mod'in")
+betshemesh2008     <<- subset(familiesList[[5]], codeloc=="Bet Shemesh")
+nahariyya2008      <<- subset(familiesList[[5]], codeloc=="Nahariyya")
+qiryatatta2008     <<- subset(familiesList[[5]], codeloc=="Qiryat Atta")
+givatayim2008      <<- subset(familiesList[[5]], codeloc=="Giv'atayim")
 
 jerusalem2009 <<- subset(familiesList[[6]], codeloc=="Jerusalem")
 Ashdod2009    <<- subset(familiesList[[6]], codeloc=="Ashdod")
@@ -261,11 +260,11 @@ petah2009    <<- subset(familiesList[[6]], codeloc=="Petah Tiqwa")
 rishon2009   <<- subset(familiesList[[6]], codeloc=="Rishon LeZiyon")
 ramat2009    <<- subset(familiesList[[6]], codeloc=="Ramat Gan")
 beer2009     <<- subset(familiesList[[6]], codeloc=="Beer Sheva")
-modiin2009         <<- subset(familiesList[[1]], codeloc=="Mod'in")
-betshemesh2009     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
-nahariyya2009      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
-qiryatatta2009     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
-givatayim2009      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
+modiin2009         <<- subset(familiesList[[6]], codeloc=="Mod'in")
+betshemesh2009     <<- subset(familiesList[[6]], codeloc=="Bet Shemesh")
+nahariyya2009      <<- subset(familiesList[[6]], codeloc=="Nahariyya")
+qiryatatta2009     <<- subset(familiesList[[6]], codeloc=="Qiryat Atta")
+givatayim2009      <<- subset(familiesList[[6]], codeloc=="Giv'atayim")
 
 jerusalem2010 <<- subset(familiesList[[7]], codeloc=="Jerusalem")
 Ashdod2010    <<- subset(familiesList[[7]], codeloc=="Ashdod")
@@ -287,11 +286,11 @@ petah2010    <<- subset(familiesList[[7]], codeloc=="Petah Tiqwa")
 rishon2010   <<- subset(familiesList[[7]], codeloc=="Rishon LeZiyon")
 ramat2010    <<- subset(familiesList[[7]], codeloc=="Ramat Gan")
 beer2010     <<- subset(familiesList[[7]], codeloc=="Beer Sheva")
-modiin2010         <<- subset(familiesList[[1]], codeloc=="Mod'in")
-betshemesh2010     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
-nahariyya2010      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
-qiryatatta2010     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
-givatayim2010      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
+modiin2010         <<- subset(familiesList[[7]], codeloc=="Mod'in")
+betshemesh2010     <<- subset(familiesList[[7]], codeloc=="Bet Shemesh")
+nahariyya2010      <<- subset(familiesList[[7]], codeloc=="Nahariyya")
+qiryatatta2010     <<- subset(familiesList[[7]], codeloc=="Qiryat Atta")
+givatayim2010      <<- subset(familiesList[[7]], codeloc=="Giv'atayim")
 
 
 jerusalem2011 <<- subset(familiesList[[8]], codeloc=="Jerusalem")
@@ -314,11 +313,11 @@ petah2011    <<- subset(familiesList[[8]], codeloc=="Petah Tiqwa")
 rishon2011   <<- subset(familiesList[[8]], codeloc=="Rishon LeZiyon")
 ramat2011    <<- subset(familiesList[[8]], codeloc=="Ramat Gan")
 beer2011     <<- subset(familiesList[[8]], codeloc=="Beer Sheva")
-modiin2011         <<- subset(familiesList[[1]], codeloc=="Mod'in")
-betshemesh2011     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
-nahariyya2011      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
-qiryatatta2011     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
-givatayim2011      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
+modiin2011         <<- subset(familiesList[[8]], codeloc=="Mod'in")
+betshemesh2011     <<- subset(familiesList[[8]], codeloc=="Bet Shemesh")
+nahariyya2011      <<- subset(familiesList[[8]], codeloc=="Nahariyya")
+qiryatatta2011     <<- subset(familiesList[[8]], codeloc=="Qiryat Atta")
+givatayim2011      <<- subset(familiesList[[8]], codeloc=="Giv'atayim")
 
 
 jerusalem2012 <<- subset(familiesList[[9]], codeloc=="Jerusalem")
@@ -341,11 +340,11 @@ petah2012    <<- subset(familiesList[[9]], codeloc=="Petah Tiqwa")
 rishon2012   <<- subset(familiesList[[9]], codeloc=="Rishon LeZiyon")
 ramat2012    <<- subset(familiesList[[9]], codeloc=="Ramat Gan")
 beer2012     <<- subset(familiesList[[9]], codeloc=="Beer Sheva")
-modiin2012         <<- subset(familiesList[[1]], codeloc=="Mod'in")
-betshemesh2012     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
-nahariyya2012      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
-qiryatatta2012     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
-givatayim2012      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
+modiin2012         <<- subset(familiesList[[9]], codeloc=="Mod'in")
+betshemesh2012     <<- subset(familiesList[[9]], codeloc=="Bet Shemesh")
+nahariyya2012      <<- subset(familiesList[[9]], codeloc=="Nahariyya")
+qiryatatta2012     <<- subset(familiesList[[9]], codeloc=="Qiryat Atta")
+givatayim2012      <<- subset(familiesList[[9]], codeloc=="Giv'atayim")
 
 
 jerusalem2013 <<- subset(familiesList[[10]], codeloc=="Jerusalem")
@@ -368,11 +367,11 @@ petah2013    <<- subset(familiesList[[10]], codeloc=="Petah Tiqwa")
 rishon2013   <<- subset(familiesList[[10]], codeloc=="Rishon LeZiyon")
 ramat2013    <<- subset(familiesList[[10]], codeloc=="Ramat Gan")
 beer2013     <<- subset(familiesList[[10]], codeloc=="Beer Sheva")
-modiin2013         <<- subset(familiesList[[1]], codeloc=="Mod'in")
-betshemesh2013     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
-nahariyya2013      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
-qiryatatta2013     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
-givatayim2013      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
+modiin2013         <<- subset(familiesList[[10]], codeloc=="Mod'in")
+betshemesh2013     <<- subset(familiesList[[10]], codeloc=="Bet Shemesh")
+nahariyya2013      <<- subset(familiesList[[10]], codeloc=="Nahariyya")
+qiryatatta2013     <<- subset(familiesList[[10]], codeloc=="Qiryat Atta")
+givatayim2013      <<- subset(familiesList[[10]], codeloc=="Giv'atayim")
 
 jerusalem2014 <<- subset(familiesList[[11]], codeloc=="Jerusalem")
 Ashdod2014    <<- subset(familiesList[[11]], codeloc=="Ashdod")
@@ -394,40 +393,322 @@ petah2014    <<- subset(familiesList[[11]], codeloc=="Petah Tiqwa")
 rishon2014   <<- subset(familiesList[[11]], codeloc=="Rishon LeZiyon")
 ramat2014    <<- subset(familiesList[[11]], codeloc=="Ramat Gan")
 beer2014     <<- subset(familiesList[[11]], codeloc=="Beer Sheva")
-modiin2014         <<- subset(familiesList[[1]], codeloc=="Mod'in")
-betshemesh2014     <<- subset(familiesList[[1]], codeloc=="Bet Shemesh")
-nahariyya2014      <<- subset(familiesList[[1]], codeloc=="Nahariyya")
-qiryatatta2014     <<- subset(familiesList[[1]], codeloc=="Qiryat Atta")
-givatayim2014      <<- subset(familiesList[[1]], codeloc=="Giv'atayim")
+modiin2014         <<- subset(familiesList[[11]], codeloc=="Mod'in")
+betshemesh2014     <<- subset(familiesList[[11]], codeloc=="Bet Shemesh")
+nahariyya2014      <<- subset(familiesList[[11]], codeloc=="Nahariyya")
+qiryatatta2014     <<- subset(familiesList[[11]], codeloc=="Qiryat Atta")
+givatayim2014      <<- subset(familiesList[[11]], codeloc=="Giv'atayim")
 
 
   ## counts in cities
 
 
 cities2004 <<- c(
-jerusalem2004,
-Ashdod2004  ,
-Haifa2004  ,
-Herzliyya2004 ,
-Holon2004   ,
-Lod2004    ,
-Hadera2004,
-Ashqelon2004,
-Nettanya2004,
-Rehovot2004 ,
-Ramla2004  ,
-Raannana2004,
-tlv2004    ,
-bene2004  ,
-bat2004  ,
-kefar2004,
-petah2004  ,
-rishon2004,
-ramat2004,
-beer2004)
+              jerusalem2004,
+                 Ashdod2004  ,
+                  Haifa2004  ,
+              Herzliyya2004 ,
+                  Holon2004   ,
+                    Lod2004    ,
+                 Hadera2004,
+               Ashqelon2004,
+               Nettanya2004,
+                Rehovot2004 ,
+                  Ramla2004  ,
+               Raannana2004,
+                    tlv2004    ,
+                   bene2004  ,
+                    bat2004  ,
+                  kefar2004,
+                  petah2004  ,
+                 rishon2004,
+                  ramat2004,
+                   beer2004,
+                 modiin2004,
+             betshemesh2004,
+              nahariyya2004,
+             qiryatatta2004,
+              givatayim2004)
 
-#cityList
-#cities2004
+cities2005 <<- c(
+              jerusalem2005,
+                 Ashdod2005  ,
+                  Haifa2005  ,
+              Herzliyya2005 ,
+                  Holon2005   ,
+                    Lod2005    ,
+                 Hadera2005,
+               Ashqelon2005,
+               Nettanya2005,
+                Rehovot2005 ,
+                  Ramla2005  ,
+               Raannana2005,
+                    tlv2005    ,
+                   bene2005  ,
+                    bat2005  ,
+                  kefar2005,
+                  petah2005  ,
+                 rishon2005,
+                  ramat2005,
+                   beer2005,
+                 modiin2005,
+             betshemesh2005,
+              nahariyya2005,
+             qiryatatta2005,
+              givatayim2005)
+
+
+cities2006 <<- c(
+              jerusalem2006,
+                 Ashdod2006  ,
+                  Haifa2006  ,
+              Herzliyya2006 ,
+                  Holon2006   ,
+                    Lod2006    ,
+                 Hadera2006,
+               Ashqelon2006,
+               Nettanya2006,
+                Rehovot2006 ,
+                  Ramla2006  ,
+               Raannana2006,
+                    tlv2006    ,
+                   bene2006  ,
+                    bat2006  ,
+                  kefar2006,
+                  petah2006  ,
+                 rishon2006,
+                  ramat2006,
+                   beer2006,
+                 modiin2006,
+             betshemesh2006,
+              nahariyya2006,
+             qiryatatta2006,
+              givatayim2006)
+
+
+cities2007 <<- c(
+              jerusalem2007,
+                 Ashdod2007  ,
+                  Haifa2007  ,
+              Herzliyya2007 ,
+                  Holon2007   ,
+                    Lod2007    ,
+                 Hadera2007,
+               Ashqelon2007,
+               Nettanya2007,
+                Rehovot2007 ,
+                  Ramla2007  ,
+               Raannana2007,
+                    tlv2007    ,
+                   bene2007  ,
+                    bat2007  ,
+                  kefar2007,
+                  petah2007  ,
+                 rishon2007,
+                  ramat2007,
+                   beer2007,
+                 modiin2007,
+             betshemesh2007,
+              nahariyya2007,
+             qiryatatta2007,
+              givatayim2007)
+
+
+cities2008 <<- c(
+              jerusalem2008,
+                 Ashdod2008  ,
+                  Haifa2008  ,
+              Herzliyya2008 ,
+                  Holon2008   ,
+                    Lod2008    ,
+                 Hadera2008,
+               Ashqelon2008,
+               Nettanya2008,
+                Rehovot2008 ,
+                  Ramla2008  ,
+               Raannana2008,
+                    tlv2008    ,
+                   bene2008  ,
+                    bat2008  ,
+                  kefar2008,
+                  petah2008  ,
+                 rishon2008,
+                  ramat2008,
+                   beer2008,
+                 modiin2008,
+             betshemesh2008,
+              nahariyya2008,
+             qiryatatta2008,
+              givatayim2008)
+
+
+cities2009 <<- c(
+              jerusalem2009,
+                 Ashdod2009  ,
+                  Haifa2009  ,
+              Herzliyya2009 ,
+                  Holon2009   ,
+                    Lod2009    ,
+                 Hadera2009,
+               Ashqelon2009,
+               Nettanya2009,
+                Rehovot2009 ,
+                  Ramla2009  ,
+               Raannana2009,
+                    tlv2009    ,
+                   bene2009  ,
+                    bat2009  ,
+                  kefar2009,
+                  petah2009  ,
+                 rishon2009,
+                  ramat2009,
+                   beer2009,
+                 modiin2009,
+             betshemesh2009,
+              nahariyya2009,
+             qiryatatta2009,
+              givatayim2009)
+
+
+cities2010 <<- c(
+              jerusalem2010,
+                 Ashdod2010  ,
+                  Haifa2010  ,
+              Herzliyya2010 ,
+                  Holon2010   ,
+                    Lod2010    ,
+                 Hadera2010,
+               Ashqelon2010,
+               Nettanya2010,
+                Rehovot2010 ,
+                  Ramla2010  ,
+               Raannana2010,
+                    tlv2010    ,
+                   bene2010  ,
+                    bat2010  ,
+                  kefar2010,
+                  petah2010  ,
+                 rishon2010,
+                  ramat2010,
+                   beer2010,
+                 modiin2010,
+             betshemesh2010,
+              nahariyya2010,
+             qiryatatta2010,
+              givatayim2010)
+
+
+cities2011 <<- c(
+              jerusalem2011,
+                 Ashdod2011  ,
+                  Haifa2011  ,
+              Herzliyya2011 ,
+                  Holon2011   ,
+                    Lod2011    ,
+                 Hadera2011,
+               Ashqelon2011,
+               Nettanya2011,
+                Rehovot2011 ,
+                  Ramla2011  ,
+               Raannana2011,
+                    tlv2011    ,
+                   bene2011  ,
+                    bat2011  ,
+                  kefar2011,
+                  petah2011  ,
+                 rishon2011,
+                  ramat2011,
+                   beer2011,
+                 modiin2011,
+             betshemesh2011,
+              nahariyya2011,
+             qiryatatta2011,
+              givatayim2011)
+
+
+cities2012 <<- c(
+              jerusalem2012,
+                 Ashdod2012  ,
+                  Haifa2012  ,
+              Herzliyya2012 ,
+                  Holon2012   ,
+                    Lod2012    ,
+                 Hadera2012,
+               Ashqelon2012,
+               Nettanya2012,
+                Rehovot2012 ,
+                  Ramla2012  ,
+               Raannana2012,
+                    tlv2012    ,
+                   bene2012  ,
+                    bat2012  ,
+                  kefar2012,
+                  petah2012  ,
+                 rishon2012,
+                  ramat2012,
+                   beer2012,
+                 modiin2012,
+             betshemesh2012,
+              nahariyya2012,
+             qiryatatta2012,
+              givatayim2012)
+
+
+cities2013 <<- c(
+              jerusalem2013,
+                 Ashdod2013  ,
+                  Haifa2013  ,
+              Herzliyya2013 ,
+                  Holon2013   ,
+                    Lod2013    ,
+                 Hadera2013,
+               Ashqelon2013,
+               Nettanya2013,
+                Rehovot2013 ,
+                  Ramla2013  ,
+               Raannana2013,
+                    tlv2013    ,
+                   bene2013  ,
+                    bat2013  ,
+                  kefar2013,
+                  petah2013  ,
+                 rishon2013,
+                  ramat2013,
+                   beer2013,
+                 modiin2013,
+             betshemesh2013,
+              nahariyya2013,
+             qiryatatta2013,
+              givatayim2013)
+
+
+cities2014 <<- c(
+              jerusalem2014,
+                 Ashdod2014,
+                  Haifa2014,
+              Herzliyya2014,
+                  Holon2014,
+                    Lod2014,
+                 Hadera2014,
+               Ashqelon2014,
+               Nettanya2014,
+                Rehovot2014,
+                  Ramla2014,
+               Raannana2014,
+                    tlv2014,
+                   bene2014,
+                    bat2014,
+                  kefar2014,
+                  petah2014,
+                 rishon2014,
+                  ramat2014,
+                   beer2014,
+                 modiin2014,
+             betshemesh2014,
+              nahariyya2014,
+             qiryatatta2014,
+              givatayim2014)
+
 counts2004 <<- c(
 jerusalem2004 %>% count %>% as.numeric,
 Ashdod2004    %>% count %>% as.numeric,
@@ -454,7 +735,6 @@ betshemesh2004  %>% count %>% as.numeric,
 nahariyya2004   %>% count %>% as.numeric,
 qiryatatta2004  %>% count %>% as.numeric,
 givatayim2004   %>% count %>% as.numeric)
-
 
 ## all years
 
