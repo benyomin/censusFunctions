@@ -2,7 +2,7 @@
 % Please edit documentation in R/rentersIncome.R
 \name{rentersIncome}
 \alias{rentersIncome}
-\title{Divide into owners and renters.}
+\title{Divide into owners and renters. v. .79 - doesn't run}
 \usage{
 rentersIncome(arg = TRUE)
 }

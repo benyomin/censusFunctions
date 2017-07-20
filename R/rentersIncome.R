@@ -1,4 +1,4 @@
-#' Divide into owners and renters.
+#' Divide into owners and renters. v. .79 - doesn't run
 #'
 #' Creates dataframes based on payment of rent..
 #' @param arg Placeholder.
