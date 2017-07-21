@@ -99,30 +99,30 @@ count(renters2013),
 count(renters2014))
 
 renterCounts  <<-  c(
-count(renters2004)   %>%     as.numeric,
-count(renters2005)   %>%     as.numeric,
-count(renters2006)   %>%     as.numeric,
-count(renters2007)   %>%     as.numeric,
-count(renters2008)   %>%     as.numeric,
-count(renters2009)   %>%     as.numeric,
-count(renters2010)   %>%     as.numeric,
-count(renters2011)   %>%     as.numeric,
-count(renters2012)   %>%     as.numeric,
-count(renters2013)   %>%     as.numeric,
-count(renters2014)   %>%     as.numeric)
+    renters2004   %>%  nrow,
+    renters2005   %>%  nrow,
+    renters2006   %>%  nrow,
+    renters2007   %>%  nrow,
+    renters2008   %>%  nrow,
+    renters2009   %>%  nrow,
+    renters2010   %>%  nrow,
+    renters2011   %>%  nrow,
+    renters2012   %>%  nrow,
+    renters2013   %>%  nrow,
+    renters2014   %>%  nrow)
 
  ownerCounts  <<- c(
-count(owners2004)   %>%     as.numeric,
-count(owners2005)   %>%     as.numeric,
-count(owners2006)   %>%     as.numeric,
-count(owners2007)   %>%     as.numeric,
-count(owners2008)   %>%     as.numeric,
-count(owners2009)   %>%     as.numeric,
-count(owners2010)   %>%     as.numeric,
-count(owners2011)   %>%     as.numeric,
-count(owners2012)   %>%     as.numeric,
-count(owners2013)   %>%     as.numeric,
-count(owners2014)   %>%     as.numeric)
+    owners2004   %>%  nrow,
+    owners2005   %>%  nrow,
+    owners2006   %>%  nrow,
+    owners2007   %>%  nrow,
+    owners2008   %>%  nrow,
+    owners2009   %>%  nrow,
+    owners2010   %>%  nrow,
+    owners2011   %>%  nrow,
+    owners2012   %>%  nrow,
+    owners2013   %>%  nrow,
+    owners2014   %>%  nrow)
 
 
   ## cities by year
