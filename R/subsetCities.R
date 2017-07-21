@@ -6,14 +6,14 @@
 #' subsetCities()
 
 subsetCities <- function(arg) {
-
+library("plyr")
   ## exports these    dataframes to the global environment
   ## cityList      <- 99
   ## survey2004   table of people surveyed by city and year
-  ownerCounts   <- 99
+ ## ownerCounts   <- 99
   ownersList    <- 99
   ownersYYYY    <- 99
-  renterCounts  <- 99
+ ## renterCounts  <- 99
   rentersList   <- 99
   rentersYYYY   <- 99
   jerusalemYYYY <- 99
