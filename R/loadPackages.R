@@ -18,10 +18,10 @@ library(tmap)
         # other
       install_if_needed("ggplot2")
 library(ggplot2)
-
       install_github("dkahle/ggmap")
 library(ggmap)
-
+      install_if_needed("plyr")          ## count()
+library(plyr)
       install_if_needed("ggthemes")
 library(ggthemes)
       install_if_needed("reshape")
