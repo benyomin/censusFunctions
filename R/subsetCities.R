@@ -98,8 +98,32 @@ count(renters2012),
 count(renters2013),
 count(renters2014))
 
-renterCounts  <<-as.numeric(countRenters)
- ownerCounts  <<-as.numeric(countOwners)
+renterCounts  <<-  c(
+count(renters2004)   %>%     as.numeric,
+count(renters2005)   %>%     as.numeric,
+count(renters2006)   %>%     as.numeric,
+count(renters2007)   %>%     as.numeric,
+count(renters2008)   %>%     as.numeric,
+count(renters2009)   %>%     as.numeric,
+count(renters2010)   %>%     as.numeric,
+count(renters2011)   %>%     as.numeric,
+count(renters2012)   %>%     as.numeric,
+count(renters2013)   %>%     as.numeric,
+count(renters2014)   %>%     as.numeric)
+
+ ownerCounts  <<- c(
+count(owners2004)   %>%     as.numeric,
+count(owners2005)   %>%     as.numeric,
+count(owners2006)   %>%     as.numeric,
+count(owners2007)   %>%     as.numeric,
+count(owners2008)   %>%     as.numeric,
+count(owners2009)   %>%     as.numeric,
+count(owners2010)   %>%     as.numeric,
+count(owners2011)   %>%     as.numeric,
+count(owners2012)   %>%     as.numeric,
+count(owners2013)   %>%     as.numeric,
+count(owners2014)   %>%     as.numeric)
+
 
   ## cities by year
 

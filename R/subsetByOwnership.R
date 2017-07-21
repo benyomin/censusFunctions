@@ -22,8 +22,7 @@ subsetByOwnership <- function(arg = TRUE) {
         weighHouseholds("owners", "income")
         weighHouseholds("owners", "consumption")
         weighHouseholds("renters", "keymoney")
-        
-        
+
         return("created subsets owners/renters for all years")
     } else if (arg == "listKeyMoney") {
         keyMoneyList <- list(exp2004keyMoney, exp2005keyMoney, exp2006keyMoney, exp2007keyMoney, 
