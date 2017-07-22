@@ -450,7 +450,7 @@ beer2014     <<- subset(familiesList[[11]], codeloc=="Beer Sheva")
 modiin2014         <<- subset(familiesList[[11]], codeloc=="Modi'in")
 betshemesh2014     <<- subset(familiesList[[11]], codeloc=="Bet Shemesh")
 nahariyya2014      <<- subset(familiesList[[11]], codeloc=="Nahariyya")
-qiryatatta2014     <<- subset(familiesList[[11]], codeloc=="Qiryat Atta")
+qiryatatta2014     <<- subset(familiesList[[11]], codeloc=="Qiryat Ata")
 givatayim2014      <<- subset(familiesList[[11]], codeloc=="Giv'atayim")
 
 
@@ -1393,3 +1393,45 @@ surveyList  <<-as.data.frame(cbind(list   = cityOrder,
                                 "2014"  = counts2014))
 
 }
+
+## ```{r firstThreeYears}
+## 99
+## ## year 4 - check
+## ## subset(familiesList[[4]], codeloc="Ashqelon") %>% nrow
+## ## ## 6000, that doesn't seem right either
+
+## ## subset(familiesList[[4]], codeloc="Tel Aviv-Yafo") %>% nrow
+
+## ## ## possible spelling changes
+## ## ## [15] "Ashkelon"
+## ## ## Tel Aviv-Yaffo
+## ## ## Netanya
+
+
+## ## levels(familiesList[[4]]$codeloc)
+
+
+## ## subset(familiesList[[3]], codeloc=="Netanya") %>% nrow    ## zero with this spelling
+## ## subset(familiesList[[4]], codeloc=="Netanya") %>% nrow    ## now there are some
+## ## subset(familiesList[[3]], codeloc=="Nettanya") %>% nrow    ## double t for 3 yrs
+
+## ## subset(familiesList[[4]], codeloc=="Ashkelon") %>% nrow
+## ## ##############
+
+## ## subset(familiesList[[3]], codeloc=="Netanya") %>% nrow    ## zero with this spelling
+## ## subset(familiesList[[4]], codeloc=="Netanya") %>% nrow    ## now there are some
+## ## subset(familiesList[[3]], codeloc=="Nettanya") %>% nrow    ## double t for 3 yrs
+
+##  subset(familiesList[[4]], codeloc=="Ashkelon") %>% nrow
+
+##  subset(familiesList[[4]], codeloc="Ashqelon") %>% nrow
+## ## check Qiryat Ata for 2014 - does it have a spelling change??
+## length(familiesList)
+
+## levels(familiesList[[11]]$codeloc)
+## levels(familiesList[[10]]$codeloc)
+## levels(familiesList[[11]]$codeloc)
+## ## yes!  2014 - only 1 t in Ata
+## subset(familiesList[[11]], codeloc=="Qiryat Ata") %>% nrow
+
+## ```
