@@ -248,7 +248,7 @@ Herzliyya2007 <<- subset(familiesList[[4]], codeloc=="Herzliyya")
 Holon2007    <<- subset(familiesList[[4]], codeloc=="Holon")
 Lod2007      <<- subset(familiesList[[4]], codeloc=="Lod")
 Hadera2007   <<- subset(familiesList[[4]], codeloc=="Hadera")
-Ashqelon2007 <<- subset(familiesList[[4]], codeloc=="Ashqelon")
+Ashqelon2007 <<- subset(familiesList[[4]], codeloc=="Ashkelon")
 Nettanya2007 <<- subset(familiesList[[4]], codeloc=="Netanya")
 Rehovot2007  <<- subset(familiesList[[4]], codeloc=="Rehovot")
 Ramla2007    <<- subset(familiesList[[4]], codeloc=="Ramla")
@@ -275,7 +275,7 @@ Herzliyya2008 <<- subset(familiesList[[5]], codeloc=="Herzliyya")
 Holon2008    <<- subset(familiesList[[5]], codeloc=="Holon")
 Lod2008      <<- subset(familiesList[[5]], codeloc=="Lod")
 Hadera2008   <<- subset(familiesList[[5]], codeloc=="Hadera")
-Ashqelon2008 <<- subset(familiesList[[5]], codeloc=="Ashqelon")
+Ashqelon2008 <<- subset(familiesList[[5]], codeloc=="Ashkelon")
 Nettanya2008 <<- subset(familiesList[[5]], codeloc=="Netanya")
 Rehovot2008  <<- subset(familiesList[[5]], codeloc=="Rehovot")
 Ramla2008    <<- subset(familiesList[[5]], codeloc=="Ramla")
@@ -301,7 +301,7 @@ Herzliyya2009 <<- subset(familiesList[[6]], codeloc=="Herzliyya")
 Holon2009    <<- subset(familiesList[[6]], codeloc=="Holon")
 Lod2009      <<- subset(familiesList[[6]], codeloc=="Lod")
 Hadera2009   <<- subset(familiesList[[6]], codeloc=="Hadera")
-Ashqelon2009 <<- subset(familiesList[[6]], codeloc=="Ashqelon")
+Ashqelon2009 <<- subset(familiesList[[6]], codeloc=="Ashkelon")
 Nettanya2009 <<- subset(familiesList[[6]], codeloc=="Netanya")
 Rehovot2009  <<- subset(familiesList[[6]], codeloc=="Rehovot")
 Ramla2009    <<- subset(familiesList[[6]], codeloc=="Ramla")
@@ -327,7 +327,7 @@ Herzliyya2010 <<- subset(familiesList[[7]], codeloc=="Herzliyya")
 Holon2010    <<- subset(familiesList[[7]], codeloc=="Holon")
 Lod2010      <<- subset(familiesList[[7]], codeloc=="Lod")
 Hadera2010   <<- subset(familiesList[[7]], codeloc=="Hadera")
-Ashqelon2010 <<- subset(familiesList[[7]], codeloc=="Ashqelon")
+Ashqelon2010 <<- subset(familiesList[[7]], codeloc=="Ashkelon")
 Nettanya2010 <<- subset(familiesList[[7]], codeloc=="Netanya")
 Rehovot2010  <<- subset(familiesList[[7]], codeloc=="Rehovot")
 Ramla2010    <<- subset(familiesList[[7]], codeloc=="Ramla")
@@ -354,7 +354,7 @@ Herzliyya2011 <<- subset(familiesList[[8]], codeloc=="Herzliyya")
 Holon2011    <<- subset(familiesList[[8]], codeloc=="Holon")
 Lod2011      <<- subset(familiesList[[8]], codeloc=="Lod")
 Hadera2011   <<- subset(familiesList[[8]], codeloc=="Hadera")
-Ashqelon2011 <<- subset(familiesList[[8]], codeloc=="Ashqelon")
+Ashqelon2011 <<- subset(familiesList[[8]], codeloc=="Ashkelon")
 Nettanya2011 <<- subset(familiesList[[8]], codeloc=="Netanya")
 Rehovot2011  <<- subset(familiesList[[8]], codeloc=="Rehovot")
 Ramla2011    <<- subset(familiesList[[8]], codeloc=="Ramla")
@@ -381,7 +381,7 @@ Herzliyya2012 <<- subset(familiesList[[9]], codeloc=="Herzliyya")
 Holon2012    <<- subset(familiesList[[9]], codeloc=="Holon")
 Lod2012      <<- subset(familiesList[[9]], codeloc=="Lod")
 Hadera2012   <<- subset(familiesList[[9]], codeloc=="Hadera")
-Ashqelon2012 <<- subset(familiesList[[9]], codeloc=="Ashqelon")
+Ashqelon2012 <<- subset(familiesList[[9]], codeloc=="Ashkelon")
 Nettanya2012 <<- subset(familiesList[[9]], codeloc=="Netanya")
 Rehovot2012  <<- subset(familiesList[[9]], codeloc=="Rehovot")
 Ramla2012    <<- subset(familiesList[[9]], codeloc=="Ramla")
@@ -408,7 +408,7 @@ Herzliyya2013 <<- subset(familiesList[[10]], codeloc=="Herzliyya")
 Holon2013    <<- subset(familiesList[[10]], codeloc=="Holon")
 Lod2013      <<- subset(familiesList[[10]], codeloc=="Lod")
 Hadera2013   <<- subset(familiesList[[10]], codeloc=="Hadera")
-Ashqelon2013 <<- subset(familiesList[[10]], codeloc=="Ashqelon")
+Ashqelon2013 <<- subset(familiesList[[10]], codeloc=="Ashkelon")
 Nettanya2013 <<- subset(familiesList[[10]], codeloc=="Netanya")
 Rehovot2013  <<- subset(familiesList[[10]], codeloc=="Rehovot")
 Ramla2013    <<- subset(familiesList[[10]], codeloc=="Ramla")
@@ -434,7 +434,7 @@ Herzliyya2014 <<- subset(familiesList[[11]], codeloc=="Herzliyya")
 Holon2014    <<- subset(familiesList[[11]], codeloc=="Holon")
 Lod2014      <<- subset(familiesList[[11]], codeloc=="Lod")
 Hadera2014   <<- subset(familiesList[[11]], codeloc=="Hadera")
-Ashqelon2014 <<- subset(familiesList[[11]], codeloc=="Ashqelon")
+Ashqelon2014 <<- subset(familiesList[[11]], codeloc=="Ashkelon")
 Nettanya2014 <<- subset(familiesList[[11]], codeloc=="Netanya")
 Rehovot2014  <<- subset(familiesList[[11]], codeloc=="Rehovot")
 Ramla2014    <<- subset(familiesList[[11]], codeloc=="Ramla")
@@ -456,25 +456,24 @@ givatayim2014      <<- subset(familiesList[[11]], codeloc=="Giv'atayim")
 
   ## counts in cities
 
-
 cities2004 <<- c(
               jerusalem2004,
-                 Ashdod2004  ,
-                  Haifa2004  ,
-              Herzliyya2004 ,
-                  Holon2004   ,
-                    Lod2004    ,
+                 Ashdod2004,
+                  Haifa2004,
+              Herzliyya2004,
+                  Holon2004,
+                    Lod2004,
                  Hadera2004,
                Ashqelon2004,
                Nettanya2004,
-                Rehovot2004 ,
-                  Ramla2004  ,
+                Rehovot2004,
+                  Ramla2004,
                Raannana2004,
-                    tlv2004    ,
-                   bene2004  ,
-                    bat2004  ,
+                    tlv2004,
+                   bene2004,
+                    bat2004,
                   kefar2004,
-                  petah2004  ,
+                  petah2004,
                  rishon2004,
                   ramat2004,
                    beer2004,
@@ -486,22 +485,22 @@ cities2004 <<- c(
 
 cities2005 <<- c(
               jerusalem2005,
-                 Ashdod2005  ,
-                  Haifa2005  ,
-              Herzliyya2005 ,
-                  Holon2005   ,
-                    Lod2005    ,
+                 Ashdod2005,
+                  Haifa2005,
+              Herzliyya2005,
+                  Holon2005,
+                    Lod2005,
                  Hadera2005,
                Ashqelon2005,
                Nettanya2005,
-                Rehovot2005 ,
-                  Ramla2005  ,
+                Rehovot2005,
+                  Ramla2005,
                Raannana2005,
-                    tlv2005    ,
-                   bene2005  ,
-                    bat2005  ,
+                    tlv2005,
+                   bene2005,
+                    bat2005,
                   kefar2005,
-                  petah2005  ,
+                  petah2005,
                  rishon2005,
                   ramat2005,
                    beer2005,
@@ -514,22 +513,22 @@ cities2005 <<- c(
 
 cities2006 <<- c(
               jerusalem2006,
-                 Ashdod2006  ,
-                  Haifa2006  ,
-              Herzliyya2006 ,
-                  Holon2006   ,
-                    Lod2006    ,
+                 Ashdod2006,
+                  Haifa2006,
+              Herzliyya2006,
+                  Holon2006,
+                    Lod2006,
                  Hadera2006,
                Ashqelon2006,
                Nettanya2006,
-                Rehovot2006 ,
-                  Ramla2006  ,
+                Rehovot2006,
+                  Ramla2006,
                Raannana2006,
-                    tlv2006    ,
-                   bene2006  ,
-                    bat2006  ,
+                    tlv2006,
+                   bene2006,
+                    bat2006,
                   kefar2006,
-                  petah2006  ,
+                  petah2006,
                  rishon2006,
                   ramat2006,
                    beer2006,
