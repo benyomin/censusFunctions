@@ -22,6 +22,8 @@ library(ggplot2)
 library(ggmap)
       install_if_needed("RColorBrewer")
 library(RColorBrewer)
+      install_if_needed("pander")        ## replacement for kable, easy captions
+library(pander)
       install_if_needed("plyr")          ## count()
 library(plyr)
       install_if_needed("ggthemes")
