@@ -75,20 +75,105 @@ importFamilyData <- function(source) {
             codeloc = codeloc, incgross = incgross, exptot = exptot, aptval = aptval, 
             typerent = typerent, weight = weight))
         ###### create data frames family2003 <<-as.data.frame(yr.2003)
-        family2004 <<- as.data.frame(yr.2004)
-        family2005 <<- as.data.frame(yr.2005)
-        family2006 <<- as.data.frame(yr.2006)
-        family2007 <<- as.data.frame(yr.2007)
-        family2008 <<- as.data.frame(yr.2008)
-        family2009 <<- as.data.frame(yr.2009)
-        family2010 <<- as.data.frame(yr.2010)
-        family2011 <<- as.data.frame(yr.2011)
-        family2012 <<- as.data.frame(yr.2012)
-        family2013 <<- as.data.frame(yr.2013)
-        family2014 <<- as.data.frame(yr.2014)
-        
-        familiesList <<- list(family2004, family2005, family2006, family2007, family2008, 
-            family2009, family2010, family2011, family2012, family2013, family2014)
+        family2004 <- as.data.frame(yr.2004)
+        family2005 <- as.data.frame(yr.2005)
+        family2006 <- as.data.frame(yr.2006)
+        family2007 <- as.data.frame(yr.2007)
+        family2008 <- as.data.frame(yr.2008)
+        family2009 <- as.data.frame(yr.2009)
+        family2010 <- as.data.frame(yr.2010)
+        family2011 <- as.data.frame(yr.2011)
+        family2012 <- as.data.frame(yr.2012)
+        family2013 <- as.data.frame(yr.2013)
+        family2014 <- as.data.frame(yr.2014)
+### process - add column with size of house
+
+fam2004 <- family2004 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+
+fam2005 <- family2005 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+fam2006 <- family2006 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+fam2007 <- family2007 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+fam2008 <- family2008 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+fam2009 <- family2009 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+fam2010 <- family2010 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+fam2011 <- family2011 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+fam2012 <- family2012 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+fam2013 <- family2013 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+fam2014 <- family2014 %>%
+  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
+                          rooms > 2 & rooms <= 3   ~ 'small',
+                          rooms > 3 & rooms <= 4   ~ 'medium',
+                          rooms > 4 & rooms <= 4.5 ~ 'large',
+                          rooms > 5                ~ 'largest'
+                          ))
+
+   familiesList <<- list(fam2004, fam2005, fam2006, fam2007, fam2008,
+                         fam2009, fam2010, fam2011, fam2012, fam2013, fam2014)
+
+
+###    old version
+###        familiesList <<- list(family2004, family2005, family2006, family2007, family2008,
+###            family2009, family2010, family2011, family2012, family2013, family2014)
         return(familiesList)
     } else if (source == "saved") {
         importData("familyProcessed")
