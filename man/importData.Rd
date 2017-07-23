@@ -2,7 +2,7 @@
 % Please edit documentation in R/importData.R
 \name{importData}
 \alias{importData}
-\title{Import data to workspace v.0.9 import housing prices index}
+\title{Import data to workspace v: 2.0 import housing prices index}
 \usage{
 importData(source)
 }
