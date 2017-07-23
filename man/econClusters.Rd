@@ -2,18 +2,19 @@
 % Please edit documentation in R/econClusters.R
 \name{econClusters}
 \alias{econClusters}
-\title{subsets by econ cluster}
+\title{subsets by econ cluster v: 2.0}
 \usage{
-econClusters(arg)
+econClusters(arg = TRUE)
 }
 \arguments{
 \item{arg}{nil}
 }
 \description{
-subsets by econ cluster
+subsets by econ cluster v: 2.0
 }
 \examples{
 econCluster()
+econCluster(TRUE)
 }
 \keyword{econ}
 \keyword{level,}
