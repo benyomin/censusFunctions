@@ -11,7 +11,7 @@ combineFrames(arg = TRUE)
 #' @keywords combine, dataframe, year}
 }
 \description{
-This function combines multiple years to a dataframe.
+This function combines multiple years to a dataframe. v: 2.0
 }
 \examples{
 combineFrames(TRUE)

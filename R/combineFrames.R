@@ -1,6 +1,6 @@
 #' combine all years into a single dataframe to facilitate regression.
 #'
-#' This function combines multiple years to a dataframe.
+#' This function combines multiple years to a dataframe. v: 2.0
 #' @param arg Sentence describing arg.
 #' #' @keywords combine, dataframe, year
 #' @export
@@ -10,22 +10,18 @@
 #' combineFrames()
 combineFrames <- function(arg = TRUE) {
     
-    family2004$stock
-    head(family2005)
-    names(family2005)
-    str(family2005)  ## get number of rows
-    
-    family2004a <- family2004
-    family2005a <- family2005
-    family2006a <- family2006
-    family2007a <- family2007
-    family2008a <- family2008
-    family2009a <- family2009
-    family2010a <- family2010
-    family2011a <- family2011
-    family2012a <- family2012
-    family2013a <- family2013
-    family2014a <- family2014
+
+    family2004a <- familiesList[[1]]
+    family2005a <- familiesList[[2]]
+    family2006a <- familiesList[[3]]
+    family2007a <- familiesList[[4]]
+    family2008a <- familiesList[[5]]
+    family2009a <- familiesList[[6]]
+    family2010a <- familiesList[[7]]
+    family2011a <- familiesList[[8]]
+    family2012a <- familiesList[[9]]
+    family2013a <- familiesList[[10]]
+    family2014a <- familiesList[[11]]
     
     ## all column names must be the same before a merge
     
