@@ -1298,7 +1298,6 @@ ownerCityList  <<-as.data.frame(cbind(list   = cityOrder,
  richRenterqiryatatta2005    <- Renterqiryatatta2005    %>%  subset(incgross > medianInc2005)
  richRentergivatayim2005     <- Rentergivatayim2005     %>%  subset(incgross > medianInc2005)
 
-      RenterCity2006    <<- c(
  richRenterjerusalem2006     <- Renterjerusalem2006     %>%  subset(incgross > medianInc2006)
  richRenterAshdod2006        <- RenterAshdod2006        %>%  subset(incgross > medianInc2006)
  richRenterHaifa2006         <- RenterHaifa2006         %>%  subset(incgross > medianInc2006)
