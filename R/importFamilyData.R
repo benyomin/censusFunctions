@@ -1,4 +1,4 @@
-#' Import family data to workspace v.0.3
+#' Import family data to workspace v: 2.0
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, 'raw' imports from .por files. 'saved' files were previously parsed in R.
@@ -179,18 +179,22 @@ fam2014 <- family2014 %>%
         importData("familyProcessed")
         return("family data imported from saved subset")
     } else if (source == "writeOut") {
-        dput(familiesList, file = "../dataframes/familiesList.txt")
-        dput(family2004, file = "../dataframes/family2004.txt")
-        dput(family2005, file = "../dataframes/family2005.txt")
-        dput(family2006, file = "../dataframes/family2006.txt")
-        dput(family2007, file = "../dataframes/family2007.txt")
-        dput(family2008, file = "../dataframes/family2008.txt")
-        dput(family2009, file = "../dataframes/family2009.txt")
-        dput(family2010, file = "../dataframes/family2010.txt")
-        dput(family2011, file = "../dataframes/family2011.txt")
-        dput(family2012, file = "../dataframes/family2012.txt")
-        dput(family2013, file = "../dataframes/family2013.txt")
-        dput(family2014, file = "../dataframes/family2014.txt")
+      ### version 2 - includes $size
+
+         dput(familiesList, file = "../dataframes/famList.txt")
+      ### version 1 - produced familyYYYY.txt files
+        ## dput(familiesList, file = "../dataframes/familiesList.txt")
+        ## dput(family2004, file = "../dataframes/family2004.txt")
+        ## dput(family2005, file = "../dataframes/family2005.txt")
+        ## dput(family2006, file = "../dataframes/family2006.txt")
+        ## dput(family2007, file = "../dataframes/family2007.txt")
+        ## dput(family2008, file = "../dataframes/family2008.txt")
+        ## dput(family2009, file = "../dataframes/family2009.txt")
+        ## dput(family2010, file = "../dataframes/family2010.txt")
+        ## dput(family2011, file = "../dataframes/family2011.txt")
+        ## dput(family2012, file = "../dataframes/family2012.txt")
+        ## dput(family2013, file = "../dataframes/family2013.txt")
+        ## dput(family2014, file = "../dataframes/family2014.txt")
         return("success #onsr9don")
     } else {
         return("error #.eil4g09")
