@@ -1,4 +1,4 @@
-#' Import family data to workspace v: 2.0
+#' Import family data to workspace v: 2.1
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, 'raw' imports from .por files. 'saved' files were previously parsed in R.
@@ -166,6 +166,25 @@ fam2014 <- family2014 %>%
                           rooms > 4 & rooms <= 4.5 ~ 'large',
                           rooms > 5                ~ 'largest'
                           ))
+        ## add stock data
+
+
+tlv125<-importData("tlv125")
+
+fam2004$stock<-tlv125["2004",2]
+fam2005$stock<-tlv125["2005",2]
+fam2006$stock<-tlv125["2006",2]
+fam2007$stock<-tlv125["2007",2]
+fam2008$stock<-tlv125["2008",2]
+fam2009$stock<-tlv125["2009",2]
+fam2010$stock<-tlv125["2010",2]
+fam2011$stock<-tlv125["2011",2]
+fam2012$stock<-tlv125["2012",2]
+fam2013$stock<-tlv125["2013",2]
+fam2014$stock<-tlv125["2014",2]
+
+  family2014 <<- fam2014  ## needed for $codeloc list of cities
+
 
    familiesList <<- list(fam2004, fam2005, fam2006, fam2007, fam2008,
                          fam2009, fam2010, fam2011, fam2012, fam2013, fam2014)
