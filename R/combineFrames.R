@@ -39,8 +39,8 @@ combineFrames <- function(arg = TRUE) {
     ## check
     names(family2011a) == names(family2005a)
     
-    mergedData1 <<- do.call(rbind, list(family2004, family2005, family2006, family2007,
-        family2008, family2009, family2010, family2011, family2012, family2013, family2014))
+    mergedData1 <<- do.call(rbind, list(family2004a, family2005a, family2006a, family2007a,
+        family2008a, family2009a, family2010a, family2011a, family2012a, family2013a, family2014a))
     
     # str(family2004) ## 6k rows
     

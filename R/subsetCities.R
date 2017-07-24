@@ -125,7 +125,8 @@ renterCounts  <<-  c(
     owners2014   %>%  nrow)
 
   ## cities by year
-
+## df family2014 is available under maxReproducible(1)
+## needs to be      available under maxReproducible(2)
 
 cities <<- as.character(levels(family2014$codeloc))
 #  cities <- as.character(levels(renters2004$codeloc))

@@ -14,6 +14,8 @@ return("added $size column to familyList[[1 to 13]]")
 importData("familyProcessed")
 importData("savedIND")
 importData("saved")
+## needs to expose df family2014 as well
+
 return("imported data from saved files")
     }else{   ##"the only options are Y and N"
         return("the only options are 1 for 'raw' and 2 for 'saved'")

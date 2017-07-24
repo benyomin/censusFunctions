@@ -1,4 +1,4 @@
-#' Import family data to workspace v: 2.1
+#' Import family data to workspace v: 2.2
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, 'raw' imports from .por files. 'saved' files were previously parsed in R.
@@ -50,7 +50,7 @@ importFamilyData <- function(source) {
             keymoney = keymoney, cluster = cluster, hhnum = hhnum, rooms = rooms, 
             codeloc = codeloc, incgross = incgross, exptot = exptot, aptval = aptval, 
             typerent = typerent, weight = weight))
-        yr.2009 <- memisc::subset(yr2009, select = c(year = year, rent = rent, owner = owner, 
+        yr.2009 <- memisc::subset(yr2009, select = c(year = year, rent = rent, owner = owner,
             keymoney = keymoney, cluster = cluster, hhnum = hhnum, rooms = rooms, 
             codeloc = codeloc, incgross = incgross, exptot = exptot, aptval = aptval, 
             typerent = typerent, weight = weight))
