@@ -2,7 +2,7 @@
 % Please edit documentation in R/ownershipByCity.R
 \name{ownershipByCity}
 \alias{ownershipByCity}
-\title{split ownersYYYY and rentersYYYY by city  v.2.2
+\title{split ownersYYYY and rentersYYYY by city  v.2.3
 This function creates subsets of renters and owners by city}
 \usage{
 ownershipByCity(arg = TRUE)
@@ -11,7 +11,7 @@ ownershipByCity(arg = TRUE)
 \item{arg}{Defaults to true.}
 }
 \description{
-split ownersYYYY and rentersYYYY by city  v.2.2
+split ownersYYYY and rentersYYYY by city  v.2.3
 This function creates subsets of renters and owners by city
 }
 \examples{

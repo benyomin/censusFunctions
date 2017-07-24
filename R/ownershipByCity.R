@@ -1,4 +1,4 @@
-#' split ownersYYYY and rentersYYYY by city  v.2.2
+#' split ownersYYYY and rentersYYYY by city  v.2.3
 #' This function creates subsets of renters and owners by city
 #' @param arg Defaults to true.
 #' @keywords owners, renters, subset
@@ -1242,8 +1242,38 @@ ownerCityList  <<-as.data.frame(cbind(list   = cityOrder,
                                 "2013"  = ownerCity2013,
                                 "2014"  = ownerCity2014))
 
+################### calculate the median income of the sample for the year ############################
+
+#  familiesList[[1]]  %>% colnames
+
+medianInc2004 <<- median(familiesList[[1]]$grossIncome)
+medianInc2005 <<- median(familiesList[[2]]$grossIncome)
+medianInc2006 <<- median(familiesList[[3]]$grossIncome)
+medianInc2007 <<- median(familiesList[[4]]$grossIncome)
+medianInc2008 <<- median(familiesList[[5]]$grossIncome)
+medianInc2009 <<- median(familiesList[[6]]$grossIncome)
+medianInc2010 <<- median(familiesList[[7]]$grossIncome)
+medianInc2011 <<- median(familiesList[[8]]$grossIncome)
+medianInc2012 <<- median(familiesList[[9]]$grossIncome)
+medianInc2013 <<- median(familiesList[[10]]$grossIncome)
+medianInc2014 <<- median(familiesList[[11]]$grossIncome)
+
+medians <<-c(medianInc2004,
+medianInc2005 ,
+medianInc2006 ,
+medianInc2007 ,
+medianInc2008 ,
+medianInc2009 ,
+medianInc2010 ,
+medianInc2011 ,
+medianInc2012 ,
+medianInc2013 ,
+medianInc2014 )
 
 
+
+
+#medianInc2004
 ############   renter ### above median income      ###############
 
  richRenterjerusalem2004     <- Renterjerusalem2004     %>%  dplyr::filter( grossIncome > medianInc2004)
