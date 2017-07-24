@@ -1,4 +1,4 @@
-#' Import family data to workspace v: 2.2
+#' Import family data to workspace v: 2.2.1
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, 'raw' imports from .por files. 'saved' files were previously parsed in R.
@@ -88,7 +88,7 @@ importFamilyData <- function(source) {
         family2014 <- as.data.frame(yr.2014)
 ### process - add column with size of house
 
-fam2004 <- family2004 %>%
+fam2004 <<- family2004 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
@@ -96,70 +96,70 @@ fam2004 <- family2004 %>%
                           rooms > 5                ~ 'largest'
                           ))
 
-fam2005 <- family2005 %>%
+fam2005 <<- family2005 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
                           rooms > 4 & rooms <= 4.5 ~ 'large',
                           rooms > 5                ~ 'largest'
                           ))
-fam2006 <- family2006 %>%
+fam2006 <<- family2006 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
                           rooms > 4 & rooms <= 4.5 ~ 'large',
                           rooms > 5                ~ 'largest'
                           ))
-fam2007 <- family2007 %>%
+fam2007 <<- family2007 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
                           rooms > 4 & rooms <= 4.5 ~ 'large',
                           rooms > 5                ~ 'largest'
                           ))
-fam2008 <- family2008 %>%
+fam2008 <<- family2008 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
                           rooms > 4 & rooms <= 4.5 ~ 'large',
                           rooms > 5                ~ 'largest'
                           ))
-fam2009 <- family2009 %>%
+fam2009 <<- family2009 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
                           rooms > 4 & rooms <= 4.5 ~ 'large',
                           rooms > 5                ~ 'largest'
                           ))
-fam2010 <- family2010 %>%
+fam2010 <<- family2010 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
                           rooms > 4 & rooms <= 4.5 ~ 'large',
                           rooms > 5                ~ 'largest'
                           ))
-fam2011 <- family2011 %>%
+fam2011 <<- family2011 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
                           rooms > 4 & rooms <= 4.5 ~ 'large',
                           rooms > 5                ~ 'largest'
                           ))
-fam2012 <- family2012 %>%
+fam2012 <<- family2012 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
                           rooms > 4 & rooms <= 4.5 ~ 'large',
                           rooms > 5                ~ 'largest'
                           ))
-fam2013 <- family2013 %>%
+fam2013 <<- family2013 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
                           rooms > 4 & rooms <= 4.5 ~ 'large',
                           rooms > 5                ~ 'largest'
                           ))
-fam2014 <- family2014 %>%
+fam2014 <<- family2014 %>%
   mutate(size = case_when(rooms             <= 2   ~ 'tiny',
                           rooms > 2 & rooms <= 3   ~ 'small',
                           rooms > 3 & rooms <= 4   ~ 'medium',
@@ -195,12 +195,28 @@ fam2014$stock<-tlv125["2014",2]
 ###            family2009, family2010, family2011, family2012, family2013, family2014)
         return(familiesList)
     } else if (source == "saved") {
-        importData("familyProcessed")
+      ## version 1 -
+      importData("familyProcessed")
+      ## version 2 -
+
+
         return("family data imported from saved subset")
     } else if (source == "writeOut") {
       ### version 2 - includes $size
-
+         dput(fam2004, file = "../dataframes/fam2004.txt")
+         dput(fam2005, file = "../dataframes/fam2005.txt")
+         dput(fam2006, file = "../dataframes/fam2006.txt")
+         dput(fam2007, file = "../dataframes/fam2007.txt")
+         dput(fam2008, file = "../dataframes/fam2008.txt")
+         dput(fam2009, file = "../dataframes/fam2009.txt")
+         dput(fam2010, file = "../dataframes/fam2010.txt")
+         dput(fam2011, file = "../dataframes/fam2011.txt")
+         dput(fam2012, file = "../dataframes/fam2012.txt")
+         dput(fam2013, file = "../dataframes/fam2013.txt")
+         dput(fam2014, file = "../dataframes/fam2014.txt")
          dput(familiesList, file = "../dataframes/famList.txt")
+
+
       ### version 1 - produced familyYYYY.txt files
         ## dput(familiesList, file = "../dataframes/familiesList.txt")
         ## dput(family2004, file = "../dataframes/family2004.txt")

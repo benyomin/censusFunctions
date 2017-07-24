@@ -128,9 +128,22 @@ return("Family data imported. 59 vars in 2005, 100 vars in 2013")
     censusFunctions::importFamilyData("raw")
     return("success 05l09l")
   }else if(source=="familyProcessed"){
-    ## new family with socio-econ var
+## version 2 - new family with socio-econ var
     householdsList <<- dget("../dataframes/householdsList.txt")
     familiesList   <<- dget("../dataframes/famList.txt")
+
+ family2004     <<- dget("../dataframes/fam2004.txt")
+ family2005     <<- dget("../dataframes/fam2005.txt")
+ family2006     <<- dget("../dataframes/fam2006.txt")
+ family2007     <<- dget("../dataframes/fam2007.txt")
+ family2008     <<- dget("../dataframes/fam2008.txt")
+ family2009     <<- dget("../dataframes/fam2009.txt")
+ family2010     <<- dget("../dataframes/fam2010.txt")
+ family2011     <<- dget("../dataframes/fam2011.txt")
+ family2012     <<- dget("../dataframes/fam2012.txt")
+ family2013     <<- dget("../dataframes/fam2013.txt")
+ family2014     <<- dget("../dataframes/fam2014.txt")
+
 ## version 1 - deprecated
 ##familiesList   <<- dget("../dataframes/familiesList.txt")
 
@@ -146,17 +159,17 @@ return("Family data imported. 59 vars in 2005, 100 vars in 2013")
 ## family2013     <<- dget("../dataframes/family2013.txt")
 family2014     <<- dget("../dataframes/family2014.txt")
     ## already combine family and individual, perhaps not needed
-exp2004s <-dget("../dataframes/exp2004s.txt")
-exp2005s <-dget("../dataframes/exp2005s.txt")
-exp2006s <-dget("../dataframes/exp2006s.txt")
-exp2007s <-dget("../dataframes/exp2007s.txt")
-exp2008s <-dget("../dataframes/exp2008s.txt")
-exp2009s <-dget("../dataframes/exp2009s.txt")
-exp2010s <-dget("../dataframes/exp2010s.txt")
-exp2011s <-dget("../dataframes/exp2011s.txt")
-exp2012s <-dget("../dataframes/exp2012s.txt")
-exp2013s <-dget("../dataframes/exp2013s.txt")
-exp2014s <-dget("../dataframes/exp2014s.txt")
+## exp2004s <-dget("../dataframes/exp2004s.txt")
+## exp2005s <-dget("../dataframes/exp2005s.txt")
+## exp2006s <-dget("../dataframes/exp2006s.txt")
+## exp2007s <-dget("../dataframes/exp2007s.txt")
+## exp2008s <-dget("../dataframes/exp2008s.txt")
+## exp2009s <-dget("../dataframes/exp2009s.txt")
+## exp2010s <-dget("../dataframes/exp2010s.txt")
+## exp2011s <-dget("../dataframes/exp2011s.txt")
+## exp2012s <-dget("../dataframes/exp2012s.txt")
+## exp2013s <-dget("../dataframes/exp2013s.txt")
+## exp2014s <-dget("../dataframes/exp2014s.txt")
 return("success o9lardn4")
   }else if(source=="rawGoogleMap"){
     mapImageData3 <- get_map(location = c(lon = 35.1660235,

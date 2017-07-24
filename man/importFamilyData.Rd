@@ -2,7 +2,7 @@
 % Please edit documentation in R/importFamilyData.R
 \name{importFamilyData}
 \alias{importFamilyData}
-\title{Import family data to workspace v: 2.2}
+\title{Import family data to workspace v: 2.2.1}
 \usage{
 importFamilyData(source)
 }

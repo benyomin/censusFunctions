@@ -161,8 +161,6 @@ cityOrder <<- c(
 )
 
 
-
-
 jerusalem2004 <<- subset(familiesList[[1]], codeloc=="Jerusalem")
 Ashdod2004    <<- subset(familiesList[[1]], codeloc=="Ashdod")
 Haifa2004     <<- subset(familiesList[[1]], codeloc=="Haifa")
