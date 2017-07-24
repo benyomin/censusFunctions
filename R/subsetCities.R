@@ -1,4 +1,4 @@
-#' subsets the yearly surveys by city of residence, v 0.88
+#' subsets the yearly surveys by city of residence, v 0.9
 #' replace plyr::subset() with dplyr::filter()
 #' @param arg nil
 #' @keywords city, subset
@@ -23,18 +23,18 @@ library("dplyr")
 ## > levels(familiesList[[1]]$RENT)
 ##   [1] "Irrelevant" "Yes"        "No"
 
-renters2004  <<- dplyr::filter(familiesList[[1]], RENT == 2)
+renters2004  <<- dplyr::filter( familiesList[[1]],  RENT == "Yes")
 # head(renters2004)  #check
-renters2005  <<- dplyr::filter( familiesList[[2]],  RENT == 2)
-renters2006  <<- dplyr::filter( familiesList[[3]],  RENT == 2)
-renters2007  <<- dplyr::filter( familiesList[[4]],  RENT == 2)
-renters2008  <<- dplyr::filter( familiesList[[5]],  RENT == 2)
-renters2009  <<- dplyr::filter( familiesList[[6]],  RENT == 2)
-renters2010  <<- dplyr::filter( familiesList[[7]],  RENT == 2)
-renters2011  <<- dplyr::filter( familiesList[[8]],  RENT == 2)
-renters2012  <<- dplyr::filter( familiesList[[9]],  RENT == 2)
-renters2013  <<- dplyr::filter( familiesList[[10]], RENT == 2)
-renters2014  <<- dplyr::filter( familiesList[[11]], RENT == 2)
+renters2005  <<- dplyr::filter( familiesList[[2]],  RENT == "Yes")
+renters2006  <<- dplyr::filter( familiesList[[3]],  RENT == "Yes")
+renters2007  <<- dplyr::filter( familiesList[[4]],  RENT == "Yes")
+renters2008  <<- dplyr::filter( familiesList[[5]],  RENT == "Yes")
+renters2009  <<- dplyr::filter( familiesList[[6]],  RENT == "Yes")
+renters2010  <<- dplyr::filter( familiesList[[7]],  RENT == "Yes")
+renters2011  <<- dplyr::filter( familiesList[[8]],  RENT == "Yes")
+renters2012  <<- dplyr::filter( familiesList[[9]],  RENT == "Yes")
+renters2013  <<- dplyr::filter( familiesList[[10]], RENT == "Yes")
+renters2014  <<- dplyr::filter( familiesList[[11]], RENT == "Yes")
 
 rentersList  <<- c(
 renters2004,
@@ -48,8 +48,6 @@ renters2011,
 renters2012,
 renters2013,
 renters2014)
-
-
 
 ## owners
 #head(familiesList[[1]])
