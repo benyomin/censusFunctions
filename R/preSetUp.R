@@ -15,8 +15,6 @@ setwd("/Volumes/Bmac/febThesis/index")
 Sys.setenv(TZ="Europe/Berlin")
 devtools::install_local("/Volumes/Bmac/censusFunctions")
 library(censusFunctions)
-load("../savedData/homeprices.Rda")
-source("../includes/regionalPrices.R")
 ## source("../includes/setColors.R")  ## hide pretty colors for faster load
 year <- 2004:2014
 stockData("saved")
