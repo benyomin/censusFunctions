@@ -1,4 +1,4 @@
-#' subsets the yearly surveys by city of residence, v 0.87
+#' subsets the yearly surveys by city of residence, v 0.88
 #' replace plyr::subset() with dplyr::filter()
 #' @param arg nil
 #' @keywords city, subset
@@ -138,7 +138,7 @@ renterCounts  <<-  c(
 ## df family2014 is available under maxReproducible(1)
 ## needs to be      available under maxReproducible(2)
 
-cities <<- as.character(levels(family2014$codeloc))
+cities <- as.character(levels(familiesList[[11]]$CODELOC))
 #  cities <- as.character(levels(renters2004$codeloc))
 cityList <<- cities[-1]
 
