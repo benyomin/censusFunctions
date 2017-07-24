@@ -22,10 +22,13 @@ makeFamiliesList <- function(arg = TRUE) {
         XFI2012   <-   dget("../dataframes/expFamInd2012.txt")
         XFI2013   <-   dget("../dataframes/expFamInd2013.txt")
         XFI2014   <-   dget("../dataframes/expFamInd2014.txt")
+
+ colnames(XFI2004)
+
 ### process - add column with size of house
 
 fam2004 <- XFI2004 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
@@ -33,7 +36,7 @@ fam2004 <- XFI2004 %>%
                           ))
 
 fam2005 <- XFI2005 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
@@ -41,7 +44,7 @@ fam2005 <- XFI2005 %>%
                           ))
 
 fam2006 <- XFI2006 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
@@ -49,63 +52,62 @@ fam2006 <- XFI2006 %>%
                           ))
 
 fam2007 <- XFI2007 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
 fam2008 <- XFI2008 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
 fam2009 <- XFI2009 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
 fam2010 <- XFI2010 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
 fam2011 <- XFI2011 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
 fam2012 <- XFI2012 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
 fam2013 <- XFI2013 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
 fam2014 <- XFI2014 %>%
-  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+     plyr::mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
         ## add stock data
-
 
 tlv125<-importData("tlv125")
 
@@ -127,3 +129,5 @@ fam2014$stock<-tlv125["2014",2]
             fam2009, fam2010, fam2011, fam2012, fam2013, fam2014)
         return(familiesList)
 }
+
+# dput(familiesList, file = "../dataframes/XFI_stock_size_List.txt")

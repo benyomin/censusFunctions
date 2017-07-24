@@ -1,5 +1,5 @@
-#' Work with saved data or from raw census downloads?  v: 0.5
-#' Defaults to saved. 1 for raw. 2 for saved. 3 to create saved(2) from raw(1) Takes one argument.
+#' Work with saved data or from raw census downloads?  v: 0.6
+#' Defaults to saved. 1 for raw. 2 for saved. 3 to import more saved.
 #' @keywords import, saved, reproducibility
 #' @export maxReproducible
 #' @examples
@@ -23,9 +23,9 @@ makeFamiliesList()
 return("imported data from saved files")
   }else if(level ==3){
 
+familiesList <- dget("../dataframes/XFI_stock_size_List.txt")
 
-
-return("not yet implemented aory9sldoar9999")
+return("imported combined columns o9on99lo")
 
     }else{   ##"the only options are Y and N"
         return("the only options are 1 for 'raw' and 2 for 'saved'")

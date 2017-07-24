@@ -2,14 +2,14 @@
 % Please edit documentation in R/maxReproducible.R
 \name{maxReproducible}
 \alias{maxReproducible}
-\title{Work with saved data or from raw census downloads?  v: 0.5
-Defaults to saved. 1 for raw. 2 for saved. 3 to create saved(2) from raw(1) Takes one argument.}
+\title{Work with saved data or from raw census downloads?  v: 0.6
+Defaults to saved. 1 for raw. 2 for saved. 3 to import more saved.}
 \usage{
 maxReproducible(level = 2)
 }
 \description{
-Work with saved data or from raw census downloads?  v: 0.5
-Defaults to saved. 1 for raw. 2 for saved. 3 to create saved(2) from raw(1) Takes one argument.
+Work with saved data or from raw census downloads?  v: 0.6
+Defaults to saved. 1 for raw. 2 for saved. 3 to import more saved.
 }
 \examples{
 maxReproducible(1)
