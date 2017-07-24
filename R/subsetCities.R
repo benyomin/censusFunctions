@@ -96,17 +96,17 @@ count(owners2013),
 count(owners2014))
 
 countRenters <- c(
-count(renters2004),
-count(renters2005),
-count(renters2006),
-count(renters2007),
-count(renters2008),
-count(renters2009),
-count(renters2010),
-count(renters2011),
-count(renters2012),
-count(renters2013),
-count(renters2014))
+(renters2004)  %>%    nrow,
+(renters2005)  %>%    nrow,
+(renters2006)  %>%    nrow,
+(renters2007)  %>%    nrow,
+(renters2008)  %>%    nrow,
+(renters2009)  %>%    nrow,
+(renters2010)  %>%    nrow,
+(renters2011)  %>%    nrow,
+(renters2012)  %>%    nrow,
+(renters2013)  %>%    nrow,
+(renters2014)  %>%    nrow)
 
 renterCounts  <<-  c(
     renters2004   %>%  nrow,
