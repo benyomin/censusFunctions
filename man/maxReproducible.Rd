@@ -12,10 +12,10 @@ Work with saved data or from raw census downloads?  v: 0.5
 Defaults to saved. 1 for raw. 2 for saved. 3 to create saved(2) from raw(1) Takes one argument.
 }
 \examples{
-importData(1)
-importData(2)
-importData(3)
-importData()
+maxReproducible(1)
+maxReproducible(2)
+maxReproducible(3)
+maxReproducible()
 }
 \keyword{import,}
 \keyword{reproducibility}

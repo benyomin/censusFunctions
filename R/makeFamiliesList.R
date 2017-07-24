@@ -1,4 +1,4 @@
-#' Make list of family, individual and exp data to workspace v: 0.2
+#' Make list of family, individual and exp data to workspace v: 0.3
 #'
 #' This function imports save data.
 #' @param source Source for data, 'raw' imports from .por files. 'saved' files were previously parsed in R.
@@ -11,20 +11,20 @@
 makeFamiliesList <- function(arg = TRUE) {
   ## import saved data frames
 
-        family2004   <-   dget("../dataframes/expFamInd2004.txt")
-        family2005   <-   dget("../dataframes/expFamInd2005.txt")
-        family2006   <-   dget("../dataframes/expFamInd2006.txt")
-        family2007   <-   dget("../dataframes/expFamInd2007.txt")
-        family2008   <-   dget("../dataframes/expFamInd2008.txt")
-        family2009   <-   dget("../dataframes/expFamInd2009.txt")
-        family2010   <-   dget("../dataframes/expFamInd2010.txt")
-        family2011   <-   dget("../dataframes/expFamInd2011.txt")
-        family2012   <-   dget("../dataframes/expFamInd2012.txt")
-        family2013   <-   dget("../dataframes/expFamInd2013.txt")
-        family2014   <-   dget("../dataframes/expFamInd2014.txt")
+        XFI2004   <-   dget("../dataframes/expFamInd2004.txt")
+        XFI2005   <-   dget("../dataframes/expFamInd2005.txt")
+        XFI2006   <-   dget("../dataframes/expFamInd2006.txt")
+        XFI2007   <-   dget("../dataframes/expFamInd2007.txt")
+        XFI2008   <-   dget("../dataframes/expFamInd2008.txt")
+        XFI2009   <-   dget("../dataframes/expFamInd2009.txt")
+        XFI2010   <-   dget("../dataframes/expFamInd2010.txt")
+        XFI2011   <-   dget("../dataframes/expFamInd2011.txt")
+        XFI2012   <-   dget("../dataframes/expFamInd2012.txt")
+        XFI2013   <-   dget("../dataframes/expFamInd2013.txt")
+        XFI2014   <-   dget("../dataframes/expFamInd2014.txt")
 ### process - add column with size of house
 
-fam2004 <- family2004 %>%
+fam2004 <- XFI2004 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
@@ -32,7 +32,7 @@ fam2004 <- family2004 %>%
                           ROOMS > 5                ~ 'largest'
                           ))
 
-fam2005 <- family2005 %>%
+fam2005 <- XFI2005 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
@@ -40,7 +40,7 @@ fam2005 <- family2005 %>%
                           ROOMS > 5                ~ 'largest'
                           ))
 
-fam2006 <- family2006 %>%
+fam2006 <- XFI2006 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
@@ -48,56 +48,56 @@ fam2006 <- family2006 %>%
                           ROOMS > 5                ~ 'largest'
                           ))
 
-fam2007 <- family2007 %>%
+fam2007 <- XFI2007 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
-fam2008 <- family2008 %>%
+fam2008 <- XFI2008 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
-fam2009 <- family2009 %>%
+fam2009 <- XFI2009 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
-fam2010 <- family2010 %>%
+fam2010 <- XFI2010 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
-fam2011 <- family2011 %>%
+fam2011 <- XFI2011 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
-fam2012 <- family2012 %>%
+fam2012 <- XFI2012 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
-fam2013 <- family2013 %>%
+fam2013 <- XFI2013 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
-fam2014 <- family2014 %>%
+fam2014 <- XFI2014 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
@@ -121,7 +121,7 @@ fam2012$stock<-tlv125["2012",2]
 fam2013$stock<-tlv125["2013",2]
 fam2014$stock<-tlv125["2014",2]
 
-  family2014 <<- fam2014$codeloc  ## needed for $codeloc list of cities
+  family2014 <<- XFI2014  ## needed for $codeloc list of cities
 
         familiesList <<- list(fam2004, fam2005, fam2006, fam2007, fam2008,
             fam2009, fam2010, fam2011, fam2012, fam2013, fam2014)

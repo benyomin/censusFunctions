@@ -3,10 +3,10 @@
 #' @keywords import, saved, reproducibility
 #' @export maxReproducible
 #' @examples
-#' importData(1)
-#' importData(2)
-#' importData(3)
-#' importData()
+#' maxReproducible(1)
+#' maxReproducible(2)
+#' maxReproducible(3)
+#' maxReproducible()
 maxReproducible <- function(level = 2){
   if(level == 1){
   importFamilyData("raw")
@@ -22,6 +22,9 @@ makeFamiliesList()
 
 return("imported data from saved files")
   }else if(level ==3){
+
+
+
 return("not yet implemented aory9sldoar9999")
 
     }else{   ##"the only options are Y and N"
