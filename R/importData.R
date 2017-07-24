@@ -1,4 +1,4 @@
-#' Import data to workspace v: 2.1 import housing prices index
+#' Import data to workspace v: 2.2 import housing prices index
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.
@@ -418,7 +418,7 @@ expFamInd2011<<-dget("../dataframes/expFamInd2011.txt")
 expFamInd2012<<-dget("../dataframes/expFamInd2012.txt")
 expFamInd2013<<-dget("../dataframes/expFamInd2013.txt")
 expFamInd2014<<-dget("../dataframes/expFamInd2014.txt")
-      return("wrote out dataframes with Exp, Fam and Ind columns")
+      return("imported dataframes with Exp, Fam and Ind columns")
           }else if(source=="writeOutCombined"){
 ####################################
 ## write out combined data frames ##

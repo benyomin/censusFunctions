@@ -2,16 +2,19 @@
 % Please edit documentation in R/maxReproducible.R
 \name{maxReproducible}
 \alias{maxReproducible}
-\title{Work with saved data or from raw census downloads? Defaults to saved. 1 for raw. 2 for saved. Takes one argument.}
+\title{Work with saved data or from raw census downloads?  v: 0.5
+Defaults to saved. 1 for raw. 2 for saved. 3 to create saved(2) from raw(1) Takes one argument.}
 \usage{
 maxReproducible(level = 2)
 }
 \description{
-Work with saved data or from raw census downloads? Defaults to saved. 1 for raw. 2 for saved. Takes one argument.
+Work with saved data or from raw census downloads?  v: 0.5
+Defaults to saved. 1 for raw. 2 for saved. 3 to create saved(2) from raw(1) Takes one argument.
 }
 \examples{
 importData(1)
 importData(2)
+importData(3)
 importData()
 }
 \keyword{import,}
