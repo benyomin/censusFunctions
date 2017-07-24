@@ -2,7 +2,7 @@
 % Please edit documentation in R/makeFamiliesList.R
 \name{makeFamiliesList}
 \alias{makeFamiliesList}
-\title{Make list of family, individual and exp data to workspace v: 0.1}
+\title{Make list of family, individual and exp data to workspace v: 0.2}
 \usage{
 makeFamiliesList(arg = TRUE)
 }
