@@ -39,6 +39,7 @@ fam2005 <- family2005 %>%
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
+
 fam2006 <- family2006 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
@@ -46,6 +47,7 @@ fam2006 <- family2006 %>%
                           ROOMS > 4 & ROOMS <= 4.5 ~ 'large',
                           ROOMS > 5                ~ 'largest'
                           ))
+
 fam2007 <- family2007 %>%
   mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
