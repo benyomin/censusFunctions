@@ -1,4 +1,4 @@
-#' Work with saved data or from raw census downloads?  v: 0.6
+#' Work with saved data or from raw census downloads?  v: 0.7
 #' Defaults to saved. 1 for raw. 2 for saved. 3 to import more saved.
 #' @keywords import, saved, reproducibility
 #' @export maxReproducible
@@ -21,9 +21,9 @@ makeFamiliesList()
 ## needs to expose df family2014 as well
 
 return("imported data from saved files")
-  }else if(level ==3){
+  }else if(level == 3){
 
-familiesList <- dget("../dataframes/XFI_stock_size_List.txt")
+familiesList <<- dget("../dataframes/XFI_stock_size_List.txt")
 
 return("imported combined columns o9on99lo")
 
