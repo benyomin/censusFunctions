@@ -3,21 +3,23 @@
 \name{ownershipByCity}
 \alias{ownershipByCity}
 \title{split ownersYYYY and rentersYYYY by city  v.2.3
-This function creates subsets of renters and owners by city}
+This function creates subsets of renters and owners by city
+call with arg (2) to split by median income}
 \usage{
-ownershipByCity(arg = TRUE)
+ownershipByCity(arg = 1)
 }
 \arguments{
-\item{arg}{Defaults to true.}
+\item{arg}{Defaults to 1}
 }
 \description{
 split ownersYYYY and rentersYYYY by city  v.2.3
 This function creates subsets of renters and owners by city
+call with arg (2) to split by median income
 }
 \examples{
+ownershipByCity(1)
+ownershipByCity(2)
 ownershipByCity()
-ownershipByCity(TRUE)
-ownershipByCity(FALSE)
 }
 \keyword{owners,}
 \keyword{renters,}

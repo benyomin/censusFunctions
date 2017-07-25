@@ -1,9 +1,10 @@
 #' Loads the required packages for the
 #' Housing Wealth Effect Analysis.
 #' Provides for simple dependency management to aid in reproducibility.
-#' v.12-2017 - remove gdata dependency, use other xlsx reader
-#' v.2-2017 - changes to tidyverse instead of tidyr
-#' March 5 - rio for csv import of stock prices
+#' v.1.2 - remove gdata dependency, use other xlsx reader
+#' v.2.0 - changes to tidyverse instead of tidyr
+#' v.2.1 - rio for csv import of stock prices
+#' v.2.6 - plyr to dplyr, add magrittr
 #' @param load Defaults to TRUE.
 #' @keywords packages, packageManagement, dependencies, library, require, requirements
 #' @export
@@ -26,8 +27,10 @@ library(RColorBrewer)
       library(pander)
 devtools::install_github("renkun-ken/pipeR")
       library(pipeR)
-      install_if_needed("plyr")          ## count()
-library(plyr)
+      install_if_needed("dplyr")          ## count()
+library(dplyr)
+      install_if_needed("magrittr")
+library(magrittr)
       install_if_needed("ggthemes")
       library(ggthemes)
 library(rgeos)

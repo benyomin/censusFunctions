@@ -1,15 +1,16 @@
 #' split ownersYYYY and rentersYYYY by city  v.2.3
 #' This function creates subsets of renters and owners by city
-#' @param arg Defaults to true.
+#' call with arg (2) to split by median income
+#' @param arg Defaults to 1
 #' @keywords owners, renters, subset
 #' @export
 #' @examples
+#' ownershipByCity(1)
+#' ownershipByCity(2)
 #' ownershipByCity()
-#' ownershipByCity(TRUE)
-#' ownershipByCity(FALSE)
 
-ownershipByCity <- function(arg = TRUE) {
-  if (arg == TRUE) {
+ownershipByCity <- function(arg = 1) {
+  if (arg == 1) {
 
 ##############  define owners #########################
 
@@ -137,59 +138,59 @@ Ownerkefar2008    <<- dplyr::filter( owners2008,  CODELOC =="Kefar Sava")
 Ownerpetah2008    <<- dplyr::filter( owners2008,  CODELOC =="Petah Tiqwa")
 Ownerrishon2008   <<- dplyr::filter( owners2008,  CODELOC =="Rishon LeZiyon")
 Ownerramat2008    <<- dplyr::filter( owners2008,  CODELOC =="Ramat Gan")
-Ownerbeer2008     <<- dplyr::filter( owners2008,  CODELOC =="Beer Sheva")
+Ownerbeer2008           <<- dplyr::filter( owners2008,  CODELOC =="Beer Sheva")
 Ownermodiin2008         <<- dplyr::filter( owners2008,  CODELOC =="Modi'in")
 Ownerbetshemesh2008     <<- dplyr::filter( owners2008,  CODELOC =="Bet Shemesh")
 Ownernahariyya2008      <<- dplyr::filter( owners2008,  CODELOC =="Nahariyya")
 Ownerqiryatatta2008     <<- dplyr::filter( owners2008,  CODELOC =="Qiryat Atta")
 Ownergivatayim2008      <<- dplyr::filter( owners2008,  CODELOC =="Giv'atayim")
 
-Ownerjerusalem2009 <<- dplyr::filter( owners2009,  CODELOC =="Jerusalem")
-OwnerAshdod2009    <<- dplyr::filter( owners2009,  CODELOC =="Ashdod")
-OwnerHaifa2009     <<- dplyr::filter( owners2009,  CODELOC =="Haifa")
-OwnerHerzliyya2009 <<- dplyr::filter( owners2009,  CODELOC =="Herzliyya")
-OwnerHolon2009    <<- dplyr::filter( owners2009,  CODELOC =="Holon")
-OwnerLod2009      <<- dplyr::filter( owners2009,  CODELOC =="Lod")
-OwnerHadera2009   <<- dplyr::filter( owners2009,  CODELOC =="Hadera")
-OwnerAshqelon2009 <<- dplyr::filter( owners2009,  CODELOC =="Ashkelon")
-OwnerNettanya2009 <<- dplyr::filter( owners2009,  CODELOC =="Netanya")
-OwnerRehovot2009  <<- dplyr::filter( owners2009,  CODELOC =="Rehovot")
-OwnerRamla2009    <<- dplyr::filter( owners2009,  CODELOC =="Ramla")
-OwnerRaannana2009 <<- dplyr::filter( owners2009,  CODELOC =="Raannana")
-Ownertlv2009      <<- dplyr::filter( owners2009,  CODELOC =="Tel Aviv-Yaffo")
-Ownerbene2009     <<- dplyr::filter( owners2009,  CODELOC =="Bene Beraq")
-Ownerbat2009      <<- dplyr::filter( owners2009,  CODELOC =="Bat Yam")
-Ownerkefar2009    <<- dplyr::filter( owners2009,  CODELOC =="Kefar Sava")
-Ownerpetah2009    <<- dplyr::filter( owners2009,  CODELOC =="Petah Tiqwa")
-Ownerrishon2009   <<- dplyr::filter( owners2009,  CODELOC =="Rishon LeZiyon")
-Ownerramat2009    <<- dplyr::filter( owners2009,  CODELOC =="Ramat Gan")
-Ownerbeer2009     <<- dplyr::filter( owners2009,  CODELOC =="Beer Sheva")
+Ownerjerusalem2009      <<- dplyr::filter( owners2009,  CODELOC =="Jerusalem")
+OwnerAshdod2009         <<- dplyr::filter( owners2009,  CODELOC =="Ashdod")
+OwnerHaifa2009          <<- dplyr::filter( owners2009,  CODELOC =="Haifa")
+OwnerHerzliyya2009      <<- dplyr::filter( owners2009,  CODELOC =="Herzliyya")
+OwnerHolon2009          <<- dplyr::filter( owners2009,  CODELOC =="Holon")
+OwnerLod2009            <<- dplyr::filter( owners2009,  CODELOC =="Lod")
+OwnerHadera2009         <<- dplyr::filter( owners2009,  CODELOC =="Hadera")
+OwnerAshqelon2009       <<- dplyr::filter( owners2009,  CODELOC =="Ashkelon")
+OwnerNettanya2009       <<- dplyr::filter( owners2009,  CODELOC =="Netanya")
+OwnerRehovot2009        <<- dplyr::filter( owners2009,  CODELOC =="Rehovot")
+OwnerRamla2009          <<- dplyr::filter( owners2009,  CODELOC =="Ramla")
+OwnerRaannana2009       <<- dplyr::filter( owners2009,  CODELOC =="Raannana")
+Ownertlv2009            <<- dplyr::filter( owners2009,  CODELOC =="Tel Aviv-Yaffo")
+Ownerbene2009           <<- dplyr::filter( owners2009,  CODELOC =="Bene Beraq")
+Ownerbat2009            <<- dplyr::filter( owners2009,  CODELOC =="Bat Yam")
+Ownerkefar2009          <<- dplyr::filter( owners2009,  CODELOC =="Kefar Sava")
+Ownerpetah2009          <<- dplyr::filter( owners2009,  CODELOC =="Petah Tiqwa")
+Ownerrishon2009         <<- dplyr::filter( owners2009,  CODELOC =="Rishon LeZiyon")
+Ownerramat2009          <<- dplyr::filter( owners2009,  CODELOC =="Ramat Gan")
+Ownerbeer2009           <<- dplyr::filter( owners2009,  CODELOC =="Beer Sheva")
 Ownermodiin2009         <<- dplyr::filter( owners2009,  CODELOC =="Modi'in")
 Ownerbetshemesh2009     <<- dplyr::filter( owners2009,  CODELOC =="Bet Shemesh")
 Ownernahariyya2009      <<- dplyr::filter( owners2009,  CODELOC =="Nahariyya")
 Ownerqiryatatta2009     <<- dplyr::filter( owners2009,  CODELOC =="Qiryat Atta")
 Ownergivatayim2009      <<- dplyr::filter( owners2009,  CODELOC =="Giv'atayim")
 
-Ownerjerusalem2010       <<- dplyr::filter( owners2010,  CODELOC =="Jerusalem")
-OwnerAshdod2010    <<- dplyr::filter( owners2010,  CODELOC =="Ashdod")
-OwnerHaifa2010     <<- dplyr::filter( owners2010,  CODELOC =="Haifa")
-OwnerHerzliyya2010 <<- dplyr::filter( owners2010,  CODELOC =="Herzliyya")
-OwnerHolon2010    <<- dplyr::filter( owners2010,  CODELOC =="Holon")
-OwnerLod2010      <<- dplyr::filter( owners2010,  CODELOC =="Lod")
-OwnerHadera2010   <<- dplyr::filter( owners2010,  CODELOC =="Hadera")
-OwnerAshqelon2010 <<- dplyr::filter( owners2010,  CODELOC =="Ashkelon")
-OwnerNettanya2010 <<- dplyr::filter( owners2010,  CODELOC =="Netanya")
-OwnerRehovot2010  <<- dplyr::filter( owners2010,  CODELOC =="Rehovot")
-OwnerRamla2010    <<- dplyr::filter( owners2010,  CODELOC =="Ramla")
-OwnerRaannana2010 <<- dplyr::filter( owners2010,  CODELOC =="Raannana")
-Ownertlv2010      <<- dplyr::filter( owners2010,  CODELOC =="Tel Aviv-Yaffo")
-Ownerbene2010     <<- dplyr::filter( owners2010,  CODELOC =="Bene Beraq")
-Ownerbat2010      <<- dplyr::filter( owners2010,  CODELOC =="Bat Yam")
-Ownerkefar2010    <<- dplyr::filter( owners2010,  CODELOC =="Kefar Sava")
-Ownerpetah2010    <<- dplyr::filter( owners2010,  CODELOC =="Petah Tiqwa")
-Ownerrishon2010   <<- dplyr::filter( owners2010,  CODELOC =="Rishon LeZiyon")
-Ownerramat2010    <<- dplyr::filter( owners2010,  CODELOC =="Ramat Gan")
-Ownerbeer2010     <<- dplyr::filter( owners2010,  CODELOC =="Beer Sheva")
+Ownerjerusalem2010      <<- dplyr::filter( owners2010,  CODELOC =="Jerusalem")
+OwnerAshdod2010         <<- dplyr::filter( owners2010,  CODELOC =="Ashdod")
+OwnerHaifa2010          <<- dplyr::filter( owners2010,  CODELOC =="Haifa")
+OwnerHerzliyya2010      <<- dplyr::filter( owners2010,  CODELOC =="Herzliyya")
+OwnerHolon2010          <<- dplyr::filter( owners2010,  CODELOC =="Holon")
+OwnerLod2010            <<- dplyr::filter( owners2010,  CODELOC =="Lod")
+OwnerHadera2010         <<- dplyr::filter( owners2010,  CODELOC =="Hadera")
+OwnerAshqelon2010       <<- dplyr::filter( owners2010,  CODELOC =="Ashkelon")
+OwnerNettanya2010       <<- dplyr::filter( owners2010,  CODELOC =="Netanya")
+OwnerRehovot2010        <<- dplyr::filter( owners2010,  CODELOC =="Rehovot")
+OwnerRamla2010          <<- dplyr::filter( owners2010,  CODELOC =="Ramla")
+OwnerRaannana2010       <<- dplyr::filter( owners2010,  CODELOC =="Raannana")
+Ownertlv2010            <<- dplyr::filter( owners2010,  CODELOC =="Tel Aviv-Yaffo")
+Ownerbene2010           <<- dplyr::filter( owners2010,  CODELOC =="Bene Beraq")
+Ownerbat2010            <<- dplyr::filter( owners2010,  CODELOC =="Bat Yam")
+Ownerkefar2010          <<- dplyr::filter( owners2010,  CODELOC =="Kefar Sava")
+Ownerpetah2010          <<- dplyr::filter( owners2010,  CODELOC =="Petah Tiqwa")
+Ownerrishon2010         <<- dplyr::filter( owners2010,  CODELOC =="Rishon LeZiyon")
+Ownerramat2010          <<- dplyr::filter( owners2010,  CODELOC =="Ramat Gan")
+Ownerbeer2010           <<- dplyr::filter( owners2010,  CODELOC =="Beer Sheva")
 Ownermodiin2010         <<- dplyr::filter( owners2010,  CODELOC =="Modi'in")
 Ownerbetshemesh2010     <<- dplyr::filter( owners2010,  CODELOC =="Bet Shemesh")
 Ownernahariyya2010      <<- dplyr::filter( owners2010,  CODELOC =="Nahariyya")
@@ -1241,36 +1242,46 @@ ownerCityList  <<-as.data.frame(cbind(list   = cityOrder,
                                 "2012"  = ownerCity2012,
                                 "2013"  = ownerCity2013,
                                 "2014"  = ownerCity2014))
-
+    return("split YYYY by owner/renter")
+} else if( arg ==2){
 ################### calculate the median income of the sample for the year ############################
 
-#  familiesList[[1]]  %>% colnames
+##   familiesList[[1]]  %>% colnames
 
-medianInc2004 <<- median(familiesList[[1]]$grossIncome)
-medianInc2005 <<- median(familiesList[[2]]$grossIncome)
-medianInc2006 <<- median(familiesList[[3]]$grossIncome)
-medianInc2007 <<- median(familiesList[[4]]$grossIncome)
-medianInc2008 <<- median(familiesList[[5]]$grossIncome)
-medianInc2009 <<- median(familiesList[[6]]$grossIncome)
-medianInc2010 <<- median(familiesList[[7]]$grossIncome)
-medianInc2011 <<- median(familiesList[[8]]$grossIncome)
-medianInc2012 <<- median(familiesList[[9]]$grossIncome)
-medianInc2013 <<- median(familiesList[[10]]$grossIncome)
-medianInc2014 <<- median(familiesList[[11]]$grossIncome)
+##     head(familiesList[1]$ROOMS)
+##     head(familiesList[1]$OWNER)
+##     head(familiesList[1]$HHNUM)
+##     head(familiesList[1]$ROOMS)
 
-medians <<-c(medianInc2004,
-medianInc2005 ,
-medianInc2006 ,
-medianInc2007 ,
-medianInc2008 ,
-medianInc2009 ,
-medianInc2010 ,
-medianInc2011 ,
-medianInc2012 ,
-medianInc2013 ,
-medianInc2014 )
+##     str(modiin2004)
+##     head(rishon2007)
 
 
+##     renterCounts
+
+## medianInc2004 <<- median(familiesList[[1]]$grossIncome)  %>% as.integer
+## medianInc2005 <<- median(familiesList[[2]]$grossIncome)  %>% as.integer
+## medianInc2006 <<- median(familiesList[[3]]$grossIncome)  %>% as.integer
+## medianInc2007 <<- median(familiesList[[4]]$grossIncome)  %>% as.integer
+## medianInc2008 <<- median(familiesList[[5]]$grossIncome)  %>% as.integer
+## medianInc2009 <<- median(familiesList[[6]]$grossIncome)  %>% as.integer
+## medianInc2010 <<- median(familiesList[[7]]$grossIncome)  %>% as.integer
+## medianInc2011 <<- median(familiesList[[8]]$grossIncome)  %>% as.integer
+## medianInc2012 <<- median(familiesList[[9]]$grossIncome)  %>% as.integer
+## medianInc2013 <<- median(familiesList[[10]]$grossIncome) %>% as.integer
+## medianInc2014 <<- median(familiesList[[11]]$grossIncome) %>% as.integer
+
+## medians <<-c(medianInc2004,
+## medianInc2005 ,
+## medianInc2006 ,
+## medianInc2007 ,
+## medianInc2008 ,
+## medianInc2009 ,
+## medianInc2010 ,
+## medianInc2011 ,
+## medianInc2012 ,
+## medianInc2013 ,
+## medianInc2014 )
 
 
 #medianInc2004
@@ -2409,7 +2420,6 @@ countPoorRenters2012 <- c(
  poorRenterqiryatatta2012        %>% nrow,
  poorRentergivatayim2012         %>% nrow )
 
-
 countPoorRenters2013 <- c(
  poorRenterjerusalem2013         %>% nrow,
  poorRenterAshdod2013            %>% nrow,
@@ -2494,7 +2504,7 @@ richRenterList  <<-as.data.frame(cbind(list   = cityOrder,
 
 
 
-        return("split cityYYYY  by owner/renter")
+        return("split CityrenterYYYY by medianIncome")
     } else {
         return("not implemented, error: 990ra9sldoar")
     }

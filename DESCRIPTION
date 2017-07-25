@@ -1,6 +1,6 @@
 Package: censusFunctions
 Title: Helper Functions for Israeli Census Files
-Version: 2.5
+Version: 2.6
 Authors@R: person("Benyomin", "Hagalili", email = "first@first.net", role = c("aut", "cre"))
 Description: Refactoring of Spaghetti Code for analysis in R
     of Israeli Census Data. Use this function
@@ -9,7 +9,7 @@ Description: Refactoring of Spaghetti Code for analysis in R
     When you make changes run
     updateMe.R
 Depends:
-    R (>= 3.3.1), rbundler, foreign, roxygen2, pander, survival, proxy, grid, plm, rio, RCurl, zoo, dtplyr, readr, operators, grid, bookdown, scales, memisc, rexcel, readxl, tidyr, ggplot2, maps, ggthemes, ggmap, rgdal, reshape, RColorBrewer, plyr
+    R (>= 3.3.1), rbundler, foreign, roxygen2, pander, survival, proxy, grid, plm, rio, RCurl, zoo, dtplyr, readr, operators, grid, bookdown, scales, memisc, rexcel, readxl, tidyr, ggplot2, maps, ggthemes, ggmap, rgdal, reshape, RColorBrewer, dplyr, magrittr
 Suggests: testthat, sf, sp, choroplethr, choroplethrAdmin1, maptools, rgeos, tmap, Hmisc, linen, crayon, rJava, xlsx
 License: MIT
 Encoding: UTF-8
