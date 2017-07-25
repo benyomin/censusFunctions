@@ -4,7 +4,7 @@
 #' v.1.2 - remove gdata dependency, use other xlsx reader
 #' v.2.0 - changes to tidyverse instead of tidyr
 #' v.2.1 - rio for csv import of stock prices
-#' v.2.6 - plyr to dplyr, add magrittr
+#' v.2.7 - plyr to dplyr, add magrittr
 #' @param load Defaults to TRUE.
 #' @keywords packages, packageManagement, dependencies, library, require, requirements
 #' @export
@@ -27,7 +27,9 @@ library(RColorBrewer)
       library(pander)
 devtools::install_github("renkun-ken/pipeR")
       library(pipeR)
-      install_if_needed("dplyr")          ## count()
+      ##  install_if_needed("dplyr")          ## count()
+      ##  install from source to prevent a warning about the binary being
+      ##  compiled with R 3.4.1 when I am using R 3.4
 library(dplyr)
       install_if_needed("magrittr")
 library(magrittr)
@@ -60,7 +62,8 @@ library(rgeos)
 library(RCurl)
         install_if_needed("zoo")
 library(zoo)                       # dates package, used to manipulate quarters
-        install_if_needed("dtplyr")
+     ##   install_if_needed("dtplyr")
+     ##   devtools::install_github("hadley/dtplyr")
 library(dtplyr)
         install_if_needed("plm")  ## linear models for panel data ## https://r-forge.r-project.org/projects/plm/
 library(plm)

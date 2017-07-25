@@ -8,7 +8,7 @@ Provides for simple dependency management to aid in reproducibility.
 v.1.2 - remove gdata dependency, use other xlsx reader
 v.2.0 - changes to tidyverse instead of tidyr
 v.2.1 - rio for csv import of stock prices
-v.2.6 - plyr to dplyr, add magrittr}
+v.2.7 - plyr to dplyr, add magrittr}
 \usage{
 loadWealthEffectPackages(load = TRUE)
 }
@@ -22,7 +22,7 @@ Provides for simple dependency management to aid in reproducibility.
 v.1.2 - remove gdata dependency, use other xlsx reader
 v.2.0 - changes to tidyverse instead of tidyr
 v.2.1 - rio for csv import of stock prices
-v.2.6 - plyr to dplyr, add magrittr
+v.2.7 - plyr to dplyr, add magrittr
 }
 \examples{
 loadWealthEffectPackages()
