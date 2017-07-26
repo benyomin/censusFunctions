@@ -1,4 +1,4 @@
-#' Graphs I've made before  v0.1.3
+#' Graphs I've made before  v0.1.4
 #'
 #' This function plots with ggplot2
 #' @param class Owner or renter? Defaults to owner.
@@ -6,6 +6,7 @@
 #' @param y What goes on the y-axis?
 #' @param year What year do you want to see?
 #' @keywords graph, plot
+#' @family plot
 #' @export
 #' @examples
 #' savedGraphs('owners', 'income', 'consumption', 2005)

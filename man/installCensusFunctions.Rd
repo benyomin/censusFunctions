@@ -2,7 +2,7 @@
 % Please edit documentation in R/installCensusFunctions.R
 \name{installCensusFunctions}
 \alias{installCensusFunctions}
-\title{Helper function to change directories. v.1.2}
+\title{Helper function to change directories. v.1.3}
 \usage{
 installCensusFunctions(location)
 }
@@ -15,6 +15,10 @@ This function installs the local or github version of Israel Census helper funct
 \examples{
 installCensusFunctions('local')
 installCensusFunctions('github')
+}
+\seealso{
+Other setup: \code{\link{install_if_needed}},
+  \code{\link{preSetUp}}
 }
 \keyword{dir,}
 \keyword{directory}

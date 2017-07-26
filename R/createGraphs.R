@@ -4,9 +4,12 @@
 #' @param metric income/consumption/NHC ;; weighted
 #' @keywords plots, graphs
 #' @export
+#' @family plot
 #' @examples
-#' createGraphs(1)
-#' createGraphs(0)
+#' createGraphs("income")
+#' createGraphs("NHC")
+#' createGraphs("consumption")
+#' createGraphs()
 createGraphs <- function(metric = "income") {
     if (metric == "income") {
         ## Graph Income - Weighted.

@@ -18,4 +18,8 @@ This function wraps setup code
 preSetUp(TRUE)
 preSetUp()
 }
+\seealso{
+Other setup: \code{\link{installCensusFunctions}},
+  \code{\link{install_if_needed}}
+}
 \keyword{setup}

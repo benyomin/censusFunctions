@@ -20,4 +20,9 @@ This function allows you to install packages.
 install_if_needed('dplyr')
 
 }
-\keyword{install}
+\seealso{
+Other setup: \code{\link{installCensusFunctions}},
+  \code{\link{preSetUp}}
+}
+\keyword{install,}
+\keyword{setup}

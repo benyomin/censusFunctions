@@ -1,8 +1,9 @@
 #' A wrapper for install.
 #'
 #' This function allows you to install packages.
-#' @keywords install
-#' @export
+#' @keywords install, setup
+#' @family setup
+#' @export install_if_needed
 #' @examples
 #' install_if_needed('dplyr')
 #'

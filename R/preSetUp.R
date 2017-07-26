@@ -1,6 +1,7 @@
 #' initial setup code
 #' This function wraps setup code
 #' @param arg Defaults to true.
+#' @family setup
 #' @keywords setup
 #' @export preSetUp
 #' @examples

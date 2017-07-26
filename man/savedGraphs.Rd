@@ -2,7 +2,7 @@
 % Please edit documentation in R/savedGraphs.R
 \name{savedGraphs}
 \alias{savedGraphs}
-\title{Graphs I've made before  v0.1.3}
+\title{Graphs I've made before  v0.1.4}
 \usage{
 savedGraphs(class = "renters", x = "income", y = "consumption",
   year = 2004)
@@ -23,6 +23,9 @@ This function plots with ggplot2
 savedGraphs('owners', 'income', 'consumption', 2005)
 savedGraphs('renters','consumption',   'rent', 2013)
 savedGraphs('renters','income',        'rent', 2010)
+}
+\seealso{
+Other plot: \code{\link{createGraphs}}
 }
 \keyword{graph,}
 \keyword{plot}

@@ -13,8 +13,13 @@ createGraphs(metric = "income")
 This function aggregates graphing code; returns plots as a list.
 }
 \examples{
-createGraphs(1)
-createGraphs(0)
+createGraphs("income")
+createGraphs("NHC")
+createGraphs("consumption")
+createGraphs()
+}
+\seealso{
+Other plot: \code{\link{savedGraphs}}
 }
 \keyword{graphs}
 \keyword{plots,}
