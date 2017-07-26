@@ -2,14 +2,14 @@
 #'
 #' This function combines multiple years to a dataframe. v: 2.0
 #' @param arg Sentence describing arg.
-#' #' @keywords combine, dataframe, year
-#' @export
+#' @keywords combine, dataframe, year
+#' @export combineFrames
+#' @family combine
 #' @examples
 #' combineFrames(TRUE)
 #' combineFrames(FALSE)
 #' combineFrames()
 combineFrames <- function(arg = TRUE) {
-    
 
     family2004a <- familiesList[[1]]
     family2005a <- familiesList[[2]]

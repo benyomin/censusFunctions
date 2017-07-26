@@ -7,8 +7,7 @@
 combineFrames(arg = TRUE)
 }
 \arguments{
-\item{arg}{Sentence describing arg.
-#' @keywords combine, dataframe, year}
+\item{arg}{Sentence describing arg.}
 }
 \description{
 This function combines multiple years to a dataframe. v: 2.0
@@ -18,3 +17,9 @@ combineFrames(TRUE)
 combineFrames(FALSE)
 combineFrames()
 }
+\seealso{
+Other combine: \code{\link{mergeFrames}}
+}
+\keyword{combine,}
+\keyword{dataframe,}
+\keyword{year}
