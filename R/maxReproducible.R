@@ -8,7 +8,6 @@
 #' maxReproducible(3)
 #' maxReproducible(4)
 #' maxReproducible()
-
 maxReproducible <- function(level = 2){
   if(level == 1){
   importFamilyData("raw")
@@ -25,11 +24,13 @@ makeFamiliesList()
 return("imported data from saved files")
   }else if(level == 3){
 
-
+## old version:  (contains NA instead of large in size column)
 # familiesList <<- dget("../dataframes/XFI_stock_size_List.txt")
-familiesList <<- dget("../dataframes/XFI_correctSize.txt")
+##return("imported combined columns o9on99lo")
 
-return("imported combined columns o9on99lo")
+## new version:
+familiesList <<-   dget("../dataframes/XFI_correctSize.txt")
+return("imported combined columns from XFI_correctSize")
 
   }else if(level == 4){
     ## this creates the data imported by maxReproducible(3)
