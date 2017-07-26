@@ -4,7 +4,7 @@
 \alias{mergeFrames}
 \title{Merge all years (in familiesList) into a single dataframe to facilitate regression.}
 \usage{
-mergeFrames(arg = 1)
+mergeFrames(arg = 3)
 }
 \arguments{
 \item{arg}{Defaults to 1. 2 is not implemented.}
@@ -13,8 +13,8 @@ mergeFrames(arg = 1)
 This function combines multiple years to a dataframe. v: 3.0
 }
 \examples{
-mergeFrames(1)
-mergeFrames(2)
+mergeFrames("merge")
+mergeFrames("writeOut")
 mergeFrames()
 }
 \seealso{

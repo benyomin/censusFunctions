@@ -6,12 +6,13 @@
 #' @export mergeFrames
 #' @family combine
 #' @examples
-#' mergeFrames(1)
-#' mergeFrames(2)
+#' mergeFrames("merge")
+#' mergeFrames("writeOut")
 #' mergeFrames()
-mergeFrames <- function(arg = 1) {
-  if(arg == 1){
+mergeFrames <- function(arg = 3) {
+  if(arg == "merge"){
 
+mergedData2 <- plyr::ldply(familiesList, data.frame)
     ## assertthat::see_if(assertthat::are_equal(familiesList[[1]] %>% names,
     ##           familiesList[[2]]  %>% names ))
 
@@ -32,41 +33,25 @@ mergeFrames <- function(arg = 1) {
 
     ## familiesList[[11]]%>% names
 
-  mergedData2 <<-
-    do.call(rbind, familiesList)
+  ## mergedData2 <<-
+  ##   do.call(rbind, familiesList)
 
 return("You are now ready to regress. DataFrame mergeData2 created.")
 
-    }else if(arg == 2){
+    }else if(arg == "writeOut"){
 
-return("not yet implemented - placeholder 97a")
 
-    ## all column names must be the same before a merge
-    
-    ## names(family2005a) <- names(family2004a)
-    ## names(family2006a) <- names(family2004a)
-    ## names(family2007a) <- names(family2004a)
-    ## names(family2008a) <- names(family2004a)
-    ## names(family2009a) <- names(family2004a)
-    ## names(family2010a) <- names(family2004a)
-    ## names(family2011a) <- names(family2004a)
-    ## names(family2012a) <- names(family2004a)
-    ## names(family2013a) <- names(family2004a)
-    ## names(family2014a) <- names(family2004a)
-    
-    ## ## check
-    ## names(family2011a) == names(family2005a)
-    
-    ## mergedData1 <<- do.call(rbind, list(family2004a, family2005a, family2006a, family2007a,
-    ##     family2008a, family2009a, family2010a, family2011a, family2012a, family2013a, family2014a))
-    
-    # str(family2004) ## 6k rows
-    
-    # str(mergedData1) ## 76k rows ## dataFrames combined successfully
-    
-    ## mergedData <- merge( family2004, family2005, family2006, family2007,
-    ## family2008, family2009, family2010, family2011, family2012, family2013,
-    ## family2014, all=T)
+dput(mergedData2, file = "../dataframes/mergedData2.txt")
+
+
+return("wrote mergedData2 to file")
+
+
+    }else if(arg == "saved"){
+
+mergedData2 <<- dget("../dataframes/mergedData2.txt")
+
+return("read saved version of mergedData2")
     }else{
 return("not implemented mergeFrames(returnCode 99x)")
     }
