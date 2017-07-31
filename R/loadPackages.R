@@ -17,8 +17,10 @@ loadWealthEffectPackages <- function(load = TRUE) {
 library(tmap)
         # devtools::install_github('walkerke/tigris') library(tigris) library(tmapn)
         # other
-      install_if_needed("ggplot2")
-library(ggplot2)
+     # install_if_needed("ggplot2")
+     #library(ggplot2)
+      install.packages("tidyverse")
+library("tidyverse")
       install_github("dkahle/ggmap")
 library(ggmap)
       install_if_needed("RColorBrewer")
@@ -27,10 +29,6 @@ library(RColorBrewer)
       library(pander)
 devtools::install_github("renkun-ken/pipeR")
       library(pipeR)
-      ##  install_if_needed("dplyr")          ## count()
-      ##  install from source to prevent a warning about the binary being
-      ##  compiled with R 3.4.1 when I am using R 3.4
-library(dplyr)
       install_if_needed("magrittr")
 library(magrittr)
       install_if_needed("ggthemes")
@@ -49,7 +47,7 @@ library(roxygen2)
         install_if_needed("foreign")
 library(foreign)
 #      install_if_needed("tidyr")
-library(tidyr)
+#      library(tidyr)
        install_if_needed("rgdal")
 library(rgdal)
        install_if_needed("rgeos")
@@ -65,6 +63,10 @@ library(zoo)                       # dates package, used to manipulate quarters
      ##   install_if_needed("dtplyr")
      ##   devtools::install_github("hadley/dtplyr")
 library(dtplyr)
+      ##  install_if_needed("dplyr")          ## count()
+      ##  install from source to prevent a warning about the binary being
+      ##  compiled with R 3.4.1 when I am using R 3.4
+      ## library(dplyr)
         install_if_needed("plm")  ## linear models for panel data ## https://r-forge.r-project.org/projects/plm/
 library(plm)
         install_if_needed("choroplethr")
