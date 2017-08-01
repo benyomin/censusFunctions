@@ -1,6 +1,6 @@
 #' Merge all years (in familiesList) into a single dataframe to facilitate regression.
 #'
-#' This function combines multiple years to a dataframe. v: 3.0
+#' This function combines multiple years to a dataframe. v: 3.1
 #' @param arg Defaults to 1. 2 is not implemented.
 #' @keywords combine, merge, regression, dataframe, year
 #' @export mergeFrames
@@ -69,13 +69,13 @@ return("wrote mergedData2 to file")
 
     }else if(arg == "saved"){
 
-mergedData2      <- dget("../dataframes/mergedData2.txt")
+mergedData2     <<- dget("../dataframes/mergedData2.txt")
 mergedData2[]   <<- lapply(mergedData2, unclass)
 
-mergedRenters    <- dget("../dataframes/mergedRenters.txt")
+mergedRenters   <<- dget("../dataframes/mergedRenters.txt")
 mergedRenters[] <<- lapply(mergedRenters, unclass)
 
-mergedOwners     <- dget("../dataframes/mergedOwners.txt")
+mergedOwners    <<- dget("../dataframes/mergedOwners.txt")
 mergedOwners[]  <<- lapply(mergedOwners, unclass)
 
 return("read saved version of mergedData2")
