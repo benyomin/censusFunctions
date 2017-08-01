@@ -1,4 +1,4 @@
-#' subsets the yearly surveys by city of residence, v 0.99
+#' subsets the yearly surveys by city of residence, v 1.01
 #' defaults to arg = "cities"
 #' replace plyr::subset() with dplyr::filter()
 #' @param    arg nil
@@ -10,7 +10,7 @@
 #' subsetCities("make")
 #' subsetCities("writeOut")
 #' subsetCities("saved")
-subsetCities <- function(arg = "cities") {
+subsetCities <- function(arg = "saved") {
   if(arg == "make1"){
 library("dplyr")
   ## exports these    dataframes to the global environment
