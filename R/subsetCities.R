@@ -1,4 +1,5 @@
-#' subsets the yearly surveys by city of residence, v 0.98
+#' subsets the yearly surveys by city of residence, v 0.99
+#' defaults to arg = "make"
 #' replace plyr::subset() with dplyr::filter()
 #' @param    arg nil
 #' @family   table
@@ -6,8 +7,11 @@
 #' @export   subsetCities
 #' @examples
 #' subsetCities()
-
-subsetCities <- function(arg) {
+#' subsetCities("make")
+#' subsetCities("save")
+#' subsetCities("saved")
+subsetCities <- function(arg = "make") {
+  if(arg == "make"){
 library("dplyr")
   ## exports these    dataframes to the global environment
   ## cityList      <- 99
@@ -1399,6 +1403,18 @@ surveyList  <<-as.data.frame(cbind(list   = cityOrder,
                                 "2013"  = counts2013,
                                 "2014"  = counts2014))
 
+
+return("success - 0n9")
+  }else if(arg == "save"){
+return("not implemented xxxx999a0n9")
+
+  }else if(arg == "saved"){
+
+return("not implemented n;bbb888n9")
+
+  }else{
+return("not implemented n;09ha0n9")
+  }
 }
 
 ## ```{r firstThreeYears}

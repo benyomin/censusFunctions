@@ -2,20 +2,25 @@
 % Please edit documentation in R/subsetCities.R
 \name{subsetCities}
 \alias{subsetCities}
-\title{subsets the yearly surveys by city of residence, v 0.98
+\title{subsets the yearly surveys by city of residence, v 0.99
+defaults to arg = "make"
 replace plyr::subset() with dplyr::filter()}
 \usage{
-subsetCities(arg)
+subsetCities(arg = "make")
 }
 \arguments{
 \item{arg}{nil}
 }
 \description{
-subsets the yearly surveys by city of residence, v 0.98
+subsets the yearly surveys by city of residence, v 0.99
+defaults to arg = "make"
 replace plyr::subset() with dplyr::filter()
 }
 \examples{
 subsetCities()
+subsetCities("make")
+subsetCities("save")
+subsetCities("saved")
 }
 \keyword{city,}
 \keyword{subset}
