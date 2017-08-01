@@ -1,5 +1,5 @@
 #' subsets the yearly surveys by city of residence, v 0.99
-#' defaults to arg = "make"
+#' defaults to arg = "cities"
 #' replace plyr::subset() with dplyr::filter()
 #' @param    arg nil
 #' @family   table
@@ -8,10 +8,10 @@
 #' @examples
 #' subsetCities()
 #' subsetCities("make")
-#' subsetCities("save")
+#' subsetCities("writeOut")
 #' subsetCities("saved")
-subsetCities <- function(arg = "make") {
-  if(arg == "make"){
+subsetCities <- function(arg = "cities") {
+  if(arg == "make1"){
 library("dplyr")
   ## exports these    dataframes to the global environment
   ## cityList      <- 99
@@ -140,39 +140,6 @@ renterCounts  <<-  c(
   ## cities by year
 ## df family2014 is available under maxReproducible(1)
 ## needs to be      available under maxReproducible(2)
-
-cities <- as.character(levels(familiesList[[11]]$CODELOC))
-#  cities <- as.character(levels(renters2004$codeloc))
-cityList <<- cities[-1]
-
-cityOrder <<- c(
-  cityList[4],
-  cityList[1],
-  cityList[5],
-  cityList[10],
-  cityList[12],
-  cityList[15],
-  cityList[11],
-  cityList[16],
-  cityList[17],
-  cityList[20],
-  cityList[21],
-  cityList[23],
-  cityList[6],
-  cityList[7],
-  cityList[8],
-  cityList[14],
-  cityList[18],
-  cityList[19],
-  cityList[22],
-  cityList[24],
-  cityList[2],
-  cityList[3],
-  cityList[25],
-  cityList[13],
-  cityList[9]
-)
-
 
 jerusalem2004 <<- dplyr::filter( familiesList[[1]],     CODELOC =="Jerusalem")
 Ashdod2004    <<- dplyr::filter( familiesList[[1]],     CODELOC =="Ashdod")
@@ -465,7 +432,43 @@ qiryatatta2014     <<- dplyr::filter( familiesList[[11]], CODELOC =="Qiryat Ata"
 givatayim2014      <<- dplyr::filter( familiesList[[11]], CODELOC =="Giv'atayim")
 
 
+
+  }else if(arg == "cities"){
   ## counts in cities
+
+cities <- as.character(levels(familiesList[[11]]$CODELOC))
+#  cities <- as.character(levels(renters2004$codeloc))
+cityList <<- cities[-1]
+
+cityOrder <<- c(
+  cityList[4],
+  cityList[1],
+  cityList[5],
+  cityList[10],
+  cityList[12],
+  cityList[15],
+  cityList[11],
+  cityList[16],
+  cityList[17],
+  cityList[20],
+  cityList[21],
+  cityList[23],
+  cityList[6],
+  cityList[7],
+  cityList[8],
+  cityList[14],
+  cityList[18],
+  cityList[19],
+  cityList[22],
+  cityList[24],
+  cityList[2],
+  cityList[3],
+  cityList[25],
+  cityList[13],
+  cityList[9]
+)
+
+  }else if(arg == "make2"){
 
 cities2004 <<- c(
               jerusalem2004,
@@ -1405,11 +1408,23 @@ surveyList  <<-as.data.frame(cbind(list   = cityOrder,
 
 
 return("success - 0n9")
-  }else if(arg == "save"){
+  }else if(arg == "writeOut"){
+     ## exports these    dataframes to the global environment
+  dput(cityList, "../dataframes/cityList.txt")
+  ## survey2004   table of people surveyed by city and year
+  ## ownerCounts   <- 99
+  ## ownersList    <- 99
+  ## ownersYYYY    <- 99
+  ## renterCounts  <- 99
+  ## rentersList   <- 99
+  ## rentersYYYY   <- 99
+  ## jerusalemYYYY <- 99
+  ## renter /owner
+
 return("not implemented xxxx999a0n9")
 
   }else if(arg == "saved"){
-
+  cityList <<-  dget("../dataframes/cityList.txt")
 return("not implemented n;bbb888n9")
 
   }else{

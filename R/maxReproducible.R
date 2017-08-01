@@ -20,7 +20,6 @@ return("added $size column to familyList[[1 to 13]]")
 
 return("imported data from saved files")
   }else if(level == 3){
-
     familiesList <<-   dget("../dataframes/XFI_correctSize.txt")
 return("imported combined columns from XFI_correctSize")
 
@@ -32,7 +31,7 @@ return("imported combined columns from XFI_correctSize")
 
 return("saved the $size column onto familiesList")
   }else if(level == 5){
-
+    familiesList <<-   dget("../dataframes/XFI_correctSize.txt")
     mergeFrames("saved")
 
 return("imported mergedData2, \n mergedRenters, \n and

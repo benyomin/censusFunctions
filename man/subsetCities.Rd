@@ -3,23 +3,23 @@
 \name{subsetCities}
 \alias{subsetCities}
 \title{subsets the yearly surveys by city of residence, v 0.99
-defaults to arg = "make"
+defaults to arg = "cities"
 replace plyr::subset() with dplyr::filter()}
 \usage{
-subsetCities(arg = "make")
+subsetCities(arg = "cities")
 }
 \arguments{
 \item{arg}{nil}
 }
 \description{
 subsets the yearly surveys by city of residence, v 0.99
-defaults to arg = "make"
+defaults to arg = "cities"
 replace plyr::subset() with dplyr::filter()
 }
 \examples{
 subsetCities()
 subsetCities("make")
-subsetCities("save")
+subsetCities("writeOut")
 subsetCities("saved")
 }
 \keyword{city,}
