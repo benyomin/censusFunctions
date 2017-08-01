@@ -37,6 +37,26 @@ mergedData2 <- plyr::ldply(familiesList, data.frame)
   ##   do.call(rbind, familiesList)
 
 return("You are now ready to regress. DataFrame mergeData2 created.")
+    }else if(arg == "renters"){
+
+mergedRenters <<- plyr::ldply(rentersList, data.frame)
+
+return("success renters")
+    }else if(arg == "owners"){
+
+mergedOwners  <<- plyr::ldply(ownersList, data.frame)
+
+return("success owners")
+    }else if(arg == "writeOutRenters"){
+
+dput(mergedRenters, file = "../dataframes/mergedRenters.txt")
+
+return("success writeOutRenters")
+    }else if(arg == "writeOutOwners"){
+
+dput(mergedOwners, file = "../dataframes/mergedOwners.txt")
+
+return("success writeOutOwners")
 
     }else if(arg == "writeOut"){
 
@@ -49,7 +69,9 @@ return("wrote mergedData2 to file")
 
     }else if(arg == "saved"){
 
-mergedData2 <<- dget("../dataframes/mergedData2.txt")
+mergedData2   <<- dget("../dataframes/mergedData2.txt")
+mergedRenters <<- dget("../dataframes/mergedRenters.txt")
+mergedOwners  <<- dget("../dataframes/mergedOwners.txt")
 
 return("read saved version of mergedData2")
     }else{

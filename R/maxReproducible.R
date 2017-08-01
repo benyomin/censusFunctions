@@ -1,4 +1,4 @@
-#' Work with saved data or from raw census downloads?  v: 1.2
+#' Work with saved data or from raw census downloads?  v: 1.4
 #' Defaults to saved. 1 for raw. 2 for saved. 3 to import more saved.  4. to write out what was made by two.
 #' @keywords import, saved, reproducibility
 #' @export maxReproducible
@@ -7,36 +7,37 @@
 #' maxReproducible(2)
 #' maxReproducible(3)
 #' maxReproducible(4)
+#' maxReproducible(5)
 #' maxReproducible()
-maxReproducible <- function(level = 2){
-  if(level == 1){
-  importFamilyData("raw")
-  importFamilyData("writeOut")
+maxReproducible <- function(level = 5){
+        if(level == 1){
+    importFamilyData("raw")
+    importFamilyData("writeOut")
 return("added $size column to familyList[[1 to 13]]")
   }else if(level == 2){
-#importData("familyProcessed")
-#importData("savedIND")
-#importData("saved")
-#importData("importExpFamInd")
-makeFamiliesList()
-## needs to expose df family2014 as well
+
+    makeFamiliesList()
 
 return("imported data from saved files")
   }else if(level == 3){
 
-## old version:  (contains NA instead of large in size column)
-# familiesList <<- dget("../dataframes/XFI_stock_size_List.txt")
-##return("imported combined columns o9on99lo")
-
-## new version:
-familiesList <<-   dget("../dataframes/XFI_correctSize.txt")
+    familiesList <<-   dget("../dataframes/XFI_correctSize.txt")
 return("imported combined columns from XFI_correctSize")
 
   }else if(level == 4){
     ## this creates the data imported by maxReproducible(3)
-          dput(familiesList, "../dataframes/XFI_correctSize.txt")
+    dput(familiesList, "../dataframes/XFI_correctSize.txt")
+    mergeFrames("writeOutOwners")
+    mergeFrames("writeOUtRenters")
+
 return("saved the $size column onto familiesList")
+  }else if(level == 5){
+
+    mergeFrames("saved")
+
+return("imported mergedData2, \n mergedRenters, \n and
+                     mergedOwners")
   }else{
-   return("the only options are 1:4")
+return("the only options are 1:5")
   }
 }
