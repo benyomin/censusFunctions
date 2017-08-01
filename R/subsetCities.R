@@ -1,8 +1,9 @@
-#' subsets the yearly surveys by city of residence, v 0.9
+#' subsets the yearly surveys by city of residence, v 0.98
 #' replace plyr::subset() with dplyr::filter()
-#' @param arg nil
+#' @param    arg nil
+#' @family   table
 #' @keywords city, subset
-#' @export subsetCities
+#' @export   subsetCities
 #' @examples
 #' subsetCities()
 

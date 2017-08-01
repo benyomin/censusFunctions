@@ -5,9 +5,11 @@
 #' @keywords setup
 #' @export setUp
 #' @examples
+#' setUp()
 #' setUp(1)
 #' setUp(2)
-
+#' setUp(3)
+#' setUp(4)
 setUp <- function(arg = 4) {
   if(arg ==1){
                 maxReproducible(3)
@@ -125,8 +127,11 @@ return("listed cities in their regions")
 return("not implemented 3")
 
   }else if(arg ==4){
-return("not implemented 4")
 
+    maxReproducible(5)
+       subsetCities()
+
+return("ran maxReproducible(5) and subsetCities() (needed for n=tables)")
   }else{
 return("not implemented ...")
 

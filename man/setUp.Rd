@@ -15,8 +15,11 @@ Secondary setup code, replaces setupV7
 This function wraps setup code
 }
 \examples{
+setUp()
 setUp(1)
 setUp(2)
+setUp(3)
+setUp(4)
 }
 \seealso{
 Other setup: \code{\link{installCensusFunctions}},
