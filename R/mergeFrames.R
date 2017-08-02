@@ -53,7 +53,7 @@ dput(mergedRenters, file = "../dataframes/mergedRenters.txt")
 
 return("success writeOutRenters")
     }else if(arg == "writeOutOwners"){
-
+#dput(ownersList,   file = "../dataframes/ownersList.txt")
 dput(mergedOwners, file = "../dataframes/mergedOwners.txt")
 
 return("success writeOutOwners")
