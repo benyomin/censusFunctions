@@ -42,7 +42,7 @@ renters2012  <<- dplyr::filter( familiesList[[9]],  RENT == "Yes")
 renters2013  <<- dplyr::filter( familiesList[[10]], RENT == "Yes")
 renters2014  <<- dplyr::filter( familiesList[[11]], RENT == "Yes")
 
-rentersList  <<- c(
+rentersList  <<- as.data.frame(c(
 renters2004,
 renters2005,
 renters2006,
@@ -53,7 +53,7 @@ renters2010,
 renters2011,
 renters2012,
 renters2013,
-renters2014)
+renters2014))
 
 ## owners
 #head(familiesList[[1]])
@@ -1407,7 +1407,6 @@ surveyList  <<-as.data.frame(cbind(list   = cityOrder,
                                 "2013"  = counts2013,
                                 "2014"  = counts2014))
 
-
 return("success - 0n9")
   }else if(arg == "writeOut"){
      ## exports these    dataframes to the global environment
@@ -1422,7 +1421,7 @@ return("success - 0n9")
   ## jerusalemYYYY <- 99
   ## renter /owner
 
-return("not implemented xxxx999a0n9")
+return("wrote cityList to file")
 
   }else if(arg == "saved"){
   cityList <<-  dget("../dataframes/cityList.txt")

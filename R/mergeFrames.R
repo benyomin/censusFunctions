@@ -72,8 +72,9 @@ return("wrote mergedData2 to file")
 mergedData2     <<- dget("../dataframes/mergedData2.txt")
 mergedData2[]   <<- lapply(mergedData2, unclass)
 
-mergedRenters   <<- dget("../dataframes/mergedRenters.txt")
-mergedRenters[] <<- lapply(mergedRenters, unclass)
+      mergedRenters   <<- dget("../dataframes/mergedRenters.txt")
+      mergedRenters[] <<- lapply(mergedRenters, unclass)
+#mergedRenters[] <<- lapply(mergedRenters, unclass)
 
 mergedOwners    <<- dget("../dataframes/mergedOwners.txt")
 mergedOwners[]  <<- lapply(mergedOwners, unclass)
