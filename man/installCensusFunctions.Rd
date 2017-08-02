@@ -18,7 +18,8 @@ installCensusFunctions('github')
 }
 \seealso{
 Other setup: \code{\link{install_if_needed}},
-  \code{\link{preSetUp}}, \code{\link{setUp}}
+  \code{\link{maxReproducible}}, \code{\link{preSetUp}},
+  \code{\link{setUp}}
 }
 \keyword{dir,}
 \keyword{directory}

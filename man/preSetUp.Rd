@@ -20,6 +20,7 @@ preSetUp()
 }
 \seealso{
 Other setup: \code{\link{installCensusFunctions}},
-  \code{\link{install_if_needed}}, \code{\link{setUp}}
+  \code{\link{install_if_needed}},
+  \code{\link{maxReproducible}}, \code{\link{setUp}}
 }
 \keyword{setup}

@@ -22,7 +22,8 @@ install_if_needed('dplyr')
 }
 \seealso{
 Other setup: \code{\link{installCensusFunctions}},
-  \code{\link{preSetUp}}, \code{\link{setUp}}
+  \code{\link{maxReproducible}}, \code{\link{preSetUp}},
+  \code{\link{setUp}}
 }
 \keyword{install,}
 \keyword{setup}

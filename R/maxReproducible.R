@@ -1,13 +1,16 @@
-#' Work with saved data or from raw census downloads?  v: 1.4
+#' Work with saved data or from raw census downloads?  v: 1.6
 #' Defaults to saved. 1 for raw. 2 for saved. 3 to import more saved.  4. to write out what was made by two.
+#' @param level 1..6, defaults to 5
 #' @keywords import, saved, reproducibility
 #' @export maxReproducible
+#' @family setup
 #' @examples
 #' maxReproducible(1)
 #' maxReproducible(2)
 #' maxReproducible(3)
 #' maxReproducible(4)
 #' maxReproducible(5)
+#' maxReproducible(6)
 #' maxReproducible()
 maxReproducible <- function(level = 5){
         if(level == 1){
@@ -36,7 +39,9 @@ return("saved the $size column onto familiesList")
 
 return("imported mergedData2, \n mergedRenters, \n and
                      mergedOwners")
+  }else if( level == 6){
+return("import of this data moved to preSetUp()")
   }else{
-return("the only options are 1:5")
+return("not yet implemented")
   }
 }

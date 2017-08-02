@@ -122,18 +122,13 @@ cities_in_region <- c(2,
                       1,
                       13)
 return("listed cities in their regions")
-
   }else if(arg == 3){
 return("not implemented 3")
-
   }else if(arg == 4){
-
        subsetCities()
-    maxReproducible(5)
-
-return("ran maxReproducible(5) and subsetCities() (needed for n=tables)")
+    maxReproducible(6)
+return("ran maxReproducible(r) and subsetCities() (needed for n=tables)")
   }else{
 return("not implemented ...")
-
   }
 }

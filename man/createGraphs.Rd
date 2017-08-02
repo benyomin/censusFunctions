@@ -2,7 +2,7 @@
 % Please edit documentation in R/createGraphs.R
 \name{createGraphs}
 \alias{createGraphs}
-\title{Create ggplot2 plots, but don't print to screen/page.}
+\title{Create ggplot2 plots, but don't print to screen/page. v. 0.8}
 \usage{
 createGraphs(metric = "income")
 }

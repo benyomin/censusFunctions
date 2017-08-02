@@ -1,4 +1,4 @@
-#' Create ggplot2 plots, but don't print to screen/page.
+#' Create ggplot2 plots, but don't print to screen/page. v. 0.8
 #'
 #' This function aggregates graphing code; returns plots as a list.
 #' @param metric income/consumption/NHC ;; weighted
@@ -16,7 +16,6 @@ createGraphs <- function(metric = "income") {
         pWeightedIncome <- ggplot(data = allWeightedIncome)
         pWeightedIncome1 <<- pWeightedIncome + geom_line(aes(x = year, y = value, 
             col = key))
-        
         return(pWeightedIncome1)
     } else if (metric == "consumption") {
         ## Graph Consumption - Weighted.

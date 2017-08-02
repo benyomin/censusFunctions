@@ -23,6 +23,7 @@ setUp(4)
 }
 \seealso{
 Other setup: \code{\link{installCensusFunctions}},
-  \code{\link{install_if_needed}}, \code{\link{preSetUp}}
+  \code{\link{install_if_needed}},
+  \code{\link{maxReproducible}}, \code{\link{preSetUp}}
 }
 \keyword{setup}
