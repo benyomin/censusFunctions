@@ -1,4 +1,4 @@
-#' initial setup code ; v.0.2 remove line stockData("saved")
+#' initial setup code ; v.0.3 remove line stockData("saved")
 #' This function wraps setup code
 #' @param arg Defaults to true.
 #' @family setup
@@ -18,5 +18,11 @@ Sys.setenv(TZ="Europe/Berlin")
 library(censusFunctions)
 ## source("../includes/setColors.R")  ## hide pretty colors for faster load
 year <<- 2004:2014
+
+mergedRenters2    <<- readRDS("../savedData/mergedRenters2.rds")
+mergedOwners2     <<- readRDS("../savedData/mergedOwners2.rds")
+mergedData2       <<- readRDS("../savedData/mergedData2.rds")
+cityList          <<- readRDS("../savedData/cityList.rds")
+
 # stockData("saved")
 }

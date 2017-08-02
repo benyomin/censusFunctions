@@ -2,7 +2,7 @@
 % Please edit documentation in R/preSetUp.R
 \name{preSetUp}
 \alias{preSetUp}
-\title{initial setup code ; v.0.2 remove line stockData("saved")
+\title{initial setup code ; v.0.3 remove line stockData("saved")
 This function wraps setup code}
 \usage{
 preSetUp(arg = TRUE)
@@ -11,7 +11,7 @@ preSetUp(arg = TRUE)
 \item{arg}{Defaults to true.}
 }
 \description{
-initial setup code ; v.0.2 remove line stockData("saved")
+initial setup code ; v.0.3 remove line stockData("saved")
 This function wraps setup code
 }
 \examples{
