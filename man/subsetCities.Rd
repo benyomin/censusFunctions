@@ -2,7 +2,7 @@
 % Please edit documentation in R/subsetCities.R
 \name{subsetCities}
 \alias{subsetCities}
-\title{subsets the yearly surveys by city of residence, v 1.01
+\title{subsets the yearly surveys by city of residence, v 1.02
 defaults to arg = "cities"
 replace plyr::subset() with dplyr::filter()}
 \usage{
@@ -12,14 +12,15 @@ subsetCities(arg = "saved")
 \item{arg}{nil}
 }
 \description{
-subsets the yearly surveys by city of residence, v 1.01
+subsets the yearly surveys by city of residence, v 1.02
 defaults to arg = "cities"
 replace plyr::subset() with dplyr::filter()
 }
 \examples{
 subsetCities()
-subsetCities("make")
 subsetCities("writeOut")
+subsetCities("make1")
+subsetCities("make2")
 subsetCities("saved")
 }
 \keyword{city,}

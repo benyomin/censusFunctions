@@ -1,4 +1,4 @@
-#' initial setup code
+#' initial setup code ; v.0.2 remove line stockData("saved")
 #' This function wraps setup code
 #' @param arg Defaults to true.
 #' @family setup
@@ -18,5 +18,5 @@ Sys.setenv(TZ="Europe/Berlin")
 library(censusFunctions)
 ## source("../includes/setColors.R")  ## hide pretty colors for faster load
 year <<- 2004:2014
-stockData("saved")
+# stockData("saved")
 }

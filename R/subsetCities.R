@@ -1,4 +1,4 @@
-#' subsets the yearly surveys by city of residence, v 1.01
+#' subsets the yearly surveys by city of residence, v 1.02
 #' defaults to arg = "cities"
 #' replace plyr::subset() with dplyr::filter()
 #' @param    arg nil
@@ -7,8 +7,9 @@
 #' @export   subsetCities
 #' @examples
 #' subsetCities()
-#' subsetCities("make")
 #' subsetCities("writeOut")
+#' subsetCities("make1")
+#' subsetCities("make2")
 #' subsetCities("saved")
 subsetCities <- function(arg = "saved") {
   if(arg == "make1"){
@@ -1425,7 +1426,8 @@ return("not implemented xxxx999a0n9")
 
   }else if(arg == "saved"){
   cityList <<-  dget("../dataframes/cityList.txt")
-return("not implemented n;bbb888n9")
+
+  return("Imported saved cityList.")
 
   }else{
 return("not implemented n;09ha0n9")
