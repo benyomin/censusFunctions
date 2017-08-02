@@ -2,7 +2,7 @@
 % Please edit documentation in R/setUp.R
 \name{setUp}
 \alias{setUp}
-\title{Secondary setup code, replaces setupV7
+\title{Secondary setup code, replaces setupV7 v. 0.5
 This function wraps setup code}
 \usage{
 setUp(arg = 4)
@@ -11,7 +11,7 @@ setUp(arg = 4)
 \item{arg}{Defaults to 4.}
 }
 \description{
-Secondary setup code, replaces setupV7
+Secondary setup code, replaces setupV7 v. 0.5
 This function wraps setup code
 }
 \examples{

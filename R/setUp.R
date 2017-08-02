@@ -1,4 +1,4 @@
-#' Secondary setup code, replaces setupV7
+#' Secondary setup code, replaces setupV7 v. 0.5
 #' This function wraps setup code
 #' @param arg Defaults to 4.
 #' @family setup
@@ -11,16 +11,14 @@
 #' setUp(3)
 #' setUp(4)
 setUp <- function(arg = 4) {
-  if(arg ==1){
+        if(arg == 1){
                 maxReproducible(3)
                 subsetCities()
                 mergeFrames("saved")
 return("merged data from all years to 1 dataframe")
 
   }else if(arg == 2){
-## none of these vars are exported, why run?
-
-        regionList <- c(
+                 regionList <- c(
                          "Jerusalem",
                          "Tel Aviv",
                          "Haifa",
@@ -31,7 +29,7 @@ return("merged data from all years to 1 dataframe")
                           "HaZafon",
                           "Qrayot Haifa")
 
-regionOrder <- c(
+regionOrder <<- c(
   regionList[1], # Jeru = Jeru
   regionList[6], # https://en.wikipedia.org/wiki/Ashdod
   regionList[3], # Haifa = Haifa
@@ -61,7 +59,7 @@ regionOrder <- c(
                  ## Givatayim - Gush Dan or TLV ?
                  ## https://en.wikipedia.org/wiki/Gush_Dan
                 )
-regionOrderTwo <-c(
+regionOrderTwo <<-c(
 
  regionList[1], # Jeru = Jeru
   regionList[6], # https://en.wikipedia.org/wiki/Ashdod
@@ -96,7 +94,7 @@ regionOrderTwo <-c(
  ## regionOrderTwo places cities into TLV or Center / regionOrder places them in Gush Dan
 )
 ## count cities in each region
-cities_in_region <- c(2,
+cities_in_region <<- c(2,
                       3,
                       1,
                       2,
