@@ -48,7 +48,7 @@ Data3 <- mergedData2 %>%
 
 Data3$regionOne <- Data3$regionOne %>% as.factor
 
-Data4 <- Data3 %>%
+Data4 <<- Data3 %>%
 plyr::mutate(regionTwo = case_when(
                CODELOC == "Jerusalem"     ~ 'Jerusalem',
                CODELOC == "Bet Shemesh"   ~ 'Jerusalem',
@@ -113,7 +113,7 @@ Rent3 <- mergedRenters2 %>%
 
 Rent3$regionOne <- Rent3$regionOne %>% as.factor
 
-Rent4 <- Rent3 %>%
+Rent4 <<- Rent3 %>%
 plyr::mutate(regionTwo = case_when(
                CODELOC == "Jerusalem"     ~ 'Jerusalem',
                CODELOC == "Bet Shemesh"   ~ 'Jerusalem',
@@ -179,8 +179,8 @@ Own3 <- mergedOwners2 %>%
 
 Own3$regionOne <- Own3$regionOne %>% as.factor
 
-Own4<- Own3 %>%
-plyr::mutate(regionTwo = case_when(
+Own4 <<- Own3 %>%
+                   plyr::mutate(regionTwo = case_when(
                CODELOC == "Jerusalem"     ~ 'Jerusalem',
                CODELOC == "Bet Shemesh"   ~ 'Jerusalem',
                CODELOC == "Ashdod"        ~ 'HaDarom',
