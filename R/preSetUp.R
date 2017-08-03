@@ -1,4 +1,4 @@
-#' initial setup code ; v.0.4 load frames with regions
+#' initial setup code ; v.0.5 load frames with regions
 #' This function wraps setup code
 #' @param arg Defaults to true.
 #' @family setup

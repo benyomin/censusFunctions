@@ -217,9 +217,9 @@ saveRDS(Rent4, "../savedData/Rent4.rds")
 saveRDS(Own4, "../savedData/Own4.rds")
 return("Saved renters, owners, all (with region column) to disk.")
  } else if (arg == "load") {
-Data4 <- readRDS("../savedData/Data4.rds")
-Rent4 <- readRDS("../savedData/Rent4.rds")
-Own4  <- readRDS("../savedData/Own4.rds")
+Data4 <<- readRDS("../savedData/Data4.rds")
+Rent4 <<- readRDS("../savedData/Rent4.rds")
+Own4  <<- readRDS("../savedData/Own4.rds")
 return("loaded data including region columns")
   } else {
 return("those args not yet implemented.")
