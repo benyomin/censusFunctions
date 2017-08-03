@@ -25,7 +25,7 @@ makeRegions()
 makeRegions("data")
 makeRegions("renters")
 makeRegions("owners")
-makeRegions("writeOut")
+makeRegions("writeout")
 makeRegions("load")
 }
 \keyword{city,}

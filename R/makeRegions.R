@@ -12,7 +12,7 @@
 #' makeRegions("data")
 #' makeRegions("renters")
 #' makeRegions("owners")
-#' makeRegions("writeOut")
+#' makeRegions("writeout")
 #' makeRegions("load")
 makeRegions <- function(arg = TRUE) {
         if (arg == "data") {
