@@ -1,13 +1,14 @@
-#' Downloads quarterly housing prices for the years
+#' Downloads quarterly housing prices for the years v.0.8
 #' 2006-2016 to the current working directory as 5 excel files
 #' @param year defaults to true
+#' @family download
 #' @keywords housing, cpi, price, download, fetch, CBS, dataset
 #' @export
 #' @examples
-#' downloadHousingPrices(13)     
-#' downloadHousingPrices(FALSE)     
-#' downloadHousingPrices(3)       
-#' downloadHousingPrices()      
+#' downloadHousingPrices(13)
+#' downloadHousingPrices(FALSE)
+#' downloadHousingPrices(3)
+#' downloadHousingPrices()
 
 downloadHousingPrices <- function(key = 3) {
     ## set variables test file
