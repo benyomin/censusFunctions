@@ -449,14 +449,13 @@ data2012<<-merge(exp2012s,fam2012s, by="HHNUM")
 data2013<<-merge(exp2013s,fam2013s, by="HHNUM")
 data2014<<-merge(exp2014s,fam2014s, by="HHNUM")
 
- } else if (arg == "load5") {
-## Data4 needs to be re-written, error reading from connection
+ } else if (source == "load5") {
 
 Data5 <<- readRDS("../savedData/Data5.rds")
 Rent5 <<- readRDS("../savedData/Rent5.rds")
 Own5  <<- readRDS("../savedData/Own5.rds")
 
+        return("imported Data5, Rent5 and Own5")
     }else{   ##"the only options are Y and N"
-        return("the only options are 'raw' and 'saved'")
+        return("not implemented - error importData('source == ?')")
     }}
-

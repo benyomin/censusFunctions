@@ -2,7 +2,7 @@
 % Please edit documentation in R/maxReproducible.R
 \name{maxReproducible}
 \alias{maxReproducible}
-\title{Work with saved data or from raw census downloads?  v: 1.6
+\title{Work with saved data or from raw census downloads?  v: 1.7
 Defaults to saved. 1 for raw. 2 for saved. 3 to import more saved.  4. to write out what was made by two.}
 \usage{
 maxReproducible(level = 5)
@@ -11,7 +11,7 @@ maxReproducible(level = 5)
 \item{level}{1..6, defaults to 5}
 }
 \description{
-Work with saved data or from raw census downloads?  v: 1.6
+Work with saved data or from raw census downloads?  v: 1.7
 Defaults to saved. 1 for raw. 2 for saved. 3 to import more saved.  4. to write out what was made by two.
 }
 \examples{
@@ -21,6 +21,7 @@ maxReproducible(3)
 maxReproducible(4)
 maxReproducible(5)
 maxReproducible(6)
+maxReproducible(7)
 maxReproducible()
 }
 \seealso{

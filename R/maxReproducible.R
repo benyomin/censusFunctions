@@ -1,4 +1,4 @@
-#' Work with saved data or from raw census downloads?  v: 1.6
+#' Work with saved data or from raw census downloads?  v: 1.7
 #' Defaults to saved. 1 for raw. 2 for saved. 3 to import more saved.  4. to write out what was made by two.
 #' @param level 1..6, defaults to 5
 #' @keywords import, saved, reproducibility
@@ -11,6 +11,7 @@
 #' maxReproducible(4)
 #' maxReproducible(5)
 #' maxReproducible(6)
+#' maxReproducible(7)
 #' maxReproducible()
 maxReproducible <- function(level = 5){
         if(level == 1){
@@ -48,7 +49,17 @@ mergeFrames("saved")
 return("imported mergedData2, \n mergedRenters, \n and
                      mergedOwners")
   }else if( level == 6){
-return("import of this data moved to preSetUp()")
+    return("import of this data moved to preSetUp()")
+
+      }else if(level == 7){
+familiesList <<- readRDS("../savedData/XFI_correctSize.rds")
+
+ subsetCities("make1")
+ subsetCities("addregion")
+ subsetCities("writeOutRegions")
+
+return("imported familiesList, returned rentersList and ownersList.")
+
   }else{
 return("not yet implemented")
   }
