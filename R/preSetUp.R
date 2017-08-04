@@ -1,4 +1,4 @@
-#' initial setup code ; v.0.5 load frames with regions
+#' initial setup code ; v.0.6 load frames with regions
 #' This function wraps setup code
 #' @param arg Defaults to true.
 #' @family setup
@@ -25,8 +25,11 @@ year <<- 2004:2014
 ## mergedData2       <<- readRDS("../savedData/mergedData2.rds")
 ## cityList          <<- readRDS("../savedData/cityList.rds")
 
-  ## new version
+  ## version 0.6
+#makeRegions("load4")
+#makeRegions("dropSmallTowns")
+  ## version 0.7
+makeRegions("load5")
 
-makeRegions("load")
 return("preSepUp() successful.")
 }

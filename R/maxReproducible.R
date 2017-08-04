@@ -23,7 +23,14 @@ return("added $size column to familyList[[1 to 13]]")
 
 return("imported data from saved files")
   }else if(level == 3){
-    familiesList <<-   dget("../dataframes/XFI_correctSize.txt")
+    ## replace with faster loading format
+##     Sys.setenv(TZ="Europe/Berlin")
+##     lubridate::now("Europe/Berlin")
+## [1] "2017-08-04 13:39:23 CEST"
+#      saveRDS(familiesList, "../savedData/XFI_correctSize.rds")
+
+familiesList <<- readRDS("../savedData/XFI_correctSize.rds")
+    #familiesList <<-   dget("../dataframes/XFI_correctSize.txt")
 return("imported combined columns from XFI_correctSize")
 
   }else if(level == 4){
@@ -34,8 +41,9 @@ return("imported combined columns from XFI_correctSize")
 
 return("saved the $size column onto familiesList")
   }else if(level == 5){
-    familiesList <<-   dget("../dataframes/XFI_correctSize.txt")
-    mergeFrames("saved")
+familiesList <<- readRDS("../savedData/XFI_correctSize.rds")
+#    familiesList <<-   dget("../dataframes/XFI_correctSize.txt")
+mergeFrames("saved")
 
 return("imported mergedData2, \n mergedRenters, \n and
                      mergedOwners")

@@ -1,6 +1,6 @@
 #' Merge all years (in familiesList) into a single dataframe to facilitate regression.
 #'
-#' This function combines multiple years to a dataframe. v: 3.1
+#' This function combines multiple years to a dataframe. v: 3.2
 #' @param arg Defaults to 1. 2 is not implemented.
 #' @keywords combine, merge, regression, dataframe, year
 #' @export mergeFrames
@@ -9,6 +9,7 @@
 #' mergeFrames("merge")
 #' mergeFrames("writeOut")
 #' mergeFrames()
+#' mergeFrames("saved")
 mergeFrames <- function(arg = 3) {
   if(arg == "merge"){
 

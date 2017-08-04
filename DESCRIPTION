@@ -1,6 +1,6 @@
 Package: censusFunctions
 Title: Helper Functions for Israeli Census Files
-Version: 2.95
+Version: 3.0
 Authors@R: person("Benyomin", "Hagalili", email = "first@first.net", role = c("aut", "cre"))
 Description: Refactoring of Spaghetti Code for analysis in R
     of Israeli Census Data. Use this function
