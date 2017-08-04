@@ -1,5 +1,5 @@
 #' Add a region column based on $CODELOC (city) in the original data.
-#' v. 0.4
+#' v. 0.6
 #' This function adds columns $regionOne and $regionTwo
 #' regionOne puts 13 cities in Gush Dan.
 #' regionTwo puts  2 cities in Gush Dan.
@@ -13,6 +13,9 @@
 #' makeRegions("renters")
 #' makeRegions("owners")
 #' makeRegions("writeout")
+#' makeRegions("writeout5")
+#' makeRegions("dropSmallTowns")
+#' makeRegions("fixSizes")
 #' makeRegions("load")
 makeRegions <- function(arg = TRUE) {
         if (arg == "data") {
@@ -220,6 +223,9 @@ return("Added region columns to owners")
  } else if (arg == "dropSmallTowns") {
 keep <- c(  "Ashdod"  ,       "Jerusalem",      "Haifa",          "Tel Aviv-Yafo", "Bene Beraq",    "Bat Yam"     ,"Herzliyya"   ,  "Hadera"      , "Holon"     ,    "Kefar Sava"  ,  "Lod"           ,"Ashqelon"     , "Nettanya"  ,    "Petah Tiqwa" ,  "Rishon LeZiyon","Rehovot"      , "Ramla"     ,    "Ramat Gan"   ,  "Raannana"      ,"Beer Sheva"   , "Modi'in"   ,    "Bet Shemesh" ,  "Tel Aviv-Yaffo","Ashkelon"     , "Netanya"   ,    "Nahariyya"   ,  "Giv'atayim"    ,"Qiryat Atta"  , "Qiryat Ata")
 
+Data4[]   <<- lapply(Data4, unclass)
+Rent4[]   <<- lapply(Rent4, unclass)
+ Own4[]   <<- lapply(Own4, unclass)
 ## 1.    Drop Small Towns that we don't know which region they are in.
 Rent4 <- Rent4[!Rent4$CODELOC == "Less than 100,000 inhabitants", ]
 Rent4 <<- droplevels(Rent4[!Rent4$CODELOC == "Less than 50,000 inhabitants", ])
@@ -238,26 +244,26 @@ Data4 <- subset(Data4, select = -size)
 Rent4 <- subset(Rent4, select = -size)
 Own4 <-  subset(Own4,  select = -size)
 
-Data4 <<- Data4 %>%
-  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
-                          rooms > 2 & rooms <= 3   ~ 'small',
-                          rooms > 3 & rooms <= 4   ~ 'medium',
-                          rooms > 4                ~ 'large'
+Data5 <<- Data4 %>%
+  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+                          ROOMS > 2 & ROOMS <= 3   ~ 'small',
+                          ROOMS > 3 & ROOMS <= 4   ~ 'medium',
+                          ROOMS > 4                ~ 'large'
                           ))
 
 Rent5 <<- Rent4 %>%
-  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
-                          rooms > 2 & rooms <= 3   ~ 'small',
-                          rooms > 3 & rooms <= 4   ~ 'medium',
-                          rooms > 4                ~ 'large'
+  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+                          ROOMS > 2 & ROOMS <= 3   ~ 'small',
+                          ROOMS > 3 & ROOMS <= 4   ~ 'medium',
+                          ROOMS > 4                ~ 'large'
                           ))
 
 
 Own5 <<- Own4 %>%
-  mutate(size = case_when(rooms             <= 2   ~ 'tiny',
-                          rooms > 2 & rooms <= 3   ~ 'small',
-                          rooms > 3 & rooms <= 4   ~ 'medium',
-                          rooms > 4                ~ 'large'
+  mutate(size = case_when(ROOMS             <= 2   ~ 'tiny',
+                          ROOMS > 2 & ROOMS <= 3   ~ 'small',
+                          ROOMS > 3 & ROOMS <= 4   ~ 'medium',
+                          ROOMS > 4                ~ 'large'
                           ))
 
 return("Only 4 sizes, not 5.")

@@ -1,4 +1,4 @@
-#' Import data to workspace v: 2.2 import housing prices index
+#' Import data to workspace v: 2.5 - load Data5 from rds
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.
@@ -7,6 +7,7 @@
 #' @examples
 #' importData("raw")
 #' importData("saved")
+#' importData("load5")
 #' importData("writeOutEXP")
 #' importData("familyOldRaw")
 #' importData("familyNewRaw")
@@ -447,6 +448,14 @@ data2011<<-merge(exp2011s,fam2011s, by="HHNUM")
 data2012<<-merge(exp2012s,fam2012s, by="HHNUM")
 data2013<<-merge(exp2013s,fam2013s, by="HHNUM")
 data2014<<-merge(exp2014s,fam2014s, by="HHNUM")
+
+ } else if (arg == "load5") {
+## Data4 needs to be re-written, error reading from connection
+
+Data5 <<- readRDS("../savedData/Data5.rds")
+Rent5 <<- readRDS("../savedData/Rent5.rds")
+Own5  <<- readRDS("../savedData/Own5.rds")
+
     }else{   ##"the only options are Y and N"
         return("the only options are 'raw' and 'saved'")
     }}
