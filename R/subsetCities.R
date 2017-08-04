@@ -2919,7 +2919,7 @@ owners2014 <- owners2014[!owners2014$CODELOC == "Less than 100,000 inhabitants",
 owners2014 <<- droplevels(Own4[!owners2014$CODELOC == "Less than 50,000 inhabitants", ])
 
 
-rentersList  <<- as.data.frame(c(
+rentersList  <<- c(
 renters2004,
 renters2005,
 renters2006,
@@ -2930,10 +2930,10 @@ renters2010,
 renters2011,
 renters2012,
 renters2013,
-renters2014))
+renters2014)
 
 
-ownersList <<- as.data.frame(c(
+ownersList <<- c(
 owners2004,
 owners2005,
 owners2006,
@@ -2944,9 +2944,10 @@ owners2010,
 owners2011,
 owners2012,
 owners2013,
-owners2014))
+owners2014)
 
-    return("that's great! -super!")
+return("added $region column before merging YYYY frames")
+
   }else if(arg == "writeOutRegions"){
 saveRDS(ownersList,  "../savedData/ownersList.rds")
 saveRDS(rentersList, "../savedData/rentersList.rds")
