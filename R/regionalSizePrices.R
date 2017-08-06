@@ -451,7 +451,7 @@ regionOne == "Tel Aviv" && size5 == "large" && year == year[8] ~ tlv4.5[31],
 regionOne == "Tel Aviv" && size5 == "large" && year == year[9] ~ tlv4.5[35],
 regionOne == "Tel Aviv" && size5 == "large" && year == year[10]~ tlv4.5[39],
 regionOne == "Tel Aviv" && size5 == "large" && year == year[11]~ tlv4.5[43],
-TRUE                                                           ~  'foo'           ## catch undefined region
+TRUE                                                           ~ 1899.34           ## catch undefined region
 )
 )
    return("Home prices added by city/size/year to each row.")
@@ -500,7 +500,7 @@ regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 ))
 
 fam2005 <- fam2005 %>%
@@ -546,7 +546,7 @@ regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2006 <- fam2006 %>%
@@ -592,7 +592,7 @@ regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2007 <- fam2007 %>%
@@ -639,7 +639,7 @@ regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2008 <- fam2008 %>%
    mutate(houseP = case_when(
@@ -684,7 +684,7 @@ regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2009 <- fam2009 %>%
@@ -730,7 +730,7 @@ regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2010 <- fam2010 %>%
@@ -776,7 +776,7 @@ regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2011 <- fam2011 %>%
@@ -822,7 +822,7 @@ regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2012 <- fam2012 %>%
@@ -868,7 +868,7 @@ regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2013 <- fam2013 %>%
    mutate(houseP = case_when(
@@ -912,7 +912,7 @@ regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
 regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2014 <- fam2014 %>%
    mutate(houseP = case_when(
@@ -956,7 +956,7 @@ regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
 regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 ))
 
     ## now add $housePTwo  based on regionTwo
@@ -1003,7 +1003,7 @@ regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 ))
 
 fam2005 <- fam2005 %>%
@@ -1049,7 +1049,7 @@ regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2006 <- fam2006 %>%
@@ -1095,7 +1095,7 @@ regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2007 <- fam2007 %>%
@@ -1142,7 +1142,7 @@ regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2008 <- fam2008 %>%
    mutate(housePTwo = case_when(
@@ -1187,7 +1187,7 @@ regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2009 <- fam2009 %>%
@@ -1233,7 +1233,7 @@ regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2010 <- fam2010 %>%
@@ -1279,7 +1279,7 @@ regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2011 <- fam2011 %>%
@@ -1325,7 +1325,7 @@ regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2012 <- fam2012 %>%
@@ -1371,7 +1371,7 @@ regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2013 <- fam2013 %>%
    mutate(housePTwo = case_when(
@@ -1415,7 +1415,7 @@ regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
 regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2014 <- fam2014 %>%
    mutate(housePTwo = case_when(
@@ -1459,7 +1459,7 @@ regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
 regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
 regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
-TRUE                   ~  'foo'           ## catch undefined region
+TRUE                   ~ 1899.34           ## catch undefined region
 ))
 
 
@@ -2361,7 +2361,6 @@ regionOne == "Tel Aviv" && size == "large" && year == year[8] ~ tlv4.5[31],
 regionOne == "Tel Aviv" && size == "large" && year == year[9] ~ tlv4.5[35],
 regionOne == "Tel Aviv" && size == "large" && year == year[10]~ tlv4.5[39],
 regionOne == "Tel Aviv" && size == "large" && year == year[11]~ tlv4.5[43],
-TRUE                                                           ~  'foo'           ## catch undefined region
 ))
     return("Home prices added by city/size/year to each renter.")
   } else {
