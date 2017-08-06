@@ -3,7 +3,7 @@
 \name{subsetByOwnership}
 \alias{subsetByOwnership}
 \title{Creates dataframes expYYYYowners and expYYYYrenters,
-calls weighHouseholds() ; 
+calls weighHouseholds() ;   v 1.7
 This function creates subsets of renters and owners. and key money}
 \usage{
 subsetByOwnership(arg = TRUE)
@@ -13,12 +13,13 @@ subsetByOwnership(arg = TRUE)
 }
 \description{
 Creates dataframes expYYYYowners and expYYYYrenters,
-calls weighHouseholds() ; 
+calls weighHouseholds() ;   v 1.7
 This function creates subsets of renters and owners. and key money
 }
 \examples{
 subsetByOwnership('listKeyMoney')
 subsetByOwnership()
+subsetByOwnership('better')
 subsetByOwnership('listOwners')
 subsetByOwnership('listNotKey')
 subsetByOwnership('listHouseholds')

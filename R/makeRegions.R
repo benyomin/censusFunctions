@@ -1,5 +1,5 @@
 #' Add a region column based on $CODELOC (city) in the original data.
-#' v. 1.7
+#' v. 1.8
 #' This function adds columns $regionOne and $regionTwo
 #' regionOne puts 13 cities in Gush Dan.
 #' regionTwo puts  2 cities in Gush Dan.
@@ -496,18 +496,382 @@ plyr::mutate(regionTwo = case_when(
                CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
                TRUE                        ~  'Too Small - No Region'))
 
+#### add regionOne
 
-fam2004$regionOne <<- fam2004$regionOne %>% as.factor
-fam2005$regionOne <<- fam2005$regionOne %>% as.factor
-fam2006$regionOne <<- fam2006$regionOne %>% as.factor
-fam2007$regionOne <<- fam2007$regionOne %>% as.factor
-fam2008$regionOne <<- fam2008$regionOne %>% as.factor
-fam2009$regionOne <<- fam2009$regionOne %>% as.factor
-fam2010$regionOne <<- fam2010$regionOne %>% as.factor
-fam2011$regionOne <<- fam2012$regionOne %>% as.factor
-fam2012$regionOne <<- fam2012$regionOne %>% as.factor
-fam2013$regionOne <<- fam2013$regionOne %>% as.factor
-fam2014$regionOne <<- fam2014$regionOne %>% as.factor
+fam2004 <- fam2004 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+
+fam2005 <- fam2005 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+
+fam2006 <- fam2006 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+
+fam2007 <- fam2007 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+
+fam2008 <- fam2008 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+
+fam2009 <- fam2009 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+
+fam2010 <- fam2010 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+fam2011 <- fam2011 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+
+fam2012 <- fam2012 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+fam2013 <- fam2013 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+
+fam2014 <- fam2014 %>%
+               mutate(regionOne = case_when(
+               CODELOC == "Jerusalem"      ~ 'Jerusalem',
+               CODELOC == "Bet Shemesh"    ~ 'Jerusalem',
+               CODELOC == "Ashdod"         ~ 'HaDarom',
+               CODELOC == "Ashkelon"       ~ 'HaDarom',
+               CODELOC == "Beer Sheva"     ~ 'HaDarom',
+               CODELOC == "Lod"            ~ 'HaMerkaz',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Nahariyya"      ~ 'HaZafon',
+               CODELOC == "Haifa"          ~ 'Haifa',
+               CODELOC == "Herzliyya"      ~ 'Tel Aviv',
+               CODELOC == "Tel Aviv-Yaffo" ~ 'Tel Aviv',
+               CODELOC == "Holon"          ~ 'Gush Dan',
+               CODELOC == "Netanya"        ~ 'Gush Dan',
+               CODELOC == "Rehovot"        ~ 'Gush Dan',
+               CODELOC == "Ramla"          ~ 'Gush Dan',
+               CODELOC == "Raannana"       ~ 'Gush Dan',
+               CODELOC == "Bene Beraq"     ~ 'Gush Dan',
+               CODELOC == "Bat Yam"        ~ 'Gush Dan',
+               CODELOC == "Kefar Sava"     ~ 'Gush Dan',
+               CODELOC == "Petah Tiqwa"    ~ 'Gush Dan',
+               CODELOC == "Rishon LeZiyon" ~ 'Gush Dan',
+               CODELOC == "Ramat Gan"      ~ 'Gush Dan',
+               CODELOC == "Modi'in"        ~ 'Gush Dan',
+               CODELOC == "Hadera"         ~ 'Sharon',
+               CODELOC == "Qirat Ata"      ~ 'Qrayot Haifa',
+               CODELOC == "Qiryat Atta"    ~ 'Qrayot Haifa',
+               TRUE                        ~  'Too Small - No Region'))
+
+
+##   should be a factor
+fam2004$regionTwo <- fam2004$regionTwo %>% as.factor
+fam2005$regionTwo <- fam2005$regionTwo %>% as.factor
+fam2006$regionTwo <- fam2006$regionTwo %>% as.factor
+fam2007$regionTwo <- fam2007$regionTwo %>% as.factor
+fam2008$regionTwo <- fam2008$regionTwo %>% as.factor
+fam2009$regionTwo <- fam2009$regionTwo %>% as.factor
+fam2010$regionTwo <- fam2010$regionTwo %>% as.factor
+fam2011$regionTwo <- fam2011$regionTwo %>% as.factor
+fam2012$regionTwo <- fam2012$regionTwo %>% as.factor
+fam2013$regionTwo <- fam2013$regionTwo %>% as.factor
+fam2014$regionTwo <- fam2014$regionTwo %>% as.factor
+
+##
+fam2004$regionOne <- fam2004$regionOne %>% as.factor
+fam2005$regionOne <- fam2005$regionOne %>% as.factor
+fam2006$regionOne <- fam2006$regionOne %>% as.factor
+fam2007$regionOne <- fam2007$regionOne %>% as.factor
+fam2008$regionOne <- fam2008$regionOne %>% as.factor
+fam2009$regionOne <- fam2009$regionOne %>% as.factor
+fam2010$regionOne <- fam2010$regionOne %>% as.factor
+fam2011$regionOne <- fam2011$regionOne %>% as.factor
+fam2012$regionOne <- fam2012$regionOne %>% as.factor
+fam2013$regionOne <- fam2013$regionOne %>% as.factor
+fam2014$regionOne <- fam2014$regionOne %>% as.factor
 
 return("Added region columns to famYYYY.")
  } else if (arg == "owners") {
