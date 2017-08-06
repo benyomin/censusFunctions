@@ -1,6 +1,6 @@
 #' Merge all years (in familiesList) into a single dataframe to facilitate regression.
 #'
-#' This function combines multiple years to a dataframe. v: 3. ua7
+#' This function combines multiple years to a dataframe. v: 3.4
 #' @param arg Defaults to 1. 2 is not implemented.
 #' @keywords combine, merge, regression, dataframe, year
 #' @export mergeFrames
@@ -10,9 +10,11 @@
 #' mergeFrames("manipulateAugVersion")
 #' mergeFrames("writeOut")
 #' mergeFrames("writeOutBetter")
+#' mergeFrames("writeOutBetter2")
 #' mergeFrames("writeOutAugVersion")
 #' mergeFrames("saved")
 #' mergeFrames("loadBetter")
+#' mergeFrames("loadBetter2")
 #' mergeFrames("renters")
 #' mergeFrames("owners")
 #' mergeFrames()
@@ -79,14 +81,26 @@ mergeFrames("owners")
 
 return(" compleat - oay9rsdoe")
 
+    }else if(arg == "loadBetter2"){
+mergedRenters <<- readRDS("../savedData/mergedRenters4.rds")
+mergedOwners  <<- readRDS("../savedData/mergeOwners4.rds")
+return("loaded better version (2) of merged data frames.")
+
+    }else if(arg == "writeOutBetter2"){
+      saveRDS(mergedRenters, "../savedData/mergedRenters4.rds")
+      saveRDS(mergedOwners,  "../savedData/mergedOwners4.rds")
+return(" wrote Better Version (2) to savedData dir")
+
     }else if(arg == "loadBetter"){
 mergedRenters <<- readRDS("../savedData/mergedRenters3.rds")
 mergedOwners  <<- readRDS("../savedData/mergeOwners3.rds")
 return("loaded better version of merged data frames.")
+
     }else if(arg == "writeOutBetter"){
       saveRDS(mergedRenters, "../savedData/mergedRenters3.rds")
       saveRDS(mergedOwners,  "../savedData/mergedOwners3.rds")
 return(" wrote Better Version to savedData dir")
+
     }else if(arg == "writeOutAugVersion"){
       saveRDS(mergedRenters, "../savedData/mergedRenters.rds")
       saveRDS(mergedOwners,  "../savedData/mergedOwners.rds")
