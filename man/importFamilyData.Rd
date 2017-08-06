@@ -2,7 +2,7 @@
 % Please edit documentation in R/importFamilyData.R
 \name{importFamilyData}
 \alias{importFamilyData}
-\title{Import family data to workspace v: 2.2.1}
+\title{Import family data to workspace v: 2.3}
 \usage{
 importFamilyData(source)
 }
@@ -13,8 +13,9 @@ importFamilyData(source)
 This function imports Israeli census data from spss .por files distributed by the CBS.
 }
 \examples{
-importFamilyData('raw')
 importFamilyData('saved')
+importFamilyData('listYYYY')
+importFamilyData('raw')
 importFamilyData('writeOut')
 }
 \keyword{import,}

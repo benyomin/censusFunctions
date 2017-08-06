@@ -1,14 +1,15 @@
 #' Merge all years (in familiesList) into a single dataframe to facilitate regression.
 #'
-#' This function combines multiple years to a dataframe. v: 3.5
+#' This function combines multiple years to a dataframe. v: 3.7
 #' @param arg Defaults to 1. 2 is not implemented.
 #' @keywords combine, merge, regression, dataframe, year
 #' @export mergeFrames
 #' @family combine
 #' @examples
 #' mergeFrames("merge")
-#' mergeFrames("writeOut")
 #' mergeFrames("manipulateAugVersion")
+#' mergeFrames("writeOut")
+#' mergeFrames("writeOutBetter")
 #' mergeFrames("writeOutAugVersion")
 #' mergeFrames("saved")
 #' mergeFrames("renters")
@@ -80,6 +81,12 @@ mergeFrames("renters")
 mergeFrames("owners")
 
 return(" compleat - oay9rsdoe")
+
+    }else if(arg == "writeOutBetter"){
+      saveRDS(mergedRenters, "../savedData/mergedRenters3.rds")
+      saveRDS(mergedOwners,  "../savedData/mergedOwners3.rds")
+return(" wrote to savedData dir")
+
 
     }else if(arg == "writeOutAugVersion"){
       saveRDS(mergedRenters, "../savedData/mergedRenters.rds")
