@@ -10,7 +10,7 @@ mergeFrames(arg = 3)
 \item{arg}{Defaults to 1. 2 is not implemented.}
 }
 \description{
-This function combines multiple years to a dataframe. v: 3.7
+This function combines multiple years to a dataframe. v: 3. ua7
 }
 \examples{
 mergeFrames("merge")
@@ -19,6 +19,7 @@ mergeFrames("writeOut")
 mergeFrames("writeOutBetter")
 mergeFrames("writeOutAugVersion")
 mergeFrames("saved")
+mergeFrames("loadBetter")
 mergeFrames("renters")
 mergeFrames("owners")
 mergeFrames()
