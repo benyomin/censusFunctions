@@ -2846,77 +2846,79 @@ owners2014$regionTwo <- owners2014$regionTwo %>% as.factor
 ##     drop small   towns of uncertain geography
 
 ###################
+#renters2004$CODELOC %>% levels
 
+#head(renters2004$AGE.x[renters2004$CODELOC == "Less than 50,000 inhabitants"])
 
-renters2004 <- renters2004[!renters2004$CODELOC == "Less than 100,000 inhabitants", ]
-renters2004 <<- droplevels(Rent4[!renters2004$CODELOC == "Less than 50,000 inhabitants", ])
+#renters2004 <- renters2004[!renters2004$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2004 <<- droplevels(renters2004[!CODELOC == "Less than 50,000 inhabitants", ])
 
-renters2005 <- renters2005[!renters2005$CODELOC == "Less than 100,000 inhabitants", ]
-renters2005 <<- droplevels(Rent4[!renters2005$CODELOC == "Less than 50,000 inhabitants", ])
+## renters2005 <- renters2005[!renters2005$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2005 <<- droplevels(renters2005[!renters2005$CODELOC == "Less than 50,000 inhabitants", ])
 
-renters2006 <- renters2006[!renters2006$CODELOC == "Less than 100,000 inhabitants", ]
-renters2006 <<- droplevels(Rent4[!renters2006$CODELOC == "Less than 50,000 inhabitants", ])
+## renters2006 <- renters2006[!renters2006$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2006 <<- droplevels(renters2006[!renters2006$CODELOC == "Less than 50,000 inhabitants", ])
 
-renters2007 <- renters2007[!renters2007$CODELOC == "Less than 100,000 inhabitants", ]
-renters2007 <<- droplevels(Rent4[!renters2007$CODELOC == "Less than 50,000 inhabitants", ])
+## renters2007 <- renters2007[!renters2007$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2007 <<- droplevels(renters2007[!renters2007$CODELOC == "Less than 50,000 inhabitants", ])
 
-renters2008 <- renters2008[!renters2008$CODELOC == "Less than 100,000 inhabitants", ]
-renters2008 <<- droplevels(Rent4[!renters2008$CODELOC == "Less than 50,000 inhabitants", ])
+## renters2008 <- renters2008[!renters2008$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2008 <<- droplevels(renters2008[!renters2008$CODELOC == "Less than 50,000 inhabitants", ])
 
-renters2009 <- renters2009[!renters2009$CODELOC == "Less than 100,000 inhabitants", ]
-renters2009 <<- droplevels(Rent4[!renters2009$CODELOC == "Less than 50,000 inhabitants", ])
+## renters2009 <- renters2009[!renters2009$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2009 <<- droplevels(renters2009[!renters2009$CODELOC == "Less than 50,000 inhabitants", ])
 
-renters2010 <- renters2010[!renters2010$CODELOC == "Less than 100,000 inhabitants", ]
-renters2010 <<- droplevels(Rent4[!renters2010$CODELOC == "Less than 50,000 inhabitants", ])
+## renters2010 <- renters2010[!renters2010$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2010 <<- droplevels(renters2010[!renters2010$CODELOC == "Less than 50,000 inhabitants", ])
 
-renters2011 <- renters2011[!renters2011$CODELOC == "Less than 100,000 inhabitants", ]
-renters2011 <<- droplevels(Rent4[!renters2011$CODELOC == "Less than 50,000 inhabitants", ])
+## renters2011 <- renters2011[!renters2011$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2011 <<- droplevels(renters2011[!renters2011$CODELOC == "Less than 50,000 inhabitants", ])
 
-renters2012 <- renters2012[!renters2012$CODELOC == "Less than 100,000 inhabitants", ]
-renters2012 <<- droplevels(Rent4[!renters2012$CODELOC == "Less than 50,000 inhabitants", ])
+## renters2012 <- renters2012[!renters2012$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2012 <<- droplevels(renters2012[!renters2012$CODELOC == "Less than 50,000 inhabitants", ])
 
-renters2013 <- renters2013[!renters2013$CODELOC == "Less than 100,000 inhabitants", ]
-renters2013 <<- droplevels(Rent4[!renters2013$CODELOC == "Less than 50,000 inhabitants", ])
+## renters2013 <- renters2013[!renters2013$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2013 <<- droplevels(renters2013[!renters2013$CODELOC == "Less than 50,000 inhabitants", ])
 
-renters2014 <- renters2014[!renters2014$CODELOC == "Less than 100,000 inhabitants", ]
-renters2014 <<- droplevels(Rent4[!renters2014$CODELOC == "Less than 50,000 inhabitants", ])
+## renters2014 <- renters2014[!renters2014$CODELOC == "Less than 100,000 inhabitants", ]
+## renters2014 <<- droplevels(renters2014[!renters2014$CODELOC == "Less than 50,000 inhabitants", ])
 
 
 ############################################################################################
 
 
-owners2004 <- owners2004[!owners2004$CODELOC == "Less than 100,000 inhabitants", ]
-owners2004 <<- droplevels(Own4[!owners2004$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2004 <- owners2004[!owners2004$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2004 <<- droplevels(owners2004[!owners2004$CODELOC == "Less than 50,000 inhabitants", ])
 
-owners2005 <- owners2005[!owners2005$CODELOC == "Less than 100,000 inhabitants", ]
-owners2005 <<- droplevels(Own4[!owners2005$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2005 <- owners2005[!owners2005$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2005 <<- droplevels(owners2005[!owners2005$CODELOC == "Less than 50,000 inhabitants", ])
 
-owners2006 <- owners2006[!owners2006$CODELOC == "Less than 100,000 inhabitants", ]
-owners2006 <<- droplevels(Own4[!owners2006$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2006 <- owners2006[!owners2006$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2006 <<- droplevels(owners2006[!owners2006$CODELOC == "Less than 50,000 inhabitants", ])
 
-owners2007 <- owners2007[!owners2007$CODELOC == "Less than 100,000 inhabitants", ]
-owners2007 <<- droplevels(Own4[!owners2007$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2007 <- owners2007[!owners2007$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2007 <<- droplevels(owners2007[!owners2007$CODELOC == "Less than 50,000 inhabitants", ])
 
-owners2008 <- owners2008[!owners2008$CODELOC == "Less than 100,000 inhabitants", ]
-owners2008 <<- droplevels(Own4[!owners2008$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2008 <- owners2008[!owners2008$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2008 <<- droplevels(owners2008[!owners2008$CODELOC == "Less than 50,000 inhabitants", ])
 
-owners2009 <- owners2009[!owners2009$CODELOC == "Less than 100,000 inhabitants", ]
-owners2009 <<- droplevels(Own4[!owners2009$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2009 <- owners2009[!owners2009$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2009 <<- droplevels(owners2009[!owners2009$CODELOC == "Less than 50,000 inhabitants", ])
 
-owners2010 <- owners2010[!owners2010$CODELOC == "Less than 100,000 inhabitants", ]
-owners2010 <<- droplevels(Own4[!owners2010$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2010 <- owners2010[!owners2010$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2010 <<- droplevels(owners2010[!owners2010$CODELOC == "Less than 50,000 inhabitants", ])
 
-owners2011 <- owners2011[!owners2011$CODELOC == "Less than 100,000 inhabitants", ]
-owners2011 <<- droplevels(Own4[!owners2011$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2011 <- owners2011[!owners2011$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2011 <<- droplevels(owners2011[!owners2011$CODELOC == "Less than 50,000 inhabitants", ])
 
-owners2012 <- owners2012[!owners2012$CODELOC == "Less than 100,000 inhabitants", ]
-owners2012 <<- droplevels(Own4[!owners2012$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2012 <- owners2012[!owners2012$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2012 <<- droplevels(owners2012[!owners2012$CODELOC == "Less than 50,000 inhabitants", ])
 
-owners2013 <- owners2013[!owners2013$CODELOC == "Less than 100,000 inhabitants", ]
-owners2013 <<- droplevels(Own4[!owners2013$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2013 <- owners2013[!owners2013$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2013 <<- droplevels(owners2013[!owners2013$CODELOC == "Less than 50,000 inhabitants", ])
 
-owners2014 <- owners2014[!owners2014$CODELOC == "Less than 100,000 inhabitants", ]
-owners2014 <<- droplevels(Own4[!owners2014$CODELOC == "Less than 50,000 inhabitants", ])
+## owners2014 <- owners2014[!owners2014$CODELOC == "Less than 100,000 inhabitants", ]
+## owners2014 <<- droplevels(owners2014[!owners2014$CODELOC == "Less than 50,000 inhabitants", ])
 
 
 rentersList  <<- c(

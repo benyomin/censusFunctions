@@ -454,9 +454,9 @@ TRUE                                                           ~ 99            #
 )
 )
    return("Home prices added by city/size/year to each row.")
-  } else if (year == "renters") {
+  } else if (frame == "renters") {
 
-Rent6 <<-
+Rent7 <<-
      Rent5 %>%
      mutate(houseP == case_when(
 

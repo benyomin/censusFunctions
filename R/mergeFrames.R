@@ -1,6 +1,6 @@
 #' Merge all years (in familiesList) into a single dataframe to facilitate regression.
 #'
-#' This function combines multiple years to a dataframe. v: 3.2
+#' This function combines multiple years to a dataframe. v: 3.5
 #' @param arg Defaults to 1. 2 is not implemented.
 #' @keywords combine, merge, regression, dataframe, year
 #' @export mergeFrames
@@ -8,8 +8,13 @@
 #' @examples
 #' mergeFrames("merge")
 #' mergeFrames("writeOut")
-#' mergeFrames()
+#' mergeFrames("manipulateAugVersion")
+#' mergeFrames("writeOutAugVersion")
 #' mergeFrames("saved")
+#' mergeFrames("renters")
+#' mergeFrames("owners")
+#' mergeFrames()
+
 mergeFrames <- function(arg = 3) {
   if(arg == "merge"){
 
@@ -68,6 +73,19 @@ dput(mergedData2, file = "../dataframes/mergedData2.txt")
 return("wrote mergedData2 to file")
 
 
+
+    }else if(arg == "manipulateAugVersion"){
+
+mergeFrames("renters")
+mergeFrames("owners")
+
+return(" compleat - oay9rsdoe")
+
+    }else if(arg == "writeOutAugVersion"){
+      saveRDS(mergedRenters, "../savedData/mergedRenters.rds")
+      saveRDS(mergedOwners,  "../savedData/mergedOwners.rds")
+return(" wrote to savedData dir")
+
     }else if(arg == "saved"){
 
 mergedData2     <<- dget("../dataframes/mergedData2.txt")
@@ -81,6 +99,12 @@ mergedOwners    <<- dget("../dataframes/mergedOwners.txt")
 mergedOwners[]  <<- lapply(mergedOwners, unclass)
 
 return("read saved version of mergedData2")
+    }else if(arg == "savedAug"){
+
+Rent6 <<- readRDS("../savedData/mergedRenters.rds")
+Own6  <<- readRDS("../savedData/mergedOwners.rds")
+
+return("read saved version of August data")
     }else{
 return("not implemented mergeFrames(returnCode 99x)")
     }
