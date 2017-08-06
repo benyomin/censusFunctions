@@ -1,9 +1,9 @@
-#' subsets the yearly surveys by city of residence, v 1.4
+#' subsets the yearly surveys by city of residence, v 3.4
 #' defaults to arg = "cities"
 #' replace plyr::subset() with dplyr::filter()
 #' @param    arg nil
-#' @family   table
-#' @keywords city, subset
+#' @family   manipulate
+#' @keywords city, subset, region, size, column
 #' @export   subsetCities
 #' @examples
 #' subsetCities()
@@ -482,7 +482,7 @@ renters2012  <- dplyr::filter( fam2012,  RENT == "Yes")
 renters2013  <- dplyr::filter( fam2013, RENT == "Yes")
 renters2014  <- dplyr::filter( fam2014, RENT == "Yes")
 
-rentersList  <<- as.data.frame(c(
+rentersList  <<- c(
 renters2004,
 renters2005,
 renters2006,
@@ -493,8 +493,7 @@ renters2010,
 renters2011,
 renters2012,
 renters2013,
-renters2014))
-
+renters2014)
 
 owners2004  <- dplyr::filter( fam2004,   OWNER == "Yes")
 # head(owners2004)  #check

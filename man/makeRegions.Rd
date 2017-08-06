@@ -33,5 +33,8 @@ makeRegions("dropSmallTowns")
 makeRegions("fixSizes")
 makeRegions("load")
 }
+\seealso{
+Other manipulate: \code{\link{subsetCities}}
+}
 \keyword{city,}
 \keyword{region}

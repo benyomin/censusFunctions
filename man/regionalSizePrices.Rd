@@ -2,7 +2,7 @@
 % Please edit documentation in R/regionalSizePrices.R
 \name{regionalSizePrices}
 \alias{regionalSizePrices}
-\title{Add houseP column based on fam:(yr, size, region) v. 1.7}
+\title{Add houseP column based on fam:(yr, size, region) v. 3.4}
 \usage{
 regionalSizePrices(frame = TRUE)
 }
@@ -10,7 +10,7 @@ regionalSizePrices(frame = TRUE)
 \item{frame}{The frame: data/owners/renters}
 }
 \description{
-This function adds $houseP column.
+This function adds $houseP and $housePTwo columns.
 }
 \examples{
 regionalSizePrices()
