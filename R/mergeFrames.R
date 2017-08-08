@@ -83,7 +83,7 @@ return(" compleat - oay9rsdoe")
 
     }else if(arg == "loadBetter2"){
 mergedRenters <<- readRDS("../savedData/mergedRenters4.rds")
-mergedOwners  <<- readRDS("../savedData/mergeOwners4.rds")
+mergedOwners  <<- readRDS("../savedData/mergedOwners4.rds")
 return("loaded better version (2) of merged data frames.")
 
     }else if(arg == "writeOutBetter2"){
