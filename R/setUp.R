@@ -123,9 +123,14 @@ return("listed cities in their regions")
   }else if(arg == 3){
 return("not implemented 3")
   }else if(arg == 4){
-       subsetCities()
+    subsetCities()
     maxReproducible(6)
 return("ran maxReproducible(r) and subsetCities() (needed for n=tables)")
+  }else if(arg == 5){
+    mergeFrames("loadBetter2")
+
+return("imported via loadBetter2.")
+
   }else{
 return("not implemented ...")
   }

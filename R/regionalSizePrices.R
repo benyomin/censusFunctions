@@ -960,7 +960,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 ))
 
     ## now add $housePTwo  based on regionTwo
-fam2004 <- fam2004 %>%
+fam2004 <<- fam2004 %>%
   mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1006,7 +1006,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 ))
 
-fam2005 <- fam2005 %>%
+fam2005 <<- fam2005 %>%
    mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1052,7 +1052,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
-fam2006 <- fam2006 %>%
+fam2006 <<- fam2006 %>%
    mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1098,7 +1098,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
-fam2007 <- fam2007 %>%
+fam2007 <<- fam2007 %>%
    mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1144,7 +1144,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
 TRUE                   ~ 1899.34           ## catch undefined region
 ))
-fam2008 <- fam2008 %>%
+fam2008 <<- fam2008 %>%
    mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1190,7 +1190,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
-fam2009 <- fam2009 %>%
+fam2009 <<- fam2009 %>%
    mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1236,7 +1236,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
-fam2010 <- fam2010 %>%
+fam2010 <<- fam2010 %>%
    mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1282,7 +1282,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
-fam2011 <- fam2011 %>%
+fam2011 <<- fam2011 %>%
    mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1328,7 +1328,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
-fam2012 <- fam2012 %>%
+fam2012 <<- fam2012 %>%
    mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1373,7 +1373,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 
 TRUE                   ~ 1899.34           ## catch undefined region
 ))
-fam2013 <- fam2013 %>%
+fam2013 <<- fam2013 %>%
    mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1417,7 +1417,7 @@ regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 ))
-fam2014 <- fam2014 %>%
+fam2014 <<- fam2014 %>%
    mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
@@ -1461,7 +1461,6 @@ regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
 regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 ))
-
 
 return("Added $houseP and $housePTwo columns to famYYYY.")
   } else if (frame == "renters") {
