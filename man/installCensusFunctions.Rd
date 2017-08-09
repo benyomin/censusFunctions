@@ -18,6 +18,7 @@ installCensusFunctions('github')
 }
 \seealso{
 Other setup: \code{\link{install_if_needed}},
+  \code{\link{makeFamiliesList}},
   \code{\link{maxReproducible}}, \code{\link{preSetUp}},
   \code{\link{setUp}}
 }

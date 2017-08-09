@@ -1,4 +1,4 @@
-#' Work with saved data or from raw census downloads?  v: 1.7
+#' Work with saved data or from raw census downloads?  v: 2
 #' Defaults to saved. 1 for raw. 2 for saved. 3 to import more saved.  4. to write out what was made by two.
 #' @param level 1..6, defaults to 5
 #' @keywords import, saved, reproducibility
@@ -60,7 +60,15 @@ familiesList <<- readRDS("../savedData/XFI_correctSize.rds")
 
 return("imported familiesList, returned rentersList and ownersList.")
 
-  }else{
+      }else if(level == 8){
+        ## imports years
+        ## adds $size
+        ## adds $stock
+
+      makeFamiliesList("new")
+return("added $size and $stock")
+
+      }else{
 return("not yet implemented")
   }
 }

@@ -2,19 +2,33 @@
 % Please edit documentation in R/makeFamiliesList.R
 \name{makeFamiliesList}
 \alias{makeFamiliesList}
-\title{Make list of family, individual and exp data to workspace v: 0.3}
+\title{Make list of family, individual and exp data to workspace v: 0.4
+still needs attr label of $size set correctly
+This function imports save data.  Defaults to "old" version.}
 \usage{
-makeFamiliesList(arg = TRUE)
+makeFamiliesList(arg = "old")
 }
 \arguments{
 \item{source}{Source for data, 'raw' imports from .por files. 'saved' files were previously parsed in R.}
 }
 \description{
-This function imports save data.
+Make list of family, individual and exp data to workspace v: 0.4
+still needs attr label of $size set correctly
+This function imports save data.  Defaults to "old" version.
 }
 \examples{
+makeFamilies("old")
+makeFamiliesList("new")
 makeFamiliesList()
-makeFamilies(TRUE)
 }
+\seealso{
+Other setup: \code{\link{installCensusFunctions}},
+  \code{\link{install_if_needed}},
+  \code{\link{maxReproducible}}, \code{\link{preSetUp}},
+  \code{\link{setUp}}
+}
+\keyword{column,}
 \keyword{import,}
-\keyword{saved}
+\keyword{manipulate}
+\keyword{size,}
+\keyword{stock,}
