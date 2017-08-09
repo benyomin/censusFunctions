@@ -2,8 +2,8 @@
 % Please edit documentation in R/setUp.R
 \name{setUp}
 \alias{setUp}
-\title{Secondary setup code, replaces setupV7 v. 0.5
-This function wraps setup code}
+\title{Secondary setup code, replaces setupV7 v. 1.5
+This function wraps setup code, arg = 6 is current version.}
 \usage{
 setUp(arg = 4)
 }
@@ -11,8 +11,8 @@ setUp(arg = 4)
 \item{arg}{Defaults to 4.}
 }
 \description{
-Secondary setup code, replaces setupV7 v. 0.5
-This function wraps setup code
+Secondary setup code, replaces setupV7 v. 1.5
+This function wraps setup code, arg = 6 is current version.
 }
 \examples{
 setUp()
@@ -20,6 +20,8 @@ setUp(1)
 setUp(2)
 setUp(3)
 setUp(4)
+setUp(5)
+setUp(6)
 }
 \seealso{
 Other setup: \code{\link{installCensusFunctions}},

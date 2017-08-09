@@ -1,4 +1,4 @@
-#' Make list of family, individual and exp data to workspace v: 0.4
+#' Make list of family, individual and exp data to workspace v: 0.6
 #' still needs attr label of $size set correctly
 #' This function imports save data.  Defaults to "old" version.
 #' @param source Source for data, 'raw' imports from .por files. 'saved' files were previously parsed in R.
@@ -124,74 +124,86 @@ fam2014$stock<-tlv125["2014",2]
 
 ### process - add column with size of house
 
-fam2004a <- XFI2004 %>%
+fam2004 <- XFI2004 %>%
      plyr::mutate(size = case_when(ROOMS    <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ) %>% factor )
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
 
-fam2005a <- XFI2005 %>%
+fam2005 <- XFI2005 %>%
      plyr::mutate(size = case_when(ROOMS    <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ROOMS >= 4.5             ~ 'large'
-                          ) %>% factor )
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
 
-fam2006a <- XFI2006 %>%
+fam2006 <- XFI2006 %>%
      plyr::mutate(size = case_when(ROOMS    <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ROOMS >= 4.5             ~ 'large'
-                          ) %>% factor )
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
 
-fam2007a <- XFI2007 %>%
+fam2007 <- XFI2007 %>%
      plyr::mutate(size = case_when(ROOMS    <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ROOMS >= 4.5             ~ 'large'
-                          ) %>% factor )
-fam2008a <- XFI2008 %>%
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
+fam2008 <- XFI2008 %>%
      plyr::mutate(size = case_when(ROOMS    <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ROOMS >= 4.5             ~ 'large'
-                          ) %>% factor )
-fam2009a <- XFI2009 %>%
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
+fam2009 <- XFI2009 %>%
      plyr::mutate(size = case_when(ROOMS    <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ROOMS >= 4.5             ~ 'large'
-                          ) %>% factor )
-fam2010a <- XFI2010 %>%
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
+fam2010 <- XFI2010 %>%
      plyr::mutate(size = case_when(ROOMS    <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ROOMS >= 4.5             ~ 'large'
-                          ) %>% factor )
-fam2011a <- XFI2011 %>%
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
+fam2011 <- XFI2011 %>%
      plyr::mutate(size = case_when(ROOMS    <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ROOMS >= 4.5             ~ 'large'
-                          ) %>% factor )
-fam2012a <- XFI2012 %>%
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
+fam2012 <- XFI2012 %>%
      plyr::mutate(size = case_when(ROOMS    <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ROOMS >= 4.5             ~ 'large'
-                          ) %>% factor )
-fam2013a <- XFI2013 %>%
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
+fam2013 <- XFI2013 %>%
      plyr::mutate(size = case_when(ROOMS    <= 2   ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ROOMS >= 4.5             ~ 'large'
-                          ) %>% factor )
-fam2014a <- XFI2014 %>%
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
+fam2014 <- XFI2014 %>%
      plyr::mutate(size = case_when(ROOMS  <= 2     ~ 'tiny',
                           ROOMS > 2 & ROOMS <= 3   ~ 'small',
                           ROOMS > 3 & ROOMS <= 4   ~ 'medium',
-                          ROOMS >= 4.5             ~ 'large'
-                          ) %>% factor )
+                          ROOMS >= 4.5             ~ 'large',
+                          TRUE                     ~ 'unknown'
+                          ) %>% factor(labels = c("Tiny", "Small", "Medium", "Large")) )
         ## add stock data
 
 tlv125<-importData("tlv125")
@@ -206,29 +218,28 @@ tlv125<-importData("tlv125")
 ## fam2011a$stock <- integer(tlv125["2011",2])
 ## fam2012a$stock <- integer(tlv125["2012",2])
 ## fam2013a$stock <- integer(tlv125["2013",2])
-## fam2014a$stock <- integer(tlv125["2014",2])
-fam2004a <- fam2004 %>%
-        mutate(stock = integer(tlv125["2004",2]))
-fam2005a <- fam2005 %>%
-        mutate(stock = integer(tlv125["2005",2]))
-fam2006a <- fam2006 %>%
-        mutate(stock = integer(tlv125["2006",2]))
-fam2007a <- fam2007 %>%
-        mutate(stock = integer(tlv125["2007",2]))
-fam2008a <- fam2008 %>%
-        mutate(stock = integer(tlv125["2008",2]))
-fam2009a <- fam2009 %>%
-        mutate(stock = integer(tlv125["2009",2]))
-fam2010a <- fam2010 %>%
-        mutate(stock = integer(tlv125["2010",2]))
-fam2011a <- fam2011 %>%
-        mutate(stock = integer(tlv125["2011",2]))
-fam2012a <- fam2012 %>%
-        mutate(stock = integer(tlv125["2012",2]))
-fam2013a <- fam2013 %>%
-        mutate(stock = integer(tlv125["2013",2]))
-fam2014a <- fam2014 %>%
-        mutate(stock = integer(tlv125["2014",2]))
+fam2004a <<- fam2004 %>%
+        mutate(stock = as.double(tlv125["2004",2]))
+fam2005a <<- fam2005 %>%
+        mutate(stock = as.double(tlv125["2005",2]))
+fam2006a <<- fam2006 %>%
+        mutate(stock = as.double(tlv125["2006",2]))
+fam2007a <<- fam2007 %>%
+        mutate(stock = as.double(tlv125["2007",2]))
+fam2008a <<- fam2008 %>%
+        mutate(stock = as.double(tlv125["2008",2]))
+fam2009a <<- fam2009 %>%
+        mutate(stock = as.double(tlv125["2009",2]))
+fam2010a <<- fam2010 %>%
+        mutate(stock = as.double(tlv125["2010",2]))
+fam2011a <<- fam2011 %>%
+        mutate(stock = as.double(tlv125["2011",2]))
+fam2012a <<- fam2012 %>%
+        mutate(stock = as.double(tlv125["2012",2]))
+fam2013a <<- fam2013 %>%
+        mutate(stock = as.double(tlv125["2013",2]))
+fam2014a <<- fam2014 %>%
+        mutate(stock = as.double(tlv125["2014",2]))
 
   #      familiesList <<- list(fam2004, fam2005, fam2006, fam2007, fam2008,
   #          fam2009, fam2010, fam2011, fam2012, fam2013, fam2014)

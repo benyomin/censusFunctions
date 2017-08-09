@@ -1,5 +1,5 @@
-#' Secondary setup code, replaces setupV7 v. 0.5
-#' This function wraps setup code
+#' Secondary setup code, replaces setupV7 v. 1.5
+#' This function wraps setup code, arg = 6 is current version.
 #' @param arg Defaults to 4.
 #' @family setup
 #' @keywords setup
@@ -10,6 +10,8 @@
 #' setUp(2)
 #' setUp(3)
 #' setUp(4)
+#' setUp(5)
+#' setUp(6)
 setUp <- function(arg = 4) {
         if(arg == 1){
                 maxReproducible(3)
@@ -130,7 +132,21 @@ return("ran maxReproducible(r) and subsetCities() (needed for n=tables)")
     mergeFrames("loadBetter2")
 
 return("imported via loadBetter2.")
+  }else if(arg == 6){
 
+        XFI2004 <<- readRDS("../savedData/expFamInd2004.rds")
+        XFI2005 <<- readRDS("../savedData/expFamInd2005.rds")
+        XFI2006 <<- readRDS("../savedData/expFamInd2006.rds")
+        XFI2007 <<- readRDS("../savedData/expFamInd2007.rds")
+        XFI2008 <<- readRDS("../savedData/expFamInd2008.rds")
+        XFI2009 <<- readRDS("../savedData/expFamInd2009.rds")
+        XFI2010 <<- readRDS("../savedData/expFamInd2010.rds")
+        XFI2011 <<- readRDS("../savedData/expFamInd2011.rds")
+        XFI2012 <<- readRDS("../savedData/expFamInd2012.rds")
+        XFI2013 <<- readRDS("../savedData/expFamInd2013.rds")
+        XFI2014 <<- readRDS("../savedData/expFamInd2014.rds")
+
+return("loaded initial data.")
   }else{
 return("not implemented ...")
   }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/makeFamiliesList.R
 \name{makeFamiliesList}
 \alias{makeFamiliesList}
-\title{Make list of family, individual and exp data to workspace v: 0.4
+\title{Make list of family, individual and exp data to workspace v: 0.6
 still needs attr label of $size set correctly
 This function imports save data.  Defaults to "old" version.}
 \usage{
@@ -12,7 +12,7 @@ makeFamiliesList(arg = "old")
 \item{source}{Source for data, 'raw' imports from .por files. 'saved' files were previously parsed in R.}
 }
 \description{
-Make list of family, individual and exp data to workspace v: 0.4
+Make list of family, individual and exp data to workspace v: 0.6
 still needs attr label of $size set correctly
 This function imports save data.  Defaults to "old" version.
 }

@@ -1,5 +1,5 @@
-#' Add houseP column based on fam:(yr, size, region) v. 3.4
-#'
+#' Add houseP column based on fam:(yr, size, region) v. 3.5
+#' famYYYYb is latest version.
 #' This function adds $houseP and $housePTwo columns.
 #' @param frame The frame: data/owners/renters
 #' @family mutate
@@ -7,8 +7,9 @@
 #' @export regionalSizePrices
 #' @examples
 #' regionalSizePrices()
-#' regionalSizePrices("famYYYY")
 #' regionalSizePrices("data")
+#' regionalSizePrices("famYYYY")
+#' regionalSizePrices("famYYYYb")
 #' regionalSizePrices("owners")
 #' regionalSizePrices("renters")
 regionalSizePrices <- function(frame = TRUE) {
@@ -455,6 +456,1015 @@ TRUE                                                           ~ 1899.34        
 )
 )
    return("Home prices added by city/size/year to each row.")
+  } else if (frame == "famYYYYb") {
+
+fam2004 <- fam2004b %>%
+  mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+))
+
+fam2005 <- fam2005b %>%
+   mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2006 <- fam2006b %>%
+   mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2007 <- fam2007b %>%
+   mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+
+TRUE                   ~ 1899.34           ## catch undefined region
+))
+fam2008 <- fam2008b %>%
+   mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2009 <- fam2009b %>%
+   mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2010 <- fam2010b %>%
+   mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2011 <- fam2011b %>%
+   mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2012 <- fam2012b %>%
+   mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+))
+fam2013 <- fam2013b %>%
+   mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+TRUE                   ~ 1899.34           ## catch undefined region
+))
+fam2014 <- fam2014b %>%
+   mutate(houseP = case_when(
+
+regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionOne == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionOne == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionOne == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionOne == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionOne == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionOne == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionOne == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionOne == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionOne == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionOne == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionOne == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionOne == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionOne == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionOne == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionOne == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionOne == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionOne == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionOne == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionOne == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionOne == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionOne == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionOne == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionOne == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+TRUE                   ~ 1899.34           ## catch undefined region
+))
+
+    ## now add $housePTwo  based on regionTwo
+fam2004c <<- fam2004 %>%
+  mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+))
+
+fam2005c <<- fam2005 %>%
+   mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2006c <<- fam2006 %>%
+   mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2007c <<- fam2007 %>%
+   mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+
+TRUE                   ~ 1899.34           ## catch undefined region
+))
+fam2008c <<- fam2008 %>%
+   mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2009c <<- fam2009 %>%
+   mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2010c <<- fam2010 %>%
+   mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2011c <<- fam2011 %>%
+   mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+
+))
+fam2012c <<- fam2012 %>%
+   mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+
+TRUE                   ~ 1899.34           ## catch undefined region
+))
+fam2013c <<- fam2013 %>%
+   mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+TRUE                   ~ 1899.34           ## catch undefined region
+))
+fam2014c <<- fam2014 %>%
+   mutate(housePTwo = case_when(
+
+regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
+regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
+regionTwo == "Jerusalem" && size == "medium" ~ Jerusalem3.5[3, 2],
+regionTwo == "Jerusalem" && size == "large" ~ Jerusalem4.5[3, 2],
+
+regionTwo == "Gush Dan" && size == "tiny" ~ GushDan1.5[3, 2],
+regionTwo == "Gush Dan" && size == "small" ~ GushDan2.5[3, 2],
+regionTwo == "Gush Dan" && size == "medium" ~ GushDan3.5[3, 2],
+regionTwo == "Gush Dan" && size == "large" ~ GushDan4.5[3, 2],
+
+regionTwo == "HaDarom" && size == "tiny" ~ South1.5[3, 2],
+regionTwo == "HaDarom" && size == "small" ~ South2.5[3, 2],
+regionTwo == "HaDarom" && size == "medium" ~ South3.5[3, 2],
+regionTwo == "HaDarom" && size == "large" ~ South4.5[3, 2],
+
+regionTwo == "Haifa" && size == "tiny" ~ Haifa1.5[3, 2],
+regionTwo == "Haifa" && size == "small" ~ Haifa2.5[3, 2],
+regionTwo == "Haifa" && size == "medium" ~ Haifa3.5[3, 2],
+regionTwo == "Haifa" && size == "large" ~ Haifa4.5[3, 2],
+
+regionTwo == "HaMerkaz" && size == "tiny" ~ centerJeruPeri1.5[3, 2],
+regionTwo == "HaMerkaz" && size == "small" ~ centerJeruPeri2.5[3, 2],
+regionTwo == "HaMerkaz" && size == "medium" ~ centerJeruPeri3.5[3, 2],
+regionTwo == "HaMerkaz" && size == "large" ~ centerJeruPeri4.5[3, 2],
+
+regionTwo == "HaZafon" && size == "tiny" ~ North1.5[3, 2],
+regionTwo == "HaZafon" && size == "small" ~ North2.5[3, 2],
+regionTwo == "HaZafon" && size == "medium" ~ North3.5[3, 2],
+regionTwo == "HaZafon" && size == "large" ~ North4.5[3, 2],
+
+regionTwo == "Sharon" && size == "tiny" ~ Sharon1.5[3, 2],
+regionTwo == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
+regionTwo == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
+regionTwo == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
+
+regionTwo == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
+regionTwo == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionTwo == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
+regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+TRUE                   ~ 1899.34           ## catch undefined region
+))
+
+return("Added $houseP and $housePTwo columns to famYYYYb, export as famYYYYc.")
+#############
   } else if (frame == "famYYYY") {
 
 fam2004 <- fam2004 %>%
