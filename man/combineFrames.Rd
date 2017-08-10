@@ -4,7 +4,7 @@
 \alias{combineFrames}
 \title{combine all years into a single dataframe to facilitate regression.}
 \usage{
-combineFrames(arg = TRUE)
+combineFrames(arg = "old")
 }
 \arguments{
 \item{arg}{Sentence describing arg.}
@@ -13,9 +13,9 @@ combineFrames(arg = TRUE)
 This function combines multiple years to a dataframe. v: 2.0
 }
 \examples{
-combineFrames(TRUE)
-combineFrames(FALSE)
 combineFrames()
+combineFrames("old")
+combineFrames("versionC")
 }
 \seealso{
 Other combine: \code{\link{mergeFrames}}

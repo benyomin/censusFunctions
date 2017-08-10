@@ -1,5 +1,5 @@
 #' Add a region column based on $CODELOC (city) in the original data.
-#' v. 3.4 - makeRegions("famYYYY") needs <<- to namespace
+#' v. 3.6
 #' This function adds columns $regionOne and $regionTwo
 #' regionOne puts 13 cities in Gush Dan.
 #' regionTwo puts  2 cities in Gush Dan.
@@ -10,6 +10,7 @@
 #' @examples
 #' makeRegions("data")
 #' makeRegions()
+#' makeRegions("dropSmallV2")
 #' makeRegions("renters")
 #' makeRegions("famYYYY")
 #' makeRegions("famYYYYa")
@@ -602,7 +603,7 @@ plyr::mutate(regionTwo = case_when(
                TRUE                        ~  'Too Small - No Region') %>% factor)
 
 
-fam20007b <<- fam2007a %>%
+fam2007b <<- fam2007a %>%
 plyr::mutate(regionTwo = case_when(
                CODELOC == "Jerusalem"     ~ 'Jerusalem',
                CODELOC == "Bet Shemesh"   ~ 'Jerusalem',
@@ -1656,6 +1657,30 @@ Data4 <- Data4[!Data4$CODELOC == "Less than 100,000 inhabitants", ]
 Data4 <<- droplevels(Data4[!Data4$CODELOC == "Less than 50,000 inhabitants", ])
 
 return("droped locations of uncertain region")
+ } else if (arg == "dropSmallV2") {
+
+   keepRegions <- c( "Gush Dan",
+                    "HaDarom",
+                    "Haifa",
+                    "HaMerkaz",
+                    "HaZafon",
+                    "Jerusalem",
+                    "Sharon",
+                    "Tel Aviv")
+
+     fam2004d <<- droplevels(dplyr::filter(fam2004c,   regionOne %in% keepRegions))
+     fam2005d <<- droplevels(dplyr::filter(fam2005c,   regionOne %in% keepRegions))
+     fam2006d <<- droplevels(dplyr::filter(fam2006c,   regionOne %in% keepRegions))
+     fam2007d <<- droplevels(dplyr::filter(fam2007c,   regionOne %in% keepRegions))
+     fam2008d <<- droplevels(dplyr::filter(fam2008c,   regionOne %in% keepRegions))
+     fam2009d <<- droplevels(dplyr::filter(fam2009c,   regionOne %in% keepRegions))
+     fam2010d <<- droplevels(dplyr::filter(fam2010c,   regionOne %in% keepRegions))
+     fam2011d <<- droplevels(dplyr::filter(fam2011c,   regionOne %in% keepRegions))
+     fam2012d <<- droplevels(dplyr::filter(fam2012c,   regionOne %in% keepRegions))
+     fam2013d <<- droplevels(dplyr::filter(fam2013c,   regionOne %in% keepRegions))
+     fam2014d <<- droplevels(dplyr::filter(fam2014c,   regionOne %in% keepRegions))
+
+return("dropped locations of uncertain regionality.")
  } else if (arg == "sizesYYYY") {
 
 fam2004 <- fam2004 %>%

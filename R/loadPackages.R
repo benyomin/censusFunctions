@@ -1,5 +1,5 @@
 #' Loads the required packages for the
-#' Housing Wealth Effect Analysis.
+#' Housing Wealth Effect Analysis.   v. 3.0
 #' Provides for simple dependency management to aid in reproducibility.
 #' v.1.2 - remove gdata dependency, use other xlsx reader
 #' v.2.0 - changes to tidyverse instead of tidyr
@@ -18,6 +18,8 @@ loadWealthEffectPackages <- function(load = TRUE) {
         # install_if_needed("ggplot2")
         #library(ggplot2)
 #      install.packages("tidyverse")
+install.packages("jpeg")   ## required for ggmap
+
 library("tidyverse")
 #      devtools::install_github('mtennekes/tmap')
 library(tmap)

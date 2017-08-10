@@ -459,7 +459,7 @@ TRUE                                                           ~ 1899.34        
   } else if (frame == "famYYYYb") {
 
 fam2004 <- fam2004b %>%
-  mutate(houseP = case_when(
+  dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -505,7 +505,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 ))
 
 fam2005 <- fam2005b %>%
-   mutate(houseP = case_when(
+   dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -551,7 +551,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2006 <- fam2006b %>%
-   mutate(houseP = case_when(
+   dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -596,8 +596,9 @@ regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
+
 fam2007 <- fam2007b %>%
-   mutate(houseP = case_when(
+   dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -634,16 +635,14 @@ regionOne == "Sharon" && size == "small" ~ Sharon2.5[3, 2],
 regionOne == "Sharon" && size == "medium" ~ Sharon3.5[3, 2],
 regionOne == "Sharon" && size == "large" ~ Sharon4.5[3, 2],
 
-regionOne == "Tel Aviv" && size == "tiny" ~ tlv1.5[3, 2],
-regionOne == "Tel Aviv" && size == "small" ~ tlv2.5[3, 2],
+regionOne == "Tel Aviv" && size == "tiny"   ~ tlv1.5[3, 2],
+regionOne == "Tel Aviv" && size == "small"  ~ tlv2.5[3, 2],
 regionOne == "Tel Aviv" && size == "medium" ~ tlv3.5[3, 2],
-regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
+regionOne == "Tel Aviv" && size == "large"  ~ tlv4.5[3, 2],
+TRUE                                        ~ 1899.34           ))
 
-
-TRUE                   ~ 1899.34           ## catch undefined region
-))
 fam2008 <- fam2008b %>%
-   mutate(houseP = case_when(
+   dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -689,7 +688,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2009 <- fam2009b %>%
-   mutate(houseP = case_when(
+   dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -735,7 +734,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2010 <- fam2010b %>%
-   mutate(houseP = case_when(
+   dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -781,7 +780,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2011 <- fam2011b %>%
-   mutate(houseP = case_when(
+   dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -827,7 +826,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2012 <- fam2012b %>%
-   mutate(houseP = case_when(
+   dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -872,7 +871,7 @@ regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2013 <- fam2013b %>%
-   mutate(houseP = case_when(
+   dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -916,7 +915,7 @@ regionOne == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2014 <- fam2014b %>%
-   mutate(houseP = case_when(
+   dplyr::mutate(houseP = case_when(
 
 regionOne == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionOne == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -962,7 +961,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
     ## now add $housePTwo  based on regionTwo
 fam2004c <<- fam2004 %>%
-  mutate(housePTwo = case_when(
+  dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -1008,7 +1007,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 ))
 
 fam2005c <<- fam2005 %>%
-   mutate(housePTwo = case_when(
+   dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -1054,7 +1053,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2006c <<- fam2006 %>%
-   mutate(housePTwo = case_when(
+   dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -1099,8 +1098,9 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
+
 fam2007c <<- fam2007 %>%
-   mutate(housePTwo = case_when(
+   dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -1146,7 +1146,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2008c <<- fam2008 %>%
-   mutate(housePTwo = case_when(
+   dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -1192,7 +1192,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2009c <<- fam2009 %>%
-   mutate(housePTwo = case_when(
+   dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -1238,7 +1238,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2010c <<- fam2010 %>%
-   mutate(housePTwo = case_when(
+   dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -1284,7 +1284,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2011c <<- fam2011 %>%
-   mutate(housePTwo = case_when(
+   dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -1330,7 +1330,7 @@ TRUE                   ~ 1899.34           ## catch undefined region
 
 ))
 fam2012c <<- fam2012 %>%
-   mutate(housePTwo = case_when(
+   dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -1375,7 +1375,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2013c <<- fam2013 %>%
-   mutate(housePTwo = case_when(
+   dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
@@ -1419,7 +1419,7 @@ regionTwo == "Tel Aviv" && size == "large" ~ tlv4.5[3, 2],
 TRUE                   ~ 1899.34           ## catch undefined region
 ))
 fam2014c <<- fam2014 %>%
-   mutate(housePTwo = case_when(
+   dplyr::mutate(housePTwo = case_when(
 
 regionTwo == "Jerusalem" && size == "tiny" ~ Jerusalem1.5[3, 2],
 regionTwo == "Jerusalem" && size == "small" ~ Jerusalem2.5[3, 2],
