@@ -3,7 +3,7 @@
 \name{makeRegions}
 \alias{makeRegions}
 \title{Add a region column based on $CODELOC (city) in the original data.
-v. 3.6
+v. 3.65
 This function adds columns $regionOne and $regionTwo
 regionOne puts 13 cities in Gush Dan.
 regionTwo puts  2 cities in Gush Dan.}
@@ -15,7 +15,7 @@ makeRegions(arg = TRUE)
 }
 \description{
 Add a region column based on $CODELOC (city) in the original data.
-v. 3.6
+v. 3.65
 This function adds columns $regionOne and $regionTwo
 regionOne puts 13 cities in Gush Dan.
 regionTwo puts  2 cities in Gush Dan.

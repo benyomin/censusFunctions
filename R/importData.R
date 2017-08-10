@@ -8,6 +8,7 @@
 #' importData("raw")
 #' importData("saved")
 #' importData("load5")
+#' importData("versionD")
 #' importData("writeOutEXP")
 #' importData("familyOldRaw")
 #' importData("familyNewRaw")
@@ -125,6 +126,36 @@ fam2014s <<-dplyr::select(fam2014df,HHNUM,
                           CODELOC,SUBDIST,CLUSTER)
 
 return("Family data imported. 59 vars in 2005, 100 vars in 2013")
+  }else if(source=="versionD"){
+fam2004d <- readRDS("../savedData/versionD2004.rds")
+fam2005d <- readRDS("../savedData/versionD2005.rds")
+fam2006d <- readRDS("../savedData/versionD2006.rds")
+fam2007d <- readRDS("../savedData/versionD2007.rds")
+fam2008d <- readRDS("../savedData/versionD2008.rds")
+fam2009d <- readRDS("../savedData/versionD2009.rds")
+fam2010d <- readRDS("../savedData/versionD2010.rds")
+fam2011d <- readRDS("../savedData/versionD2011.rds")
+fam2012d <- readRDS("../savedData/versionD2012.rds")
+fam2013d <- readRDS("../savedData/versionD2013.rds")
+fam2014d <- readRDS("../savedData/versionD2014.rds")
+
+## fix type - this $column has different types in different years
+fam2005d$RELATHHH.x <- as.integer(fam2005d$RELATHHH.x)
+fam2010d$RELATHHH.x <- as.integer(fam2010d$RELATHHH.x)
+
+fam2004e <<- subset(fam2004d, select =-c(SUBDIST, HHWERNRS))
+fam2005e <<- subset(fam2005d, select =-c(SUBDIST, HHWERNRS))
+fam2006e <<- subset(fam2006d, select =-c(SUBDIST, HHWERNRS))
+fam2007e <<- subset(fam2007d, select =-c(SUBDIST, HHWERNRS))
+fam2008e <<- subset(fam2008d, select =-c(SUBDIST, HHWERNRS))
+fam2009e <<- subset(fam2009d, select =-c(SUBDIST, HHWERNRS))
+fam2010e <<- subset(fam2010d, select =-c(SUBDIST, HHWERNRS))
+fam2011e <<- subset(fam2011d, select =-c(SUBDIST, HHWERNRS))
+fam2012e <<- subset(fam2012d, select =-c(SUBDIST, HHWERNRS))
+fam2013e <<- subset(fam2013d, select =-c(SUBDIST, HHWERNRS))
+fam2014e <<- subset(fam2014d, select =-c(SUBDIST, HHWERNRS))
+
+return("loaded version D, dropped columns, returned versionE.")
   }else if(source=="familyNewRaw"){
     censusFunctions::importFamilyData("raw")
     return("success 05l09l")
@@ -206,7 +237,7 @@ ind2004 <- spss.get("../rawData/census/f466/f466ind.por",
                   use.value.labels = TRUE)
 ind2005 <- spss.get("../rawData/census/f467/f467ind.por",
                   use.value.labels = TRUE)
-ind2006 <- spss.get("../rawData/census/f468/n468ind.por",  
+ind2006 <- spss.get("../rawData/census/f468/n468ind.por",
                   use.value.labels = TRUE)
 ind2007 <- spss.get("../rawData/census/f469/f469ind.por",
                   use.value.labels = TRUE)
@@ -272,7 +303,7 @@ tlv127<-tlv126[13:1,]  # remove extra rows
 tlv125<-as.data.frame(tlv127)
 rownames(tlv125)<-c(2004:2016)
 #tlv128["2004",2] #"YYYY",2nd column is closing P. @ last day in June.
-    return(tlv125)    
+    return(tlv125)
   }else  if(source=="raw"){
    #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
 exp2004 <- spss.get("../rawData/census/f466/f466exp.por",

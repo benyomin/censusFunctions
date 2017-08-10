@@ -16,6 +16,7 @@ This function imports Israeli census data from spss .por files distributed by th
 importData("raw")
 importData("saved")
 importData("load5")
+importData("versionD")
 importData("writeOutEXP")
 importData("familyOldRaw")
 importData("familyNewRaw")
