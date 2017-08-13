@@ -1,4 +1,4 @@
-#' Import data to workspace v: 2.5 - load Data5 from rds
+#' Import data to workspace v: 3.4
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.
@@ -8,6 +8,7 @@
 #' importData("raw")
 #' importData("saved")
 #' importData("load5")
+#' importData("load6")
 #' importData("versionD")
 #' importData("writeOutEXP")
 #' importData("familyOldRaw")
@@ -126,7 +127,7 @@ fam2014s <<-dplyr::select(fam2014df,HHNUM,
                           CODELOC,SUBDIST,CLUSTER)
 
 return("Family data imported. 59 vars in 2005, 100 vars in 2013")
-  }else if(source=="versionD"){
+  }else if(source == "versionD"){
 fam2004d <- readRDS("../savedData/versionD2004.rds")
 fam2005d <- readRDS("../savedData/versionD2005.rds")
 fam2006d <- readRDS("../savedData/versionD2006.rds")
@@ -138,27 +139,108 @@ fam2011d <- readRDS("../savedData/versionD2011.rds")
 fam2012d <- readRDS("../savedData/versionD2012.rds")
 fam2013d <- readRDS("../savedData/versionD2013.rds")
 fam2014d <- readRDS("../savedData/versionD2014.rds")
+## this version is what to keep
+fam2004e <<- fam2004d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
 
-## fix type - this $column has different types in different years
-fam2005d$RELATHHH.x <- as.integer(fam2005d$RELATHHH.x)
-fam2010d$RELATHHH.x <- as.integer(fam2010d$RELATHHH.x)
+fam2005e <<- fam2005d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
 
-fam2004e <<- subset(fam2004d, select =-c(SUBDIST, HHWERNRS))
-fam2005e <<- subset(fam2005d, select =-c(SUBDIST, HHWERNRS))
-fam2006e <<- subset(fam2006d, select =-c(SUBDIST, HHWERNRS))
-fam2007e <<- subset(fam2007d, select =-c(SUBDIST, HHWERNRS))
-fam2008e <<- subset(fam2008d, select =-c(SUBDIST, HHWERNRS))
-fam2009e <<- subset(fam2009d, select =-c(SUBDIST, HHWERNRS))
-fam2010e <<- subset(fam2010d, select =-c(SUBDIST, HHWERNRS))
-fam2011e <<- subset(fam2011d, select =-c(SUBDIST, HHWERNRS))
-fam2012e <<- subset(fam2012d, select =-c(SUBDIST, HHWERNRS))
-fam2013e <<- subset(fam2013d, select =-c(SUBDIST, HHWERNRS))
-fam2014e <<- subset(fam2014d, select =-c(SUBDIST, HHWERNRS))
 
-return("loaded version D, dropped columns, returned versionE.")
+fam2006e <<- fam2006d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2007e <<- fam2007d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2008e <<- fam2008d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2009e <<- fam2009d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2010e <<- fam2010d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2011e <<- fam2011d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2012e <<- fam2012d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2013e <<- fam2013d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2014e <<- fam2014d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+return("dropped columns, returned versionE.")
   }else if(source=="familyNewRaw"){
     censusFunctions::importFamilyData("raw")
-    return("success 05l09l")
+return("success 05l09l")
   }else if(source=="familyProcessed"){
 ## version 2 - new family with socio-econ var
     householdsList <<- dget("../dataframes/householdsList.txt")
@@ -266,7 +348,7 @@ ind2012s <<- select(ind2012,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
 ind2013s <<- select(ind2013,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
 ind2014s <<- select(ind2014,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
 
-    return("imported raw individual data, subset selected columns")
+return("imported raw individual data, subset selected columns")
   }else  if(source=="writeOutIND"){
 dput(ind2004s, file="../dataframes/ind2004s.txt")
 dput(ind2005s, file="../dataframes/ind2005s.txt")
@@ -279,7 +361,7 @@ dput(ind2011s, file="../dataframes/ind2011s.txt")
 dput(ind2012s, file="../dataframes/ind2012s.txt")
 dput(ind2013s, file="../dataframes/ind2013s.txt")
 dput(ind2014s, file="../dataframes/ind2014s.txt")
-    return("wrote out IND data.")
+return("wrote out IND data.")
   }else  if(source=="savedIND"){
 ind2004s <<- dget("../dataframes/ind2004s.txt")
 ind2005s <<- dget("../dataframes/ind2005s.txt")
@@ -292,7 +374,7 @@ ind2011s <<- dget("../dataframes/ind2011s.txt")
 ind2012s <<- dget("../dataframes/ind2012s.txt")
 ind2013s <<- dget("../dataframes/ind2013s.txt")
 ind2014s <<- dget("../dataframes/ind2014s.txt")
-    return("imported Individual data from saved subset.")
+return("imported Individual data from saved subset.")
   }else  if(source=="tlv125"){
     #import the new TLV stock data from the csv
 tlv128<-readr::read_csv("../rawData/TLV-125midYearPrice.csv")
@@ -303,7 +385,7 @@ tlv127<-tlv126[13:1,]  # remove extra rows
 tlv125<-as.data.frame(tlv127)
 rownames(tlv125)<-c(2004:2016)
 #tlv128["2004",2] #"YYYY",2nd column is closing P. @ last day in June.
-    return(tlv125)
+return(tlv125)
   }else  if(source=="raw"){
    #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
 exp2004 <- spss.get("../rawData/census/f466/f466exp.por",
@@ -356,7 +438,7 @@ exp2014s <-dplyr::select(exp2014df, Q1,Q28,Q84,Q383,Q389,WEIGHT,HHNUM)
 renameColumns() ## adds a year column
                 ## exports columns with <<- super assignment
 
-        return("Imported Housing Expenditure Survey from Central Bureau of Statistics raw files.")
+return("Imported Housing Expenditure Survey from Central Bureau of Statistics raw files.")
     }else if(source=="saved"){
  ##  source("../includes/getProcessedData.R", echo=FALSE)
 exp2004s <<-dget("../dataframes/exp2004s.txt")
@@ -371,7 +453,7 @@ exp2012s <<-dget("../dataframes/exp2012s.txt")
 exp2013s <<-dget("../dataframes/exp2013s.txt")
 exp2014s <<-dget("../dataframes/exp2014s.txt")
 
-      return("Imported selected portions of Housing Expenditure Survey. Returns exp2004-14s")
+return("Imported selected portions of Housing Expenditure Survey. Returns exp2004-14s")
     }else if(source=="writeOutfamilies"){
       ## taken from working Feb16.Rmd
 dput(householdsList, file="../dataframes/householdsList.txt")
@@ -402,7 +484,7 @@ dput(exp2011s, file="../dataframes/exp2011s.txt")
 dput(exp2012s, file="../dataframes/exp2012s.txt")
 dput(exp2013s, file="../dataframes/exp2013s.txt")
 dput(exp2014s, file="../dataframes/exp2014s.txt")
-      return("wrote out dataframes")
+return("wrote out dataframes")
           }else if(source=="importCombined"){
 ####################################
 ## IMPORT    combined data frames ##
@@ -418,7 +500,7 @@ data2011<<-dget("../dataframes/data2011.txt")
 data2012<<-dget("../dataframes/data2012.txt")
 data2013<<-dget("../dataframes/data2013.txt")
 data2014<<-dget("../dataframes/data2014.txt")
-      return("wrote out dataframes")
+return("wrote out dataframes")
  }else if(source=="writeOutExpFamInd"){
 ####################################
 ## write out combined data frames ##
@@ -434,7 +516,7 @@ dput(expFamInd2011, file="../dataframes/expFamInd2011.txt")
 dput(expFamInd2012, file="../dataframes/expFamInd2012.txt")
 dput(expFamInd2013, file="../dataframes/expFamInd2013.txt")
 dput(expFamInd2014, file="../dataframes/expFamInd2014.txt")
-      return("wrote out dataframes with Exp, Fam and Ind columns")
+return("wrote out dataframes with Exp, Fam and Ind columns")
  }else if(source=="importExpFamInd"){
 ####################################
 ## import    combined data frames ##
@@ -450,7 +532,7 @@ expFamInd2011<<-dget("../dataframes/expFamInd2011.txt")
 expFamInd2012<<-dget("../dataframes/expFamInd2012.txt")
 expFamInd2013<<-dget("../dataframes/expFamInd2013.txt")
 expFamInd2014<<-dget("../dataframes/expFamInd2014.txt")
-      return("imported dataframes with Exp, Fam and Ind columns")
+return("imported dataframes with Exp, Fam and Ind columns")
           }else if(source=="writeOutCombined"){
 ####################################
 ## write out combined data frames ##
@@ -466,7 +548,7 @@ dput(data2011, file="../dataframes/data2011.txt")
 dput(data2012, file="../dataframes/data2012.txt")
 dput(data2013, file="../dataframes/data2013.txt")
 dput(data2014, file="../dataframes/data2014.txt")
-      return("wrote out dataframes")
+return("wrote out dataframes")
       }else if(source=="combine"){
 data2004<<-merge(exp2004s,fam2004s, by="HHNUM")
 data2005<<-merge(exp2005s,fam2005s, by="HHNUM")
@@ -486,7 +568,13 @@ Data5 <<- readRDS("../savedData/Data5.rds")
 Rent5 <<- readRDS("../savedData/Rent5.rds")
 Own5  <<- readRDS("../savedData/Own5.rds")
 
-        return("imported Data5, Rent5 and Own5")
+return("imported Data5, Rent5 and Own5")
+ } else if (source == "load6") {
+importData("versionD")
+subsetByOwnership("versionD")
+
+return("imported versionD.")
+
     }else{   ##"the only options are Y and N"
         return("not implemented - error importData('source == ?')")
     }}
