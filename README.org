@@ -1,0 +1,17 @@
+#+TITLE: R helper functions for Israeli Census Data
+
+[[file:logo.png]]
+
+* Readme file for R package censusFunctions.
+
+** install:
+#+BEGIN_SRC R :results drawer append
+devtools::install_github("benyomin/censusFunctions")
+#+END_SRC
+
+** provides:
+helper functions for the project: "Israeli Housing Wealth Effect"
+
+** keywords:
+reproducible research, R, package, Israel,
+housing, economics, consumption, wealth effect

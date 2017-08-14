@@ -1,6 +1,6 @@
 #' Creates dataframes expYYYYowners and expYYYYrenters,
 #' calls weighHouseholds() ;   v. 3.65
-#' This function creates subsets of renters and owners. and key money
+# This function creates subsets of renters and owners. and key money
 #' @param arg Defaults to true.
 #' @keywords owners, renters, subset
 #' @export
@@ -54,6 +54,7 @@ return(rentersList)
             exp2009s, exp2010s, exp2011s, exp2012s, exp2013s, exp2014s)
 return(householdsList)
     } else if (arg == "versionD") {
+
 renters2004  <- dplyr::filter( fam2004e,  RENT == "Yes")
 renters2005  <- dplyr::filter( fam2005e,  RENT == "Yes")
 renters2006  <- dplyr::filter( fam2006e,  RENT == "Yes")
