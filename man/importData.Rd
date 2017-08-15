@@ -2,7 +2,7 @@
 % Please edit documentation in R/importData.R
 \name{importData}
 \alias{importData}
-\title{Import data to workspace v: 3.4}
+\title{Import data to workspace v: 3.7}
 \usage{
 importData(source)
 }
@@ -18,6 +18,7 @@ importData("saved")
 importData("load5")
 importData("load6")
 importData("versionD")
+importData("versionF")
 importData("writeOutEXP")
 importData("familyOldRaw")
 importData("familyNewRaw")

@@ -1,5 +1,5 @@
 #' Creates dataframes expYYYYowners and expYYYYrenters,
-#' calls weighHouseholds() ;   v. 3.65
+#' calls weighHouseholds() ;   v. 3.7
 # This function creates subsets of renters and owners. and key money
 #' @param arg Defaults to true.
 #' @keywords owners, renters, subset
@@ -7,9 +7,12 @@
 #' @examples
 #' subsetByOwnership('listKeyMoney')
 #' subsetByOwnership()
-#' ## this should be called after loadData("versionD")
-#' subsetByOwnership('versionD')
+#'
+#' ## this should be called after loadData("versionF")
+#' subsetByOwnership('versionF')
+#'
 #' ## this was the previous version
+#' subsetByOwnership('versionD')
 #' subsetByOwnership('better')
 #'
 #' subsetByOwnership('listOwners')
@@ -53,6 +56,69 @@ return(rentersList)
         householdsList <- list(exp2004s, exp2005s, exp2006s, exp2007s, exp2008s,
             exp2009s, exp2010s, exp2011s, exp2012s, exp2013s, exp2014s)
 return(householdsList)
+  } else if (arg == "versionF") {
+
+renters2004  <- dplyr::filter( fam2004f,  RENT == "Yes")
+renters2005  <- dplyr::filter( fam2005f,  RENT == "Yes")
+renters2006  <- dplyr::filter( fam2006f,  RENT == "Yes")
+renters2007  <- dplyr::filter( fam2007f,  RENT == "Yes")
+renters2008  <- dplyr::filter( fam2008f,  RENT == "Yes")
+renters2009  <- dplyr::filter( fam2009f,  RENT == "Yes")
+renters2010  <- dplyr::filter( fam2010f,  RENT == "Yes")
+renters2011  <- dplyr::filter( fam2011f,  RENT == "Yes")
+renters2012  <- dplyr::filter( fam2012f,  RENT == "Yes")
+renters2013  <- dplyr::filter( fam2013f,  RENT == "Yes")
+renters2014  <- dplyr::filter( fam2014f,  RENT == "Yes")
+
+owners2004  <- dplyr::filter( fam2004f,   OWNER == "Yes")
+owners2005  <- dplyr::filter( fam2005f,   OWNER == "Yes")
+owners2006  <- dplyr::filter( fam2006f,   OWNER == "Yes")
+owners2007  <- dplyr::filter( fam2007f,   OWNER == "Yes")
+owners2008  <- dplyr::filter( fam2008f,   OWNER == "Yes")
+owners2009  <- dplyr::filter( fam2009f,   OWNER == "Yes")
+owners2010  <- dplyr::filter( fam2010f,   OWNER == "Yes")
+owners2011  <- dplyr::filter( fam2011f,   OWNER == "Yes")
+owners2012  <- dplyr::filter( fam2012f,   OWNER == "Yes")
+owners2013  <- dplyr::filter( fam2013f,   OWNER == "Yes")
+owners2014  <- dplyr::filter( fam2014f,   OWNER == "Yes")
+
+allfamiliesF <<-  bind_rows(list(fam2004f,
+     fam2005f,
+     fam2006f,
+     fam2007f,
+     fam2008f,
+     fam2009f,
+     fam2010f,
+     fam2011f,
+     fam2012f,
+     fam2013f,
+     fam2014f))
+
+ allRentersF <<-  bind_rows(list(renters2004,
+     renters2005,
+     renters2006,
+     renters2007,
+     renters2008,
+     renters2009,
+     renters2010,
+     renters2011,
+     renters2012,
+     renters2013,
+     renters2014))
+
+ allOwnersF <<-  bind_rows(list(owners2004,
+     owners2005,
+     owners2006,
+     owners2007,
+     owners2008,
+     owners2009,
+     owners2010,
+     owners2011,
+     owners2012,
+     owners2013,
+     owners2014))
+
+return("Merged allRenters and allOwners from version F. Should be ready for regression.")
     } else if (arg == "versionD") {
 
 renters2004  <- dplyr::filter( fam2004e,  RENT == "Yes")

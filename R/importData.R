@@ -1,4 +1,4 @@
-#' Import data to workspace v: 3.4
+#' Import data to workspace v: 3.7
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.
@@ -10,6 +10,7 @@
 #' importData("load5")
 #' importData("load6")
 #' importData("versionD")
+#' importData("versionF")
 #' importData("writeOutEXP")
 #' importData("familyOldRaw")
 #' importData("familyNewRaw")
@@ -127,6 +128,141 @@ fam2014s <<-dplyr::select(fam2014df,HHNUM,
                           CODELOC,SUBDIST,CLUSTER)
 
 return("Family data imported. 59 vars in 2005, 100 vars in 2013")
+  }else if(source == "versionF"){
+fam2004d <- readRDS("../savedData/versionD2004.rds")
+fam2005d <- readRDS("../savedData/versionD2005.rds")
+fam2006d <- readRDS("../savedData/versionD2006.rds")
+fam2007d <- readRDS("../savedData/versionD2007.rds")
+fam2008d <- readRDS("../savedData/versionD2008.rds")
+fam2009d <- readRDS("../savedData/versionD2009.rds")
+fam2010d <- readRDS("../savedData/versionD2010.rds")
+fam2011d <- readRDS("../savedData/versionD2011.rds")
+fam2012d <- readRDS("../savedData/versionD2012.rds")
+fam2013d <- readRDS("../savedData/versionD2013.rds")
+fam2014d <- readRDS("../savedData/versionD2014.rds")
+## this version(F) is what to keep  ++ $CLUSTER
+
+ fam2004f <<- fam2004d[, c("OWNER", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+fam2005f <<- fam2005d[, c("OWNER", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2006f <<- fam2006d[, c("OWNER", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2007f <<- fam2007d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2008f <<- fam2008d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2009f <<- fam2009d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2010f <<- fam2010d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2011f <<- fam2011d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2012f <<- fam2012d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2013f <<- fam2013d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+fam2014f <<- fam2014d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+fam2004f$socio <<- ordered(fam2004f$CLUSTER)
+levels(fam2004f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2005f$socio <<- ordered(fam2005f$CLUSTER)
+levels(fam2005f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2006f$socio <<- ordered(fam2006f$CLUSTER)
+levels(fam2006f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2007f$socio <<- ordered(fam2007f$CLUSTER)
+levels(fam2007f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2008f$socio <<- ordered(fam2008f$CLUSTER)
+levels(fam2008f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2009f$socio <<- ordered(fam2009f$CLUSTER)
+levels(fam2009f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2010f$socio <<- ordered(fam2010f$CLUSTER)
+levels(fam2010f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2011f$socio <<- ordered(fam2011f$CLUSTER)
+levels(fam2011f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2012f$socio <<- ordered(fam2012f$CLUSTER)
+levels(fam2012f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2013f$socio <<- ordered(fam2013f$CLUSTER)
+levels(fam2013f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2014f$socio <<- ordered(fam2014f$CLUSTER)
+levels(fam2014f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+
+return("dropped columns, returned versionF.")
+
   }else if(source == "versionD"){
 fam2004d <- readRDS("../savedData/versionD2004.rds")
 fam2005d <- readRDS("../savedData/versionD2005.rds")
