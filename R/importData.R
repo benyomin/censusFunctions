@@ -1,4 +1,4 @@
-#' Import data to workspace v: 3.7
+#' Import data to workspace v: 3.72
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.
@@ -9,6 +9,8 @@
 #' importData("saved")
 #' importData("load5")
 #' importData("load6")
+#' importData("loadF")
+#' importData("savedF")
 #' importData("versionD")
 #' importData("versionF")
 #' importData("writeOutEXP")
@@ -673,44 +675,49 @@ return("imported dataframes with Exp, Fam and Ind columns")
 ####################################
 ## write out combined data frames ##
 ####################################
-dput(data2004, file="../dataframes/data2004.txt")
-dput(data2005, file="../dataframes/data2005.txt")
-dput(data2006, file="../dataframes/data2006.txt")
-dput(data2007, file="../dataframes/data2007.txt")
-dput(data2008, file="../dataframes/data2008.txt")
-dput(data2009, file="../dataframes/data2009.txt")
-dput(data2010, file="../dataframes/data2010.txt")
-dput(data2011, file="../dataframes/data2011.txt")
-dput(data2012, file="../dataframes/data2012.txt")
-dput(data2013, file="../dataframes/data2013.txt")
-dput(data2014, file="../dataframes/data2014.txt")
+       dput(data2004, file="../dataframes/data2004.txt")
+       dput(data2005, file="../dataframes/data2005.txt")
+       dput(data2006, file="../dataframes/data2006.txt")
+       dput(data2007, file="../dataframes/data2007.txt")
+       dput(data2008, file="../dataframes/data2008.txt")
+       dput(data2009, file="../dataframes/data2009.txt")
+       dput(data2010, file="../dataframes/data2010.txt")
+       dput(data2011, file="../dataframes/data2011.txt")
+       dput(data2012, file="../dataframes/data2012.txt")
+       dput(data2013, file="../dataframes/data2013.txt")
+       dput(data2014, file="../dataframes/data2014.txt")
 return("wrote out dataframes")
       }else if(source=="combine"){
-data2004<<-merge(exp2004s,fam2004s, by="HHNUM")
-data2005<<-merge(exp2005s,fam2005s, by="HHNUM")
-data2006<<-merge(exp2006s,fam2006s, by="HHNUM")
-data2007<<-merge(exp2007s,fam2007s, by="HHNUM")
-data2008<<-merge(exp2008s,fam2008s, by="HHNUM")
-data2009<<-merge(exp2009s,fam2009s, by="HHNUM")
-data2010<<-merge(exp2010s,fam2010s, by="HHNUM")
-data2011<<-merge(exp2011s,fam2011s, by="HHNUM")
-data2012<<-merge(exp2012s,fam2012s, by="HHNUM")
-data2013<<-merge(exp2013s,fam2013s, by="HHNUM")
-data2014<<-merge(exp2014s,fam2014s, by="HHNUM")
-
- } else if (source == "load5") {
-
-Data5 <<- readRDS("../savedData/Data5.rds")
-Rent5 <<- readRDS("../savedData/Rent5.rds")
-Own5  <<- readRDS("../savedData/Own5.rds")
-
+       data2004<<-merge(exp2004s,fam2004s, by="HHNUM")
+       data2005<<-merge(exp2005s,fam2005s, by="HHNUM")
+       data2006<<-merge(exp2006s,fam2006s, by="HHNUM")
+       data2007<<-merge(exp2007s,fam2007s, by="HHNUM")
+       data2008<<-merge(exp2008s,fam2008s, by="HHNUM")
+       data2009<<-merge(exp2009s,fam2009s, by="HHNUM")
+       data2010<<-merge(exp2010s,fam2010s, by="HHNUM")
+       data2011<<-merge(exp2011s,fam2011s, by="HHNUM")
+       data2012<<-merge(exp2012s,fam2012s, by="HHNUM")
+       data2013<<-merge(exp2013s,fam2013s, by="HHNUM")
+       data2014<<-merge(exp2014s,fam2014s, by="HHNUM")
+return("sourceCombine == success 90arlsdo")
+    } else if (source == "load5") {
+      Data5 <<- readRDS("../savedData/Data5.rds")
+      Rent5 <<- readRDS("../savedData/Rent5.rds")
+      Own5  <<- readRDS("../savedData/Own5.rds")
 return("imported Data5, Rent5 and Own5")
- } else if (source == "load6") {
-importData("versionD")
-subsetByOwnership("versionD")
-
+    } else if (source == "load6") {
+      importData("versionD")
+      subsetByOwnership("versionD")
 return("imported versionD.")
-
-    }else{   ##"the only options are Y and N"
+    } else if (source == "savedF") {
+      allOwnersF   <- readRDS("../savedData/allOwnersF.Rds")
+      allRentersF  <- readRDS("../savedData/allRentersF.Rds")
+      allfamiliesF <- readRDS("../savedData/allfamiliesF.Rds")
+return("imported version F --from-saved.")
+    } else if (source == "loadF") {
+      importData("versionF")
+      subsetByOwnership("versionF")
+return("Imported YYYY and merged -- versionF.")
+    } else{   ##"the only options are Y and N"
         return("not implemented - error importData('source == ?')")
     }}
