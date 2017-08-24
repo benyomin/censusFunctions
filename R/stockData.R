@@ -1,7 +1,8 @@
-#' Import stock data from exchange
+#' Import stock data from exchange v. 2.2
 #'
 #' This function imports mid-year prices from the tlv-125 index.
 #' @param arg import- get it, add- add it as a column to the data frame, write- write the new dataframe
+#' @family manipulate
 #' @keywords import, stocks, tlv-125, non-housing wealth, write
 #' @export
 #' @examples
@@ -10,6 +11,7 @@
 #' stockData('saved')
 #' stockData('createSaved')
 #' stockData('add')
+#' stockData('lagged')
 
 stockData <- function(arg) {
     if (arg == "import") {
@@ -59,6 +61,7 @@ stockData <- function(arg) {
         wStockFamily2012$stock <<- tlv125["2012", 2]
         wStockFamily2013$stock <<- tlv125["2013", 2]
         wStockFamily2014$stock <<- tlv125["2014", 2]
+return("sucess: 8888gwf")
     } else if (arg == "saved") {
         wStockFamily2004 <<- dget("../dataframes/wStockFamily2004.txt")
         wStockFamily2005 <<- dget("../dataframes/wStockFamily2005.txt")
@@ -71,11 +74,95 @@ stockData <- function(arg) {
         wStockFamily2012 <<- dget("../dataframes/wStockFamily2012.txt")
         wStockFamily2013 <<- dget("../dataframes/wStockFamily2013.txt")
         wStockFamily2014 <<- dget("../dataframes/wStockFamily2014.txt")
-        return("imported saved data :: ;043q9ogwf")
+return("imported saved data :: ;043q9ogwf")
     } else if (arg == "createSaved") {
         tlv125 <- censusFunctions::stockData("import")
         censusFunctions::stockData("add")
         censusFunctions::stockData("writeOutStock")
-        return("added stock values and saved data wStockFamilyYYYY")
+return("added stock values and saved data wStockFamilyYYYY")
+    } else if (arg == "lagged") {
+
+    ### import the new TLV stock data from the csv
+    tlv129 <- readr::read_csv("../rawData/Data_20170824.csv")
+    tlv131 <- tlv129[, c(1, 4)]  # select date and closing price columns
+    ## tlv131[39,] ## 2003 mid-year
+    ## Date `Closing Index Value`
+    ##        <chr>                 <dbl>
+
+    fam2004f$stocktminus1 <<- as.double(tlv131[39, 2])
+    fam2004f$stocktminus2 <<- as.double(tlv131[284,2])
+    fam2005f$stocktminus1 <<- fam2004f$stock[1]
+    fam2006f$stocktminus1 <<- fam2005f$stock[1]
+    fam2007f$stocktminus1 <<- fam2006f$stock[1]
+    fam2008f$stocktminus1 <<- fam2007f$stock[1]
+    fam2009f$stocktminus1 <<- fam2008f$stock[1]
+    fam2010f$stocktminus1 <<- fam2009f$stock[1]
+    fam2011f$stocktminus1 <<- fam2010f$stock[1]
+    fam2012f$stocktminus1 <<- fam2011f$stock[1]
+    fam2013f$stocktminus1 <<- fam2012f$stock[1]
+    fam2014f$stocktminus1 <<- fam2013f$stock[1]
+
+    fam2005f$stocktminus2 <<- as.double(tlv131[39, 2])
+    fam2006f$stocktminus2 <<- fam2004f$stock[1]
+    fam2007f$stocktminus2 <<- fam2005f$stock[1]
+    fam2008f$stocktminus2 <<- fam2006f$stock[1]
+    fam2009f$stocktminus2 <<- fam2007f$stock[1]
+    fam2010f$stocktminus2 <<- fam2008f$stock[1]
+    fam2011f$stocktminus2 <<- fam2009f$stock[1]
+    fam2012f$stocktminus2 <<- fam2010f$stock[1]
+    fam2013f$stocktminus2 <<- fam2011f$stock[1]
+    fam2014f$stocktminus2 <<- fam2012f$stock[1]
+
+## find difference between actual change in stock market and
+## expected change given by previous one-period change
+
+fam2004f$diffPrior  <<-(fam2004f$stocktminus1[1] - fam2004f$stocktminus2[1])/ fam2004f$stocktminus2[1]
+fam2004f$diffNow    <<-(fam2004f$stock           - fam2004f$stocktminus1[1])/ fam2004f$stocktminus1[1]
+fam2004f$errorTerm  <<- fam2004f$diffNow         - fam2004f$diffPrior
+## diffNow - diffPrior == ErrorTerm ??
+## head(fam2004f$errorTerm)
+## 0.04639981   ## a positive 4.6% shock to non-housing wealth in 2004
+
+fam2005f$diffPrior  <<-(fam2005f$stocktminus1[1] - fam2005f$stocktminus2[1])/ fam2005f$stocktminus2[1]
+fam2005f$diffNow    <<-(fam2005f$stock           - fam2005f$stocktminus1[1])/ fam2005f$stocktminus1[1]
+fam2005f$errorTerm  <<- fam2005f$diffNow         - fam2005f$diffPrior
+
+fam2006f$diffPrior  <<-(fam2006f$stocktminus1[1] - fam2006f$stocktminus2[1])/ fam2006f$stocktminus2[1]
+fam2006f$diffNow    <<-(fam2006f$stock           - fam2006f$stocktminus1[1])/ fam2006f$stocktminus1[1]
+fam2006f$errorTerm  <<- fam2006f$diffNow         - fam2006f$diffPrior
+
+fam2007f$diffPrior  <<-(fam2007f$stocktminus1[1] - fam2007f$stocktminus2[1])/ fam2007f$stocktminus2[1]
+fam2007f$diffNow    <<-(fam2007f$stock           - fam2007f$stocktminus1[1])/ fam2007f$stocktminus1[1]
+fam2007f$errorTerm  <<- fam2007f$diffNow         - fam2007f$diffPrior
+
+fam2008f$diffPrior  <<-(fam2008f$stocktminus1[1] - fam2008f$stocktminus2[1])/ fam2008f$stocktminus2[1]
+fam2008f$diffNow    <<-(fam2008f$stock           - fam2008f$stocktminus1[1])/ fam2008f$stocktminus1[1]
+fam2008f$errorTerm  <<- fam2008f$diffNow         - fam2008f$diffPrior
+
+fam2009f$diffPrior  <<-(fam2009f$stocktminus1[1] - fam2009f$stocktminus2[1])/ fam2009f$stocktminus2[1]
+fam2009f$diffNow    <<-(fam2009f$stock           - fam2009f$stocktminus1[1])/ fam2009f$stocktminus1[1]
+fam2009f$errorTerm  <<- fam2009f$diffNow         - fam2009f$diffPrior
+
+fam20010f$diffPrior <<-(fam20010f$stocktminus1[1] - fam20010f$stocktminus2[1])/ fam20010f$stocktminus2[1]
+fam20010f$diffNow   <<-(fam20010f$stock           - fam20010f$stocktminus1[1])/ fam20010f$stocktminus1[1]
+fam20010f$errorTerm <<- fam20010f$diffNow         - fam20010f$diffPrior
+
+fam20011f$diffPrior <<-(fam20011f$stocktminus1[1] - fam20011f$stocktminus2[1])/ fam20011f$stocktminus2[1]
+fam20011f$diffNow   <<-(fam20011f$stock           - fam20011f$stocktminus1[1])/ fam20011f$stocktminus1[1]
+fam20011f$errorTerm <<- fam20011f$diffNow         - fam20011f$diffPrior
+
+fam20012f$diffPrior <<-(fam20012f$stocktminus1[1] - fam20012f$stocktminus2[1])/ fam20012f$stocktminus2[1]
+fam20012f$diffNow   <<-(fam20012f$stock           - fam20012f$stocktminus1[1])/ fam20012f$stocktminus1[1]
+fam20012f$errorTerm <<- fam20012f$diffNow         - fam20012f$diffPrior
+
+fam20013f$diffPrior <<-(fam20013f$stocktminus1[1] - fam20013f$stocktminus2[1])/ fam20013f$stocktminus2[1]
+fam20013f$diffNow   <<-(fam20013f$stock           - fam20013f$stocktminus1[1])/ fam20013f$stocktminus1[1]
+fam20013f$errorTerm <<- fam20013f$diffNow         - fam20013f$diffPrior
+
+fam20014f$diffPrior <<-(fam20014f$stocktminus1[1] - fam20014f$stocktminus2[1])/ fam20014f$stocktminus2[1]
+fam20014f$diffNow   <<-(fam20014f$stock           - fam20014f$stocktminus1[1])/ fam20014f$stocktminus1[1]
+fam20014f$errorTerm <<- fam20014f$diffNow         - fam20014f$diffPrior
+
+return("added lagged stock value columns and YYYYf")
     } else {
         return("feature not implemented :: ;049035;")}}

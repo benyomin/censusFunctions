@@ -17,17 +17,17 @@ regionalSizePrices <- function(frame = TRUE) {
 Data6 <<-
      Data5 %>%
      mutate(houseP = case_when(
-regionOne == "Jerusalem" && size5 == "tiny" && year == year[1] ~ Jerusalem1.5[3],
-regionOne == "Jerusalem" && size5 == "tiny" && year == year[2] ~ Jerusalem1.5[7],
-regionOne == "Jerusalem" && size5 == "tiny" && year == year[3] ~ Jerusalem1.5[11],
-regionOne == "Jerusalem" && size5 == "tiny" && year == year[4] ~ Jerusalem1.5[15],
-regionOne == "Jerusalem" && size5 == "tiny" && year == year[5] ~ Jerusalem1.5[19],
+regionOne == "Jerusalem" && size5 == "tiny" && year == year[1] ~ Jerusalem1.5[3],  ##2004
+regionOne == "Jerusalem" && size5 == "tiny" && year == year[2] ~ Jerusalem1.5[7],  ##2005
+regionOne == "Jerusalem" && size5 == "tiny" && year == year[3] ~ Jerusalem1.5[11], ##2006
+regionOne == "Jerusalem" && size5 == "tiny" && year == year[4] ~ Jerusalem1.5[15], ##2007
+regionOne == "Jerusalem" && size5 == "tiny" && year == year[5] ~ Jerusalem1.5[19], ##2008
 regionOne == "Jerusalem" && size5 == "tiny" && year == year[6] ~ Jerusalem1.5[23],
-regionOne == "Jerusalem" && size5 == "tiny" && year == year[7] ~ Jerusalem1.5[27],
+regionOne == "Jerusalem" && size5 == "tiny" && year == year[7] ~ Jerusalem1.5[27], ##2010
 regionOne == "Jerusalem" && size5 == "tiny" && year == year[8] ~ Jerusalem1.5[31],
-regionOne == "Jerusalem" && size5 == "tiny" && year == year[9] ~ Jerusalem1.5[35],
+regionOne == "Jerusalem" && size5 == "tiny" && year == year[9] ~ Jerusalem1.5[35], ##2012
 regionOne == "Jerusalem" && size5 == "tiny" && year == year[10]~ Jerusalem1.5[39],
-regionOne == "Jerusalem" && size5 == "tiny" && year == year[11]~ Jerusalem1.5[43],
+regionOne == "Jerusalem" && size5 == "tiny" && year == year[11]~ Jerusalem1.5[43], ##2014
 ##################
 regionOne == "Jerusalem" && size5 == "small" && year == year[1] ~ Jerusalem2.5[3],
 regionOne == "Jerusalem" && size5 == "small" && year == year[2] ~ Jerusalem2.5[7],

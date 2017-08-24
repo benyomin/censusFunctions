@@ -27,7 +27,8 @@ subsetCities("writeOutRegions")
 subsetCities("saved")
 }
 \seealso{
-Other manipulate: \code{\link{makeRegions}}
+Other manipulate: \code{\link{makeRegions}},
+  \code{\link{stockData}}
 }
 \keyword{city,}
 \keyword{column}

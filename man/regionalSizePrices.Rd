@@ -24,6 +24,9 @@ regionalSizePrices("famYYYYb")
 regionalSizePrices("owners")
 regionalSizePrices("renters")
 }
+\seealso{
+Other mutate: \code{\link{movingAverage}}
+}
 \keyword{case}
 \keyword{price,}
 \keyword{regional,}
