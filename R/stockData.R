@@ -118,50 +118,50 @@ return("added stock values and saved data wStockFamilyYYYY")
 
 fam2004f$diffPrior  <<-(fam2004f$stocktminus1[1] - fam2004f$stocktminus2[1])/ fam2004f$stocktminus2[1]
 fam2004f$diffNow    <<-(fam2004f$stock           - fam2004f$stocktminus1[1])/ fam2004f$stocktminus1[1]
-fam2004f$errorTerm  <<- fam2004f$diffNow         - fam2004f$diffPrior
+fam2004f$Wshock_NH  <<- fam2004f$diffNow         - fam2004f$diffPrior
 ## diffNow - diffPrior == ErrorTerm ??
-## head(fam2004f$errorTerm)
+## head(fam2004f$Wshock_NH)
 ## 0.04639981   ## a positive 4.6% shock to non-housing wealth in 2004
 
 fam2005f$diffPrior  <<-(fam2005f$stocktminus1[1] - fam2005f$stocktminus2[1])/ fam2005f$stocktminus2[1]
 fam2005f$diffNow    <<-(fam2005f$stock           - fam2005f$stocktminus1[1])/ fam2005f$stocktminus1[1]
-fam2005f$errorTerm  <<- fam2005f$diffNow         - fam2005f$diffPrior
+fam2005f$Wshock_NH  <<- fam2005f$diffNow         - fam2005f$diffPrior
 
 fam2006f$diffPrior  <<-(fam2006f$stocktminus1[1] - fam2006f$stocktminus2[1])/ fam2006f$stocktminus2[1]
 fam2006f$diffNow    <<-(fam2006f$stock           - fam2006f$stocktminus1[1])/ fam2006f$stocktminus1[1]
-fam2006f$errorTerm  <<- fam2006f$diffNow         - fam2006f$diffPrior
+fam2006f$Wshock_NH  <<- fam2006f$diffNow         - fam2006f$diffPrior
 
 fam2007f$diffPrior  <<-(fam2007f$stocktminus1[1] - fam2007f$stocktminus2[1])/ fam2007f$stocktminus2[1]
 fam2007f$diffNow    <<-(fam2007f$stock           - fam2007f$stocktminus1[1])/ fam2007f$stocktminus1[1]
-fam2007f$errorTerm  <<- fam2007f$diffNow         - fam2007f$diffPrior
+fam2007f$Wshock_NH  <<- fam2007f$diffNow         - fam2007f$diffPrior
 
 fam2008f$diffPrior  <<-(fam2008f$stocktminus1[1] - fam2008f$stocktminus2[1])/ fam2008f$stocktminus2[1]
 fam2008f$diffNow    <<-(fam2008f$stock           - fam2008f$stocktminus1[1])/ fam2008f$stocktminus1[1]
-fam2008f$errorTerm  <<- fam2008f$diffNow         - fam2008f$diffPrior
+fam2008f$Wshock_NH  <<- fam2008f$diffNow         - fam2008f$diffPrior
 
 fam2009f$diffPrior  <<-(fam2009f$stocktminus1[1] - fam2009f$stocktminus2[1])/ fam2009f$stocktminus2[1]
 fam2009f$diffNow    <<-(fam2009f$stock           - fam2009f$stocktminus1[1])/ fam2009f$stocktminus1[1]
-fam2009f$errorTerm  <<- fam2009f$diffNow         - fam2009f$diffPrior
+fam2009f$Wshock_NH  <<- fam2009f$diffNow         - fam2009f$diffPrior
 
 fam20010f$diffPrior <<-(fam20010f$stocktminus1[1] - fam20010f$stocktminus2[1])/ fam20010f$stocktminus2[1]
 fam20010f$diffNow   <<-(fam20010f$stock           - fam20010f$stocktminus1[1])/ fam20010f$stocktminus1[1]
-fam20010f$errorTerm <<- fam20010f$diffNow         - fam20010f$diffPrior
+fam20010f$Wshock_NH <<- fam20010f$diffNow         - fam20010f$diffPrior
 
 fam20011f$diffPrior <<-(fam20011f$stocktminus1[1] - fam20011f$stocktminus2[1])/ fam20011f$stocktminus2[1]
 fam20011f$diffNow   <<-(fam20011f$stock           - fam20011f$stocktminus1[1])/ fam20011f$stocktminus1[1]
-fam20011f$errorTerm <<- fam20011f$diffNow         - fam20011f$diffPrior
+fam20011f$Wshock_NH <<- fam20011f$diffNow         - fam20011f$diffPrior
 
 fam20012f$diffPrior <<-(fam20012f$stocktminus1[1] - fam20012f$stocktminus2[1])/ fam20012f$stocktminus2[1]
 fam20012f$diffNow   <<-(fam20012f$stock           - fam20012f$stocktminus1[1])/ fam20012f$stocktminus1[1]
-fam20012f$errorTerm <<- fam20012f$diffNow         - fam20012f$diffPrior
+fam20012f$Wshock_NH <<- fam20012f$diffNow         - fam20012f$diffPrior
 
 fam20013f$diffPrior <<-(fam20013f$stocktminus1[1] - fam20013f$stocktminus2[1])/ fam20013f$stocktminus2[1]
 fam20013f$diffNow   <<-(fam20013f$stock           - fam20013f$stocktminus1[1])/ fam20013f$stocktminus1[1]
-fam20013f$errorTerm <<- fam20013f$diffNow         - fam20013f$diffPrior
+fam20013f$Wshock_NH <<- fam20013f$diffNow         - fam20013f$diffPrior
 
 fam20014f$diffPrior <<-(fam20014f$stocktminus1[1] - fam20014f$stocktminus2[1])/ fam20014f$stocktminus2[1]
 fam20014f$diffNow   <<-(fam20014f$stock           - fam20014f$stocktminus1[1])/ fam20014f$stocktminus1[1]
-fam20014f$errorTerm <<- fam20014f$diffNow         - fam20014f$diffPrior
+fam20014f$Wshock_NH <<- fam20014f$diffNow         - fam20014f$diffPrior
 
 return("added lagged stock value columns and YYYYf")
     } else {

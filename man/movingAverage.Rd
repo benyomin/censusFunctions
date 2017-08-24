@@ -2,9 +2,9 @@
 % Please edit documentation in R/movingAverage.R
 \name{movingAverage}
 \alias{movingAverage}
-\title{Add Moving Average Column to YYYY. v. 0.3}
+\title{Add Moving Average Column to YYYY. v. 0.4}
 \usage{
-movingAverage(arg = TRUE)
+movingAverage(arg = "load")
 }
 \arguments{
 \item{arg}{The year that data will be returned for.}

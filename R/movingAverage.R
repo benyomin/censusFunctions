@@ -1,4 +1,4 @@
-#' Add Moving Average Column to YYYY. v. 0.3
+#' Add Moving Average Column to YYYY. v. 0.4
 #'
 #' This function creates a moving average of homeP.
 #' @param arg The year that data will be returned for.
@@ -13,7 +13,7 @@
 #' 3: source("../includes/regionalPrices.R")
 #' movingAverage("load")
 #' movingAverage("bar")
-movingAverage <- function(arg = TRUE) {
+movingAverage <- function(arg = "load") {
     if (arg == "load") {
 
 prePrices <- readxl::read_excel("../rawData/allHouseP.xls", range = "B93:I712")
