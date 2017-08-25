@@ -2,7 +2,7 @@
 % Please edit documentation in R/movingAverage.R
 \name{movingAverage}
 \alias{movingAverage}
-\title{Add Moving Average Column to YYYY. v. 0.4}
+\title{Add Moving Average Column to YYYY. v. 0.6}
 \usage{
 movingAverage(arg = "load")
 }
@@ -10,7 +10,7 @@ movingAverage(arg = "load")
 \item{arg}{The year that data will be returned for.}
 }
 \description{
-This function creates a moving average of homeP.
+This function creates a lagged homeP column.
 }
 \examples{
 movingAverage()
