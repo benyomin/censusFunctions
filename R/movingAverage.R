@@ -1,4 +1,4 @@
-#' Add Moving Average Column to YYYY. v. 1.1
+#' Add Moving Average Column to YYYY. v. 1.3
 #'
 #' This function creates a lagged homeP column.
 #' @param arg The year that data will be returned for.
@@ -12,7 +12,10 @@
 #' 2: load("../savedData/homeprices.Rda")
 #' 3: source("../includes/regionalPrices.R")
 #' movingAverage("load")
+#' adds the tminus1 and tminus2 columns for homeP
 #' movingAverage("whshock")
+#' calculates the error or unexpected shock difference
+#' between (homeP - tminus1) and (tminus1 - tminus2)
 movingAverage <- function(arg = "load") {
     if (arg == "load") {
 
@@ -1266,8 +1269,6 @@ regionOne == "Tel Aviv" && size == "Small"  ~ tlv2.5[19, 2],
 regionOne == "Tel Aviv" && size == "Medium" ~ tlv3.5[19, 2],
 regionOne == "Tel Aviv" && size == "Large"  ~ tlv4.5[19, 2],
                                                            TRUE ~ 999.99))
-
-
 ### 2012
 fam2012g <-
      fam2012f %>%
