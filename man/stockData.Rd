@@ -2,7 +2,7 @@
 % Please edit documentation in R/stockData.R
 \name{stockData}
 \alias{stockData}
-\title{Import stock data from exchange v. 2.2}
+\title{Import stock data from exchange v. 2.3}
 \usage{
 stockData(arg)
 }

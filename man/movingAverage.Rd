@@ -2,7 +2,7 @@
 % Please edit documentation in R/movingAverage.R
 \name{movingAverage}
 \alias{movingAverage}
-\title{Add Moving Average Column to YYYY. v. 0.6}
+\title{Add Moving Average Column to YYYY. v. 1.1}
 \usage{
 movingAverage(arg = "load")
 }
@@ -19,7 +19,7 @@ requires:
 2: load("../savedData/homeprices.Rda")
 3: source("../includes/regionalPrices.R")
 movingAverage("load")
-movingAverage("bar")
+movingAverage("whshock")
 }
 \seealso{
 Other mutate: \code{\link{regionalSizePrices}}

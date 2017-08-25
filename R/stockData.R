@@ -1,4 +1,4 @@
-#' Import stock data from exchange v. 2.2
+#' Import stock data from exchange v. 2.3
 #'
 #' This function imports mid-year prices from the tlv-125 index.
 #' @param arg import- get it, add- add it as a column to the data frame, write- write the new dataframe
@@ -143,9 +143,9 @@ fam2009f$diffPrior  <<-(fam2009f$stocktminus1[1] - fam2009f$stocktminus2[1])/ fa
 fam2009f$diffNow    <<-(fam2009f$stock           - fam2009f$stocktminus1[1])/ fam2009f$stocktminus1[1]
 fam2009f$Wshock_NH  <<- fam2009f$diffNow         - fam2009f$diffPrior
 
-fam20010f$diffPrior <<-(fam20010f$stocktminus1[1] - fam20010f$stocktminus2[1])/ fam20010f$stocktminus2[1]
-fam20010f$diffNow   <<-(fam20010f$stock           - fam20010f$stocktminus1[1])/ fam20010f$stocktminus1[1]
-fam20010f$Wshock_NH <<- fam20010f$diffNow         - fam20010f$diffPrior
+fam2010f$diffPrior <<-(fam2010f$stocktminus1[1] - fam2010f$stocktminus2[1])/ fam2010f$stocktminus2[1]
+fam2010f$diffNow   <<-(fam2010f$stock           - fam2010f$stocktminus1[1])/ fam2010f$stocktminus1[1]
+fam2010f$Wshock_NH <<- fam2010f$diffNow         - fam2010f$diffPrior
 
 fam20011f$diffPrior <<-(fam20011f$stocktminus1[1] - fam20011f$stocktminus2[1])/ fam20011f$stocktminus2[1]
 fam20011f$diffNow   <<-(fam20011f$stock           - fam20011f$stocktminus1[1])/ fam20011f$stocktminus1[1]
