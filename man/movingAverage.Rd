@@ -2,7 +2,7 @@
 % Please edit documentation in R/movingAverage.R
 \name{movingAverage}
 \alias{movingAverage}
-\title{Add Moving Average Column to YYYY. v. 1.3}
+\title{Add Moving Average Column to YYYY. v. 1.4}
 \usage{
 movingAverage(arg = "load")
 }
