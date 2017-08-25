@@ -1,4 +1,4 @@
-#' Add Moving Average Column to YYYY. v. 1.3
+#' Add Moving Average Column to YYYY. v. 1.4
 #'
 #' This function creates a lagged homeP column.
 #' @param arg The year that data will be returned for.
@@ -1577,57 +1577,57 @@ return("added cols for Simple Moving Average (SMA).")
       ## 2004
       fam2004g$diffPriorHP  <<-(fam2004g$housePtminus1[1] - fam2004g$housePtminus2[1])/ fam2004g$housePtminus2[1]
       fam2004g$diffNowHP    <<-(fam2004g$houseP           - fam2004g$housePtminus1[1])/ fam2004g$housePtminus1[1]
-      fam2004g$Wshock_H     <<- fam2004g$diffNow - fam2004g$diffPrior
+      fam2004g$Wshock_H     <<- fam2004g$diffNowHP - fam2004g$diffPriorHP
 
       ## 2005
       fam2005g$diffPriorHP  <<-(fam2005g$housePtminus1[1] - fam2005g$housePtminus2[1])/ fam2005g$housePtminus2[1]
       fam2005g$diffNowHP    <<-(fam2005g$houseP           - fam2005g$housePtminus1[1])/ fam2005g$housePtminus1[1]
-      fam2005g$Wshock_H     <<- fam2005g$diffNow - fam2005g$diffPrior
+      fam2005g$Wshock_H     <<- fam2005g$diffNowHP - fam2005g$diffPriorHP
 
       ## 2006
       fam2006g$diffPriorHP  <<-(fam2006g$housePtminus1[1] - fam2006g$housePtminus2[1])/ fam2006g$housePtminus2[1]
       fam2006g$diffNowHP    <<-(fam2006g$houseP           - fam2006g$housePtminus1[1])/ fam2006g$housePtminus1[1]
-      fam2006g$Wshock_H     <<- fam2006g$diffNow - fam2006g$diffPrior
+      fam2006g$Wshock_H     <<- fam2006g$diffNowHP - fam2006g$diffPriorHP
 
       ## 2007
       fam2007g$diffPriorHP  <<-(fam2007g$housePtminus1[1] - fam2007g$housePtminus2[1])/ fam2007g$housePtminus2[1]
       fam2007g$diffNowHP    <<-(fam2007g$houseP           - fam2007g$housePtminus1[1])/ fam2007g$housePtminus1[1]
-      fam2007g$Wshock_H     <<- fam2007g$diffNow - fam2007g$diffPrior
+      fam2007g$Wshock_H     <<- fam2007g$diffNowHP - fam2007g$diffPriorHP
 
       ## 2008
       fam2008g$diffPriorHP  <<-(fam2008g$housePtminus1[1] - fam2008g$housePtminus2[1])/ fam2008g$housePtminus2[1]
       fam2008g$diffNowHP    <<-(fam2008g$houseP           - fam2008g$housePtminus1[1])/ fam2008g$housePtminus1[1]
-      fam2008g$Wshock_H     <<- fam2008g$diffNow - fam2008g$diffPrior
+      fam2008g$Wshock_H     <<- fam2008g$diffNowHP - fam2008g$diffPriorHP
 
       ## 2009
       fam2009g$diffPriorHP  <<-(fam2009g$housePtminus1[1] - fam2009g$housePtminus2[1])/ fam2009g$housePtminus2[1]
       fam2009g$diffNowHP    <<-(fam2009g$houseP           - fam2009g$housePtminus1[1])/ fam2009g$housePtminus1[1]
-      fam2009g$Wshock_H     <<- fam2009g$diffNow - fam2009g$diffPrior
+      fam2009g$Wshock_H     <<- fam2009g$diffNowHP - fam2009g$diffPriorHP
 
       ## 2010
       fam2010g$diffPriorHP  <<-(fam2010g$housePtminus1[1] - fam2010g$housePtminus2[1])/ fam2010g$housePtminus2[1]
       fam2010g$diffNowHP    <<-(fam2010g$houseP           - fam2010g$housePtminus1[1])/ fam2010g$housePtminus1[1]
-      fam2010g$Wshock_H     <<- fam2010g$diffNow - fam2010g$diffPrior
+      fam2010g$Wshock_H     <<- fam2010g$diffNowHP - fam2010g$diffPriorHP
 
       ## 2011
       fam2011g$diffPriorHP  <<-(fam2011g$housePtminus1[1] - fam2011g$housePtminus2[1])/ fam2011g$housePtminus2[1]
       fam2011g$diffNowHP    <<-(fam2011g$houseP           - fam2011g$housePtminus1[1])/ fam2011g$housePtminus1[1]
-      fam2011g$Wshock_H     <<- fam2011g$diffNow - fam2011g$diffPrior
+      fam2011g$Wshock_H     <<- fam2011g$diffNowHP - fam2011g$diffPriorHP
 
       ## 2012
       fam2012g$diffPriorHP  <<-(fam2012g$housePtminus1[1] - fam2012g$housePtminus2[1])/ fam2012g$housePtminus2[1]
       fam2012g$diffNowHP    <<-(fam2012g$houseP           - fam2012g$housePtminus1[1])/ fam2012g$housePtminus1[1]
-      fam2012g$Wshock_H     <<- fam2012g$diffNow - fam2012g$diffPrior
+      fam2012g$Wshock_H     <<- fam2012g$diffNowHP - fam2012g$diffPriorHP
 
       ## 2013
       fam2013g$diffPriorHP  <<-(fam2013g$housePtminus1[1] - fam2013g$housePtminus2[1])/ fam2013g$housePtminus2[1]
       fam2013g$diffNowHP    <<-(fam2013g$houseP           - fam2013g$housePtminus1[1])/ fam2013g$housePtminus1[1]
-      fam2013g$Wshock_H     <<- fam2013g$diffNow - fam2013g$diffPrior
+      fam2013g$Wshock_H     <<- fam2013g$diffNowHP - fam2013g$diffPriorHP
 
       ## 2014
       fam2014g$diffPriorHP  <<-(fam2014g$housePtminus1[1] - fam2014g$housePtminus2[1])/ fam2014g$housePtminus2[1]
       fam2014g$diffNowHP    <<-(fam2014g$houseP           - fam2014g$housePtminus1[1])/ fam2014g$housePtminus1[1]
-      fam2014g$Wshock_H     <<- fam2014g$diffNow - fam2014g$diffPrior
+      fam2014g$Wshock_H     <<- fam2014g$diffNowHP - fam2014g$diffPriorHP
 
 
 return("Calculated yearly housing wealth shock.")
