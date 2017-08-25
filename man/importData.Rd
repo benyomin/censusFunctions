@@ -2,9 +2,9 @@
 % Please edit documentation in R/importData.R
 \name{importData}
 \alias{importData}
-\title{Import data to workspace v: 2.5 - load Data5 from rds}
+\title{Import data to workspace v: 3.73}
 \usage{
-importData(source)
+importData(source = "loadF")
 }
 \arguments{
 \item{source}{Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.}
@@ -13,10 +13,15 @@ importData(source)
 This function imports Israeli census data from spss .por files distributed by the CBS.
 }
 \examples{
+importData()
 importData("raw")
 importData("saved")
 importData("load5")
+importData("load6")
+importData("loadF")
+importData("savedF")
 importData("versionD")
+importData("versionF")
 importData("writeOutEXP")
 importData("familyOldRaw")
 importData("familyNewRaw")

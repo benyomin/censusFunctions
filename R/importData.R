@@ -1,14 +1,20 @@
-#' Import data to workspace v: 2.5 - load Data5 from rds
+#' Import data to workspace v: 3.73
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.
+#' @family import
 #' @keywords import, saved, spss, por, raw, load, family, individual, write
 #' @export
 #' @examples
+#' importData()
 #' importData("raw")
 #' importData("saved")
 #' importData("load5")
+#' importData("load6")
+#' importData("loadF")
+#' importData("savedF")
 #' importData("versionD")
+#' importData("versionF")
 #' importData("writeOutEXP")
 #' importData("familyOldRaw")
 #' importData("familyNewRaw")
@@ -21,7 +27,7 @@
 #' importData("process")
 #' importData("importExpFamInd")
 #' importData("importCombined")
-importData <- function(source){
+importData <- function(source = "loadF"){
   family="family"
   expenditure="raw"
   if(source=="familyOldRaw"){
@@ -55,78 +61,213 @@ fam2014 <- spss.get("../rawData/census/f456/f456fam.por",
 
 ######  create data frames
       ##  note:  these only become local variables   ##
-fam2004df <<-as.data.frame(fam2004)
-# fam2004s <<-dplyr::select(fam2004df,v40,v48,v42,HHNUM)  #net income ,v43
-fam2005df <<-as.data.frame(fam2005)
-# fam2005s <<-dplyr::select(fam2005df,v40,v48,v42,HHNUM)  #net income,v43
-fam2006df <<-as.data.frame(fam2006)
-# fam2006s <<-dplyr::select(fam2006df,v40,v48,v42,HHNUM)
-fam2007df <<-as.data.frame(fam2007)
-# fam2007s <<-dplyr::select(fam2007df,v40,v48,v42,HHNUM)
-fam2008df <<-as.data.frame(fam2008)
-# fam2008s <<-dplyr::select(fam2008df,v40,v48,v42,HHNUM)
-fam2009df <<-as.data.frame(fam2009)
-# fam2009s <<-dplyr::select(fam2009df,v40,v48,v42,HHNUM)
-fam2010df <<-as.data.frame(fam2010)
-# fam2010s <<-dplyr::select(fam2010df,v40,v48,v42,HHNUM)
-fam2011df <<-as.data.frame(fam2011)
-# fam2011s <<-dplyr::select(fam2011df,v40,v48,v42,HHNUM)
-fam2012df <<-as.data.frame(fam2012)
-# fam2012s <<-dplyr::select(fam2012df,v40,v48,v42,HHNUM)
-fam2013df <<-as.data.frame(fam2013)
-# fam2013s <<-dplyr::select(fam2013df,v40,v48,v42,HHNUM)
-fam2014df <<-as.data.frame(fam2014)
-# fam2014s <<-dplyr::select(fam2014df,v40,v48,v42,HHNUM)
+    fam2004df <<-as.data.frame(fam2004)
+    # fam2004s <<-dplyr::select(fam2004df,v40,v48,v42,HHNUM)  #net income ,v43
+    fam2005df <<-as.data.frame(fam2005)
+    # fam2005s <<-dplyr::select(fam2005df,v40,v48,v42,HHNUM)  #net income,v43
+    fam2006df <<-as.data.frame(fam2006)
+    # fam2006s <<-dplyr::select(fam2006df,v40,v48,v42,HHNUM)
+    fam2007df <<-as.data.frame(fam2007)
+    # fam2007s <<-dplyr::select(fam2007df,v40,v48,v42,HHNUM)
+    fam2008df <<-as.data.frame(fam2008)
+    # fam2008s <<-dplyr::select(fam2008df,v40,v48,v42,HHNUM)
+    fam2009df <<-as.data.frame(fam2009)
+    # fam2009s <<-dplyr::select(fam2009df,v40,v48,v42,HHNUM)
+    fam2010df <<-as.data.frame(fam2010)
+    # fam2010s <<-dplyr::select(fam2010df,v40,v48,v42,HHNUM)
+    fam2011df <<-as.data.frame(fam2011)
+    # fam2011s <<-dplyr::select(fam2011df,v40,v48,v42,HHNUM)
+    fam2012df <<-as.data.frame(fam2012)
+    # fam2012s <<-dplyr::select(fam2012df,v40,v48,v42,HHNUM)
+    fam2013df <<-as.data.frame(fam2013)
+    # fam2013s <<-dplyr::select(fam2013df,v40,v48,v42,HHNUM)
+    fam2014df <<-as.data.frame(fam2014)
+    # fam2014s <<-dplyr::select(fam2014df,v40,v48,v42,HHNUM)
 
 ######  subset data frames
 ###subset columns in family data
-fam2004s <<-dplyr::select(fam2004df,HHNUM,
+    fam2004s <<-dplyr::select(fam2004df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,RELIGION,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
-fam2005s <<-dplyr::select(fam2005df,HHNUM,
+    fam2005s <<-dplyr::select(fam2005df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,RELIGION,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
-fam2006s <<-dplyr::select(fam2006df,HHNUM,
+    fam2006s <<-dplyr::select(fam2006df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,RELIGION,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
-fam2007s <<-dplyr::select(fam2007df,HHNUM,
+    fam2007s <<-dplyr::select(fam2007df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,RELIGION,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
-fam2008s <<-dplyr::select(fam2008df,HHNUM,
+    fam2008s <<-dplyr::select(fam2008df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,RELIGION,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
-fam2009s <<-dplyr::select(fam2009df,HHNUM,
+    fam2009s <<-dplyr::select(fam2009df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,RELIGION,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
-fam2010s <<-dplyr::select(fam2010df,HHNUM,
+    fam2010s <<-dplyr::select(fam2010df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,RELIGION,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
-fam2011s <<-dplyr::select(fam2011df,HHNUM,
+    fam2011s <<-dplyr::select(fam2011df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,RELIGION,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
-fam2012s <<-dplyr::select(fam2012df,HHNUM,
+    fam2012s <<-dplyr::select(fam2012df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,RELIGION,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
-fam2013s <<-dplyr::select(fam2013df,HHNUM,
+    fam2013s <<-dplyr::select(fam2013df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,RELIGION,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
-fam2014s <<-dplyr::select(fam2014df,HHNUM,
+    fam2014s <<-dplyr::select(fam2014df,HHNUM,
                           ROOMS,INCOMENT,EXPTOT,RENT,
                           APTVAL,OWNER,NATIONAL,HHWERNRS,
                           CODELOC,SUBDIST,CLUSTER)
 
 return("Family data imported. 59 vars in 2005, 100 vars in 2013")
-  }else if(source=="versionD"){
+  }else if(source == "versionF"){
+    fam2004d <- readRDS("../savedData/versionD2004.rds")
+    fam2005d <- readRDS("../savedData/versionD2005.rds")
+    fam2006d <- readRDS("../savedData/versionD2006.rds")
+    fam2007d <- readRDS("../savedData/versionD2007.rds")
+    fam2008d <- readRDS("../savedData/versionD2008.rds")
+    fam2009d <- readRDS("../savedData/versionD2009.rds")
+    fam2010d <- readRDS("../savedData/versionD2010.rds")
+    fam2011d <- readRDS("../savedData/versionD2011.rds")
+    fam2012d <- readRDS("../savedData/versionD2012.rds")
+    fam2013d <- readRDS("../savedData/versionD2013.rds")
+    fam2014d <- readRDS("../savedData/versionD2014.rds")
+## this version(F) is what to keep  ++ $CLUSTER
+
+     fam2004f <<- fam2004d[, c("OWNER", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+    fam2005f <<- fam2005d[, c("OWNER", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+    fam2006f <<- fam2006d[, c("OWNER", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+    fam2007f <<- fam2007d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+    fam2008f <<- fam2008d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+    fam2009f <<- fam2009d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+    fam2010f <<- fam2010d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+    fam2011f <<- fam2011d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+    fam2012f <<- fam2012d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+    fam2013f <<- fam2013d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+    fam2014f <<- fam2014d[, c("OWNER",  "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "CLUSTER",  "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+fam2004f$socio <<- ordered(fam2004f$CLUSTER)
+levels(fam2004f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2005f$socio <<- ordered(fam2005f$CLUSTER)
+levels(fam2005f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2006f$socio <<- ordered(fam2006f$CLUSTER)
+levels(fam2006f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2007f$socio <<- ordered(fam2007f$CLUSTER)
+levels(fam2007f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2008f$socio <<- ordered(fam2008f$CLUSTER)
+levels(fam2008f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2009f$socio <<- ordered(fam2009f$CLUSTER)
+levels(fam2009f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2010f$socio <<- ordered(fam2010f$CLUSTER)
+levels(fam2010f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2011f$socio <<- ordered(fam2011f$CLUSTER)
+levels(fam2011f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2012f$socio <<- ordered(fam2012f$CLUSTER)
+levels(fam2012f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2013f$socio <<- ordered(fam2013f$CLUSTER)
+levels(fam2013f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+fam2014f$socio <<- ordered(fam2014f$CLUSTER)
+levels(fam2014f$socio) <<- list("Lowest" = "1", Low = "2", Med = "3", High = "4", "Highest" = "5")
+
+return("dropped columns, returned versionF.")
+
+  }else if(source == "versionD"){
 fam2004d <- readRDS("../savedData/versionD2004.rds")
 fam2005d <- readRDS("../savedData/versionD2005.rds")
 fam2006d <- readRDS("../savedData/versionD2006.rds")
@@ -138,27 +279,108 @@ fam2011d <- readRDS("../savedData/versionD2011.rds")
 fam2012d <- readRDS("../savedData/versionD2012.rds")
 fam2013d <- readRDS("../savedData/versionD2013.rds")
 fam2014d <- readRDS("../savedData/versionD2014.rds")
+## this version is what to keep
+fam2004e <<- fam2004d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
 
-## fix type - this $column has different types in different years
-fam2005d$RELATHHH.x <- as.integer(fam2005d$RELATHHH.x)
-fam2010d$RELATHHH.x <- as.integer(fam2010d$RELATHHH.x)
+fam2005e <<- fam2005d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
 
-fam2004e <<- subset(fam2004d, select =-c(SUBDIST, HHWERNRS))
-fam2005e <<- subset(fam2005d, select =-c(SUBDIST, HHWERNRS))
-fam2006e <<- subset(fam2006d, select =-c(SUBDIST, HHWERNRS))
-fam2007e <<- subset(fam2007d, select =-c(SUBDIST, HHWERNRS))
-fam2008e <<- subset(fam2008d, select =-c(SUBDIST, HHWERNRS))
-fam2009e <<- subset(fam2009d, select =-c(SUBDIST, HHWERNRS))
-fam2010e <<- subset(fam2010d, select =-c(SUBDIST, HHWERNRS))
-fam2011e <<- subset(fam2011d, select =-c(SUBDIST, HHWERNRS))
-fam2012e <<- subset(fam2012d, select =-c(SUBDIST, HHWERNRS))
-fam2013e <<- subset(fam2013d, select =-c(SUBDIST, HHWERNRS))
-fam2014e <<- subset(fam2014d, select =-c(SUBDIST, HHWERNRS))
 
-return("loaded version D, dropped columns, returned versionE.")
+fam2006e <<- fam2006d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2007e <<- fam2007d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2008e <<- fam2008d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2009e <<- fam2009d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2010e <<- fam2010d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2011e <<- fam2011d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2012e <<- fam2012d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2013e <<- fam2013d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+
+fam2014e <<- fam2014d[, c("OWNER", "RENT", "grossIncome",
+                          "rentalIncome", "rentEXP",
+                           "imputedRent", "WEIGHT",
+                         "year", "ROOMS", "INCOMENT",
+                        "EXPTOT", "RENT", "APTVAL",
+                         "size", "stock", "regionOne",
+                   "regionTwo", "houseP", "housePTwo")]
+
+return("dropped columns, returned versionE.")
   }else if(source=="familyNewRaw"){
     censusFunctions::importFamilyData("raw")
-    return("success 05l09l")
+return("success 05l09l")
   }else if(source=="familyProcessed"){
 ## version 2 - new family with socio-econ var
     householdsList <<- dget("../dataframes/householdsList.txt")
@@ -212,281 +434,292 @@ return("success o9lardn4")
                                  zoom = 7)
 return("success rawGoogleMap")
   }else if(source=="saveGoogleMap"){
-dput(mapImageData3, "../dataframes/mapImageData3.txt")
+    dput(mapImageData3, "../dataframes/mapImageData3.txt")
 return("success - wrote out Google Map")
   }else if(source=="homePrices"){
-homeprices <<- load("../savedData/homeprices.Rda")
+    homeprices <<- load("../savedData/homeprices.Rda")
 source("../includes/regionalPrices.R")
   }else if(source=="savedGoogleMap"){
-mapImageData3 <- dget("../dataframes/mapImageData3.txt")
+    mapImageData3 <- dget("../dataframes/mapImageData3.txt")
 return(mapImageData3)
   }else if(source=="process"){
-family2004$year<<-2004
-family2005$year<<-2005
-family2006$year<<-2006
-family2007$year<<-2007
-family2008$year<<-2008
-family2009$year<<-2009
-family2010$year<<-2010
-family2011$year<<-2011
-family2012$year<<-2012
-family2013$year<<-2013
-family2014$year<<-2014
+    family2004$year<<-2004
+    family2005$year<<-2005
+    family2006$year<<-2006
+    family2007$year<<-2007
+    family2008$year<<-2008
+    family2009$year<<-2009
+    family2010$year<<-2010
+    family2011$year<<-2011
+    family2012$year<<-2012
+    family2013$year<<-2013
+    family2014$year<<-2014
   }else if(source=="rawIND"){
-ind2004 <- spss.get("../rawData/census/f466/f466ind.por",
+    ind2004 <- spss.get("../rawData/census/f466/f466ind.por",
                   use.value.labels = TRUE)
-ind2005 <- spss.get("../rawData/census/f467/f467ind.por",
+    ind2005 <- spss.get("../rawData/census/f467/f467ind.por",
                   use.value.labels = TRUE)
-ind2006 <- spss.get("../rawData/census/f468/n468ind.por",
+    ind2006 <- spss.get("../rawData/census/f468/n468ind.por",
                   use.value.labels = TRUE)
-ind2007 <- spss.get("../rawData/census/f469/f469ind.por",
+    ind2007 <- spss.get("../rawData/census/f469/f469ind.por",
                   use.value.labels = TRUE)
-ind2008 <- spss.get("../rawData/census/f474/f474ind.por",
+    ind2008 <- spss.get("../rawData/census/f474/f474ind.por",
                   use.value.labels = TRUE)
-ind2009 <- spss.get("../rawData/census/f472/f472ind.por",
+    ind2009 <- spss.get("../rawData/census/f472/f472ind.por",
                     use.value.labels = TRUE)
-ind2010 <- haven::read_por("../rawData/census/f471/f471ind.por")
-ind2011 <- spss.get("../rawData/census/f459/f459ind.por",
+    ind2010 <- haven::read_por("../rawData/census/f471/f471ind.por")
+    ind2011 <- spss.get("../rawData/census/f459/f459ind.por",
                     use.value.labels = TRUE)
-ind2012 <- spss.get("../rawData/census/f458/f458ind.por",
+    ind2012 <- spss.get("../rawData/census/f458/f458ind.por",
                     use.value.labels = TRUE)
-ind2013 <- spss.get("../rawData/census/f457/f457ind.por",
+    ind2013 <- spss.get("../rawData/census/f457/f457ind.por",
                     use.value.labels = TRUE)
-ind2014 <- spss.get("../rawData/census/f456/f456ind.por",
+    ind2014 <- spss.get("../rawData/census/f456/f456ind.por",
                     use.value.labels = TRUE)
-ind2004s <<- select(ind2004,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2005s <<- select(ind2005,HHNUM,PERSNUM,RELATHH,AGE,SCHOOLY)
-ind2006s <<- select(ind2006,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2007s <<- select(ind2007,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2008s <<- select(ind2008,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2009s <<- select(ind2009,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2010s <<- select(ind2010,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2011s <<- select(ind2011,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2012s <<- select(ind2012,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2013s <<- select(ind2013,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-ind2014s <<- select(ind2014,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ind2004s <<- select(ind2004,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ind2005s <<- select(ind2005,HHNUM,PERSNUM,RELATHH,AGE,SCHOOLY)
+    ind2006s <<- select(ind2006,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ind2007s <<- select(ind2007,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ind2008s <<- select(ind2008,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ind2009s <<- select(ind2009,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ind2010s <<- select(ind2010,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ind2011s <<- select(ind2011,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ind2012s <<- select(ind2012,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ind2013s <<- select(ind2013,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ind2014s <<- select(ind2014,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
 
-    return("imported raw individual data, subset selected columns")
+return("imported raw individual data, subset selected columns")
   }else  if(source=="writeOutIND"){
-dput(ind2004s, file="../dataframes/ind2004s.txt")
-dput(ind2005s, file="../dataframes/ind2005s.txt")
-dput(ind2006s, file="../dataframes/ind2006s.txt")
-dput(ind2007s, file="../dataframes/ind2007s.txt")
-dput(ind2008s, file="../dataframes/ind2008s.txt")
-dput(ind2009s, file="../dataframes/ind2009s.txt")
-dput(ind2010s, file="../dataframes/ind2010s.txt")
-dput(ind2011s, file="../dataframes/ind2011s.txt")
-dput(ind2012s, file="../dataframes/ind2012s.txt")
-dput(ind2013s, file="../dataframes/ind2013s.txt")
-dput(ind2014s, file="../dataframes/ind2014s.txt")
-    return("wrote out IND data.")
+    dput(ind2004s, file="../dataframes/ind2004s.txt")
+    dput(ind2005s, file="../dataframes/ind2005s.txt")
+    dput(ind2006s, file="../dataframes/ind2006s.txt")
+    dput(ind2007s, file="../dataframes/ind2007s.txt")
+    dput(ind2008s, file="../dataframes/ind2008s.txt")
+    dput(ind2009s, file="../dataframes/ind2009s.txt")
+    dput(ind2010s, file="../dataframes/ind2010s.txt")
+    dput(ind2011s, file="../dataframes/ind2011s.txt")
+    dput(ind2012s, file="../dataframes/ind2012s.txt")
+    dput(ind2013s, file="../dataframes/ind2013s.txt")
+    dput(ind2014s, file="../dataframes/ind2014s.txt")
+return("wrote out IND data.")
   }else  if(source=="savedIND"){
-ind2004s <<- dget("../dataframes/ind2004s.txt")
-ind2005s <<- dget("../dataframes/ind2005s.txt")
-ind2006s <<- dget("../dataframes/ind2006s.txt")
-ind2007s <<- dget("../dataframes/ind2007s.txt")
-ind2008s <<- dget("../dataframes/ind2008s.txt")
-ind2009s <<- dget("../dataframes/ind2009s.txt")
-ind2010s <<- dget("../dataframes/ind2010s.txt")
-ind2011s <<- dget("../dataframes/ind2011s.txt")
-ind2012s <<- dget("../dataframes/ind2012s.txt")
-ind2013s <<- dget("../dataframes/ind2013s.txt")
-ind2014s <<- dget("../dataframes/ind2014s.txt")
-    return("imported Individual data from saved subset.")
+    ind2004s <<- dget("../dataframes/ind2004s.txt")
+    ind2005s <<- dget("../dataframes/ind2005s.txt")
+    ind2006s <<- dget("../dataframes/ind2006s.txt")
+    ind2007s <<- dget("../dataframes/ind2007s.txt")
+    ind2008s <<- dget("../dataframes/ind2008s.txt")
+    ind2009s <<- dget("../dataframes/ind2009s.txt")
+    ind2010s <<- dget("../dataframes/ind2010s.txt")
+    ind2011s <<- dget("../dataframes/ind2011s.txt")
+    ind2012s <<- dget("../dataframes/ind2012s.txt")
+    ind2013s <<- dget("../dataframes/ind2013s.txt")
+    ind2014s <<- dget("../dataframes/ind2014s.txt")
+return("imported Individual data from saved subset.")
   }else  if(source=="tlv125"){
     #import the new TLV stock data from the csv
-tlv128<-readr::read_csv("../rawData/TLV-125midYearPrice.csv")
+     tlv128<-readr::read_csv("../rawData/TLV-125midYearPrice.csv")
 #View(tlv125)
-tlv126<-tlv128[,c(1,4)] # select date and closing price columns
+     tlv126<-tlv128[,c(1,4)] # select date and closing price columns
 #View(tlv126)
-tlv127<-tlv126[13:1,]  # remove extra rows
-tlv125<-as.data.frame(tlv127)
-rownames(tlv125)<-c(2004:2016)
+   tlv127<-tlv126[13:1,]  # remove extra rows
+   tlv125<-as.data.frame(tlv127)
+   rownames(tlv125)<-c(2004:2016)
 #tlv128["2004",2] #"YYYY",2nd column is closing P. @ last day in June.
-    return(tlv125)
+return(tlv125)
   }else  if(source=="raw"){
    #   source("../includes/importExpenditureRaw.R",  echo=FALSE)
-exp2004 <- spss.get("../rawData/census/f466/f466exp.por",
+   exp2004 <- spss.get("../rawData/census/f466/f466exp.por",
                   use.value.labels = TRUE)
-exp2005 <- spss.get("../rawData/census/f467/f467exp.por",
+   exp2005 <- spss.get("../rawData/census/f467/f467exp.por",
                   use.value.labels = TRUE)
-exp2006 <- spss.get("../rawData/census/f468/f468exp.por",         #f again
+   exp2006 <- spss.get("../rawData/census/f468/f468exp.por",         #f again
                   use.value.labels = TRUE)
-exp2007 <- spss.get("../rawData/census/f469/f469exp.por",
+   exp2007 <- spss.get("../rawData/census/f469/f469exp.por",
                   use.value.labels = TRUE)
-exp2008 <- spss.get("../rawData/census/f474/f474exp.por",
+   exp2008 <- spss.get("../rawData/census/f474/f474exp.por",
                   use.value.labels = TRUE)
-exp2009 <- spss.get("../rawData/census/f472/f472exp.por",
+   exp2009 <- spss.get("../rawData/census/f472/f472exp.por",
                     use.value.labels = TRUE)
-exp2010 <- spss.get("../rawData/census/f471/f471exp.por",
+   exp2010 <- spss.get("../rawData/census/f471/f471exp.por",
                     use.value.labels = TRUE)
-exp2011 <- spss.get("../rawData/census/f459/f459exp.por",
+   exp2011 <- spss.get("../rawData/census/f459/f459exp.por",
                     use.value.labels = TRUE)
-exp2012 <- spss.get("../rawData/census/f458/f458exp.por",
+   exp2012 < - spss.get("../rawData/census/f458/f458exp.por",
                     use.value.labels = TRUE)
-exp2013 <- spss.get("../rawData/census/f457/f457exp.por",
+   exp2013 <- spss.get("../rawData/census/f457/f457exp.por",
                     use.value.labels = TRUE)
-exp2014 <- spss.get("../rawData/census/f456/f456exp.por",
+   exp2014 <- spss.get("../rawData/census/f456/f456exp.por",
                     use.value.labels = TRUE)
 ######
       ##  note:  these only become local variables   ##
-exp2004df <-as.data.frame(exp2004)
-exp2004s <-dplyr::select(exp2004df, Q1,Q22,Q64,Q294,Q297,WEIGHT,HHNUM)
-exp2005df <-as.data.frame(exp2005)
-exp2005s <-dplyr::select(exp2005df, Q1,Q24,Q69,Q308,Q311,WEIGHT,HHNUM)
-exp2006df <-as.data.frame(exp2006)
-exp2006s <-dplyr::select(exp2006df, Q1,Q24,Q66,Q303,Q306,WEIGHT,HHNUM)
-exp2007df <-as.data.frame(exp2007)
-exp2007s <-dplyr::select(exp2007df, Q1,Q24,Q69,Q321,Q326,WEIGHT,HHNUM)
-exp2008df <-as.data.frame(exp2008)
-exp2008s <-dplyr::select(exp2008df, Q1,Q24,Q69,Q325,Q330,WEIGHT,HHNUM)
-exp2009df <-as.data.frame(exp2009)
-exp2009s <-dplyr::select(exp2009df, Q1,Q26,Q77,Q358,Q363,WEIGHT,HHNUM)
-exp2010df <-as.data.frame(exp2010)
-exp2010s <-dplyr::select(exp2010df, Q1,Q27,Q78,Q361,Q367,WEIGHT,HHNUM)
-exp2011df <-as.data.frame(exp2011)
-exp2011s <-dplyr::select(exp2011df, Q1,Q28,Q81,Q366,Q372,WEIGHT,HHNUM)
-exp2012df <-as.data.frame(exp2012)
-exp2012s <-dplyr::select(exp2012df, Q1,Q28,Q81,Q366,Q372,WEIGHT,HHNUM)
-exp2013df <-as.data.frame(exp2013)
-exp2013s <-dplyr::select(exp2013df, Q1,Q28,Q83,Q382,Q387,WEIGHT,HHNUM)
-exp2014df <-as.data.frame(exp2014)
-exp2014s <-dplyr::select(exp2014df, Q1,Q28,Q84,Q383,Q389,WEIGHT,HHNUM)
+   exp2004df <-as.data.frame(exp2004)
+   exp2004s <-dplyr::select(exp2004df, Q1,Q22,Q64,Q294,Q297,WEIGHT,HHNUM)
+   exp2005df <-as.data.frame(exp2005)
+   exp2005s <-dplyr::select(exp2005df, Q1,Q24,Q69,Q308,Q311,WEIGHT,HHNUM)
+   exp2006df <-as.data.frame(exp2006)
+   exp2006s <-dplyr::select(exp2006df, Q1,Q24,Q66,Q303,Q306,WEIGHT,HHNUM)
+   exp2007df <-as.data.frame(exp2007)
+   exp2007s <-dplyr::select(exp2007df, Q1,Q24,Q69,Q321,Q326,WEIGHT,HHNUM)
+   exp2008df <-as.data.frame(exp2008)
+   exp2008s <-dplyr::select(exp2008df, Q1,Q24,Q69,Q325,Q330,WEIGHT,HHNUM)
+   exp2009df <-as.data.frame(exp2009)
+   exp2009s <-dplyr::select(exp2009df, Q1,Q26,Q77,Q358,Q363,WEIGHT,HHNUM)
+   exp2010df <-as.data.frame(exp2010)
+   exp2010s <-dplyr::select(exp2010df, Q1,Q27,Q78,Q361,Q367,WEIGHT,HHNUM)
+   exp2011df <-as.data.frame(exp2011)
+   exp2011s <-dplyr::select(exp2011df, Q1,Q28,Q81,Q366,Q372,WEIGHT,HHNUM)
+   exp2012df <-as.data.frame(exp2012)
+   exp2012s <-dplyr::select(exp2012df, Q1,Q28,Q81,Q366,Q372,WEIGHT,HHNUM)
+   exp2013df <-as.data.frame(exp2013)
+   exp2013s <-dplyr::select(exp2013df, Q1,Q28,Q83,Q382,Q387,WEIGHT,HHNUM)
+   exp2014df <-as.data.frame(exp2014)
+   exp2014s <-dplyr::select(exp2014df, Q1,Q28,Q84,Q383,Q389,WEIGHT,HHNUM)
 
 renameColumns() ## adds a year column
                 ## exports columns with <<- super assignment
 
-        return("Imported Housing Expenditure Survey from Central Bureau of Statistics raw files.")
+return("Imported Housing Expenditure Survey from Central Bureau of Statistics raw files.")
     }else if(source=="saved"){
  ##  source("../includes/getProcessedData.R", echo=FALSE)
-exp2004s <<-dget("../dataframes/exp2004s.txt")
-exp2005s <<-dget("../dataframes/exp2005s.txt")
-exp2006s <<-dget("../dataframes/exp2006s.txt")
-exp2007s <<-dget("../dataframes/exp2007s.txt")
-exp2008s <<-dget("../dataframes/exp2008s.txt")
-exp2009s <<-dget("../dataframes/exp2009s.txt")
-exp2010s <<-dget("../dataframes/exp2010s.txt")
-exp2011s <<-dget("../dataframes/exp2011s.txt")
-exp2012s <<-dget("../dataframes/exp2012s.txt")
-exp2013s <<-dget("../dataframes/exp2013s.txt")
-exp2014s <<-dget("../dataframes/exp2014s.txt")
+   exp2004s <<-dget("../dataframes/exp2004s.txt")
+   exp2005s <<-dget("../dataframes/exp2005s.txt")
+   exp2006s <<-dget("../dataframes/exp2006s.txt")
+   exp2007s <<-dget("../dataframes/exp2007s.txt")
+   exp2008s <<-dget("../dataframes/exp2008s.txt")
+   exp2009s <<-dget("../dataframes/exp2009s.txt")
+   exp2010s <<-dget("../dataframes/exp2010s.txt")
+   exp2011s <<-dget("../dataframes/exp2011s.txt")
+   exp2012s <<-dget("../dataframes/exp2012s.txt")
+   exp2013s <<-dget("../dataframes/exp2013s.txt")
+   exp2014s <<-dget("../dataframes/exp2014s.txt")
 
-      return("Imported selected portions of Housing Expenditure Survey. Returns exp2004-14s")
+return("Imported selected portions of Housing Expenditure Survey. Returns exp2004-14s")
     }else if(source=="writeOutfamilies"){
       ## taken from working Feb16.Rmd
-dput(householdsList, file="../dataframes/householdsList.txt")
-dput(familiesList,   file="../dataframes/familiesList.txt")
-dput(family2004,     file="../dataframes/family2004.txt")
-dput(family2005,     file="../dataframes/family2005.txt")
-dput(family2006,     file="../dataframes/family2006.txt")
-dput(family2007,     file="../dataframes/family2007.txt")
-dput(family2008,     file="../dataframes/family2008.txt")
-dput(family2009,     file="../dataframes/family2009.txt")
-dput(family2010,     file="../dataframes/family2010.txt")
-dput(family2011,     file="../dataframes/family2011.txt")
-dput(family2012,     file="../dataframes/family2012.txt")
-dput(family2013,     file="../dataframes/family2013.txt")
-dput(family2014,     file="../dataframes/family2014.txt")
+   dput(householdsList, file="../dataframes/householdsList.txt")
+   dput(familiesList,   file="../dataframes/familiesList.txt")
+   dput(family2004,     file="../dataframes/family2004.txt")
+   dput(family2005,     file="../dataframes/family2005.txt")
+   dput(family2006,     file="../dataframes/family2006.txt")
+   dput(family2007,     file="../dataframes/family2007.txt")
+   dput(family2008,     file="../dataframes/family2008.txt")
+   dput(family2009,     file="../dataframes/family2009.txt")
+   dput(family2010,     file="../dataframes/family2010.txt")
+   dput(family2011,     file="../dataframes/family2011.txt")
+   dput(family2012,     file="../dataframes/family2012.txt")
+   dput(family2013,     file="../dataframes/family2013.txt")
+   dput(family2014,     file="../dataframes/family2014.txt")
     }else if(source=="writeOutEXP"){
 ########################
 ## write out new data ##
 ########################
-dput(exp2004s, file="../dataframes/exp2004s.txt")
-dput(exp2005s, file="../dataframes/exp2005s.txt")
-dput(exp2006s, file="../dataframes/exp2006s.txt")
-dput(exp2007s, file="../dataframes/exp2007s.txt")
-dput(exp2008s, file="../dataframes/exp2008s.txt")
-dput(exp2009s, file="../dataframes/exp2009s.txt")
-dput(exp2010s, file="../dataframes/exp2010s.txt")
-dput(exp2011s, file="../dataframes/exp2011s.txt")
-dput(exp2012s, file="../dataframes/exp2012s.txt")
-dput(exp2013s, file="../dataframes/exp2013s.txt")
-dput(exp2014s, file="../dataframes/exp2014s.txt")
-      return("wrote out dataframes")
+   dput(exp2004s, file="../dataframes/exp2004s.txt")
+   dput(exp2005s, file="../dataframes/exp2005s.txt")
+   dput(exp2006s, file="../dataframes/exp2006s.txt")
+   dput(exp2007s, file="../dataframes/exp2007s.txt")
+   dput(exp2008s, file="../dataframes/exp2008s.txt")
+   dput(exp2009s, file="../dataframes/exp2009s.txt")
+   dput(exp2010s, file="../dataframes/exp2010s.txt")
+   dput(exp2011s, file="../dataframes/exp2011s.txt")
+   dput(exp2012s, file="../dataframes/exp2012s.txt")
+   dput(exp2013s, file="../dataframes/exp2013s.txt")
+   dput(exp2014s, file="../dataframes/exp2014s.txt")
+return("wrote out dataframes")
           }else if(source=="importCombined"){
 ####################################
 ## IMPORT    combined data frames ##
 ####################################
-data2004<<-dget("../dataframes/data2004.txt")
-data2005<<-dget("../dataframes/data2005.txt")
-data2006<<-dget("../dataframes/data2006.txt")
-data2007<<-dget("../dataframes/data2007.txt")
-data2008<<-dget("../dataframes/data2008.txt")
-data2009<<-dget("../dataframes/data2009.txt")
-data2010<<-dget("../dataframes/data2010.txt")
-data2011<<-dget("../dataframes/data2011.txt")
-data2012<<-dget("../dataframes/data2012.txt")
-data2013<<-dget("../dataframes/data2013.txt")
-data2014<<-dget("../dataframes/data2014.txt")
-      return("wrote out dataframes")
+   data2004<<-dget("../dataframes/data2004.txt")
+   data2005<<-dget("../dataframes/data2005.txt")
+   data2006<<-dget("../dataframes/data2006.txt")
+   data2007<<-dget("../dataframes/data2007.txt")
+   data2008<<-dget("../dataframes/data2008.txt")
+   data2009<<-dget("../dataframes/data2009.txt")
+   data2010<<-dget("../dataframes/data2010.txt")
+   data2011<<-dget("../dataframes/data2011.txt")
+   data2012<<-dget("../dataframes/data2012.txt")
+   data2013<<-dget("../dataframes/data2013.txt")
+   data2014<<-dget("../dataframes/data2014.txt")
+return("wrote out dataframes")
  }else if(source=="writeOutExpFamInd"){
 ####################################
 ## write out combined data frames ##
 ####################################
-dput(expFamInd2004, file="../dataframes/expFamInd2004.txt")
-dput(expFamInd2005, file="../dataframes/expFamInd2005.txt")
-dput(expFamInd2006, file="../dataframes/expFamInd2006.txt")
-dput(expFamInd2007, file="../dataframes/expFamInd2007.txt")
-dput(expFamInd2008, file="../dataframes/expFamInd2008.txt")
-dput(expFamInd2009, file="../dataframes/expFamInd2009.txt")
-dput(expFamInd2010, file="../dataframes/expFamInd2010.txt")
-dput(expFamInd2011, file="../dataframes/expFamInd2011.txt")
-dput(expFamInd2012, file="../dataframes/expFamInd2012.txt")
-dput(expFamInd2013, file="../dataframes/expFamInd2013.txt")
-dput(expFamInd2014, file="../dataframes/expFamInd2014.txt")
-      return("wrote out dataframes with Exp, Fam and Ind columns")
+   dput(expFamInd2004, file="../dataframes/expFamInd2004.txt")
+   dput(expFamInd2005, file="../dataframes/expFamInd2005.txt")
+   dput(expFamInd2006, file="../dataframes/expFamInd2006.txt")
+   dput(expFamInd2007, file="../dataframes/expFamInd2007.txt")
+   dput(expFamInd2008, file="../dataframes/expFamInd2008.txt")
+   dput(expFamInd2009, file="../dataframes/expFamInd2009.txt")
+   dput(expFamInd2010, file="../dataframes/expFamInd2010.txt")
+   dput(expFamInd2011, file="../dataframes/expFamInd2011.txt")
+   dput(expFamInd2012, file="../dataframes/expFamInd2012.txt")
+   dput(expFamInd2013, file="../dataframes/expFamInd2013.txt")
+   dput(expFamInd2014, file="../dataframes/expFamInd2014.txt")
+return("wrote out dataframes with Exp, Fam and Ind columns")
  }else if(source=="importExpFamInd"){
 ####################################
 ## import    combined data frames ##
 ####################################
-expFamInd2004<<-dget("../dataframes/expFamInd2004.txt")
-expFamInd2005<<-dget("../dataframes/expFamInd2005.txt")
-expFamInd2006<<-dget("../dataframes/expFamInd2006.txt")
-expFamInd2007<<-dget("../dataframes/expFamInd2007.txt")
-expFamInd2008<<-dget("../dataframes/expFamInd2008.txt")
-expFamInd2009<<-dget("../dataframes/expFamInd2009.txt")
-expFamInd2010<<-dget("../dataframes/expFamInd2010.txt")
-expFamInd2011<<-dget("../dataframes/expFamInd2011.txt")
-expFamInd2012<<-dget("../dataframes/expFamInd2012.txt")
-expFamInd2013<<-dget("../dataframes/expFamInd2013.txt")
-expFamInd2014<<-dget("../dataframes/expFamInd2014.txt")
-      return("imported dataframes with Exp, Fam and Ind columns")
-          }else if(source=="writeOutCombined"){
+   expFamInd2004<<-dget("../dataframes/expFamInd2004.txt")
+   expFamInd2005<<-dget("../dataframes/expFamInd2005.txt")
+   expFamInd2006<<-dget("../dataframes/expFamInd2006.txt")
+   expFamInd2007<<-dget("../dataframes/expFamInd2007.txt")
+   expFamInd2008<<-dget("../dataframes/expFamInd2008.txt")
+   expFamInd2009<<-dget("../dataframes/expFamInd2009.txt")
+   expFamInd2010<<-dget("../dataframes/expFamInd2010.txt")
+   expFamInd2011<<-dget("../dataframes/expFamInd2011.txt")
+   expFamInd2012<<-dget("../dataframes/expFamInd2012.txt")
+   expFamInd2013<<-dget("../dataframes/expFamInd2013.txt")
+   expFamInd2014<<-dget("../dataframes/expFamInd2014.txt")
+return("imported dataframes with Exp, Fam and Ind columns")
+ }else if(source=="writeOutCombined"){
 ####################################
 ## write out combined data frames ##
 ####################################
-dput(data2004, file="../dataframes/data2004.txt")
-dput(data2005, file="../dataframes/data2005.txt")
-dput(data2006, file="../dataframes/data2006.txt")
-dput(data2007, file="../dataframes/data2007.txt")
-dput(data2008, file="../dataframes/data2008.txt")
-dput(data2009, file="../dataframes/data2009.txt")
-dput(data2010, file="../dataframes/data2010.txt")
-dput(data2011, file="../dataframes/data2011.txt")
-dput(data2012, file="../dataframes/data2012.txt")
-dput(data2013, file="../dataframes/data2013.txt")
-dput(data2014, file="../dataframes/data2014.txt")
-      return("wrote out dataframes")
+       dput(data2004, file="../dataframes/data2004.txt")
+       dput(data2005, file="../dataframes/data2005.txt")
+       dput(data2006, file="../dataframes/data2006.txt")
+       dput(data2007, file="../dataframes/data2007.txt")
+       dput(data2008, file="../dataframes/data2008.txt")
+       dput(data2009, file="../dataframes/data2009.txt")
+       dput(data2010, file="../dataframes/data2010.txt")
+       dput(data2011, file="../dataframes/data2011.txt")
+       dput(data2012, file="../dataframes/data2012.txt")
+       dput(data2013, file="../dataframes/data2013.txt")
+       dput(data2014, file="../dataframes/data2014.txt")
+return("wrote out dataframes")
       }else if(source=="combine"){
-data2004<<-merge(exp2004s,fam2004s, by="HHNUM")
-data2005<<-merge(exp2005s,fam2005s, by="HHNUM")
-data2006<<-merge(exp2006s,fam2006s, by="HHNUM")
-data2007<<-merge(exp2007s,fam2007s, by="HHNUM")
-data2008<<-merge(exp2008s,fam2008s, by="HHNUM")
-data2009<<-merge(exp2009s,fam2009s, by="HHNUM")
-data2010<<-merge(exp2010s,fam2010s, by="HHNUM")
-data2011<<-merge(exp2011s,fam2011s, by="HHNUM")
-data2012<<-merge(exp2012s,fam2012s, by="HHNUM")
-data2013<<-merge(exp2013s,fam2013s, by="HHNUM")
-data2014<<-merge(exp2014s,fam2014s, by="HHNUM")
-
- } else if (source == "load5") {
-
-Data5 <<- readRDS("../savedData/Data5.rds")
-Rent5 <<- readRDS("../savedData/Rent5.rds")
-Own5  <<- readRDS("../savedData/Own5.rds")
-
-        return("imported Data5, Rent5 and Own5")
-    }else{   ##"the only options are Y and N"
+       data2004<<-merge(exp2004s,fam2004s, by="HHNUM")
+       data2005<<-merge(exp2005s,fam2005s, by="HHNUM")
+       data2006<<-merge(exp2006s,fam2006s, by="HHNUM")
+       data2007<<-merge(exp2007s,fam2007s, by="HHNUM")
+       data2008<<-merge(exp2008s,fam2008s, by="HHNUM")
+       data2009<<-merge(exp2009s,fam2009s, by="HHNUM")
+       data2010<<-merge(exp2010s,fam2010s, by="HHNUM")
+       data2011<<-merge(exp2011s,fam2011s, by="HHNUM")
+       data2012<<-merge(exp2012s,fam2012s, by="HHNUM")
+       data2013<<-merge(exp2013s,fam2013s, by="HHNUM")
+       data2014<<-merge(exp2014s,fam2014s, by="HHNUM")
+return("sourceCombine == success 90arlsdo")
+    } else if (source == "load5") {
+      Data5 <<- readRDS("../savedData/Data5.rds")
+      Rent5 <<- readRDS("../savedData/Rent5.rds")
+      Own5  <<- readRDS("../savedData/Own5.rds")
+return("imported Data5, Rent5 and Own5")
+    } else if (source == "load6") {
+      importData("versionD")
+      subsetByOwnership("versionD")
+return("imported versionD.")
+    } else if (source == "savedF") {
+      allOwnersF   <<- readRDS("../savedData/allOwnersF.Rds")
+      allRentersF  <<- readRDS("../savedData/allRentersF.Rds")
+      allfamiliesF <<- readRDS("../savedData/allfamiliesF.Rds")
+return("imported version F --from-saved.")
+    } else if (source == "loadF") {
+      importData("versionF")
+      subsetByOwnership("versionF")
+return("Imported YYYY and merged -- versionF.")
+    } else{   ##"the only options are Y and N"
         return("not implemented - error importData('source == ?')")
     }}

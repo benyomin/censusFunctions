@@ -3,21 +3,21 @@
 \name{loadWealthEffectPackages}
 \alias{loadWealthEffectPackages}
 \title{Loads the required packages for the
-Housing Wealth Effect Analysis.   v. 3.0
+Housing Wealth Effect Analysis.   v. 3.2
 Provides for simple dependency management to aid in reproducibility.
 v.1.2 - remove gdata dependency, use other xlsx reader
 v.2.0 - changes to tidyverse instead of tidyr
 v.2.1 - rio for csv import of stock prices
 v.2.7 - plyr to dplyr, add magrittr}
 \usage{
-loadWealthEffectPackages(load = TRUE)
+loadWealthEffectPackages(load = "library")
 }
 \arguments{
 \item{load}{Defaults to TRUE.}
 }
 \description{
 Loads the required packages for the
-Housing Wealth Effect Analysis.   v. 3.0
+Housing Wealth Effect Analysis.   v. 3.2
 Provides for simple dependency management to aid in reproducibility.
 v.1.2 - remove gdata dependency, use other xlsx reader
 v.2.0 - changes to tidyverse instead of tidyr
@@ -26,6 +26,8 @@ v.2.7 - plyr to dplyr, add magrittr
 }
 \examples{
 loadWealthEffectPackages()
+loadWealthEffectPackages("library")
+loadWealthEffectPackages("install")
 }
 \keyword{dependencies,}
 \keyword{library,}

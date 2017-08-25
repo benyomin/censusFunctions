@@ -1,4 +1,4 @@
-#' initial setup code ; v.0.7 load frames with regions
+#' initial setup code ; v. 3.4 load frames with regions
 #' This function wraps setup code
 #' @param arg Defaults to true.
 #' @family setup
@@ -15,7 +15,7 @@ setwd("/Volumes/Bmac/febThesis/index")
 #installCensusFunctions("local")
 Sys.setenv(TZ="Europe/Berlin")
 # devtools::install_local("/Volumes/Bmac/censusFunctions")
-library(censusFunctions)
+## library(censusFunctions)
 ## source("../includes/setColors.R")  ## hide pretty colors for faster load
 year <<- 2004:2014
 
@@ -29,7 +29,9 @@ year <<- 2004:2014
 #makeRegions("load4")
 #makeRegions("dropSmallTowns")
   ## version 0.7
-importData("load5")
+  ##importData("load5")
+## version 3.4
+##  importData("load6")
 
-return("preSetUp() successful.")
+return("preSetUp() v. 3.4 successful.")
 }
