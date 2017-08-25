@@ -3,7 +3,7 @@
 \name{loadWealthEffectPackages}
 \alias{loadWealthEffectPackages}
 \title{Loads the required packages for the
-Housing Wealth Effect Analysis.   v. 3.1
+Housing Wealth Effect Analysis.   v. 3.2
 Provides for simple dependency management to aid in reproducibility.
 v.1.2 - remove gdata dependency, use other xlsx reader
 v.2.0 - changes to tidyverse instead of tidyr
@@ -17,7 +17,7 @@ loadWealthEffectPackages(load = "library")
 }
 \description{
 Loads the required packages for the
-Housing Wealth Effect Analysis.   v. 3.1
+Housing Wealth Effect Analysis.   v. 3.2
 Provides for simple dependency management to aid in reproducibility.
 v.1.2 - remove gdata dependency, use other xlsx reader
 v.2.0 - changes to tidyverse instead of tidyr

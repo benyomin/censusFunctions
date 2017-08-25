@@ -1,5 +1,5 @@
 #' Loads the required packages for the
-#' Housing Wealth Effect Analysis.   v. 3.1
+#' Housing Wealth Effect Analysis.   v. 3.2
 #' Provides for simple dependency management to aid in reproducibility.
 #' v.1.2 - remove gdata dependency, use other xlsx reader
 #' v.2.0 - changes to tidyverse instead of tidyr
@@ -47,11 +47,12 @@ loadWealthEffectPackages <- function(load = "library") {
 #        install_if_needed("zoo")
      ##   install_if_needed("dtplyr")
 #        devtools::install_github("hadley/dtplyr")
-      ##  install_if_needed("dplyr")          ## count()
+   ##  install_if_needed("dplyr")          ## count()
       ##  install from source to prevent a warning about the binary being
       ##  compiled with R 3.4.1 when I am using R 3.4
-      ## library(dplyr)
-#        install_if_needed("plm")  ## linear models for panel data ## https://r-forge.r-project.org/projects/plm/
+   ## library(dplyr)
+   ##      install_if_needed("plm")  ## linear models for panel data
+                                     ## https://r-forge.r-project.org/projects/plm/
 #        install_if_needed("choroplethr")
 #        install_github("choroplethrAdmin1", "arilamstein")
 #        devtools::install_github("r-spatial/mapview@develop")
@@ -69,9 +70,43 @@ loadWealthEffectPackages <- function(load = "library") {
 #        install_if_needed("Hmisc")
 #        install_if_needed("memisc")
 #        install_github("edzer/sp")
+censusFunctions::install_if_needed("rgdal")
+censusFunctions::install_if_needed("tidyverse")
+censusFunctions::install_if_needed("roxygen2")
+censusFunctions::install_if_needed("tmap")
+censusFunctions::install_if_needed("foreign")
+censusFunctions::install_if_needed('ggmap')
+censusFunctions::install_if_needed('rgeos')
+censusFunctions::install_if_needed('RColorBrewer')
+censusFunctions::install_if_needed('zoo') # dates package
+                                         ## used to manipulate quarters
+censusFunctions::install_if_needed('RCurl')
+censusFunctions::install_if_needed('pander')
+censusFunctions::install_if_needed('dtplyr')
+censusFunctions::install_if_needed('pipeR')
+censusFunctions::install_if_needed('plm')
+censusFunctions::install_if_needed('magrittr')
+censusFunctions::install_if_needed('mapview')
+censusFunctions::install_if_needed('ggthemes')
+censusFunctions::install_if_needed('rgeos')
+censusFunctions::install_if_needed('choroplethr')
+censusFunctions::install_if_needed('reshape')
+censusFunctions::install_if_needed('choroplethrAdmin1')
+censusFunctions::install_if_needed('reshape2')
+censusFunctions::install_if_needed('proxy')
+censusFunctions::install_if_needed('maps')
+censusFunctions::install_if_needed('grid')
+censusFunctions::install_if_needed('rio')
+censusFunctions::install_if_needed('rexcel')
+censusFunctions::install_if_needed('readxl')
+censusFunctions::install_if_needed('bookdown')
+censusFunctions::install_if_needed('scales')
+censusFunctions::install_if_needed('Hmisc')
+censusFunctions::install_if_needed('memisc')
+censusFunctions::install_if_needed('sp')
     } else if (load == "library") {
 library(rgdal)
-library("tidyverse")
+library(tidyverse)
 library(roxygen2)
 library(tmap)
 library(foreign)
