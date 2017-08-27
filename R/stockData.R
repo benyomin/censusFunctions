@@ -1,4 +1,4 @@
-#' Import stock data from exchange v. 2.3
+#' Import stock data from exchange v. 2.4
 #'
 #' This function imports mid-year prices from the tlv-125 index.
 #' @param arg import- get it, add- add it as a column to the data frame, write- write the new dataframe
@@ -147,21 +147,21 @@ fam2010f$diffPrior <<-(fam2010f$stocktminus1[1] - fam2010f$stocktminus2[1])/ fam
 fam2010f$diffNow   <<-(fam2010f$stock           - fam2010f$stocktminus1[1])/ fam2010f$stocktminus1[1]
 fam2010f$Wshock_NH <<- fam2010f$diffNow         - fam2010f$diffPrior
 
-fam20011f$diffPrior <<-(fam20011f$stocktminus1[1] - fam20011f$stocktminus2[1])/ fam20011f$stocktminus2[1]
-fam20011f$diffNow   <<-(fam20011f$stock           - fam20011f$stocktminus1[1])/ fam20011f$stocktminus1[1]
-fam20011f$Wshock_NH <<- fam20011f$diffNow         - fam20011f$diffPrior
+fam2011f$diffPrior <<-(fam2011f$stocktminus1[1] - fam2011f$stocktminus2[1])/ fam2011f$stocktminus2[1]
+fam2011f$diffNow   <<-(fam2011f$stock           - fam2011f$stocktminus1[1])/ fam2011f$stocktminus1[1]
+fam2011f$Wshock_NH <<- fam2011f$diffNow         - fam2011f$diffPrior
 
-fam20012f$diffPrior <<-(fam20012f$stocktminus1[1] - fam20012f$stocktminus2[1])/ fam20012f$stocktminus2[1]
-fam20012f$diffNow   <<-(fam20012f$stock           - fam20012f$stocktminus1[1])/ fam20012f$stocktminus1[1]
-fam20012f$Wshock_NH <<- fam20012f$diffNow         - fam20012f$diffPrior
+fam2012f$diffPrior <<-(fam2012f$stocktminus1[1] - fam2012f$stocktminus2[1])/ fam2012f$stocktminus2[1]
+fam2012f$diffNow   <<-(fam2012f$stock           - fam2012f$stocktminus1[1])/ fam2012f$stocktminus1[1]
+fam2012f$Wshock_NH <<- fam2012f$diffNow         - fam2012f$diffPrior
 
-fam20013f$diffPrior <<-(fam20013f$stocktminus1[1] - fam20013f$stocktminus2[1])/ fam20013f$stocktminus2[1]
-fam20013f$diffNow   <<-(fam20013f$stock           - fam20013f$stocktminus1[1])/ fam20013f$stocktminus1[1]
-fam20013f$Wshock_NH <<- fam20013f$diffNow         - fam20013f$diffPrior
+fam2013f$diffPrior <<-(fam2013f$stocktminus1[1] - fam2013f$stocktminus2[1])/ fam2013f$stocktminus2[1]
+fam2013f$diffNow   <<-(fam2013f$stock           - fam2013f$stocktminus1[1])/ fam2013f$stocktminus1[1]
+fam2013f$Wshock_NH <<- fam2013f$diffNow         - fam2013f$diffPrior
 
-fam20014f$diffPrior <<-(fam20014f$stocktminus1[1] - fam20014f$stocktminus2[1])/ fam20014f$stocktminus2[1]
-fam20014f$diffNow   <<-(fam20014f$stock           - fam20014f$stocktminus1[1])/ fam20014f$stocktminus1[1]
-fam20014f$Wshock_NH <<- fam20014f$diffNow         - fam20014f$diffPrior
+fam2014f$diffPrior <<-(fam2014f$stocktminus1[1] - fam2014f$stocktminus2[1])/ fam2014f$stocktminus2[1]
+fam2014f$diffNow   <<-(fam2014f$stock           - fam2014f$stocktminus1[1])/ fam2014f$stocktminus1[1]
+fam2014f$Wshock_NH <<- fam2014f$diffNow         - fam2014f$diffPrior
 
 return("added lagged stock value columns and YYYYf")
     } else {
