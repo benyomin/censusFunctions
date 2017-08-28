@@ -2,19 +2,25 @@
 % Please edit documentation in R/calcNHC.R
 \name{calcNHC}
 \alias{calcNHC}
-\title{Subtracts Housing Expenditures from Total Expenditures.
+\title{Subtracts Housing Expenditures from Total Expenditures. v. 0.4
 Saves this in $NHC column.}
 \usage{
-calcNHC(arg = TRUE)
+calcNHC(arg = "exp")
 }
 \arguments{
-\item{arg}{Sentence describing arg.
-#' @keywords rename, parse}
+\item{arg}{Sentence describing arg.}
 }
 \description{
 This function subtracts.
 }
 \examples{
-calcNHC(TRUE)
-calcNHC(FALSE)
+calcNHC()
+calcNHC("versionG")
+calcNHC("exp")
 }
+\seealso{
+Other manipulate: \code{\link{makeRegions}},
+  \code{\link{stockData}}, \code{\link{subsetCities}}
+}
+\keyword{parse}
+\keyword{rename,}

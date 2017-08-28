@@ -38,13 +38,12 @@ return("success a9yrsdno")
       }else if(arg == "versionG"){
         allFamiliesH <<- allFamiliesG %>%
           mutate(NHC = case_when(
-                   RENT  == "No"  && OWNER == "No"  ~ EXPTOT -   ,
-                   RENT  == "Yes" && OWNER == "No"  ~ EXPTOT -   ,
-                   RENT  == "No"  && OWNER == "Yes" ~ EXPTOT -   ,
-                   RENT  == "Yes" && OWNER == "Yes" ~ EXPTOT -   ,
+     RENT  == "No"  && OWNER == "No"  ~ EXPTOT , ## these are key money
+     RENT  == "Yes" && OWNER == "No"  ~ EXPTOT - rentEXP,
+     RENT  == "No"  && OWNER == "Yes" ~ EXPTOT - imputedRent,
+     RENT  == "Yes" && OWNER == "Yes" ~ EXPTOT, ## own rental house, live in rental
+                                 TRUE ~ EXPTOT ))
 
-                 ))
-
-return("success sdnoarys9dlo")
+return("success - created $NHC column.")
       }
 }

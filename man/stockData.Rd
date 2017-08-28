@@ -21,8 +21,8 @@ stockData('add')
 stockData('lagged')
 }
 \seealso{
-Other manipulate: \code{\link{makeRegions}},
-  \code{\link{subsetCities}}
+Other manipulate: \code{\link{calcNHC}},
+  \code{\link{makeRegions}}, \code{\link{subsetCities}}
 }
 \keyword{import,}
 \keyword{non-housing}

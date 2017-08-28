@@ -36,8 +36,8 @@ makeRegions("fixSizes")
 makeRegions("load")
 }
 \seealso{
-Other manipulate: \code{\link{stockData}},
-  \code{\link{subsetCities}}
+Other manipulate: \code{\link{calcNHC}},
+  \code{\link{stockData}}, \code{\link{subsetCities}}
 }
 \keyword{city,}
 \keyword{region}
