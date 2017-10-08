@@ -1,5 +1,5 @@
 #' Creates dataframes expYYYYowners and expYYYYrenters,
-#' calls weighHouseholds() ;   v. 3.7
+#' calls weighHouseholds() ;   v. 3.8
 # This function creates subsets of renters and owners. and key money
 #' @param arg Defaults to true.
 #' @keywords owners, renters, subset
@@ -121,29 +121,29 @@ allfamiliesF <<-  bind_rows(list(fam2004f,
 return("Merged allRenters and allOwners from version F. Should be ready for regression.")
     } else if (arg == "versionD") {
 
-renters2004  <- dplyr::filter( fam2004e,  RENT == "Yes")
-renters2005  <- dplyr::filter( fam2005e,  RENT == "Yes")
-renters2006  <- dplyr::filter( fam2006e,  RENT == "Yes")
-renters2007  <- dplyr::filter( fam2007e,  RENT == "Yes")
-renters2008  <- dplyr::filter( fam2008e,  RENT == "Yes")
-renters2009  <- dplyr::filter( fam2009e,  RENT == "Yes")
-renters2010  <- dplyr::filter( fam2010e,  RENT == "Yes")
-renters2011  <- dplyr::filter( fam2011e,  RENT == "Yes")
-renters2012  <- dplyr::filter( fam2012e,  RENT == "Yes")
-renters2013  <- dplyr::filter( fam2013e,  RENT == "Yes")
-renters2014  <- dplyr::filter( fam2014e,  RENT == "Yes")
+renters2004  <<- dplyr::filter( fam2004e,  RENT == "Yes")
+renters2005  <<- dplyr::filter( fam2005e,  RENT == "Yes")
+renters2006  <<- dplyr::filter( fam2006e,  RENT == "Yes")
+renters2007  <<- dplyr::filter( fam2007e,  RENT == "Yes")
+renters2008  <<- dplyr::filter( fam2008e,  RENT == "Yes")
+renters2009  <<- dplyr::filter( fam2009e,  RENT == "Yes")
+renters2010  <<- dplyr::filter( fam2010e,  RENT == "Yes")
+renters2011  <<- dplyr::filter( fam2011e,  RENT == "Yes")
+renters2012  <<- dplyr::filter( fam2012e,  RENT == "Yes")
+renters2013  <<- dplyr::filter( fam2013e,  RENT == "Yes")
+renters2014  <<- dplyr::filter( fam2014e,  RENT == "Yes")
 
-owners2004  <- dplyr::filter( fam2004e,   OWNER == "Yes")
-owners2005  <- dplyr::filter( fam2005e,   OWNER == "Yes")
-owners2006  <- dplyr::filter( fam2006e,   OWNER == "Yes")
-owners2007  <- dplyr::filter( fam2007e,   OWNER == "Yes")
-owners2008  <- dplyr::filter( fam2008e,   OWNER == "Yes")
-owners2009  <- dplyr::filter( fam2009e,   OWNER == "Yes")
-owners2010  <- dplyr::filter( fam2010e,   OWNER == "Yes")
-owners2011  <- dplyr::filter( fam2011e,   OWNER == "Yes")
-owners2012  <- dplyr::filter( fam2012e,   OWNER == "Yes")
-owners2013  <- dplyr::filter( fam2013e,   OWNER == "Yes")
-owners2014  <- dplyr::filter( fam2014e,   OWNER == "Yes")
+owners2004  <<- dplyr::filter( fam2004e,   OWNER == "Yes")
+owners2005  <<- dplyr::filter( fam2005e,   OWNER == "Yes")
+owners2006  <<- dplyr::filter( fam2006e,   OWNER == "Yes")
+owners2007  <<- dplyr::filter( fam2007e,   OWNER == "Yes")
+owners2008  <<- dplyr::filter( fam2008e,   OWNER == "Yes")
+owners2009  <<- dplyr::filter( fam2009e,   OWNER == "Yes")
+owners2010  <<- dplyr::filter( fam2010e,   OWNER == "Yes")
+owners2011  <<- dplyr::filter( fam2011e,   OWNER == "Yes")
+owners2012  <<- dplyr::filter( fam2012e,   OWNER == "Yes")
+owners2013  <<- dplyr::filter( fam2013e,   OWNER == "Yes")
+owners2014  <<- dplyr::filter( fam2014e,   OWNER == "Yes")
 
 allfamilies <<-  bind_rows(list(fam2004e,
      fam2005e,
