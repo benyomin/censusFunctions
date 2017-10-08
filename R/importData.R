@@ -1,4 +1,4 @@
-#' Import data to workspace v: 3.73
+#' Import data to workspace v: 3.8
 #'
 #' This function imports Israeli census data from spss .por files distributed by the CBS.
 #' @param source Source for data, "raw" imports from .por files. "saved" files were previously parsed in R. Saved files used for quick analysis, raw files used for final project - maximum reproducibility from source data.
@@ -477,7 +477,8 @@ return(mapImageData3)
     ind2014 <- spss.get("../rawData/census/f456/f456ind.por",
                     use.value.labels = TRUE)
     ind2004s <<- select(ind2004,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
-    ind2005s <<- select(ind2005,HHNUM,PERSNUM,RELATHH,AGE,SCHOOLY)
+    ind2005s <<- select(ind2005,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
+    ## 2005 only has HH not HHH ??
     ind2006s <<- select(ind2006,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
     ind2007s <<- select(ind2007,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
     ind2008s <<- select(ind2008,HHNUM,PERSNUM,RELATHHH,AGE,SCHOOLY)
