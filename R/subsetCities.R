@@ -430,8 +430,6 @@ nahariyya2014      <<- dplyr::filter( familiesList[[11]], CODELOC =="Nahariyya")
 qiryatatta2014     <<- dplyr::filter( familiesList[[11]], CODELOC =="Qiryat Ata")
 givatayim2014      <<- dplyr::filter( familiesList[[11]], CODELOC =="Giv'atayim")
 
-
-
   }else if(arg == "cities"){
   ## counts in cities
 

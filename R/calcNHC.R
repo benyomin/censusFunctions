@@ -40,10 +40,11 @@ return("success a9yrsdno")
           mutate(NHC = case_when(
      RENT  == "No"  && OWNER == "No"  ~ EXPTOT , ## these are key money
      RENT  == "Yes" && OWNER == "No"  ~ EXPTOT - rentEXP,
-     RENT  == "No"  && OWNER == "Yes" ~ EXPTOT - imputedRent,
-     RENT  == "Yes" && OWNER == "Yes" ~ EXPTOT, ## own rental house, live in rental
+                       OWNER == "Yes" ~ EXPTOT - imputedRent,
+  ##   RENT  == "No"  && OWNER == "Yes" ~ EXPTOT - imputedRent,
+  ##   RENT  == "Yes" && OWNER == "Yes" ~ EXPTOT - imputedRent, ## own rental house,
+                                                                ## live in rental
                                  TRUE ~ EXPTOT ))
-
 return("success - created $NHC column.")
       }
 }
